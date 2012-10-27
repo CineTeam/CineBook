@@ -21,8 +21,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE IF NOT EXISTS `cinemas_frequentes` (
   `id_cinema` int(11) NOT NULL,
-  `id_utilisateur` int(11) NOT NULL,
-  `date` date NOT NULL
+  `id_utilisateur` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
