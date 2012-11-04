@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.allocine.net/v6/ns/">
+  <page>1</page>
+  <count>200</count>
+  <results type="theater">5</results>
+  <totalResults>5</totalResults>
+  <theater code="W3300">
+    <name>Mega CGR Français - Bordeaux</name>
+    <address>9 rue Montesquieu  </address>
+    <postalCode>33000</postalCode>
+    <city>Bordeaux</city>
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/seance/salle_gen_csalle=W3300.html" />
+    </linkList>
+  </theater>
+  <theater code="P0087">
+    <name>UGC Ciné Cité Bordeaux</name>
+    <address>13-15 rue Georges-Bonnac  </address>
+    <postalCode>33000</postalCode>
+    <city>Bordeaux</city>
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/seance/salle_gen_csalle=P0087.html" />
+    </linkList>
+  </theater>
+  <theater code="P0763">
+    <name>Mégarama Bordeaux</name>
+    <address>7, quai de Queyries  </address>
+    <postalCode>33100</postalCode>
+    <city>Bordeaux</city>
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/seance/salle_gen_csalle=P0763.html" />
+    </linkList>
+  </theater>
+  <theater code="P0425">
+    <name>Gaumont Bordeaux Talence</name>
+    <address>Allee du 7eme Art - Place de l'église  </address>
+    <postalCode>33400</postalCode>
+    <city>Talence</city>
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/seance/salle_gen_csalle=P0425.html" />
+    </linkList>
+  </theater>
+  <theater code="P0769">
+    <name>Utopia Saint-Simeon</name>
+    <address>5, place Camille-Jullian  </address>
+    <postalCode>33000</postalCode>
+    <city>Bordeaux</city>
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/seance/salle_gen_csalle=P0769.html" />
+    </linkList>
+  </theater>
+</feed>

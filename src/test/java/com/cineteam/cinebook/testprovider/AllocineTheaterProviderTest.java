@@ -44,9 +44,25 @@ public class AllocineTheaterProviderTest {
     {
         AllocineTheaterProvider theaterProvider = new AllocineTheaterProvider();
         
-        List<Theater> theaters = theaterProvider.getTheatersByName(null);
+        List<Theater> theaters = theaterProvider.getTheatersByName("Bordeaux");
         
         assertNotNull(theaters);
         assertTrue(theaters.size() > 0);
+    }
+    
+    @Test
+    public void returnListOfTheatersWithSearchedName() 
+    {
+        AllocineTheaterProvider theaterProvider = new AllocineTheaterProvider();
+        
+        List<Theater> theaters = theaterProvider.getTheatersByName("Bordeaux");
+        
+        assertNotNull(theaters);
+        assertTrue(theaters.size() > 0);
+        
+        for(Theater theater : theaters)
+        {
+            assertTrue(theater.getName().contains("Bordeaux") || theater.getCity().contains("Bordeaux"));
+        }
     }
 }
