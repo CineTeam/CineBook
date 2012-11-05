@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="/CineBook"/>
+<Context antiJARLocking="true" path="/CineBook">
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="15" maxIdle="3" name="jdbc/BDCineBook" type="javax.sql.DataSource" url="jdbc:mysql://127.0.0.1:3306/BDCineBook" username="bdcinebook"  password="bdcinebook" />
+</Context>

@@ -7,11 +7,6 @@
         <title>CinéBook</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        
-        
-        <form action="ServletVisiteur?action=rechercherCinemaAction" method="post">
-            <input type="submit" name="envoyer" value="Valider"/>
-        </form>
+        <h1>Liste des cinemas !</h1>
     </body>
 </html>

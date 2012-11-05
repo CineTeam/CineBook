@@ -1,29 +1,20 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.cineteam.cinebook.provider;
+package com.cineteam.cinebook.model.provider;
 
 import java.io.File;
-import java.io.InputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author alexis
- */
+/** @author alexis */
 public class FileProviderSource implements IProviderSource
 {
 
     public InputStream getInputStream(String sourcePath) 
     {
         File file = new File(sourcePath);
-        
         InputStream is = null;
-        
         try 
         {
             is = new FileInputStream(file);
@@ -32,7 +23,6 @@ public class FileProviderSource implements IProviderSource
         {
             Logger.getLogger(FileProviderSource.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
         return is;
     }
 

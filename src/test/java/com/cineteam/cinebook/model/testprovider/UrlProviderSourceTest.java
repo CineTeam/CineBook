@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cineteam.cinebook.testprovider;
+package com.cineteam.cinebook.model.testprovider;
 
-import com.cineteam.cinebook.provider.UrlProviderSource;
+import com.cineteam.cinebook.model.provider.UrlProviderSource;
 import java.io.InputStream;
 import static org.junit.Assert.*;
 import org.junit.Test;

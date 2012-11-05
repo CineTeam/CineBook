@@ -1,26 +1,16 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.cineteam.cinebook.testprovider;
+package com.cineteam.cinebook.model.testprovider;
 
-import com.cineteam.cinebook.provider.FileProviderSource;
+import com.cineteam.cinebook.model.provider.FileProviderSource;
 import java.io.InputStream;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author alexis
- */
+/** @author alexis */
 public class FileProviderSourceTest {
     
     @Test
-    public void returnInputStreamForValidUrl() 
+    public void retourneUnInputStreamPourUneURLValide() 
     {
         FileProviderSource source = new FileProviderSource();
         InputStream is = source.getInputStream("TestXml/searchTheater.xml");
@@ -29,7 +19,7 @@ public class FileProviderSourceTest {
     }
     
     @Test
-    public void returnNullForInvalidUrl() 
+    public void retourneNullPourUneURLInvalide() 
     {
         FileProviderSource source = new FileProviderSource();
         InputStream is = source.getInputStream("pooom.xml");
