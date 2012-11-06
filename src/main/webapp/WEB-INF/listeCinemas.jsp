@@ -14,6 +14,13 @@
         <c:import url="header.jsp" />
         
         <div id="page">
+            <div id="recherche">
+                <form action="ServletVisiteur?action=rechercherCinemaAction" method="post">
+                    Rechercher un cinéma :
+                    <input type="text" name="valeur" />
+                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider"/>
+                </form>
+            </div>
             <div id="content">
                 <div class="post">
                     <h1>Liste des cinemas !</h1>
