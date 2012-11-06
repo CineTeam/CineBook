@@ -58,6 +58,7 @@ public class TestServletVisiteur {
         final Map params = new HashMap();
         params.put("action", "rechercherCinemaAction");
         params.put("vue", "");
+        params.put("recherche", "");
         request = new AddedParametersRequestWrapper(request,params);
                 
         servlet.processRequest(request,response);

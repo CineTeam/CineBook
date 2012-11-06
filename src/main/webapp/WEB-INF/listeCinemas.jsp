@@ -11,32 +11,26 @@
         <link href="style/style.css" rel="stylesheet" type="text/css" media="screen" />
     </head>
     <body>
-        <c:import url="header.jsp" />
-        
-        <div id="page">
-            <div id="recherche">
-                <form action="ServletVisiteur?action=rechercherCinemaAction" method="post">
-                    Rechercher un cinéma :
-                    <input type="text" name="valeur" />
-                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider"/>
-                </form>
-            </div>
-            <div id="content">
-                <div class="post">
-                    <h1>Liste des cinemas !</h1>
+        <div id="wrapper">
+            <c:import url="header.jsp" />
+
+            <div id="page">
+                <div id="content">
+                    <div class="post">
+                        <h1>Liste des cinemas !</h1>
+
+                        <div style="clear: both;">&nbsp;</div>
+                        <div class="entry">
+
+                        </div>
+                    </div>
 
                     <div style="clear: both;">&nbsp;</div>
-                    <div class="entry">
-                    
-                    </div>
                 </div>
 
                 <div style="clear: both;">&nbsp;</div>
             </div>
-
-            <div style="clear: both;">&nbsp;</div>
         </div>
-
         <c:import url="footer.jsp" />
     </body>
 </html>

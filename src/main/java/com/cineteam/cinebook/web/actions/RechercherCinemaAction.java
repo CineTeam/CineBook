@@ -9,7 +9,13 @@ public class RechercherCinemaAction implements Action{
     
     public String execute(HttpServletRequest request) {
 
-        return "listeCinemas.jsp";
+        String cinema_recherche = (String) request.getParameter("recherche");
+        if(!cinema_recherche.isEmpty()){
+            return "listeCinemas.jsp";
+        }
+        else{
+            return "accueilCinema.jsp";
+        }
   
     }
     
