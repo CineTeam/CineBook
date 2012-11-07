@@ -22,11 +22,9 @@ public class UrlProviderSource implements IProviderSource
         } 
         catch (MalformedURLException ex) 
         {
-            Logger.getLogger(UrlProviderSource.class.getName()).log(Level.SEVERE, null, ex);
         }
         catch (IOException ex) 
         {
-                Logger.getLogger(UrlProviderSource.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return is;

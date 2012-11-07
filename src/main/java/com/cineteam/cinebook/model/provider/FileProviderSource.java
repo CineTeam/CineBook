@@ -21,7 +21,6 @@ public class FileProviderSource implements IProviderSource
         } 
         catch (FileNotFoundException ex) 
         {
-            Logger.getLogger(FileProviderSource.class.getName()).log(Level.SEVERE, null, ex);
         }
         return is;
     }
