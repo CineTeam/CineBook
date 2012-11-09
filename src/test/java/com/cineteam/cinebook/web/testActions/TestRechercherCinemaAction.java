@@ -3,13 +3,14 @@ package com.cineteam.cinebook.web.testActions;
 import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.web.actions.RechercherCinemaAction;
 import com.cineteam.cinebook.web.testServlets.AddedParametersRequestWrapper;
-import java.security.Provider;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.replay;
+import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import static org.easymock.EasyMock.*;
 
 /** @author ikram */
 public class TestRechercherCinemaAction {

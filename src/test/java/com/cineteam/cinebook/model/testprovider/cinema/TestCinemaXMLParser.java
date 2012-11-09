@@ -1,22 +1,19 @@
-package com.cineteam.cinebook.model.testprovider;
+package com.cineteam.cinebook.model.testprovider.cinema;
 
 import com.cineteam.cinebook.model.entity.Cinema;
-import com.cineteam.cinebook.model.provider.AllocineXMLParser;
+import com.cineteam.cinebook.model.provider.cinema.CinemaXMLParser;
 import com.cineteam.cinebook.model.provider.FileProviderSource;
 import java.util.List;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 /** @author alexis */
-public class AllocineXMLParserTest {
-    
-    public AllocineXMLParserTest() {
-    }
-    
+public class TestCinemaXMLParser {
+     
     @Test
     public void parserRetourneUneListeDeCinemas() 
     {
-        AllocineXMLParser parser = new AllocineXMLParser();
+        CinemaXMLParser parser = new CinemaXMLParser();
         FileProviderSource source = new FileProviderSource();
         
         List<Cinema> cinemas = parser.parseCinemaFromInputStream(source.getInputStream("TestXml/searchTheater.xml"));
@@ -27,7 +24,7 @@ public class AllocineXMLParserTest {
     @Test
     public void parserRetourneDesCinemasDuTestXml()
     {
-        AllocineXMLParser parser = new AllocineXMLParser();
+        CinemaXMLParser parser = new CinemaXMLParser();
         FileProviderSource source = new FileProviderSource();
         
         List<Cinema> cinemas = parser.parseCinemaFromInputStream(source.getInputStream("TestXml/searchTheater.xml"));
@@ -39,7 +36,7 @@ public class AllocineXMLParserTest {
     @Test
     public void parserRetourneDesCinemasCompletsDuTestXml()
     {
-        AllocineXMLParser parser = new AllocineXMLParser();
+        CinemaXMLParser parser = new CinemaXMLParser();
         FileProviderSource source = new FileProviderSource();
         
         List<Cinema> cinemas = parser.parseCinemaFromInputStream(source.getInputStream("TestXml/searchTheater.xml"));

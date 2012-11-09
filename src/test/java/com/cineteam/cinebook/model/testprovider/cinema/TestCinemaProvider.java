@@ -1,22 +1,22 @@
-package com.cineteam.cinebook.model.testprovider;
+package com.cineteam.cinebook.model.testprovider.cinema;
 
 import com.cineteam.cinebook.model.entity.Cinema;
-import com.cineteam.cinebook.model.provider.AllocineCinemaProvider;
+import com.cineteam.cinebook.model.provider.cinema.CinemaProvider;
 import java.util.List;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /** @author alexis */
-public class AllocineCinemaProviderTest {
+public class TestCinemaProvider {
     
-    public AllocineCinemaProviderTest() {
+    public TestCinemaProvider() {
     }
     
     @Test
     public void returnListOfTheaters() 
     {
-        AllocineCinemaProvider theaterProvider = new AllocineCinemaProvider();
+        CinemaProvider theaterProvider = new CinemaProvider();
         
         List<Cinema> theaters = theaterProvider.getCinemasParNom("Bordeaux");
         
@@ -27,7 +27,7 @@ public class AllocineCinemaProviderTest {
     @Test
     public void returnListOfTheatersWithSearchedName() 
     {
-        AllocineCinemaProvider theaterProvider = new AllocineCinemaProvider();
+        CinemaProvider theaterProvider = new CinemaProvider();
         
         List<Cinema> theaters = theaterProvider.getCinemasParNom("Bordeaux");
         

@@ -7,7 +7,7 @@ import static org.junit.Assert.assertNull;
 import org.junit.Test;
 
 /** @author alexis */
-public class FileProviderSourceTest {
+public class TestFileProviderSource {
     
     @Test
     public void retourneUnInputStreamPourUneURLValide() 
