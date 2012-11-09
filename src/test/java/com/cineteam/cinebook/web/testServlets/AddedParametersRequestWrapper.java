@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 public class AddedParametersRequestWrapper extends HttpServletRequestWrapper {
 
     private Map params;
+    private Map attributes =new HashMap();
     private boolean merged;
     private String method;
     private MockHttpSession session = new MockHttpSession();
@@ -52,6 +53,16 @@ public class AddedParametersRequestWrapper extends HttpServletRequestWrapper {
             if (value instanceof String)
                 entry.setValue(new String[] {(String) value});
         }
+    }
+    
+    @Override
+    public void setAttribute(String name, Object o){
+        attributes.put(name, o);
+    }
+    
+    @Override
+    public Object getAttribute(String name){
+        return attributes.get(name);
     }
     
     @Override

@@ -21,7 +21,32 @@
 
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
-
+                            <table>
+                                
+                                <c:if test = "${requestScope.cinemasParNom != null}">
+                                    <c:choose>
+                                        <c:when test = "${empty requestScope.cinemasParNom}">
+                                            <tr>Aucun cinema ne correspond à votre recherche</tr>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <tr>
+                                                <th>Nom : </th>
+                                                <th>Adresse :</th>
+                                                <th>CP : </th>
+                                                <th>Ville : </th>
+                                             </tr>
+                                            <c:forEach var="cinema" items="${requestScope.cinemasParNom}">
+                                                <tr >
+                                                   <td>${cinema.nom}</td>
+                                                   <td>${cinema.adresse}</td>
+                                                   <td>${cinema.code_postal}</td> 
+                                                   <td>${cinema.ville}</td>
+                                                </tr>
+                                            </c:forEach>
+                                        </c:otherwise>                                            
+                                    </c:choose>
+                                </c:if>
+                            </table>
                         </div>
                     </div>
 

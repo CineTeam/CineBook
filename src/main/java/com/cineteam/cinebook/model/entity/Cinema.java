@@ -38,12 +38,12 @@ public class Cinema
     {
         adresse = _adresse;
     }
-    public String getCodePostal()
+    public String getCode_postal()
     {
         return code_postal;
     }
     
-    public void setCodePostal(String _code_postal)
+    public void setCode_postal(String _code_postal)
     {
         code_postal = _code_postal;
     }

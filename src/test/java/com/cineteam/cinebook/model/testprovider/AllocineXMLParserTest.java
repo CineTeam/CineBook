@@ -49,7 +49,7 @@ public class AllocineXMLParserTest {
         assertEquals("W3300", cinema.getId());
         assertEquals("Mega CGR Français - Bordeaux", cinema.getNom());
         assertEquals("9 rue Montesquieu  ", cinema.getAdresse());
-        assertEquals("33000", cinema.getCodePostal());
+        assertEquals("33000", cinema.getCode_postal());
         assertEquals("Bordeaux", cinema.getVille());
     }
 }

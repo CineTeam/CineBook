@@ -1,5 +1,6 @@
 package com.cineteam.cinebook.web.servlets;
 
+import com.cineteam.cinebook.model.provider.AllocineCinemaProvider;
 import com.cineteam.cinebook.web.actions.Action;
 import com.cineteam.cinebook.web.actions.RechercherCinemaAction;
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class ServletVisiteur extends HttpServlet {
         if(param_action!=null && !param_action.isEmpty()){
             Action classeAction = null;
             if (param_action.equalsIgnoreCase("rechercherCinemaAction")) {
-                    classeAction = new RechercherCinemaAction();
+                    classeAction = new RechercherCinemaAction(new AllocineCinemaProvider());
             }
                         
             vue = dossier_prive+classeAction.execute(request);

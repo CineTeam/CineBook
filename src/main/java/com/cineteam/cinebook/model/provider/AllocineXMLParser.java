@@ -41,26 +41,28 @@ public class AllocineXMLParser
     private List<Cinema> parseCinemaFromDocument(Document document)
     {
         List<Cinema> cinemas = new ArrayList<Cinema>(); 
-        Namespace defaultNameSpace = Namespace.getNamespace("http://www.allocine.net/v6/ns/");
-        Element racine = document.getRootElement();
-        
-        List listeCinemas = racine.getChildren("theater", defaultNameSpace);
-        
-        Iterator i = listeCinemas.iterator();
-        while(i.hasNext())
+        if (document != null)
         {
-            Element courant = (Element)i.next();
-            
-            Cinema cinema = new Cinema();
-            cinema.setId(courant.getAttributeValue("code"));
-            cinema.setNom(courant.getChildText("name", defaultNameSpace));
-            cinema.setAdresse(courant.getChildText("address", defaultNameSpace));
-            cinema.setCodePostal(courant.getChildText("postalCode", defaultNameSpace));
-            cinema.setVille(courant.getChildText("city", defaultNameSpace));
-            
-            cinemas.add(cinema);
+             Namespace defaultNameSpace = Namespace.getNamespace("http://www.allocine.net/v6/ns/");
+            Element racine = document.getRootElement();
+
+            List listeCinemas = racine.getChildren("theater", defaultNameSpace);
+
+            Iterator i = listeCinemas.iterator();
+            while(i.hasNext())
+            {
+                Element courant = (Element)i.next();
+
+                Cinema cinema = new Cinema();
+                cinema.setId(courant.getAttributeValue("code"));
+                cinema.setNom(courant.getChildText("name", defaultNameSpace));
+                cinema.setAdresse(courant.getChildText("address", defaultNameSpace));
+                cinema.setCode_postal(courant.getChildText("postalCode", defaultNameSpace));
+                cinema.setVille(courant.getChildText("city", defaultNameSpace));
+
+                cinemas.add(cinema);
+            }
         }
-        
         return cinemas;
     }
 }
