@@ -249,3 +249,12 @@ a:hover {
 .list-style1 a {
     color: #7F7F7F;
 }
+
+
+.clickable{
+    cursor: pointer;
+}
+
+.invisible{
+    display : none;
+}
