@@ -14,29 +14,29 @@ public class TestCinemaProvider {
     }
     
     @Test
-    public void returnListOfTheaters() 
+    public void retourneUneListeDeCinema() 
     {
-        CinemaProvider theaterProvider = new CinemaProvider();
+        CinemaProvider cinemaProvider = new CinemaProvider();
         
-        List<Cinema> theaters = theaterProvider.getCinemasParNom("Bordeaux");
+        List<Cinema> cinemas = cinemaProvider.getCinemasParNom("Bordeaux");
         
-        assertNotNull(theaters);
-        assertTrue(theaters.size() > 0);
+        assertNotNull(cinemas);
+        assertTrue(cinemas.size() > 0);
     }
     
     @Test
-    public void returnListOfTheatersWithSearchedName() 
+    public void retourneUneListeDeCinemaAvecLeNomRecherche() 
     {
-        CinemaProvider theaterProvider = new CinemaProvider();
+        CinemaProvider cinemaProvider = new CinemaProvider();
         
-        List<Cinema> theaters = theaterProvider.getCinemasParNom("Bordeaux");
+        List<Cinema> cinemas = cinemaProvider.getCinemasParNom("Bordeaux");
         
-        assertNotNull(theaters);
-        assertTrue(theaters.size() > 0);
+        assertNotNull(cinemas);
+        assertTrue(cinemas.size() > 0);
         
-        for(Cinema theater : theaters)
+        for(Cinema cinema : cinemas)
         {
-            assertTrue(theater.getNom().contains("Bordeaux") || theater.getVille().contains("Bordeaux"));
+            assertTrue(cinema.getNom().contains("Bordeaux") || cinema.getVille().contains("Bordeaux"));
         }
     }
 }

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.allocine.net/v6/ns/">
+  <page>1</page>
+  <count>5</count>
+  <results type="movie">10</results>
+  <totalResults>10</totalResults>
+  <movie code="61282">
+    <originalTitle>Avatar</originalTitle>
+    <title>Avatar</title>
+    <productionYear>2009</productionYear>
+    <release>
+      <releaseDate>2010-09-01</releaseDate>
+    </release>
+    <castingShort>
+      <directors>James Cameron</directors>
+      <actors>Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang, Michelle Rodriguez</actors>
+    </castingShort>
+    <statistics>
+      <pressRating>4.33333</pressRating>
+      <userRating>4.31534</userRating>
+    </statistics>
+    <poster path="/medias/nmedia/18/78/95/70/19485155.jpg" href="http://images.allocine.fr/medias/nmedia/18/78/95/70/19485155.jpg" />
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=61282.html" />
+    </linkList>
+  </movie>
+  <movie code="143950">
+    <originalTitle>Avatar</originalTitle>
+    <productionYear>2004</productionYear>
+    <castingShort>
+      <directors>Jian Hong Kuo</directors>
+      <actors>Genevieve O'Reilly, Luoyong Wang, Kay Siu Lim, David Warner, Joan Chen</actors>
+    </castingShort>
+    <statistics>
+      <userRating>3.9645</userRating>
+    </statistics>
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=143950.html" />
+    </linkList>
+  </movie>
+  <movie code="46284">
+    <originalTitle>Avatars</originalTitle>
+    <productionYear>2001</productionYear>
+    <castingShort>
+      <directors>Ben Elia</directors>
+      <actors>Ken Samuels, Alex Ligen, Cédric Brenner, Gaï Assouline, Thomas Guerigen</actors>
+    </castingShort>
+    <statistics>
+      <userRating>3.20588</userRating>
+    </statistics>
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=46284.html" />
+    </linkList>
+  </movie>
+  <movie code="187247">
+    <originalTitle>Avatar 3</originalTitle>
+    <productionYear>2016</productionYear>
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=187247.html" />
+    </linkList>
+  </movie>
+  <movie code="178014">
+    <originalTitle>Avatar 2</originalTitle>
+    <productionYear>2015</productionYear>
+    <castingShort>
+      <directors>James Cameron</directors>
+    </castingShort>
+    <linkList>
+      <link rel="aco:web" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=178014.html" />
+    </linkList>
+  </movie>
+</feed>

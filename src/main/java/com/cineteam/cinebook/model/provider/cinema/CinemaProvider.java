@@ -2,8 +2,8 @@ package com.cineteam.cinebook.model.provider.cinema;
 
 import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder;
-import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Methodes;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Filtres;
+import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Methodes;
 import com.cineteam.cinebook.model.provider.UrlProviderSource;
 import java.util.List;
 

@@ -1,17 +1,16 @@
 package com.cineteam.cinebook.model.provider.cinema;
 
 import com.cineteam.cinebook.model.entity.Cinema;
+import com.cineteam.cinebook.model.provider.AXMLParser;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import org.jdom.Document;
 import org.jdom.Element;
-import org.jdom.Namespace;
-import org.jdom.input.SAXBuilder;
 
 /** @author alexis */
-public class CinemaXMLParser {
+public class CinemaXMLParser extends AXMLParser{
     
     public List<Cinema> parseCinemaFromInputStream(InputStream is)
     {
@@ -19,25 +18,12 @@ public class CinemaXMLParser {
         List<Cinema> cinemas = parseCinemaFromDocument(document);
         return cinemas;
     }
-    
-    private Document getDocumentFromInputStream(InputStream is)
-    {
-        SAXBuilder sxb = new SAXBuilder();
-        Document document = null;
-        try {
-           document = sxb.build(is);
-        }
-        catch(Exception e){}
-        
-        return document;
-    }
-    
+ 
     private List<Cinema> parseCinemaFromDocument(Document document)
     {
         List<Cinema> cinemas = new ArrayList<Cinema>(); 
         if (document != null)
         {
-            Namespace defaultNameSpace = Namespace.getNamespace("http://www.allocine.net/v6/ns/");
             Element racine = document.getRootElement();
 
             List listeCinemas = racine.getChildren("theater", defaultNameSpace);

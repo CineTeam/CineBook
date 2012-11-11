@@ -24,7 +24,9 @@ public class AllocineApiUrlBuilder
     
     public static enum Filtres
     {
-        CINEMA ("theater");
+        CINEMA ("theater"),
+        FILM ("movie");
+        
         private final String value;
         
         private Filtres(String value)
