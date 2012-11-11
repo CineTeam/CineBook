@@ -1,9 +1,6 @@
 package com.cineteam.cinebook.model.provider;
 
-/**
- * @author alexis
- */
-
+/** @author alexis */
 public class AllocineApiUrlBuilder 
 {
     public static enum Methodes

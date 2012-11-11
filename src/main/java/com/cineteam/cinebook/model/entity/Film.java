@@ -28,56 +28,56 @@ public class Film {
         return titre;
     }
 
-    public void setTitre(String Titre) {
-        this.titre = Titre;
+    public void setTitre(String _titre) {
+        titre = _titre;
     }
 
     public DateTime getDate_sortie() {
         return date_sortie;
     }
 
-    public void setDate_sortie(DateTime date_sortie) {
-        this.date_sortie = date_sortie;
+    public void setDate_sortie(DateTime _date_sortie) {
+        date_sortie = _date_sortie;
     }
 
     public String getRealisateur() {
         return realisateur;
     }
 
-    public void setRealisateur(String realisateur) {
-        this.realisateur = realisateur;
+    public void setRealisateur(String _realisateur) {
+        realisateur = _realisateur;
     }
 
     public String getActeurs() {
         return acteurs;
     }
 
-    public void setActeurs(String acteurs) {
-        this.acteurs = acteurs;
+    public void setActeurs(String _acteurs) {
+        acteurs = _acteurs;
     }
 
     public float getNote_utilisateurs() {
         return note_utilisateurs;
     }
 
-    public void setNote_utilisateurs(float note_utilisateurs) {
-        this.note_utilisateurs = note_utilisateurs;
+    public void setNote_utilisateurs(float _note_utilisateurs) {
+        note_utilisateurs = _note_utilisateurs;
     }
 
     public float getNote_presse() {
         return note_presse;
     }
 
-    public void setNote_presse(float note_presse) {
-        this.note_presse = note_presse;
+    public void setNote_presse(float _note_presse) {
+        note_presse = _note_presse;
     }
 
     public String getUrl_affiche() {
         return url_affiche;
     }
 
-    public void setUrl_affiche(String url_affiche) {
-        this.url_affiche = url_affiche;
+    public void setUrl_affiche(String _url_affiche) {
+        url_affiche = _url_affiche;
     }
     
 }

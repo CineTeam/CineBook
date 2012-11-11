@@ -1,18 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cineteam.cinebook.model.testprovider;
 
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Methodes;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author alexis
- */
+/** @author alexis */
 public class TestAllocineApiUrlBuilder {
     
     @Test

@@ -3,7 +3,8 @@ package com.cineteam.cinebook.model.testprovider.film;
 import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.model.provider.film.FilmProvider;
 import java.util.List;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /** @author alexis */

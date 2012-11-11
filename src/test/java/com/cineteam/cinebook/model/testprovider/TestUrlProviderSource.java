@@ -2,7 +2,8 @@ package com.cineteam.cinebook.model.testprovider;
 
 import com.cineteam.cinebook.model.provider.UrlProviderSource;
 import java.io.InputStream;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import org.junit.Test;
 
 /** @author alexis */
