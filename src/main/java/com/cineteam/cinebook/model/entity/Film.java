@@ -79,5 +79,5 @@ public class Film {
     public void setUrl_affiche(String _url_affiche) {
         url_affiche = _url_affiche;
     }
-    
+
 }

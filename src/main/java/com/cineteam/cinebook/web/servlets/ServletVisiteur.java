@@ -1,8 +1,10 @@
 package com.cineteam.cinebook.web.servlets;
 
 import com.cineteam.cinebook.model.provider.cinema.CinemaProvider;
+import com.cineteam.cinebook.model.provider.film.FilmProvider;
 import com.cineteam.cinebook.web.actions.Action;
 import com.cineteam.cinebook.web.actions.RechercherCinemaAction;
+import com.cineteam.cinebook.web.actions.RechercherFilmAction;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -33,7 +35,10 @@ public class ServletVisiteur extends HttpServlet {
             if (param_action.equalsIgnoreCase("rechercherCinemaAction")) {
                     classeAction = new RechercherCinemaAction(new CinemaProvider());
             }
-                        
+            if (param_action.equalsIgnoreCase("rechercherFilmAction")) {
+                    classeAction = new RechercherFilmAction(new FilmProvider());
+            }
+            
             vue = dossier_prive+classeAction.execute(request);
         }
         if (vue != null) {
@@ -57,6 +62,6 @@ public class ServletVisiteur extends HttpServlet {
 
     @Override
     public String getServletInfo() {
-        return "Dispatche les actions visiteur";
+        return "Dispatche les actions visiteurs";
     }
 }
