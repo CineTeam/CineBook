@@ -22,4 +22,12 @@ public class TestAllocineApiUrlBuilder {
                                                                   .ajouterLeFiltre(AllocineApiUrlBuilder.Filtres.CINEMA).ajouterLaRequete("test").getUrl();
         assertEquals("http://api.allocine.fr/rest/v3/search?partner=YW5kcm9pZC12M3M&format=xml&page=1&count=200&filter=theater&q=test", url);
     }
+    
+    @Test
+    public void retourneUrlDesDixDerniersFilmsAvecLesBonsParametres()
+    {
+        String url = new AllocineApiUrlBuilder(Methodes.FILMSENSALLE).ajouterLaPage(1).ajouterLeNombreDeResultat(10)
+                                                                  .ajouterLeFiltre(AllocineApiUrlBuilder.Filtres.ENSALLE).ajouterLOrdre(AllocineApiUrlBuilder.Ordre.DATEDESC).getUrl();
+        assertEquals("http://api.allocine.fr/rest/v3/movielist?partner=YW5kcm9pZC12M3M&format=xml&page=1&count=10&filter=nowshowing&order=DATEDESC", url);
+    }
 }

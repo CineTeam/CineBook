@@ -5,7 +5,9 @@ public class AllocineApiUrlBuilder
 {
     public static enum Methodes
     {
-        RECHERCHE ("search");
+        RECHERCHE ("search"),
+        FILMSENSALLE ("movielist");
+        
         private final String value;
         
         private Methodes(String value)
@@ -22,7 +24,8 @@ public class AllocineApiUrlBuilder
     public static enum Filtres
     {
         CINEMA ("theater"),
-        FILM ("movie");
+        FILM ("movie"),
+        ENSALLE ("nowshowing");
         
         private final String value;
         
@@ -32,6 +35,23 @@ public class AllocineApiUrlBuilder
         }
         
         public String getFiltre()
+        {
+            return value;
+        }
+    }
+    
+    public static enum Ordre
+    {
+        DATEDESC ("datedesc");
+        
+        private final String value;
+        
+        private Ordre(String value)
+        {
+            this.value = value;
+        }
+        
+        public String getOrdre()
         {
             return value;
         }
@@ -69,6 +89,12 @@ public class AllocineApiUrlBuilder
     public AllocineApiUrlBuilder ajouterLaRequete(String requete)
     {
         url += "&q=" + requete;
+        return this;
+    }
+    
+    public AllocineApiUrlBuilder ajouterLOrdre(Ordre ordre)
+    {
+        url += "&order=" + ordre;
         return this;
     }
     

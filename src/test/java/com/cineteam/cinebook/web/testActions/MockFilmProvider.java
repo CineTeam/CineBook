@@ -19,5 +19,15 @@ public class MockFilmProvider implements IFilmProvider
         }
         return resultat;
     }
+
+    public List<Film> getDixDerniersFilms() {
+        List<Film> resultat = new ArrayList<Film>();
+        for(int i=0; i < 10; i++){
+            Film film = films.get(i);
+            resultat.add(film);
+        }
+        
+        return resultat;
+    }
     
 }
