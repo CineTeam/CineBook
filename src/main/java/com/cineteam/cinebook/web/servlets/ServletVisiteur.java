@@ -3,9 +3,7 @@ package com.cineteam.cinebook.web.servlets;
 import com.cineteam.cinebook.model.provider.cinema.CinemaProvider;
 import com.cineteam.cinebook.model.provider.film.FilmProvider;
 import com.cineteam.cinebook.web.actions.Action;
-import com.cineteam.cinebook.web.actions.RechercherCinemaAction;
-import com.cineteam.cinebook.web.actions.RechercherFilmAction;
-import com.cineteam.cinebook.web.actions.RecupererLesDixDerniersFilmsSortisAction;
+import com.cineteam.cinebook.web.actions.*;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,14 +27,7 @@ public class ServletVisiteur extends HttpServlet {
         String param_vue = (String) request.getParameter("vue");
         String param_action = (String) request.getParameter("action");
         if(param_vue!=null && !param_vue.isEmpty()){
-            Action classeAction = null;
-            if(param_vue.equalsIgnoreCase("accueilFilm.jsp")){    
-                classeAction = new RecupererLesDixDerniersFilmsSortisAction(new FilmProvider());
-                vue = dossier_prive+classeAction.execute(request);
-            }
-            else {
-                vue = dossier_prive+param_vue;    
-            }
+            vue = dossier_prive+param_vue;    
         }
         if(param_action!=null && !param_action.isEmpty()){
             Action classeAction = null;
@@ -45,6 +36,9 @@ public class ServletVisiteur extends HttpServlet {
             }
             if (param_action.equalsIgnoreCase("rechercherFilmAction")) {
                     classeAction = new RechercherFilmAction(new FilmProvider());
+            }
+            if(param_action.equalsIgnoreCase("recupererDixDerniersFilmsSortisAction")){    
+                    classeAction = new RecupererDixDerniersFilmsSortisAction(new FilmProvider());
             }
             
             vue = dossier_prive+classeAction.execute(request);

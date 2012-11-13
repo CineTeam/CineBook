@@ -4,15 +4,17 @@ import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.web.actions.RechercherFilmAction;
 import com.cineteam.cinebook.web.testServlets.AddedParametersRequestWrapper;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.replay;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-/** @author ikram */
+/** @author Berangere */
 public class TestRechercherFilmAction {
   
     private MockFilmProvider fauxProvider ;
@@ -36,11 +38,26 @@ public class TestRechercherFilmAction {
         
         rechercherFilmAction.execute(request);
         
-        assertTrue(fauxProvider.getFilmsParNom("").isEmpty());
+        assertTrue(fauxProvider.getFilmsParNom("").isEmpty());        
+        assertNull(request.getAttribute("filmsParNom"));
     }
  
     @Test
-    public void rechercheFilmAvecParametreDeRecherche()
+    public void neRetournePasDeFilmSiPasDeFilm()
+    {
+        String param_recherche = "filmRecherche";
+        final Map parametres = new HashMap();
+        parametres.put("recherche",param_recherche);
+        request = new AddedParametersRequestWrapper(request, parametres);   
+        
+        rechercherFilmAction.execute(request);
+        
+        assertTrue(fauxProvider.getFilmsParNom(param_recherche).isEmpty());       
+        assertTrue(((List<Film>)request.getAttribute("filmsParNom")).isEmpty());
+    }
+    
+    @Test
+    public void rechercheFilmAvecParametreDeRechercheEtFilms()
     {
         final Film film = film();
         fauxProvider.films.add(film);
@@ -51,7 +68,8 @@ public class TestRechercherFilmAction {
         
         rechercherFilmAction.execute(request);
         
-        assertTrue(!fauxProvider.getFilmsParNom(param_recherche).isEmpty());
+        assertTrue(!fauxProvider.getFilmsParNom(param_recherche).isEmpty()); 
+        assertTrue(!((List<Film>)request.getAttribute("filmsParNom")).isEmpty());
     }
     
     public Film film()

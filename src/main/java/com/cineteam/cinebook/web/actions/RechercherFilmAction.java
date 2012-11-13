@@ -1,6 +1,5 @@
 package com.cineteam.cinebook.web.actions;
 
-import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.model.provider.film.IFilmProvider;
 import java.util.List;
@@ -20,15 +19,11 @@ public class RechercherFilmAction implements Action{
 
         String film_recherche = (String) request.getParameter("recherche");
         if(!film_recherche.isEmpty()){
-            
             List<Film> filmsParNom = provider.getFilmsParNom(film_recherche);
-            request.setAttribute("filmsParNom", filmsParNom);           
-            return "listeFilms.jsp";
+            request.setAttribute("filmsParNom", filmsParNom);  
         }
-        else{
-            return "accueilFilm.jsp";
-        }
-  
+        return "listeFilms.jsp";
+ 
     }
     
 }

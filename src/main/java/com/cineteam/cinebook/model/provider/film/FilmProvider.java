@@ -33,14 +33,12 @@ public class FilmProvider implements IFilmProvider
     public List<Film> getDixDerniersFilms() {
         String url = new AllocineApiUrlBuilder(Methodes.FILMSENSALLE).ajouterLaPage(1).ajouterLeNombreDeResultat(10)
                                                                   .ajouterLeFiltre(AllocineApiUrlBuilder.Filtres.ENSALLE).ajouterLOrdre(AllocineApiUrlBuilder.Ordre.DATEDESC).getUrl();
-        System.out.println("-----> " + url);
         List<Film> films = parser.parseFilmFromInputStream(source.getInputStream(url));
         List<Film> resultats = new ArrayList<Film>();
         for(Film film : films)
         {
             resultats.add(film);
         }
-        
         return resultats;
     }
     

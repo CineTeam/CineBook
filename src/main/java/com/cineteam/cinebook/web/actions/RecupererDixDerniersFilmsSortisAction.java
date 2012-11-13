@@ -5,15 +5,12 @@ import com.cineteam.cinebook.model.provider.film.IFilmProvider;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- *
- * @author Cedric
- */
-public class RecupererLesDixDerniersFilmsSortisAction implements Action {
+/** @author Cedric */
+public class RecupererDixDerniersFilmsSortisAction implements Action {
 
     private IFilmProvider provider;
     
-    public RecupererLesDixDerniersFilmsSortisAction(IFilmProvider _provider) {
+    public RecupererDixDerniersFilmsSortisAction(IFilmProvider _provider) {
         provider = _provider;
     }
 
@@ -21,10 +18,8 @@ public class RecupererLesDixDerniersFilmsSortisAction implements Action {
         
         List<Film> derniersFilmsSortis = provider.getDixDerniersFilms();
         request.setAttribute("derniersFilmsSortis", derniersFilmsSortis);           
-        
         return "accueilFilm.jsp";
         
     }
-    
-    
+     
 }

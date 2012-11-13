@@ -16,6 +16,13 @@
         <div id="wrapper">
             <c:import url="header.jsp" />
             <div id="page">
+                <div id="recherche">
+                    <form action="ServletVisiteur?action=rechercherFilmAction" method="post">
+                        Rechercher un film :
+                        <input type="text" name="recherche" />
+                        <input type="submit" id="bouton_valider" name="envoyer" value="Valider"/>
+                    </form>
+                </div>
                 <div id="content">
                     <div class="post">
                         <h1>Liste des films !</h1>
@@ -37,13 +44,16 @@
                                                 </tr>
                                                 <c:forEach var="film" items="${requestScope.filmsParNom}" varStatus="status">
                                                     <tr id="${status.count}" class='clickable'>
-                                                    <td>${film.titre}</td>
-                                                    <td>${film.realisateur}</td>
-                                                    <td>${film.date_sortie}</td> 
+                                                        <td>${film.titre}</td>
+                                                        <td>${film.realisateur}</td>
+                                                        <td>${film.date_sortie}</td> 
                                                     </tr>
                                                 </c:forEach>
                                             </c:otherwise>                                            
                                         </c:choose>
+                                    </c:if>
+                                    <c:if test = "${requestScope.filmsParNom == null}">                                                
+                                        <tr>Veuillez saisir un paramètre de recherche !</tr>
                                     </c:if>
                                 </table>
                                 <div class="invisible">

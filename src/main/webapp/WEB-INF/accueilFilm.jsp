@@ -25,42 +25,44 @@
                 <div id="content">
                     <div class="post">
                         <h1>Accueil Films</h1>
-
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
-                            <table>  
-                                <c:if test = "${requestScope.derniersFilmsSortis != null}">
-                                    <c:choose>
-                                        <c:when test = "${empty requestScope.derniersFilmsSortis}">
-                                            <tr>Aucun film</tr>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <tr>
-                                                <th>Titre : </th>
-                                                <th>Réalisateur :</th>
-                                                <th>Date de sortie : </th>
-                                            </tr>
-                                            <c:forEach var="film" items="${requestScope.derniersFilmsSortis}" varStatus="status">
-                                                <tr id="${status.count}" class='clickable'>
-                                                <td>${film.titre}</td>
-                                                <td>${film.realisateur}</td>
-                                                <td>${film.date_sortie}</td> 
+                            
+                            Les dernières sorties !
+                            <form action="ServletVisiteur?#" method="post">
+                                <table>  
+                                    <c:if test = "${requestScope.derniersFilmsSortis != null}">
+                                        <c:choose>
+                                            <c:when test = "${empty requestScope.derniersFilmsSortis}">
+                                                <tr>Aucun film</tr>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <tr>
+                                                    <th>Titre : </th>
+                                                    <th>Réalisateur :</th>
+                                                    <th>Date de sortie : </th>
                                                 </tr>
-                                            </c:forEach>
-                                        </c:otherwise>                                            
-                                    </c:choose>
-                                </c:if>
-                            </table>
-                            <div class="invisible">
-                                <input id="cpt" type="text" value="test" name="cpt"/>
-                                <input id="bouton" type="submit" />
-                            </div>
+                                                <c:forEach var="film" items="${requestScope.derniersFilmsSortis}" varStatus="status">
+                                                    <tr id="${status.count}" class='clickable'>
+                                                        <td>${film.titre}</td>
+                                                        <td>${film.realisateur}</td>
+                                                        <td>${film.date_sortie}</td> 
+                                                    </tr>
+                                                </c:forEach>
+                                            </c:otherwise>                                            
+                                        </c:choose>
+                                    </c:if>
+                                </table>
+                                <div class="invisible">
+                                    <input id="cpt" type="text" value="test" name="cpt"/>
+                                    <input id="bouton" type="submit" />
+                                </div>
+                            </form>
                         </div>
                     </div>
 
                     <div style="clear: both;">&nbsp;</div>
                 </div>
-
                 <div style="clear: both;">&nbsp;</div>
             </div>
         </div>

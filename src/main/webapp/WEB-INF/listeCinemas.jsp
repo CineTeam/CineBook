@@ -16,6 +16,13 @@
         <div id="wrapper">
             <c:import url="header.jsp" />
             <div id="page">
+                <div id="recherche">
+                    <form action="ServletVisiteur?action=rechercherCinemaAction" method="post">
+                        Rechercher un cinéma :
+                        <input type="text" name="recherche" />
+                        <input type="submit" id="bouton_valider" name="envoyer" value="Valider"/>
+                    </form>
+                </div>
                 <div id="content">
                     <div class="post">
                         <h1>Liste des cinemas !</h1>
@@ -38,14 +45,17 @@
                                                 </tr>
                                                 <c:forEach var="cinema" items="${requestScope.cinemasParNom}" varStatus="status">
                                                     <tr id="${status.count}" class='clickable'>
-                                                    <td>${cinema.nom}</td>
-                                                    <td>${cinema.adresse}</td>
-                                                    <td>${cinema.code_postal}</td> 
-                                                    <td>${cinema.ville}</td>
+                                                        <td>${cinema.nom}</td>
+                                                        <td>${cinema.adresse}</td>
+                                                        <td>${cinema.code_postal}</td> 
+                                                        <td>${cinema.ville}</td>
                                                     </tr>
                                                 </c:forEach>
                                             </c:otherwise>                                            
                                         </c:choose>
+                                    </c:if>
+                                    <c:if test = "${requestScope.cinemasParNom == null}">                                                
+                                        <tr>Veuillez saisir un paramètre de recherche !</tr>
                                     </c:if>
                                 </table>
                                 <div class="invisible">

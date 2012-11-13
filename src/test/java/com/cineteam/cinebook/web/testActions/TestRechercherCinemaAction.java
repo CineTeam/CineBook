@@ -4,10 +4,12 @@ import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.web.actions.RechercherCinemaAction;
 import com.cineteam.cinebook.web.testServlets.AddedParametersRequestWrapper;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.replay;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,9 +38,24 @@ public class TestRechercherCinemaAction {
         
         rechercherCinemaAction.execute(request);
         
-        assertTrue(fauxProvider.getCinemasParNom("").isEmpty());
+        assertTrue(fauxProvider.getCinemasParNom("").isEmpty());       
+        assertNull(request.getAttribute("cinemasParNom"));
     }
  
+    @Test
+    public void neRetournePasDeCinemasSiPasDeCinema()
+    {
+        String param_recherche = "cinemaRecherche";
+        final Map parametres = new HashMap();
+        parametres.put("recherche",param_recherche);
+        request = new AddedParametersRequestWrapper(request, parametres);   
+        
+        rechercherCinemaAction.execute(request);
+        
+        assertTrue(fauxProvider.getCinemasParNom(param_recherche).isEmpty());       
+        assertTrue(((List<Cinema>)request.getAttribute("cinemasParNom")).isEmpty());
+    }
+    
     @Test
     public void rechercheCinemaAvecParametreDeRecherche()
     {
@@ -52,6 +69,7 @@ public class TestRechercherCinemaAction {
         rechercherCinemaAction.execute(request);
         
         assertTrue(!fauxProvider.getCinemasParNom(param_recherche).isEmpty());
+        assertTrue(!((List<Cinema>)request.getAttribute("cinemasParNom")).isEmpty());
     }
     
     public Cinema cinema()

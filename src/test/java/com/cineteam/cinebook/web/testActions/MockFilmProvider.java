@@ -5,16 +5,18 @@ import com.cineteam.cinebook.model.provider.film.IFilmProvider;
 import java.util.ArrayList;
 import java.util.List;
 
-/** @author alexis */
+/** @author ikram */
 public class MockFilmProvider implements IFilmProvider
 {
     public List<Film> films = new ArrayList<Film>();
     
     public List<Film> getFilmsParNom(String nom) {
         List<Film> resultat = new ArrayList<Film>();
-        for(Film film : films){
-            if(film.getTitre().contains(nom)) {
-                resultat.add(film);
+        if(!films.isEmpty()){
+            for(Film film : films){
+                if(film.getTitre().contains(nom)) {
+                    resultat.add(film);
+                }
             }
         }
         return resultat;
@@ -22,11 +24,12 @@ public class MockFilmProvider implements IFilmProvider
 
     public List<Film> getDixDerniersFilms() {
         List<Film> resultat = new ArrayList<Film>();
-        for(int i=0; i < 10; i++){
-            Film film = films.get(i);
-            resultat.add(film);
+        if(!films.isEmpty()){
+            for(int i=0; i < 10; i++){
+                Film film = films.get(i);
+                resultat.add(film);
+            }
         }
-        
         return resultat;
     }
     

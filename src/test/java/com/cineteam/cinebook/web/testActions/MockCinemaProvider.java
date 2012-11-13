@@ -10,13 +10,14 @@ public class MockCinemaProvider implements ICinemaProvider
 {
     public List<Cinema> cinemas = new ArrayList<Cinema>();
     
-   
     public List<Cinema> getCinemasParNom(String nom)
     {
         List<Cinema> resultat = new ArrayList<Cinema>();
-        for(Cinema cinema : cinemas){
-            if(cinema.getNom().contains(nom))
-                resultat.add(cinema);
+        if(!cinemas.isEmpty()){
+            for(Cinema cinema : cinemas){
+                if(cinema.getNom().contains(nom))
+                    resultat.add(cinema);
+            }
         }
         return resultat;
     }
