@@ -28,6 +28,6 @@ public class TestAllocineApiUrlBuilder {
     {
         String url = new AllocineApiUrlBuilder(Methodes.FILMSENSALLE).ajouterLaPage(1).ajouterLeNombreDeResultat(10)
                                                                   .ajouterLeFiltre(AllocineApiUrlBuilder.Filtres.ENSALLE).ajouterLOrdre(AllocineApiUrlBuilder.Ordre.DATEDESC).getUrl();
-        assertEquals("http://api.allocine.fr/rest/v3/movielist?partner=YW5kcm9pZC12M3M&format=xml&page=1&count=10&filter=nowshowing&order=DATEDESC", url);
+        assertEquals("http://api.allocine.fr/rest/v3/movielist?partner=YW5kcm9pZC12M3M&format=xml&page=1&count=10&filter=nowshowing&order=datedesc", url);
     }
 }

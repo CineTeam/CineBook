@@ -4,6 +4,7 @@ import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Filtres;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Methodes;
+import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Ordre;
 import com.cineteam.cinebook.model.provider.UrlProviderSource;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,14 +33,10 @@ public class FilmProvider implements IFilmProvider
 
     public List<Film> getDixDerniersFilms() {
         String url = new AllocineApiUrlBuilder(Methodes.FILMSENSALLE).ajouterLaPage(1).ajouterLeNombreDeResultat(10)
-                                                                  .ajouterLeFiltre(AllocineApiUrlBuilder.Filtres.ENSALLE).ajouterLOrdre(AllocineApiUrlBuilder.Ordre.DATEDESC).getUrl();
+                                                                  .ajouterLeFiltre(Filtres.ENSALLE).ajouterLOrdre(Ordre.DATEDESC).getUrl();
         List<Film> films = parser.parseFilmFromInputStream(source.getInputStream(url));
-        List<Film> resultats = new ArrayList<Film>();
-        for(Film film : films)
-        {
-            resultats.add(film);
-        }
-        return resultats;
+
+        return films;
     }
     
 }

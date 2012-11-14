@@ -94,7 +94,7 @@ public class AllocineApiUrlBuilder
     
     public AllocineApiUrlBuilder ajouterLOrdre(Ordre ordre)
     {
-        url += "&order=" + ordre;
+        url += "&order=" + ordre.getOrdre();
         return this;
     }
     
