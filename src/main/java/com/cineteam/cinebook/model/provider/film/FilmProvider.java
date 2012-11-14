@@ -23,7 +23,7 @@ public class FilmProvider implements IFilmProvider
         List<Film> resultats = new ArrayList<Film>();
         for(Film film : films)
         {
-            if(film.getTitre().contains(nom))
+            if(film.getTitre().toLowerCase().contains(nom.toLowerCase()))
             {
                 resultats.add(film);
             }

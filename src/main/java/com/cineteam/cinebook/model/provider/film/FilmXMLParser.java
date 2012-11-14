@@ -70,8 +70,24 @@ public class FilmXMLParser extends AXMLParser
             String stringDateSortie = release.getChildText("releaseDate", defaultNameSpace);
             if(stringDateSortie != null)
             {
-                DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd");
-                return formatter.parseDateTime(stringDateSortie);
+                DateTimeFormatter formatter;
+                if(stringDateSortie.length() > 4)
+                {
+                     formatter = DateTimeFormat.forPattern("yyyy-MM-dd");    
+                }
+                else
+                {
+                    formatter = DateTimeFormat.forPattern("yyyy");
+                }
+                
+                DateTime dateSortie = null;
+                try{
+                    dateSortie = formatter.parseDateTime(stringDateSortie);
+                }
+                catch(Exception e){
+                }
+                
+                return dateSortie;
             }
         }
         
