@@ -39,6 +39,7 @@ ul, ol {
 
 a {
     color: #5E5E5E;
+    text-decoration: none;
 }
 
 a:hover {
@@ -267,4 +268,32 @@ a:hover {
 
 .invisible{
     display : none;
+}
+
+.short_film{
+    background-color: transparent;
+    height : 270px;
+    width:500px;
+}
+
+.titre_film{
+    font-weight : bold;
+    font-size: 15px;
+    padding :0 0 0 0;
+    margin:0 0 0 0;
+}
+
+.short_img{
+    display:block;
+    float:left;
+    width:200px;
+    height : 270px;
+}
+
+.short_desc{
+    display:block;
+    margin-left: 200px;
+    padding-left:20px; 
+    width:300px;
+    height : 270px;
 }

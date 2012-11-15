@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +25,7 @@
                                 <form action="ServletVisiteur?action=rechercherFilmAction" method="post">
                                     Rechercher un film :
                                     <input type="text" name="recherche" />
-                                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider"/>
+                                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider" class='clickable'/>
                                 </form>
                             </div>
                         </div>
@@ -39,16 +40,31 @@
                                                 <tr>Aucun film ne correspond à votre recherche</tr>
                                             </c:when>
                                             <c:otherwise>
-                                                <tr>
-                                                    <th>Titre : </th>
-                                                    <th>Réalisateur :</th>
-                                                    <th>Date de sortie : </th>
-                                                </tr>
                                                 <c:forEach var="film" items="${requestScope.filmsParNom}" varStatus="status">
-                                                    <tr id="${status.count}" class='clickable'>
-                                                        <td>${film.titre}</td>
-                                                        <td>${film.realisateur}</td>
-                                                        <td>${film.date_sortie}</td> 
+                                                    <tr>
+                                                        <a href='#' id="${status.count}" class='clickable'>
+                                                            <div class="short_film">
+                                                                <div class="short_img">
+                                                                    <c:choose>
+                                                                        <c:when test = "${film.url_affiche !=null}">
+                                                                            <img src="${film.url_affiche}" width='200' height='270'/>
+                                                                        </c:when>
+                                                                        <c:otherwise>
+                                                                            <img src="images/image-non-dispo.jpg" width='200' height='270'/>
+                                                                        </c:otherwise>
+                                                                    </c:choose>
+                                                                </div>
+                                                                <div class="short_desc">
+                                                                    <p class="titre_film">${film.titre}</p>
+                                                                    <c:if test = "${film.date_sortie !=null}">Sorti le <f:formatDate value="${film.date_sortie}" type="date" dateStyle="default" /> <br> </c:if>
+                                                                    <c:if test = "${film.realisateur !=null}">Par ${film.realisateur} <br></c:if>
+                                                                    <c:if test = "${film.acteurs !=null}">Avec ${film.acteurs}</c:if>
+                                                                </div>   
+                                                            </div>
+                                                        </a>
+                                                    </tr>
+                                                    <tr>
+                                                        <br>
                                                     </tr>
                                                 </c:forEach>
                                             </c:otherwise>                                            

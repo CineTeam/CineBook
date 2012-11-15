@@ -10,7 +10,6 @@
     text-decoration: none;
 }
 
-
 #slider li, #slider ul{
     margin:0 auto;    
 }
@@ -47,29 +46,4 @@
 
 .short_film{
     margin-left:200px;
-    background-color: transparent;
-    height : 270px;
-    width:500px;
-}
-
-.titre_film{
-    font-weight : bold;
-    font-size: 15px;
-    padding :0 0 0 0;
-    margin:0 0 0 0;
-}
-
-.short_img{
-    display:block;
-    float:left;
-    width:200px;
-    height : 270px;
-}
-
-.short_desc{
-    display:block;
-    margin-left: 200px;
-    padding-left:20px; 
-    width:300px;
-    height : 270px;
 }

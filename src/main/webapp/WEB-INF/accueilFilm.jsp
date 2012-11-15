@@ -43,7 +43,7 @@
                                 <form action="ServletVisiteur?action=rechercherFilmAction" method="post">
                                     Rechercher un film :
                                     <input type="text" name="recherche" />
-                                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider"/>
+                                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider" class='clickable'/>
                                 </form>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                                 <c:otherwise>
                                                     <c:forEach var="film" items="${requestScope.derniersFilmsSortis}" varStatus="status">                           
                                                         <li>
-                                                            <a href='#' id="${status.count}" class='clic'>
+                                                            <a href='#' id="${status.count}" class='clickable'>
                                                                 <div class="short_film">
                                                                     <div class="short_img">
                                                                         <img src="${film.url_affiche}" width='200' height='270'/>
@@ -80,8 +80,8 @@
                                         </c:if>
                                     </ul>
                                     <div class="invisible">
-                                        <input id='cptALaUne' type='text' value='test' name='cptALaUne'/>
-                                        <input id='boutonDetail' type='submit' />
+                                        <input id='cpt' type='text' value='test' name='cptALaUne'/>
+                                        <input id='bouton' type='submit' />
                                     </div>
                                 </form>
                             </div>

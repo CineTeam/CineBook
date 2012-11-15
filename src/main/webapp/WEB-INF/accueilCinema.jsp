@@ -23,7 +23,7 @@
                                 <form action="ServletVisiteur?action=rechercherCinemaAction" method="post">
                                     Rechercher un cinéma :
                                     <input type="text" name="recherche" />
-                                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider"/>
+                                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider" class='clickable'/>
                                 </form>
                             </div>
                         </div>
