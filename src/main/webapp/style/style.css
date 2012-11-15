@@ -61,7 +61,7 @@ a:hover {
 
 #header {
     width: 1000px;
-    height: 150px;
+    height: 90px;
     margin: 0 auto;
     padding: 0px 0px;
 }
@@ -70,7 +70,7 @@ a:hover {
 
 #menu {
     float: left;
-    height: 90px;
+    height: auto;
     margin: 0 auto;
     padding: 0;
 }
@@ -78,7 +78,7 @@ a:hover {
 #menu ul {
     float: left;
     margin: 0;
-    padding: 20px 0px 0px 0px;
+    padding: 0 0 0 0;
     list-style: none;
     line-height: normal;
 }
@@ -112,9 +112,19 @@ a:hover {
 #menu .current_page_item a {
 }
 
+#entete{
+    width:1000px;
+}
+
+#entete h1{
+    display: block;
+    width:auto;
+    float : left;
+}
+
 #recherche {
     float: right;
-    height: 90px;
+    height: auto;
     margin: 0 auto;
     padding: 0;
 }
@@ -232,7 +242,7 @@ a:hover {
 #banner {
     margin: 0px auto;
     width: 1000px;
-    height: 330px;
+    height: 230px;
     background: url(../images/img03.png) no-repeat left bottom;
 }
 

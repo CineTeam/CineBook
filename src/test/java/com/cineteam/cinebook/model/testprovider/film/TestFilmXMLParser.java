@@ -46,7 +46,7 @@ public class TestFilmXMLParser {
         assertNotNull(films);
         assertEquals("61282", film.getId());
         assertEquals("Avatar", film.getTitre());
-        assertEquals(new DateTime(2010,9,1,0,0), film.getDate_sortie());
+        assertEquals(new DateTime(2010,9,1,0,0).toDate(), film.getDate_sortie());
         assertEquals("James Cameron", film.getRealisateur());
         assertEquals("Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang, Michelle Rodriguez", film.getActeurs());
         assertEquals(4.3333,film.getNote_presse(), 0.1 );

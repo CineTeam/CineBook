@@ -4,6 +4,7 @@ import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.model.provider.AXMLParser;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import org.jdom.Document;
@@ -63,7 +64,7 @@ public class FilmXMLParser extends AXMLParser
         }
     }
 
-    private DateTime parseDateSortie(Element courant) {
+    private Date parseDateSortie(Element courant) {
         Element release = courant.getChild("release",defaultNameSpace);
         if(release != null)
         {
@@ -87,7 +88,7 @@ public class FilmXMLParser extends AXMLParser
                 catch(Exception e){
                 }
                 
-                return dateSortie;
+                return dateSortie.toDate();
             }
         }
         

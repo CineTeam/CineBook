@@ -1,13 +1,14 @@
 package com.cineteam.cinebook.model.entity;
 
-import org.joda.time.DateTime;
+import java.util.Date;
+
 
 /** @author alexis */
 public class Film {
 
     private String id;
     private String titre;
-    private DateTime date_sortie;
+    private Date date_sortie;
     private String realisateur;
     private String acteurs;
     private float note_utilisateurs;
@@ -32,11 +33,11 @@ public class Film {
         titre = _titre;
     }
 
-    public DateTime getDate_sortie() {
+    public Date getDate_sortie() {
         return date_sortie;
     }
 
-    public void setDate_sortie(DateTime _date_sortie) {
+    public void setDate_sortie(Date _date_sortie) {
         date_sortie = _date_sortie;
     }
 
