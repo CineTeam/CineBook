@@ -4,13 +4,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>CinéBook</title>
+        <title>Cinémas</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
         <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
         <link href="style/style.css" rel="stylesheet" type="text/css" media="screen" />
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/tableaux.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
     </head>
     <body>
         <div id="wrapper">
