@@ -81,14 +81,15 @@ public class FilmXMLParser extends AXMLParser
                     formatter = DateTimeFormat.forPattern("yyyy");
                 }
                 
-                DateTime dateSortie = null;
+                Date dateSortie = null;
                 try{
-                    dateSortie = formatter.parseDateTime(stringDateSortie);
+                    DateTime dateSortieDt = formatter.parseDateTime(stringDateSortie);
+                    dateSortie = dateSortieDt.toDate();
                 }
                 catch(Exception e){
                 }
                 
-                return dateSortie.toDate();
+                return dateSortie;
             }
         }
         
