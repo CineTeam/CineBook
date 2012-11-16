@@ -6,7 +6,7 @@
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Accueil</title>
+        <title>CinéBook</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
         <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
@@ -14,8 +14,7 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
     </head>
-
-    <body>
+    <body id="Accueil">
         <div id="wrapper">
             <c:import url="header.jsp" />
 

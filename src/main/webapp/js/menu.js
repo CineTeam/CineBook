@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   var titre = document.getElementsByTagName("title")[0].firstChild.nodeValue;
+   var titre = $(document.getElementsByTagName("body")[0]).attr("id");
    var li = document.getElementById("ul_menu").getElementsByTagName("li");
    
    for(i=0; i<li.length; i++){
