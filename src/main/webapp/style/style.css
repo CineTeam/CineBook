@@ -104,10 +104,13 @@ a:hover {
     border: none;
 }
 
-#menu a:hover, #menu .current_page_item a {
+#menu .current_page_item a, #menu .current_page_item a:hover {
     background: url(../images/img01.jpg) repeat;
     text-decoration: none;
     color: #FFFFFF;
+}
+#menu a:hover {
+    background: url(../images/img02.jpg) repeat;
 }
 
 #entete{

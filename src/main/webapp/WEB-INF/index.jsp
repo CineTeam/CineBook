@@ -22,7 +22,7 @@
             <div id="page">
                 <div id="content">
                     <div class="post">
-                        <h2 class="title"><a href="#">Bienvenue sur CineBook</a></h2>
+                        <h1>Bienvenue sur CineBook</h1>
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu blandit ante. Mauris faucibus felis egestas tortor aliquet pellentesque. Sed enim metus, viverra in dignissim in, laoreet et elit. Donec vestibulum interdum ornare. Curabitur dapibus, justo tempor ultricies ullamcorper, lacus leo ultrices libero, ac viverra risus mi ut dui. Nullam adipiscing tincidunt laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla interdum vestibulum augue sed consectetur. Maecenas urna risus, pretium elementum ornare id, varius eget velit. Duis condimentum, sapien ac condimentum fermentum, dui sapien consectetur risus, sed imperdiet turpis odio eu neque. Duis viverra, massa non volutpat gravida, dui dui porta est, vitae molestie augue ante ut erat. Mauris et felis vel arcu dapibus malesuada in at elit. Pellentesque vel est nulla, in dictum justo. Donec venenatis nisl eu ipsum pharetra molestie.</p>
