@@ -18,7 +18,7 @@ public class TestCinemaProvider {
     {
         CinemaProvider cinemaProvider = new CinemaProvider();
         
-        List<Cinema> cinemas = cinemaProvider.getCinemasParNom("Bordeaux");
+        List<Cinema> cinemas = cinemaProvider.rechercherCinemasParMotCle("Bordeaux");
         
         assertNotNull(cinemas);
         assertTrue(cinemas.size() > 0);
@@ -29,7 +29,7 @@ public class TestCinemaProvider {
     {
         CinemaProvider cinemaProvider = new CinemaProvider();
         
-        List<Cinema> cinemas = cinemaProvider.getCinemasParNom("Bordeaux");
+        List<Cinema> cinemas = cinemaProvider.rechercherCinemasParMotCle("Bordeaux");
         
         assertNotNull(cinemas);
         assertTrue(cinemas.size() > 0);

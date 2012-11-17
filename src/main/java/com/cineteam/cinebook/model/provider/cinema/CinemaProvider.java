@@ -13,7 +13,7 @@ public class CinemaProvider implements ICinemaProvider {
     private CinemaXMLParser parser = new CinemaXMLParser();
     private UrlProviderSource source = new UrlProviderSource();
     
-    public List<Cinema> getCinemasParNom(String nom) 
+    public List<Cinema> rechercherCinemasParMotCle(String nom) 
     {
         String url = new AllocineApiUrlBuilder(Methodes.RECHERCHE).ajouterLaPage(1).ajouterLeNombreDeResultat(200)
                                                                   .ajouterLeFiltre(Filtres.CINEMA).ajouterLaRequete(nom).getUrl();

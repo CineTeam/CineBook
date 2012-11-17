@@ -6,5 +6,5 @@ import java.util.List;
 /** @author alexis */
 public interface ICinemaProvider
 {
-    public List<Cinema> getCinemasParNom(String nom);
+    public List<Cinema> rechercherCinemasParMotCle(String nom);
 }

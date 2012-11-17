@@ -38,7 +38,7 @@ public class TestRechercherCinemaAction {
         
         rechercherCinemaAction.execute(request);
         
-        assertTrue(fauxProvider.getCinemasParNom("").isEmpty());       
+        assertTrue(fauxProvider.rechercherCinemasParMotCle("").isEmpty());       
         assertNull(request.getAttribute("cinemasParNom"));
     }
  
@@ -52,7 +52,7 @@ public class TestRechercherCinemaAction {
         
         rechercherCinemaAction.execute(request);
         
-        assertTrue(fauxProvider.getCinemasParNom(param_recherche).isEmpty());       
+        assertTrue(fauxProvider.rechercherCinemasParMotCle(param_recherche).isEmpty());       
         assertTrue(((List<Cinema>)request.getAttribute("cinemasParNom")).isEmpty());
     }
     
@@ -68,7 +68,7 @@ public class TestRechercherCinemaAction {
         
         rechercherCinemaAction.execute(request);
         
-        assertTrue(!fauxProvider.getCinemasParNom(param_recherche).isEmpty());
+        assertTrue(!fauxProvider.rechercherCinemasParMotCle(param_recherche).isEmpty());
         assertTrue(!((List<Cinema>)request.getAttribute("cinemasParNom")).isEmpty());
     }
     

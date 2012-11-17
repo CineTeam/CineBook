@@ -117,4 +117,10 @@ public class AddedParametersRequestWrapper extends HttpServletRequestWrapper {
     public String getMethod () {
         return this.method;
     }
+    
+    @Override
+    public void setCharacterEncoding(String encoding)
+    {
+        
+    }
  }

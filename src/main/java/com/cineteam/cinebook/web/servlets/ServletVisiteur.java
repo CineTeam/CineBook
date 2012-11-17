@@ -24,6 +24,7 @@ public class ServletVisiteur extends HttpServlet {
     throws ServletException, IOException {
         
         String dossier_prive = "/WEB-INF/";
+        request.setCharacterEncoding("UTF-8");
         String param_vue = (String) request.getParameter("vue");
         String param_action = (String) request.getParameter("action");
         if(param_vue!=null && !param_vue.isEmpty()){

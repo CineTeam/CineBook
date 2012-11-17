@@ -19,7 +19,7 @@ public class RechercherCinemaAction implements Action{
 
         String cinema_recherche = (String) request.getParameter("recherche");
         if(!cinema_recherche.isEmpty()){
-            List<Cinema> cinemasParNom = provider.getCinemasParNom(cinema_recherche);
+            List<Cinema> cinemasParNom = provider.rechercherCinemasParMotCle(cinema_recherche);
             request.setAttribute("cinemasParNom", cinemasParNom);       
         }    
         return "listeCinemas.jsp";

@@ -10,7 +10,7 @@ public class MockFilmProvider implements IFilmProvider
 {
     public List<Film> films = new ArrayList<Film>();
     
-    public List<Film> getFilmsParNom(String nom) {
+    public List<Film> rechercherFilmParMotCle(String nom) {
         List<Film> resultat = new ArrayList<Film>();
         if(!films.isEmpty()){
             for(Film film : films){

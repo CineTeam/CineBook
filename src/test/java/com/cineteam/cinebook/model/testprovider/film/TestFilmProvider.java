@@ -15,25 +15,31 @@ public class TestFilmProvider {
     {
         FilmProvider filmProvider = new FilmProvider();
         
-        List<Film> films = filmProvider.getFilmsParNom("Avatar");
+        List<Film> films = filmProvider.rechercherFilmParMotCle("Avatar");
         
         assertNotNull(films);
         assertTrue(films.size() > 0);
     }
     
     @Test
-    public void retourneListDeFilmAvecLeNomRecheche() 
+    public void retourneListDeFilmQuandLeNomAUnAccent() 
     {
         FilmProvider filmProvider = new FilmProvider();
         
-        List<Film> films = filmProvider.getFilmsParNom("Avatar");
+        List<Film> films = filmProvider.rechercherFilmParMotCle("arrête");
         
         assertNotNull(films);
         assertTrue(films.size() > 0);
+    }
+    
+    @Test
+    public void retourneListDeFilmQuandLeNomAUnEspace() 
+    {
+        FilmProvider filmProvider = new FilmProvider();
         
-        for(Film film : films)
-        {
-            assertTrue(film.getTitre().contains("Avatar"));
-        }
+        List<Film> films = filmProvider.rechercherFilmParMotCle("le seigneur");
+        
+        assertNotNull(films);
+        assertTrue(films.size() > 0);
     }
 }

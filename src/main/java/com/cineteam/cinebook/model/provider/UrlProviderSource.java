@@ -10,6 +10,7 @@ public class UrlProviderSource implements IProviderSource {
 
     public InputStream getInputStream(String sourcePath)
     {
+        sourcePath = StringUtils.formaterPourUneUrl(sourcePath);
         URL url = null;
         InputStream is = null;
         try {
