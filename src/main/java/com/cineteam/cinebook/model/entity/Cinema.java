@@ -1,4 +1,6 @@
 package com.cineteam.cinebook.model.entity;
+import com.cineteam.cinebook.outils.Geolocalisation;
+
 
 /** @author alexis */
 public class Cinema 
@@ -8,6 +10,9 @@ public class Cinema
     private String adresse;
     private String code_postal;
     private String ville;
+    private int nombreEcrans;
+    private Geolocalisation position;
+    private String urlImage;
     
     public String getId()
     {
@@ -56,5 +61,29 @@ public class Cinema
     public void setVille(String _ville)
     {
         ville = _ville;
+    }
+
+    public int getNombreEcrans() {
+        return nombreEcrans;
+    }
+
+    public void setNombreEcrans(int nombreEcrans) {
+        this.nombreEcrans = nombreEcrans;
+    }
+
+    public Geolocalisation getPosition() {
+        return position;
+    }
+
+    public void setPosition(Geolocalisation position) {
+        this.position = position;
+    }
+
+    public String getUrlImage() {
+        return urlImage;
+    }
+
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
     }
 }

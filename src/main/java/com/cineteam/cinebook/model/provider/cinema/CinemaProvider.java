@@ -4,6 +4,7 @@ import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Filtres;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Methodes;
+import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.NiveauDetail;
 import com.cineteam.cinebook.model.provider.UrlProviderSource;
 import java.util.List;
 
@@ -17,15 +18,22 @@ public class CinemaProvider implements ICinemaProvider {
     {
         String url = new AllocineApiUrlBuilder(Methodes.RECHERCHE).ajouterLaPage(1).ajouterLeNombreDeResultat(200)
                                                                   .ajouterLeFiltre(Filtres.CINEMA).ajouterLaRequete(nom).getUrl();
-        List<Cinema> resultat = parser.parseCinemaFromInputStream(source.getInputStream(url));
+        List<Cinema> resultat = parser.parserLesCinemasAPartirDeInputStream(source.getInputStream(url));
         return resultat;
     }
     
     public List<Cinema> rechercherCinemasParCodePostal(String codePostal) 
     {
         String url = new AllocineApiUrlBuilder(Methodes.LISTECINEMA).ajouterLeNombreDeResultat(200).ajouterLeCodePostal(codePostal).getUrl();
-        List<Cinema> resultat = parser.parseCinemaFromInputStream(source.getInputStream(url));
+        List<Cinema> resultat = parser.parserLesCinemasAPartirDeInputStream(source.getInputStream(url));
         return resultat;
+    }
+    
+    public Cinema getDetailCinema (String id)
+    {
+        String url = new AllocineApiUrlBuilder(Methodes.DETAILCINEMA).ajouterLIdentifiant(id).ajouterLeNiveauDeDetail(NiveauDetail.LARGE).getUrl();
+        Cinema resultat = parser.parserLeCinemaAPartirDeInputStream(source.getInputStream(url));
+        return resultat; 
     }
     
 }

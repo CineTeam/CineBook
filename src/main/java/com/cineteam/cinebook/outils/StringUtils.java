@@ -1,4 +1,4 @@
-package com.cineteam.cinebook.model.provider;
+package com.cineteam.cinebook.outils;
 
 import java.text.Normalizer;
 

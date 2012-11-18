@@ -1,6 +1,6 @@
-package com.cineteam.cinebook.model.testprovider;
+package com.cineteam.cinebook.testoutils;
 
-import com.cineteam.cinebook.model.provider.StringUtils;
+import com.cineteam.cinebook.outils.StringUtils;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 

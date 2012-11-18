@@ -1,5 +1,6 @@
 package com.cineteam.cinebook.model.provider;
 
+import com.cineteam.cinebook.outils.StringUtils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;

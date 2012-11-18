@@ -8,7 +8,8 @@ public class AllocineApiUrlBuilder
         RECHERCHE ("search"),
         FILMSENSALLE ("movielist"),
         DETAILFILM ("movie"),
-        LISTECINEMA ("theaterlist");
+        LISTECINEMA ("theaterlist"),
+        DETAILCINEMA ("theater");
         
         private final String value;
         

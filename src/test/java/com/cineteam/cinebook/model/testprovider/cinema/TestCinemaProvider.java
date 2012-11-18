@@ -36,5 +36,13 @@ public class TestCinemaProvider {
         
     }
     
-    
+    @Test
+    public void retourneUnCinemaParSonIdentifiant() 
+    {
+        CinemaProvider cinemaProvider = new CinemaProvider();
+        
+        Cinema cinema = cinemaProvider.getDetailCinema("W3300");
+        
+        assertNotNull(cinema);
+    }
 }

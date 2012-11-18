@@ -47,4 +47,11 @@ public class TestAllocineApiUrlBuilder {
         String url = new AllocineApiUrlBuilder(Methodes.LISTECINEMA).ajouterLeCodePostal("33000").ajouterLeNombreDeResultat(200).getUrl();
         assertEquals("http://api.allocine.fr/rest/v3/theaterlist?partner=YW5kcm9pZC12M3M&format=xml&zip=33000&count=200", url);
     }
+    
+    @Test
+    public void retourneUrlDUnCinemaAvecLesBonsParemetres()
+    {
+        String url = new AllocineApiUrlBuilder(Methodes.DETAILCINEMA).ajouterLIdentifiant("W3300").ajouterLeNiveauDeDetail(NiveauDetail.LARGE).getUrl();
+        assertEquals("http://api.allocine.fr/rest/v3/theater?partner=YW5kcm9pZC12M3M&format=xml&code=W3300&profile=large", url);
+    }
 }

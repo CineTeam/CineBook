@@ -55,7 +55,7 @@ public class TestFilmXMLParser {
     }
     
     @Test
-    public void parserRetourneLeDetailDUnFilmComplets()
+    public void parserRetourneLeDetailDUnFilmComplet()
     {
         FilmXMLParser parser = new FilmXMLParser();
         FileProviderSource source = new FileProviderSource();

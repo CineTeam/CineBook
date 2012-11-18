@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<theater code="W3300" xmlns="http://www.allocine.net/v6/ns/">
+  <altIdList>
+    <altId scheme="alttheater" code="3190" />
+  </altIdList>
+  <name>Mega CGR Français - Bordeaux</name>
+  <address>9 rue Montesquieu</address>
+  <postalCode>33000</postalCode>
+  <city>Bordeaux</city>
+  <cinemaChain code="81005">CGR</cinemaChain>
+  <screenCount>12</screenCount>
+  <geoloc lat="44.8424880" long="-0.5785400" />
+  <comment>Bar à Vin, Ecrans 3D et bornes interactives dans le hall d'accueil, location d'espaces</comment>
+  <picture path="/medias/nmedia/18/75/02/25/19456348.JPG" href="http://images.allocine.fr/medias/nmedia/18/75/02/25/19456348.JPG" />
+  <candyStore>1</candyStore>
+  <linkList>
+    <link rel="aco:web" href="http://www.allocine.fr/seance/salle_gen_csalle=W3300.html" />
+  </linkList>
+</theater>
