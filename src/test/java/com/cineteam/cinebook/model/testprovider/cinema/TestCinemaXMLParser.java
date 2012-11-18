@@ -64,10 +64,10 @@ public class TestCinemaXMLParser {
         assertEquals("9 rue Montesquieu", cinema.getAdresse());
         assertEquals("33000", cinema.getCode_postal());
         assertEquals("Bordeaux", cinema.getVille());
-        assertEquals(12, cinema.getNombreEcrans());
+        assertEquals(12, cinema.getNombre_ecrans());
         assertNotNull(cinema.getPosition());
         assertEquals(44.8424880, cinema.getPosition().getLatitude(), 0.001);
         assertEquals(-0.5785400, cinema.getPosition().getLongitude(), 0.001);
-        assertEquals("http://images.allocine.fr/medias/nmedia/18/75/02/25/19456348.JPG", cinema.getUrlImage());
+        assertEquals("http://images.allocine.fr/medias/nmedia/18/75/02/25/19456348.JPG", cinema.getUrl_image());
     }
 }

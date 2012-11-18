@@ -19,7 +19,6 @@ public class StringUtils
     {
         url = remplacerLesAccents(url);
         url = remplacerLesEspacesPourUneUrl(url);
-        
         return url;
     }
 }

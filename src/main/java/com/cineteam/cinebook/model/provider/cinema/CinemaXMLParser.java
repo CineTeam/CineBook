@@ -2,7 +2,7 @@ package com.cineteam.cinebook.model.provider.cinema;
 
 import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.provider.AXMLParser;
-import com.cineteam.cinebook.outils.Geolocalisation;
+import com.cineteam.cinebook.model.entity.Geolocalisation;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -73,9 +73,9 @@ public class CinemaXMLParser extends AXMLParser{
         cinema.setAdresse(parseLAdresse(courant));
         cinema.setCode_postal(parseLeCodePostal(courant));
         cinema.setVille(parseLaVille(courant));
-        cinema.setNombreEcrans(parseLEcran(courant));
+        cinema.setNombre_ecrans(parseLEcran(courant));
         cinema.setPosition(parseLaPosition(courant));
-        cinema.setUrlImage(parseLUrlDeLImage(courant));
+        cinema.setUrl_image(parseLUrlDeLImage(courant));
 
         return cinema;
     }

@@ -1,4 +1,4 @@
-package com.cineteam.cinebook.outils;
+package com.cineteam.cinebook.model.entity;
 
 /** @author Viviens **/
 public class Geolocalisation {
@@ -9,15 +9,15 @@ public class Geolocalisation {
         return latitude;
     }
 
-    public void setLatitude(float latitude) {
-        this.latitude = latitude;
+    public void setLatitude(float _latitude) {
+        latitude = _latitude;
     }
 
     public float getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(float longitude) {
-        this.longitude = longitude;
+    public void setLongitude(float _longitude) {
+        longitude = _longitude;
     }
 }

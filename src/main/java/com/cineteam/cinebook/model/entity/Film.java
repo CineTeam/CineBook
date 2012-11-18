@@ -1,8 +1,6 @@
 package com.cineteam.cinebook.model.entity;
-
 import java.util.Date;
 import java.util.List;
-
 
 /** @author alexis */
 public class Film {
@@ -20,13 +18,11 @@ public class Film {
     private List<String> genres;
     private String synopsis;
             
-    public String getId()
-    {
+    public String getId() {
         return id;
     }
     
-    public void setId(String _id)
-    {
+    public void setId(String _id) {
         id = _id;
     }
 
@@ -90,32 +86,32 @@ public class Film {
         return duree;
     }
 
-    public void setDuree(String duree) {
-        this.duree = duree;
+    public void setDuree(String _duree) {
+        duree = _duree;
     }
 
     public List<String> getPays() {
         return pays;
     }
 
-    public void setPays(List<String> pays) {
-        this.pays = pays;
+    public void setPays(List<String> _pays) {
+        pays = _pays;
     }
 
     public List<String> getGenres() {
         return genres;
     }
 
-    public void setGenres(List<String> genres) {
-        this.genres = genres;
+    public void setGenres(List<String> _genres) {
+        genres = _genres;
     }
 
     public String getSynopsis() {
         return synopsis;
     }
 
-    public void setSynopsis(String synopsis) {
-        this.synopsis = synopsis;
+    public void setSynopsis(String _synopsis) {
+        synopsis = _synopsis;
     }
 
 }
