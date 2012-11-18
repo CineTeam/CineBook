@@ -262,9 +262,10 @@ a:hover {
 }
 
 
-.clickable{
+.clickable,.button_clickable{
     cursor: pointer;
 }
+
 
 .invisible{
     display : none;

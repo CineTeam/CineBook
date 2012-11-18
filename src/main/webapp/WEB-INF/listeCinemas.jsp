@@ -21,13 +21,7 @@
                     <div class="post">
                         <div id="entete">
                             <h1>Liste des cinemas !</h1>
-                            <div id="recherche">
-                                <form action="ServletVisiteur?action=rechercherCinemaAction" method="post">
-                                    Rechercher un cinéma :
-                                    <input type="text" name="recherche" />
-                                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider" class='clickable'/>
-                                </form>
-                            </div>
+                             <c:import url="barreRechercheCinemas.jsp" />
                         </div>                        
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">

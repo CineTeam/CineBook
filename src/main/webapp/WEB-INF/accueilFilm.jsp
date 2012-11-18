@@ -40,13 +40,7 @@
                     <div class="post">
                         <div id="entete">
                             <h1>Accueil Films - A la une !</h1>
-                            <div id="recherche">
-                                <form action="ServletVisiteur?action=rechercherFilmAction" method="post">
-                                    Rechercher un film :
-                                    <input type="text" name="recherche" />
-                                    <input type="submit" id="bouton_valider" name="envoyer" value="Valider" class='clickable'/>
-                                </form>
-                            </div>
+                            <c:import url ="barreRechercheFilms.jsp" />
                         </div>
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
