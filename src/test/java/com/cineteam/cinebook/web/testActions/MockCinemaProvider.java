@@ -21,5 +21,17 @@ public class MockCinemaProvider implements ICinemaProvider
         }
         return resultat;
     }
+
+    public List<Cinema> rechercherCinemasParCodePostal(String codePostal) 
+    {
+        List<Cinema> resultat = new ArrayList<Cinema>();
+        if(!cinemas.isEmpty()){
+            for(Cinema cinema : cinemas){
+                if(cinema.getCode_postal().equals(codePostal))
+                    resultat.add(cinema);
+            }
+        }
+        return resultat;
+    }
     
 }

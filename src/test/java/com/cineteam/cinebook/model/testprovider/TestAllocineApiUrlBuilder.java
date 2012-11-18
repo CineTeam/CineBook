@@ -40,4 +40,11 @@ public class TestAllocineApiUrlBuilder {
                                                                     .ajouterLaSuppressionDeBaliseHTML().getUrl();
         assertEquals("http://api.allocine.fr/rest/v3/movie?partner=YW5kcm9pZC12M3M&format=xml&code=61282&profile=medium&filter=movie&striptags=synopsis", url);
     }
+    
+    @Test
+    public void retourneUrlDesCinemasAuxAlentours()
+    {
+        String url = new AllocineApiUrlBuilder(Methodes.LISTECINEMA).ajouterLeCodePostal("33000").ajouterLeNombreDeResultat(200).getUrl();
+        assertEquals("http://api.allocine.fr/rest/v3/theaterlist?partner=YW5kcm9pZC12M3M&format=xml&zip=33000&count=200", url);
+    }
 }

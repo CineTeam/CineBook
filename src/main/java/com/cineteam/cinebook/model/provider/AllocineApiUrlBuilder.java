@@ -7,7 +7,8 @@ public class AllocineApiUrlBuilder
     {
         RECHERCHE ("search"),
         FILMSENSALLE ("movielist"),
-        DETAILFILM ("movie");
+        DETAILFILM ("movie"),
+        LISTECINEMA ("theaterlist");
         
         private final String value;
         
@@ -135,6 +136,12 @@ public class AllocineApiUrlBuilder
         url += "&striptags=synopsis";
         return this;
     }
+    
+    public AllocineApiUrlBuilder ajouterLeCodePostal(String codePostal)
+    {
+        url += "&zip=" + codePostal;
+        return this;
+    } 
     
     public String getUrl()
     {

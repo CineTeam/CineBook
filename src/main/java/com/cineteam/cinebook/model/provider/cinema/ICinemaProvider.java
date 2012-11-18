@@ -7,4 +7,6 @@ import java.util.List;
 public interface ICinemaProvider
 {
     public List<Cinema> rechercherCinemasParMotCle(String nom);
+    
+    public List<Cinema> rechercherCinemasParCodePostal(String codePostal);
 }

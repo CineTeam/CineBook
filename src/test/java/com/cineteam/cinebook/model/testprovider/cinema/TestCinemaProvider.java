@@ -14,7 +14,7 @@ public class TestCinemaProvider {
     }
     
     @Test
-    public void retourneUneListeDeCinema() 
+    public void retourneUneListeDeCinemaParMotCle() 
     {
         CinemaProvider cinemaProvider = new CinemaProvider();
         
@@ -25,18 +25,16 @@ public class TestCinemaProvider {
     }
     
     @Test
-    public void retourneUneListeDeCinemaAvecLeNomRecherche() 
+    public void retourneUneListeDeCinemaParCodePostal() 
     {
         CinemaProvider cinemaProvider = new CinemaProvider();
         
-        List<Cinema> cinemas = cinemaProvider.rechercherCinemasParMotCle("Bordeaux");
+        List<Cinema> cinemas = cinemaProvider.rechercherCinemasParCodePostal("33000");
         
         assertNotNull(cinemas);
         assertTrue(cinemas.size() > 0);
         
-        for(Cinema cinema : cinemas)
-        {
-            assertTrue(cinema.getNom().contains("Bordeaux") || cinema.getVille().contains("Bordeaux"));
-        }
     }
+    
+    
 }

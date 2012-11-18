@@ -21,4 +21,11 @@ public class CinemaProvider implements ICinemaProvider {
         return resultat;
     }
     
+    public List<Cinema> rechercherCinemasParCodePostal(String codePostal) 
+    {
+        String url = new AllocineApiUrlBuilder(Methodes.LISTECINEMA).ajouterLeNombreDeResultat(200).ajouterLeCodePostal(codePostal).getUrl();
+        List<Cinema> resultat = parser.parseCinemaFromInputStream(source.getInputStream(url));
+        return resultat;
+    }
+    
 }
