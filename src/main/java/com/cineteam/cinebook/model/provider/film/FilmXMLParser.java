@@ -10,20 +10,31 @@ import java.util.List;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.joda.time.DateTime;
+import org.joda.time.Period;
+import org.joda.time.Seconds;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.PeriodFormatter;
+import org.joda.time.format.PeriodFormatterBuilder;
 
 /** @author alexis */
 public class FilmXMLParser extends AXMLParser
 {
-    public List<Film> parseFilmFromInputStream(InputStream is)
+    public List<Film> parserLesFilmsAPartirDeLInputStream(InputStream is)
     {
         Document document = getDocumentFromInputStream(is);
-        List<Film> films = parseFilmsFromDocument(document);
+        List<Film> films = parserLesFilmsAPartirDuDocument(document);
         return films;
     }
     
-    private List<Film> parseFilmsFromDocument(Document document)
+     public Film parserLeFilmAPartirDeLInputStream(InputStream is)
+    {
+        Document document = getDocumentFromInputStream(is);
+        Film film = parserLeFilmAPartirDuDocument(document);
+        return film;
+    }
+    
+    private List<Film> parserLesFilmsAPartirDuDocument(Document document)
     {
         List<Film> films = new ArrayList<Film>(); 
         if (document != null)
@@ -36,23 +47,40 @@ public class FilmXMLParser extends AXMLParser
             while(i.hasNext())
             {
                 Element courant = (Element)i.next();
-
-                Film film = new Film();
-                film.setId(courant.getAttributeValue("code"));
-                film.setTitre(parseTitre(courant));
-                film.setDate_sortie(parseDateSortie(courant));
-                film.setRealisateur(parseRealisateur(courant));
-                film.setActeurs(parseActeurs(courant));
-                film.setNote_presse(parseNotePresse(courant));
-                film.setNote_utilisateurs(parseNoteUtilisateurs(courant));
-                film.setUrl_affiche(parseUrlAffiche(courant));
-                
+                Film film = parserLeFilm(courant);        
                 films.add(film);
             }
         }
         return films;
     }
+    
+    private Film parserLeFilmAPartirDuDocument(Document document) {
+        Film film = null; 
+        if (document != null)
+        {
+            Element racine = document.getRootElement();
+            film = parserLeFilm(racine);
+        }
+        return film;
+    }
 
+    private Film parserLeFilm(Element courant) {
+        Film film = new Film();
+        film.setId(courant.getAttributeValue("code"));
+        film.setTitre(parseTitre(courant));
+        film.setDate_sortie(parseDateSortie(courant));
+        film.setRealisateur(parseRealisateur(courant));
+        film.setActeurs(parseActeurs(courant));
+        film.setNote_presse(parseNotePresse(courant));
+        film.setNote_utilisateurs(parseNoteUtilisateurs(courant));
+        film.setUrl_affiche(parseUrlAffiche(courant));
+        film.setDuree(parseDuree(courant));
+        film.setGenres(parseGenre(courant));
+        film.setPays(parsePays(courant));
+        film.setSynopsis(parseSynopsis(courant));
+        return film;
+    }
+    
     private String parseTitre(Element courant) {
         if(courant.getChildText("title", defaultNameSpace) != null)
         {
@@ -148,4 +176,59 @@ public class FilmXMLParser extends AXMLParser
         }
         return null;
     }
+   
+    private String parseDuree(Element courant) {
+        String duree = courant.getChildText("runtime", defaultNameSpace);
+        if(duree != null)
+        {
+           Seconds secondes = Seconds.seconds(Integer.parseInt(duree));
+           Period p1 = new Period(secondes);
+           PeriodFormatter dhm = new PeriodFormatterBuilder().appendHours().appendSuffix("h").appendMinutes().toFormatter();
+           return dhm.print(p1.normalizedStandard());
+        }
+        return null;
+    }
+    
+      private List<String> parsePays(Element courant) {
+        Element element_pays = courant.getChild("nationalityList", defaultNameSpace);
+        if(element_pays != null)
+        {
+            List<String> pays = new ArrayList();
+            List list_pays = element_pays.getChildren("nationality", defaultNameSpace);
+            
+            Iterator i = list_pays.iterator();
+            while(i.hasNext())
+            {
+                Element pays_courant = (Element)i.next();
+                pays.add(pays_courant.getText());
+            }
+            return pays;
+        }
+        return null;
+    }
+    
+      private List<String> parseGenre(Element courant) {
+        Element element_genre = courant.getChild("genreList", defaultNameSpace);
+        if(element_genre != null)
+        {
+            List<String> genres = new ArrayList();
+            List list_genre = element_genre.getChildren("genre", defaultNameSpace);
+            
+            Iterator i = list_genre.iterator();
+            while(i.hasNext())
+            {
+                Element genre_courant = (Element)i.next();
+                genres.add(genre_courant.getText());
+            }
+            return genres;
+        }
+        return null;
+    }
+      
+     private String parseSynopsis(Element courant) 
+     {
+        return courant.getChildText("synopsis", defaultNameSpace);
+    }
+  
+      
 }

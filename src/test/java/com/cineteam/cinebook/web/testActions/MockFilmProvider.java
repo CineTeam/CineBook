@@ -32,5 +32,17 @@ public class MockFilmProvider implements IFilmProvider
         }
         return resultat;
     }
+
+    public Film getDetailFilm(String id) {
+        
+         if(!films.isEmpty()){
+            for(Film film : films){
+                if(film.getId().equals(id)) {
+                    return film;
+                }
+            }
+        }
+         return null;
+    }
     
 }

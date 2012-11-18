@@ -8,4 +8,5 @@ public interface IFilmProvider
 {
     public List<Film> rechercherFilmParMotCle(String nom);
     public List<Film> getDixDerniersFilms();
+    public Film getDetailFilm(String id);
 }

@@ -1,6 +1,7 @@
 package com.cineteam.cinebook.model.entity;
 
 import java.util.Date;
+import java.util.List;
 
 
 /** @author alexis */
@@ -14,6 +15,10 @@ public class Film {
     private float note_utilisateurs;
     private float note_presse;
     private String url_affiche;
+    private String duree;
+    private List<String> pays;
+    private List<String> genres;
+    private String synopsis;
             
     public String getId()
     {
@@ -79,6 +84,38 @@ public class Film {
 
     public void setUrl_affiche(String _url_affiche) {
         url_affiche = _url_affiche;
+    }
+
+    public String getDuree() {
+        return duree;
+    }
+
+    public void setDuree(String duree) {
+        this.duree = duree;
+    }
+
+    public List<String> getPays() {
+        return pays;
+    }
+
+    public void setPays(List<String> pays) {
+        this.pays = pays;
+    }
+
+    public List<String> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(List<String> genres) {
+        this.genres = genres;
+    }
+
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
     }
 
 }

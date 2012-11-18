@@ -6,7 +6,8 @@ public class AllocineApiUrlBuilder
     public static enum Methodes
     {
         RECHERCHE ("search"),
-        FILMSENSALLE ("movielist");
+        FILMSENSALLE ("movielist"),
+        DETAILFILM ("movie");
         
         private final String value;
         
@@ -35,6 +36,25 @@ public class AllocineApiUrlBuilder
         }
         
         public String getFiltre()
+        {
+            return value;
+        }
+    }
+    
+    public static enum NiveauDetail
+    {
+        SMALL ("small"),
+        MEDIUM ("medium"),
+        LARGE ("large");
+        
+        private final String value;
+        
+        private NiveauDetail(String value)
+        {
+            this.value = value;
+        }
+        
+        public String getNiveauDetail()
         {
             return value;
         }
@@ -95,6 +115,24 @@ public class AllocineApiUrlBuilder
     public AllocineApiUrlBuilder ajouterLOrdre(Ordre ordre)
     {
         url += "&order=" + ordre.getOrdre();
+        return this;
+    }
+    
+    public AllocineApiUrlBuilder ajouterLeNiveauDeDetail(NiveauDetail niveauDetail)
+    {
+        url += "&profile=" + niveauDetail.getNiveauDetail();
+        return this;
+    }
+     
+    public AllocineApiUrlBuilder ajouterLIdentifiant(String id)
+    {
+        url += "&code=" + id;
+        return this;
+    }
+    
+    public AllocineApiUrlBuilder ajouterLaSuppressionDeBaliseHTML()
+    {
+        url += "&striptags=synopsis";
         return this;
     }
     

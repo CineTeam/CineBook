@@ -11,7 +11,7 @@ import org.junit.Test;
 public class TestFilmProvider {
     
     @Test
-    public void retourneListeDeFilm() 
+    public void retourneListeDeFilmPourUneRecherche() 
     {
         FilmProvider filmProvider = new FilmProvider();
         
@@ -22,7 +22,7 @@ public class TestFilmProvider {
     }
     
     @Test
-    public void retourneListDeFilmQuandLeNomAUnAccent() 
+    public void retourneListDeFilmPourUneRechercheQuandLeNomAUnAccent() 
     {
         FilmProvider filmProvider = new FilmProvider();
         
@@ -33,7 +33,7 @@ public class TestFilmProvider {
     }
     
     @Test
-    public void retourneListDeFilmQuandLeNomAUnEspace() 
+    public void retourneListDeFilmPourUneRechercheQuandLeNomAUnEspace() 
     {
         FilmProvider filmProvider = new FilmProvider();
         
@@ -41,5 +41,26 @@ public class TestFilmProvider {
         
         assertNotNull(films);
         assertTrue(films.size() > 0);
+    }
+    
+    @Test
+    public void retourneListeDeFilmPourLesDixDerniereSorties() 
+    {
+        FilmProvider filmProvider = new FilmProvider();
+        
+        List<Film> films = filmProvider.getDixDerniersFilms();
+        
+        assertNotNull(films);
+        assertTrue(films.size() > 0);
+    }
+    
+    @Test
+    public void retourneUnFilmParSonIdentifiant() 
+    {
+        FilmProvider filmProvider = new FilmProvider();
+        
+        Film film = filmProvider.getDetailFilm("61282");
+        
+        assertNotNull(film);
     }
 }

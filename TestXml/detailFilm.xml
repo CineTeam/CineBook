@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<movie code="61282" xmlns="http://www.allocine.net/v6/ns/">
+  <movieType code="4002">Long-métrage</movieType>
+  <originalTitle>Avatar</originalTitle>
+  <title>Avatar</title>
+  <keywords>James Cameron's Avatar Project 880 vatar avtar, Avatar : Special Edition Avatar Avatar 3D </keywords>
+  <productionYear>2009</productionYear>
+  <nationalityList>
+    <nationality code="5002">U.S.A.</nationality>
+  </nationalityList>
+  <genreList>
+    <genre code="13021">Science fiction</genre>
+    <genre code="13001">Aventure</genre>
+  </genreList>
+  <release>
+    <releaseDate>2009-12-16</releaseDate>
+    <reissueDate>2010-09-01</reissueDate>
+    <country code="5001">France</country>
+    <releaseState code="3009">Reprise</releaseState>
+    <distributor code="7622" name="Twentieth Century Fox France" />
+  </release>
+  <runtime>9720</runtime>
+  <synopsis>Malgré sa paralysie, Jake Sully, un ancien marine immobilisé dans un fauteuil roulant, est resté un combattant au plus profond de son être. Il est recruté pour se rendre à des années-lumière de la Terre, sur Pandora, où de puissants groupes industriels exploitent un minerai rarissime destiné à résoudre la crise énergétique sur Terre. Parce que l'atmosphère de Pandora est toxique pour les humains, ceux-ci ont créé le Programme Avatar, qui permet à des &quot; pilotes &quot; humains de lier leur esprit à un avatar, un corps biologique commandé à distance, capable de survivre dans cette atmosphère létale. Ces avatars sont des hybrides créés génétiquement en croisant l'ADN humain avec celui des Na'vi, les autochtones de Pandora.Sous sa forme d'avatar, Jake peut de nouveau marcher. On lui confie une mission d'infiltration auprès des Na'vi, devenus un obstacle trop conséquent à l'exploitation du précieux minerai. Mais tout va changer lorsque Neytiri, une très belle Na'vi, sauve la vie de Jake...</synopsis>
+  <synopsisShort>Sur la lointaine planète de Pandora, Jake Sully, un héros malgré lui, se lance dans une quête de rédemption, de découverte, d'amour inattendu, dont l'issue sera un combat héroïque pour sauver toute une civilisation.</synopsisShort>
+  <castingShort>
+    <directors>James Cameron</directors>
+    <actors>Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang, Michelle Rodriguez</actors>
+  </castingShort>
+  <casting>
+    <castMember>
+      <person code="1066">
+        <name>James Cameron</name>
+      </person>
+      <activity code="8002">Réalisateur</activity>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/35/34/02/19226897.jpg" href="http://images.allocine.fr/medias/nmedia/18/35/34/02/19226897.jpg" />
+    </castMember>
+    <castMember>
+      <person code="41339">
+        <name>Sam Worthington</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>Jake Sully</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/70/53/24/19587092.jpg" href="http://images.allocine.fr/medias/nmedia/18/70/53/24/19587092.jpg" />
+    </castMember>
+    <castMember>
+      <person code="34515">
+        <name>Zoe Saldana</name>
+      </person>
+      <activity code="8001">Actrice</activity>
+      <role>Neytiri</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/35/42/79/19226902.jpg" href="http://images.allocine.fr/medias/nmedia/18/35/42/79/19226902.jpg" />
+    </castMember>
+    <castMember>
+      <person code="259">
+        <name>Sigourney Weaver</name>
+      </person>
+      <activity code="8001">Actrice</activity>
+      <role>Grace Augustine</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/35/39/23/19820771.jpg" href="http://images.allocine.fr/medias/nmedia/18/35/39/23/19820771.jpg" />
+    </castMember>
+    <castMember>
+      <person code="6407">
+        <name>Stephen Lang</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>le colonel Miles Quaritch</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/71/42/77/19783660.jpg" href="http://images.allocine.fr/medias/nmedia/18/71/42/77/19783660.jpg" />
+    </castMember>
+    <castMember>
+      <person code="60617">
+        <name>Michelle Rodriguez</name>
+      </person>
+      <activity code="8001">Actrice</activity>
+      <role>Trudy Chacon</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/35/36/07/19603216.jpg" href="http://images.allocine.fr/medias/nmedia/18/35/36/07/19603216.jpg" />
+    </castMember>
+    <castMember>
+      <person code="28985">
+        <name>Giovanni Ribisi</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>Parker Selfridge</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/35/39/55/19226929.jpg" href="http://images.allocine.fr/medias/nmedia/18/35/39/55/19226929.jpg" />
+    </castMember>
+    <castMember>
+      <person code="130952">
+        <name>Joel Moore</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>Norm Spellman</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/74/01/99/19226924.jpg" href="http://images.allocine.fr/medias/nmedia/18/74/01/99/19226924.jpg" />
+    </castMember>
+    <castMember>
+      <person code="18050">
+        <name>Wes Studi</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>Eytukan</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/36/31/06/19442312.jpg" href="http://images.allocine.fr/medias/nmedia/18/36/31/06/19442312.jpg" />
+    </castMember>
+    <castMember>
+      <person code="175724">
+        <name>CCH Pounder</name>
+      </person>
+      <activity code="8001">Actrice</activity>
+      <role>Moat</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/74/01/97/19226918.jpg" href="http://images.allocine.fr/medias/nmedia/18/74/01/97/19226918.jpg" />
+    </castMember>
+    <castMember>
+      <person code="117875">
+        <name>Laz Alonso</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>Tsu'Tey</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/64/53/72/19678320.jpg" href="http://images.allocine.fr/medias/nmedia/18/64/53/72/19678320.jpg" />
+    </castMember>
+    <castMember>
+      <person code="218328">
+        <name>Dileep Rao</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>Dr. Max Patel</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/70/79/16/19226908.jpg" href="http://images.allocine.fr/medias/nmedia/18/70/79/16/19226908.jpg" />
+    </castMember>
+    <castMember>
+      <person code="77973">
+        <name>Peter Mensah</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>Akwey</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/74/02/02/20207970.jpg" href="http://images.allocine.fr/medias/nmedia/18/74/02/02/20207970.jpg" />
+    </castMember>
+    <castMember>
+      <person code="61597">
+        <name>Matt Gerald</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>le caporal Lyne Wainfleet</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/62/80/61/18652076.jpg" href="http://images.allocine.fr/medias/nmedia/18/62/80/61/18652076.jpg" />
+    </castMember>
+    <castMember>
+      <person code="104999">
+        <name>Scott Lawrence</name>
+      </person>
+      <activity code="8001">Acteur</activity>
+      <role>le chef d'équipage du Venture Star</role>
+      <picture name="Photo Avatar" path="/medias/nmedia/18/35/97/11/20255189.jpg" href="http://images.allocine.fr/medias/nmedia/18/35/97/11/20255189.jpg" />
+    </castMember>
+  </casting>
+  <poster name="Affiche Avatar" href="http://images.allocine.fr/medias/nmedia/18/78/95/70/19485155.jpg" />
+  <trailer name="Bande-Annonce Avatar" code="19135625" href="http://www.allocine.fr/blogvision/19135625" />
+  <linkList>
+    <link rel="aco:web" name="Avatar" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=61282.html" />
+    <link rel="aco:web_casting" name="Casting Avatar" href="http://www.allocine.fr/film/fichefilm-61282/casting/" />
+    <link rel="aco:web_trivia" name="Anecdotes Avatar" href="http://www.allocine.fr/film/fichefilm-61282/secrets-tournage/" />
+    <link rel="aco:web_showtimes" name="Séances Avatar" href="http://www.allocine.fr/seance/film-61282/" />
+    <link rel="aco:web_publicreviews" name="Critiques Avatar" href="http://www.allocine.fr/film/fichefilm-61282/critiques/spectateurs/recentes/" />
+    <link rel="aco:web_pressreviews" name="Critiques presse Avatar" href="http://www.allocine.fr/film/fichefilm-61282/critiques/presse/" />
+    <link rel="aco:web_shots" name="Photos Avatar" href="http://www.allocine.fr/film/fichefilm-61282/photos/" />
+    <link rel="aco:web_trailers" name="Bandes annonces Avatar" href="http://www.allocine.fr/videos/fichefilm-61282/toutes/" />
+  </linkList>
+  <statistics>
+    <pressRating>4.333333</pressRating>
+    <pressReviewCount>30</pressReviewCount>
+    <userRating>4.314627</userRating>
+    <userReviewCount>10126</userReviewCount>
+    <userRatingCount>49100</userRatingCount>
+    <commentCount>7842</commentCount>
+    <photoCount>33</photoCount>
+    <videoCount>45</videoCount>
+    <ratingStats>
+      <rating note="5.0">5895</rating>
+      <rating note="4.5">1185</rating>
+      <rating note="4.0">1003</rating>
+      <rating note="3.5">175</rating>
+      <rating note="3.0">482</rating>
+      <rating note="2.5">467</rating>
+      <rating note="2.0">218</rating>
+      <rating note="1.5">76</rating>
+      <rating note="1.0">325</rating>
+      <rating note="0.5">527</rating>
+      <rating note="0.0">1</rating>
+    </ratingStats>
+    <fanCount>16051</fanCount>
+    <releaseWeekPosition>-115</releaseWeekPosition>
+    <theaterCountOnRelease>78</theaterCountOnRelease>
+  </statistics>
+  <newsList>
+    <news code="18615868">
+      <publication dateStart="2012-08-10T21:10:00" />
+      <title>Affiches insolites : des héros de films version... gamins ! [PHOTOS]</title>
+      <picture path="/medias/nmedia/18/92/60/94/20208624.jpg" href="http://images.allocine.fr/medias/nmedia/18/92/60/94/20208624.jpg" />
+      <categoryList>
+        <category code="23012">Vu sur le web</category>
+      </categoryList>
+    </news>
+    <news code="18615480">
+      <publication dateStart="2012-07-24T19:00:00" />
+      <title>Les records du box-office US</title>
+      <picture path="/medias/nmedia/18/92/21/58/20186852.jpg" href="http://images.allocine.fr/medias/nmedia/18/92/21/58/20186852.jpg" />
+      <categoryList>
+        <category code="23006">Box Office</category>
+      </categoryList>
+    </news>
+  </newsList>
+  <featureList>
+    <feature code="18591849">
+      <publication dateStart="2012-06-13T05:00:00" />
+      <title>1972-2012 : vos 40 "Mad Movies" préférés</title>
+      <picture path="/medias/nmedia/18/91/21/03/20134403.jpg" href="http://images.allocine.fr/medias/nmedia/18/91/21/03/20134403.jpg" />
+      <categoryList>
+        <category code="23144">Dossiers</category>
+      </categoryList>
+    </feature>
+    <feature code="18591807">
+      <publication dateStart="2012-04-12T05:00:00" />
+      <title>"Silence, on... vote sur AlloCiné !" - Les élections cinéma/séries (1er tour)</title>
+      <picture path="/medias/nmedia/18/90/06/55/20081044.jpg" href="http://images.allocine.fr/medias/nmedia/18/90/06/55/20081044.jpg" />
+      <categoryList>
+        <category code="23144">Dossiers</category>
+      </categoryList>
+    </feature>
+  </featureList>
+  <triviaList>
+    <trivia code="18498002">
+      <publication dateStart="2010-07-09T14:40:00" />
+      <title>Avatar, l'édition spéciale !</title>
+      <body>Après son succès en 2009, le célèbre long métrage de James Cameron bénéficie d'une ressortie sur les écrans 3D et IMAX 3D à l'été 2010, en France, le 1er septembre. Cette Special Edition offre près de 8 minutes inédites ajoutées au film original, présentant de nouvelles créatures et des scènes d’action jamais vues, repoussant encore plus loin les limites de l'univers de la planète Pandora.</body>
+    </trivia>
+  </triviaList>
+  <tagList>
+    <tag code="114">Alien / extraterrestre</tag>
+    <tag code="850">choc des cultures</tag>
+    <tag code="1229">films en 3D - en relief</tag>
+    <tag code="796">jungle</tag>
+    <tag code="1716">Mine / mineurs</tag>
+    <tag code="289">nature et vie sauvage</tag>
+    <tag code="4394">performance-capture</tag>
+    <tag code="3277">planètes</tag>
+  </tagList>
+</movie>
