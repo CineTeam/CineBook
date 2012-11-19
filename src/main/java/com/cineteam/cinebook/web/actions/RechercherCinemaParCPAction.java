@@ -6,11 +6,11 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 /** @author Bérangère */
-public class RechercherCinemaAction implements Action{
+public class RechercherCinemaParCPAction implements Action{
 
     private ICinemaProvider provider ; 
     
-    public RechercherCinemaAction(ICinemaProvider _provider) 
+    public RechercherCinemaParCPAction(ICinemaProvider _provider) 
     {
         provider = _provider;
     }
@@ -19,8 +19,8 @@ public class RechercherCinemaAction implements Action{
 
         String cinema_recherche = (String) request.getParameter("recherche");
         if(!cinema_recherche.isEmpty()){
-            List<Cinema> cinemasParMotCle = provider.rechercherCinemasParMotCle(cinema_recherche);
-            request.setAttribute("cinemas", cinemasParMotCle);       
+            List<Cinema> cinemasParCP = provider.rechercherCinemasParCodePostal(cinema_recherche);
+            request.setAttribute("cinemas", cinemasParCP);       
         }    
         return "listeCinemas.jsp";
 

@@ -6,14 +6,13 @@
     <body>
         <div id="recherche">
             <form action="#" method="post" id="form">
-                Rechercher un cinéma :
+                Rechercher un cinéma par :
                 <select name="parametre" id="select" >
-                    <option selected="selected">Selectionnez</option>
-                    <option>Tous</option>
+                    <option selected="selected" >Mot clé</option>
                     <option>Code postal</option>
                 </select>
-                <input type="text" name="recherche" disabled="disabled" id="inputText" />
-                <input type="submit" id="bouton_valider" name="envoyer" value="Valider" disabled="disabled" />
+                <input type="text" name="recherche" id="inputText" />
+                <input type="submit" id="bouton_valider" name="envoyer" value="Valider" />
             </form>
         </div>
     </body>

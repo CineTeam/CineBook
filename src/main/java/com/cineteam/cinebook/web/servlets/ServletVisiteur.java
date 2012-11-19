@@ -2,7 +2,6 @@ package com.cineteam.cinebook.web.servlets;
 
 import com.cineteam.cinebook.model.provider.cinema.CinemaProvider;
 import com.cineteam.cinebook.model.provider.film.FilmProvider;
-import com.cineteam.cinebook.web.actions.Action;
 import com.cineteam.cinebook.web.actions.*;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -40,6 +39,9 @@ public class ServletVisiteur extends HttpServlet {
             }
             if(param_action.equalsIgnoreCase("recupererDixDerniersFilmsSortisAction")){    
                     classeAction = new RecupererDixDerniersFilmsSortisAction(new FilmProvider());
+            }
+            if (param_action.equalsIgnoreCase("rechercherCinemaParCPAction")) {
+                    classeAction = new RechercherCinemaParCPAction(new CinemaProvider());
             }
             
             vue = dossier_prive+classeAction.execute(request);

@@ -28,9 +28,9 @@
                             <form action="ServletVisiteur?#" method="post">
 
                                 <table>  
-                                    <c:if test = "${requestScope.cinemasParNom != null}">
+                                    <c:if test = "${requestScope.cinemas != null}">
                                         <c:choose>
-                                            <c:when test = "${empty requestScope.cinemasParNom}">
+                                            <c:when test = "${empty requestScope.cinemas}">
                                                 <tr>Aucun cinema ne correspond à votre recherche</tr>
                                             </c:when>
                                             <c:otherwise>
@@ -40,7 +40,7 @@
                                                     <th>CP : </th>
                                                     <th>Ville : </th>
                                                 </tr>
-                                                <c:forEach var="cinema" items="${requestScope.cinemasParNom}" varStatus="status">
+                                                <c:forEach var="cinema" items="${requestScope.cinemas}" varStatus="status">
                                                     <tr id="${status.count}" class='clickable'>
                                                         <td>${cinema.nom}</td>
                                                         <td>${cinema.adresse}</td>
@@ -51,7 +51,7 @@
                                             </c:otherwise>                                            
                                         </c:choose>
                                     </c:if>
-                                    <c:if test = "${requestScope.cinemasParNom == null}">                                                
+                                    <c:if test = "${requestScope.cinemas == null}">                                                
                                         <tr>Veuillez saisir un paramètre de recherche !</tr>
                                     </c:if>
                                 </table>
