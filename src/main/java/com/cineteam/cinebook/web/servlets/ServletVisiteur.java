@@ -46,6 +46,9 @@ public class ServletVisiteur extends HttpServlet {
             if (param_action.equalsIgnoreCase("consulterDetailCinemaAction")) {
                     classeAction = new ConsulterDetailCinemaAction(new CinemaProvider());
             }
+            if (param_action.equalsIgnoreCase("consulterDetailFilmAction")) {
+                    classeAction = new ConsulterDetailFilmAction(new FilmProvider());
+            }
             
             vue = dossier_prive+classeAction.execute(request);
         }
