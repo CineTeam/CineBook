@@ -218,6 +218,12 @@ a:hover {
     text-align: justify;
 }
 
+#googlemap {
+    width: 850px; 
+    height: 680px; 
+    margin: auto;    
+}
+
 #footer {
     height: 140px;
     margin: 0 auto;

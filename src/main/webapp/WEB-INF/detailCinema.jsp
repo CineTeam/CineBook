@@ -12,6 +12,15 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/tableaux.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript" src="js/googlemap.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var latitude = '${requestScope.cinema.position.latitude}';
+                var longitude = '${requestScope.cinema.position.longitude}';
+                initialize(latitude, longitude);
+            });
+        </script>
     </head>
     <body id="Cinémas">
         <div id="wrapper">
@@ -24,39 +33,24 @@
                         </div>                        
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
-                            <table>  
-                                <c:if test = "${requestScope.cinema != null}">
-                                    <c:choose>
-                                        <c:when test = "${empty requestScope.cinema}">
-                                            <tr>Aucun cinema ne correspond à votre recherche</tr>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <tr>
-                                                <td rowspan="5"><img src="${cinema.url_image}" width='200'/></td>
-                                                <td>Nom : </td>
-                                                <td>${cinema.nom}</td>
-                                                <td rowspan="3">googlemap à mettre</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Adresse :</td>
-                                                <td>${cinema.adresse}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Code postal :</td>
-                                                <td>${cinema.code_postal}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ville :</td>
-                                                <td>${cinema.ville}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Nombre de salles :</td>
-                                                <td>${cinema.nombre_salles}</td>
-                                            </tr>
-                                        </c:otherwise>                                            
-                                    </c:choose>
-                                </c:if>
-                            </table>
+                            <c:if test = "${requestScope.cinema != null}">
+                                <c:choose>
+                                    <c:when test = "${empty requestScope.cinema}">
+                                        Aucun cinema ne correspond à votre recherche
+                                    </c:when>
+                                    <c:otherwise>
+                                        <div id="cinema_infos">
+                                            <img src="${cinema.url_image}" width='200'/>
+                                            <p class="titre_film">${cinema.nom}</p>
+                                            ${cinema.adresse}<br />
+                                            ${cinema.code_postal} ${cinema.ville}<br />
+                                            Nombre de salles : ${cinema.nombre_salles}
+                                            
+                                            <div id="googlemap"></div>
+                                        </div>
+                                    </c:otherwise>                                            
+                                </c:choose>
+                            </c:if>
                         </div>
                     </div>
                     <div style="clear: both;">&nbsp;</div>
