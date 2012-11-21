@@ -34,8 +34,14 @@ public class MockCinemaProvider implements ICinemaProvider
         return resultat;
     }
 
-    public Cinema getDetailCinema(String id) {
-        Cinema cinema = new Cinema();
+    public Cinema getDetailCinema(String id) 
+    {
+        Cinema cinema = null;
+        if(!id.isEmpty()){
+            cinema = new Cinema();
+            cinema.setId(id);
+            cinema.setNombre_salles(40);
+        }
         return cinema;
     }
     

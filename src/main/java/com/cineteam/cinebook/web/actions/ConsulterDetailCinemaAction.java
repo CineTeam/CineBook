@@ -18,7 +18,6 @@ public class ConsulterDetailCinemaAction implements Action {
         String index_cinema = (String) request.getParameter("cpt");
         if(!index_cinema.isEmpty()){
             Cinema cinema = provider.getDetailCinema(index_cinema);
-            System.out.println(cinema.getId()+" - "+ cinema.getNom());
             request.setAttribute("cinema", cinema);       
         }    
         

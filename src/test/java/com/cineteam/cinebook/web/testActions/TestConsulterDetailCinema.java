@@ -1,6 +1,5 @@
 package com.cineteam.cinebook.web.testActions;
 
-import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.web.actions.ConsulterDetailCinemaAction;
 import com.cineteam.cinebook.web.testServlets.AddedParametersRequestWrapper;
 import java.util.HashMap;
@@ -26,22 +25,33 @@ public class TestConsulterDetailCinema {
         request = createMock(HttpServletRequest.class);
         replay(request);
     }
-    
+        
     @Test
-    public void recupererDetailCinema() {
-        final Cinema cinema = fauxProvider.getDetailCinema(cinema().getId());
-        String cinema_ID = "10";
+    public void neConsultePasDetailCinemaSansCinemaSaisi()
+    {
+        String cinema_id = "";
         final Map parametres = new HashMap();
-        parametres.put("cpt",cinema_ID);
+        parametres.put("cpt",cinema_id);
         request = new AddedParametersRequestWrapper(request, parametres);
+        
         consulterDetailsCinemaAction.execute(request);
         
-        assertTrue(fauxProvider.getDetailCinema(cinema_ID) != null);
+        assertNull(fauxProvider.getDetailCinema(cinema_id));
+        assertNull(request.getAttribute("cinema"));
     }
     
-    public Cinema cinema() {
-        Cinema cinema = new Cinema();
-        cinema.setId("10");
-        return cinema;
+    @Test
+    public void consulteDetailCinemaAvecCinemaSaisi() {
+        String cinema_id = "10";
+        final Map parametres = new HashMap();
+        parametres.put("cpt",cinema_id);
+        request = new AddedParametersRequestWrapper(request, parametres);
+        
+        consulterDetailsCinemaAction.execute(request);
+        
+        assertNotNull(fauxProvider.getDetailCinema(cinema_id));
+        assertNotNull(request.getAttribute("cinema"));
+        assertNotNull(fauxProvider.getDetailCinema(cinema_id).getNombre_salles());
     }
+    
 }
