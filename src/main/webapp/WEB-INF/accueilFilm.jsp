@@ -57,10 +57,10 @@
                                                         <li>
                                                             <a href='#' id="${film.id}" class='clickable'>
                                                                 <div class="short_film">
-                                                                    <div class="short_img">
-                                                                        <img src="${film.url_affiche}" width='200' height='270'/>
+                                                                    <div class="short_img_film">
+                                                                        <img src="${film.url_affiche}"/>
                                                                     </div>
-                                                                    <div class="short_desc">
+                                                                    <div class="short_desc_film">
                                                                         <p class="titre_film">${film.titre}</p>
                                                                         <c:if test = "${film.date_sortie !=null}">Sorti le <f:formatDate value="${film.date_sortie}" type="date" dateStyle="default" /> <br> </c:if>
                                                                         <c:if test = "${film.realisateur !=null}">Par ${film.realisateur} <br></c:if>

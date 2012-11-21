@@ -15,12 +15,9 @@
 }
 
 #slider, #slider li, #slider ul{
-    height:270px;
+    height:274px;
     width:1000px;
     overflow:hidden;
-    font-family: Tahoma;
-    font-size:14px;
-    color : #000000;
 }
 
 #prevBtn,#nextBtn{

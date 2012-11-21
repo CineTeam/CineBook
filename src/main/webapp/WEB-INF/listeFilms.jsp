@@ -39,21 +39,21 @@
                                                     <tr>
                                                         <a href='#' id="${film.id}" class='clickable'>
                                                             <div class="short_film">
-                                                                <div class="short_img">
+                                                                <div class="short_img_film">
                                                                     <c:choose>
                                                                         <c:when test = "${film.url_affiche !=null}">
-                                                                            <img src="${film.url_affiche}" width='200' height='270'/>
+                                                                            <img src="${film.url_affiche}"/>
                                                                         </c:when>
                                                                         <c:otherwise>
-                                                                            <img src="images/image-non-dispo.jpg" width='200' height='270'/>
+                                                                            <img src="images/image-film-non-dispo.jpg"/>
                                                                         </c:otherwise>
                                                                     </c:choose>
                                                                 </div>
-                                                                <div class="short_desc">
+                                                                <div class="short_desc_film">
                                                                     <p class="titre_film">${film.titre}</p>
-                                                                    <c:if test = "${film.date_sortie !=null}">Sorti le <f:formatDate value="${film.date_sortie}" type="date" dateStyle="default" /> <br> </c:if>
-                                                                    <c:if test = "${film.realisateur !=null}">Par ${film.realisateur} <br></c:if>
-                                                                    <c:if test = "${film.acteurs !=null}">Avec ${film.acteurs}</c:if>
+                                                                    <p class="p_desc_film"><c:if test = "${film.date_sortie !=null}">Sorti le <f:formatDate value="${film.date_sortie}" type="date" dateStyle="default" /> </c:if></p>
+                                                                    <p class="p_desc_film"><c:if test = "${film.realisateur !=null}">Par ${film.realisateur} </c:if></p>
+                                                                    <p class="p_desc_film"><c:if test = "${film.acteurs !=null}">Avec ${film.acteurs}</c:if></p>
                                                                 </div>   
                                                             </div>
                                                         </a>

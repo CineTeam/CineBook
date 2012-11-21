@@ -39,13 +39,25 @@
                                         Aucun cinema ne correspond à votre recherche
                                     </c:when>
                                     <c:otherwise>
-                                        <div id="cinema_infos">
-                                            <img src="${cinema.url_image}" width='200'/>
-                                            <p class="titre_film">${cinema.nom}</p>
-                                            ${cinema.adresse}<br />
-                                            ${cinema.code_postal} ${cinema.ville}<br />
-                                            Nombre de salles : ${cinema.nombre_salles}
-                                            
+                                        <div class="bandeau_cinema">
+                                            <div id="cinema_infos">
+                                                <div class="img_cinema">
+                                                    <c:choose>
+                                                        <c:when test = "${cinema.url_image !=null}">
+                                                            <img src="${cinema.url_image}"/>
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <img src="images/image-cinema-non-dispo.jpg"/>
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </div>
+                                                <div class="short_desc_cinema">
+                                                    <p class="titre_cinema">${cinema.nom}</p>
+                                                    <p class="p_desc_cinema">${cinema.adresse}</p>
+                                                    <p class="p_desc_cinema">${cinema.code_postal} ${cinema.ville}</p>
+                                                    <p class="p_desc_cinema">Nombre de salles : ${cinema.nombre_salles}</p>
+                                                </div>
+                                            </div>
                                             <div id="googlemap"></div>
                                         </div>
                                     </c:otherwise>                                            
