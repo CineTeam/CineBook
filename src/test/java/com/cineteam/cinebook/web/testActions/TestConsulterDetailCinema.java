@@ -32,7 +32,7 @@ public class TestConsulterDetailCinema {
         final Cinema cinema = fauxProvider.getDetailCinema(cinema().getId());
         String cinema_ID = "10";
         final Map parametres = new HashMap();
-        parametres.put("cinema_ID",cinema_ID);
+        parametres.put("cpt",cinema_ID);
         request = new AddedParametersRequestWrapper(request, parametres);
         consulterDetailsCinemaAction.execute(request);
         
