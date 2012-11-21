@@ -32,7 +32,7 @@ public class FilmProvider implements IFilmProvider
     }
 
     public Film getDetailFilm(String id) {
-         String url =new AllocineApiUrlBuilder(Methodes.DETAILFILM).ajouterLIdentifiant("61282").ajouterLeNiveauDeDetail(NiveauDetail.MEDIUM)
+         String url =new AllocineApiUrlBuilder(Methodes.DETAILFILM).ajouterLIdentifiant(id).ajouterLeNiveauDeDetail(NiveauDetail.MEDIUM)
                                                                     .ajouterLeFiltre(Filtres.FILM).ajouterLaSuppressionDeBaliseHTML().getUrl();
         Film film = parser.parserLeFilmAPartirDeLInputStream(source.getInputStream(url));
 

@@ -293,35 +293,35 @@ a:hover {
 .short_desc_film,.short_desc_cinema{
     font-family: Tahoma;
     font-size:14px;
-}
-
-.p_desc_film,.p_desc_cinema{
-    margin-bottom: 5px;
+    line-height: 180%;
 }
 
 .short_img_film{
     display:block;
     float:left;
     width:200px;
-    height : 270px;
+    height : 280px;
 }
 
 
 .short_img_film img{
     border:2px solid #4D4D4D;
     width:200px;
-    height : 270px;
+    height : 280px;
 }
 
 .short_desc_film{
     display:block;
     margin-left: 200px;
     padding-left:20px; 
-    width:300px;
-    height : 270px;
+    height : 280px;
 }
 
-.bandeau_cinema{
+.size_desc_film{
+    width:350px;
+}
+
+.bandeau_cinema .bandeau_film{
     width: 1000px;
 }
 
@@ -346,8 +346,9 @@ a:hover {
             display:block;
             vertical-align:middle;
             display:inline-block;
-            line-height:1.2;
-            width:300px;    
+            line-height:1;
+            width:300px;
+            max-height:290px;
         }
 
         .short_desc_cinema{
@@ -357,10 +358,31 @@ a:hover {
             height:300px;
             width:360px;
         }
-
+      
     #googlemap{
         display:block;
         margin-left: 700px;
         height : 300px;
         width:300px;
     }
+
+.film_infos{
+    display:block;
+    float:left;
+    width:570px;
+    height:280px;
+}
+
+.bande_annonce{
+    display:block;
+    margin-left:580px;
+    height:280px;
+    width:420px;
+}
+
+.synopsis {
+    font-family: Tahoma;
+    font-size : 14px;
+    margin-top: 20px;
+    line-height: 180%;
+}

@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,48 +32,68 @@
                                     </c:when>
                                     <c:otherwise>
                                         <div class="bandeau_film">
-                                            <div id="film_infos">
+                                            <div class="film_infos">
                                                 <div class="img_film">
                                                     <c:choose>
                                                         <c:when test = "${film.url_affiche !=null}">
-                                                            <img src="${film.url_affiche}"/>
+                                                            <div class="short_img_film">
+                                                                <img src="${film.url_affiche}"/>
+                                                            </div>
                                                         </c:when>
                                                         <c:otherwise>
                                                             <img src="images/image-film-non-dispo.jpg"/>
                                                         </c:otherwise>
                                                     </c:choose>
                                                 </div>
-                                                <div class="short_desc_film">
+                                                <div class="short_desc_film size_desc_film">
                                                     <p class="titre_film">${film.titre}</p>
-                                                    <p class="p_desc_film">Sortie le <f:formatDate value="${film.date_sortie}" type="date" dateStyle="default" /></p>
-                                                    <p class="p_desc_film">Réalisé par ${film.realisateur}</p>
-                                                    <p class="p_desc_film">Avec ${film.acteurs}</p>
-                                                    <p class="p_desc_film">Genre 
-                                                        <c:forEach var="genre" items="${film.genres}">
-                                                            <c:when test = "${film.genres[0]} == ${genre}">
-                                                                ${genre}
-                                                            </c:when>
-                                                            <c:otherwise>
-                                                                , ${genre}
-                                                            </c:otherwise>
-                                                        </c:forEach>
-                                                    </p>
-                                                    <p class="p_desc_film">Nationalité 
-                                                        <c:forEach var="nationalite" items="${film.nationalites}">
-                                                            <c:when test = "${film.nationalites[0]} == ${nationalite}">
-                                                                ${nationalite}
-                                                            </c:when>
-                                                            <c:otherwise>
-                                                                , ${nationalite}
-                                                            </c:otherwise>
-                                                        </c:forEach>
-                                                    </p>
-                                                    <p class="p_desc_film"> ${film.acteurs}</p>
-                                                    <p class="titre_film">Durée ${film.duree}</p>
-                                                    <p class="titre_film">Presse ${film.note_presse}</p>
-                                                    <p class="titre_film">Spectateurs ${film.note_utilisateurs}</p>
+                                                    <c:if test = "${film.realisateur!=null}">Réalisé par ${film.realisateur}<br></c:if>
+                                                    <c:if test = "${film.date_sortie!=null}">Sortie le <f:formatDate value="${film.date_sortie}" type="date" dateStyle="default" /><br></c:if>
+                                                    <c:if test = "${film.acteurs!=null}">Avec ${film.acteurs}<br></c:if>
+                                                    <c:if test = "${film.genres!=null}">
+                                                        Genre(s) : 
+                                                        <c:forEach var="genre" items="${film.genres}" varStatus="status">
+                                                            <c:choose>
+                                                                <c:when test = "${status.first}">
+                                                                    ${genre}
+                                                                </c:when>
+                                                                <c:otherwise>
+                                                                    , ${genre}
+                                                                </c:otherwise>
+                                                            </c:choose>
+                                                        </c:forEach><br>
+                                                    </c:if>
+                                                    <c:if test = "${film.pays!=null}">
+                                                        Nationalité(s) : 
+                                                        <c:forEach var="pays" items="${film.pays}" varStatus="status">
+                                                            <c:choose>
+                                                                <c:when test = "${status.first}">
+                                                                    ${pays}
+                                                                </c:when>
+                                                                <c:otherwise>
+                                                                    , ${pays}
+                                                                </c:otherwise>
+                                                            </c:choose>
+                                                        </c:forEach><br>
+                                                    </c:if>
+                                                    <c:if test = "${film.duree!=null}">Durée : ${film.duree}<br></c:if>
+                                                    <c:if test = "${film.note_presse!=null}">Presse : <f:formatNumber value="${film.note_presse}" maxFractionDigits="1" /> / 5<br></c:if>
+                                                    <c:if test = "${film.note_utilisateurs!=null}">Spectateurs : <f:formatNumber value="${film.note_utilisateurs}" maxFractionDigits="1" /> / 5</c:if>
                                                 </div>
                                             </div>
+                                            <c:if test = "${film.url_bande_annonce!=null}">
+                                                <div class='bande_annonce'>
+                                                    <object width='100%' height='100%'>
+                                                        <param name='movie' value='${film.url_bande_annonce}'/>
+                                                        <param name='allowFullScreen' value='true'/>
+                                                        <param name='allowScriptAccess' value='always'/>
+                                                        <embed src='${film.url_bande_annonce}' type='application/x-shockwave-flash' width='100%' height='100%' allowFullScreen='true' allowScriptAccess='always'/>
+                                                    </object>
+                                                </div>
+                                            </c:if>
+                                        </div>
+                                        <div class="synopsis">
+                                             ${film.synopsis}
                                         </div>
                                     </c:otherwise>                                            
                                 </c:choose>

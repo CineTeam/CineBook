@@ -53,9 +53,9 @@
                                                 </div>
                                                 <div class="short_desc_cinema">
                                                     <p class="titre_cinema">${cinema.nom}</p>
-                                                    <p class="p_desc_cinema">${cinema.adresse}</p>
-                                                    <p class="p_desc_cinema">${cinema.code_postal} ${cinema.ville}</p>
-                                                    <p class="p_desc_cinema">Nombre de salles : ${cinema.nombre_salles}</p>
+                                                    <c:if test = "${cinema.adresse!=null}">${cinema.adresse}<br></c:if>
+                                                    <c:if test = "${cinema.code_postal!=null}">${cinema.code_postal} ${cinema.ville}<br></c:if>
+                                                    <c:if test = "${cinema.nombre_salles!=null}">Nombre de salles : ${cinema.nombre_salles}<br></c:if>
                                                 </div>
                                             </div>
                                             <div id="googlemap"></div>

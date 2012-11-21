@@ -45,7 +45,7 @@
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
                             <div id="slider">
-                                <form action="ServletVisiteur?#" method="post">
+                                <form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
                                     <ul>
                                         <c:if test = "${requestScope.derniersFilmsSortis != null}">
                                             <c:choose>
@@ -60,7 +60,7 @@
                                                                     <div class="short_img_film">
                                                                         <img src="${film.url_affiche}"/>
                                                                     </div>
-                                                                    <div class="short_desc_film">
+                                                                    <div class="short_desc_film size_desc_film_slider">
                                                                         <p class="titre_film">${film.titre}</p>
                                                                         <c:if test = "${film.date_sortie !=null}">Sorti le <f:formatDate value="${film.date_sortie}" type="date" dateStyle="default" /> <br> </c:if>
                                                                         <c:if test = "${film.realisateur !=null}">Par ${film.realisateur} <br></c:if>
@@ -75,7 +75,7 @@
                                         </c:if>
                                     </ul>
                                     <div class="invisible">
-                                        <input id='cpt' type='text' value='test' name='cptALaUne'/>
+                                        <input id='cpt' type='text' value='test' name='cpt'/>
                                         <input id='bouton' type='submit' />
                                     </div>
                                 </form>

@@ -26,7 +26,7 @@
                         </div>
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
-                            <form action="ServletVisiteur?#" method="post">
+                            <form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
 
                                 <table>  
                                     <c:if test = "${requestScope.filmsParNom != null}">
@@ -49,17 +49,17 @@
                                                                         </c:otherwise>
                                                                     </c:choose>
                                                                 </div>
-                                                                <div class="short_desc_film">
+                                                                <div class="short_desc_film size_desc_film">
                                                                     <p class="titre_film">${film.titre}</p>
-                                                                    <p class="p_desc_film"><c:if test = "${film.date_sortie !=null}">Sorti le <f:formatDate value="${film.date_sortie}" type="date" dateStyle="default" /> </c:if></p>
-                                                                    <p class="p_desc_film"><c:if test = "${film.realisateur !=null}">Par ${film.realisateur} </c:if></p>
-                                                                    <p class="p_desc_film"><c:if test = "${film.acteurs !=null}">Avec ${film.acteurs}</c:if></p>
+                                                                    <c:if test = "${film.date_sortie !=null}">Sorti le <f:formatDate value="${film.date_sortie}" type="date" dateStyle="default" /> </c:if><br>
+                                                                    <c:if test = "${film.realisateur !=null}">Par ${film.realisateur} </c:if><br>
+                                                                    <c:if test = "${film.acteurs !=null}">Avec ${film.acteurs}</c:if>
                                                                 </div>   
                                                             </div>
                                                         </a>
                                                     </tr>
                                                     <tr>
-                                                        <br>
+                                                        <br><br>
                                                     </tr>
                                                 </c:forEach>
                                             </c:otherwise>                                            

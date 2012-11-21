@@ -42,10 +42,10 @@
                                                 </tr>
                                                 <c:forEach var="cinema" items="${requestScope.cinemas}">
                                                     <tr id="${cinema.id}" class='clickable'>
-                                                        <td>${cinema.nom}</td>
-                                                        <td>${cinema.adresse}</td>
-                                                        <td>${cinema.code_postal}</td> 
-                                                        <td>${cinema.ville}</td>
+                                                        <td><c:if test = "${cinema.nom!=null}">${cinema.nom}</c:if></td>
+                                                        <td><c:if test = "${cinema.adresse!=null}">${cinema.adresse}</c:if></td>
+                                                        <td><c:if test = "${cinema.code_postal!=null}">${cinema.code_postal}</c:if></td> 
+                                                        <td><c:if test = "${cinema.ville!=null}">${cinema.ville}</c:if></td>
                                                     </tr>
                                                 </c:forEach>
                                             </c:otherwise>                                            
