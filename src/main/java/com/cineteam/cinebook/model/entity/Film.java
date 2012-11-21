@@ -13,6 +13,7 @@ public class Film {
     private float note_utilisateurs;
     private float note_presse;
     private String url_affiche;
+    private String url_bande_annonce;
     private String duree;
     private List<String> pays;
     private List<String> genres;
@@ -112,6 +113,14 @@ public class Film {
 
     public void setSynopsis(String _synopsis) {
         synopsis = _synopsis;
+    }
+
+    public String getUrl_bande_annonce() {
+        return url_bande_annonce;
+    }
+
+    public void setUrl_bande_annonce(String url_bande_annonce) {
+        this.url_bande_annonce = url_bande_annonce;
     }
 
 }

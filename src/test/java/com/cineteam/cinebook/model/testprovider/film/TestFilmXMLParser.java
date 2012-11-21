@@ -72,6 +72,7 @@ public class TestFilmXMLParser {
         assertEquals(4.3333,film.getNote_presse(), 0.1 );
         assertEquals(4.31534,film.getNote_utilisateurs(), 0.1 );
         assertEquals("http://images.allocine.fr/medias/nmedia/18/78/95/70/19485155.jpg", film.getUrl_affiche());
+        assertEquals("http://www.allocine.fr/blogvision/19135625", film.getUrl_bande_annonce());
         assertEquals("2h42", film.getDuree());
         assertEquals(synopsis, film.getSynopsis());
         assertEquals(1,film.getPays().size());

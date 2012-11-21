@@ -74,6 +74,7 @@ public class FilmXMLParser extends AXMLParser
         film.setNote_presse(parseNotePresse(courant));
         film.setNote_utilisateurs(parseNoteUtilisateurs(courant));
         film.setUrl_affiche(parseUrlAffiche(courant));
+        film.setUrl_bande_annonce(parseUrlBandeAnnonce(courant));
         film.setDuree(parseDuree(courant));
         film.setGenres(parseGenre(courant));
         film.setPays(parsePays(courant));
@@ -173,6 +174,15 @@ public class FilmXMLParser extends AXMLParser
         if(poster != null)
         {
              return poster.getAttributeValue("href");
+        }
+        return null;
+    }
+    
+    private String parseUrlBandeAnnonce(Element courant) {
+        Element bandeAnnonce = courant.getChild("trailer", defaultNameSpace);
+        if(bandeAnnonce != null)
+        {
+             return bandeAnnonce.getAttributeValue("href");
         }
         return null;
     }
