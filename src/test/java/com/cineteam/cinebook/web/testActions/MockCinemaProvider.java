@@ -33,5 +33,10 @@ public class MockCinemaProvider implements ICinemaProvider
         }
         return resultat;
     }
+
+    public Cinema getDetailCinema(String id) {
+        Cinema cinema = new Cinema();
+        return cinema;
+    }
     
 }

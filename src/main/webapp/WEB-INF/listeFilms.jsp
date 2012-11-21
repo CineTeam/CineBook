@@ -35,9 +35,9 @@
                                                 <tr>Aucun film ne correspond à votre recherche</tr>
                                             </c:when>
                                             <c:otherwise>
-                                                <c:forEach var="film" items="${requestScope.filmsParNom}" varStatus="status">
+                                                <c:forEach var="film" items="${requestScope.filmsParNom}">
                                                     <tr>
-                                                        <a href='#' id="${status.count}" class='clickable'>
+                                                        <a href='#' id="${film.id}" class='clickable'>
                                                             <div class="short_film">
                                                                 <div class="short_img">
                                                                     <c:choose>

@@ -53,9 +53,9 @@
                                                     <li>Aucun film</li>
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <c:forEach var="film" items="${requestScope.derniersFilmsSortis}" varStatus="status">                           
+                                                    <c:forEach var="film" items="${requestScope.derniersFilmsSortis}">                           
                                                         <li>
-                                                            <a href='#' id="${status.count}" class='clickable'>
+                                                            <a href='#' id="${film.id}" class='clickable'>
                                                                 <div class="short_film">
                                                                     <div class="short_img">
                                                                         <img src="${film.url_affiche}" width='200' height='270'/>

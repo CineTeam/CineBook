@@ -8,7 +8,7 @@ public class Cinema
     private String adresse;
     private String code_postal;
     private String ville;
-    private int nombre_ecrans;
+    private int nombre_salles;
     private Geolocalisation position;
     private String url_image;
     
@@ -52,12 +52,12 @@ public class Cinema
         ville = _ville;
     }
 
-    public int getNombre_ecrans() {
-        return nombre_ecrans;
+    public int getNombre_salles() {
+        return nombre_salles;
     }
 
-    public void setNombre_ecrans(int _nombre_ecrans) {
-        nombre_ecrans = _nombre_ecrans;
+    public void setNombre_salles(int _nombre_salles) {
+        nombre_salles = _nombre_salles;
     }
 
     public Geolocalisation getPosition() {

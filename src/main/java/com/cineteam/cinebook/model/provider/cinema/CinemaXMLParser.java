@@ -73,7 +73,7 @@ public class CinemaXMLParser extends AXMLParser{
         cinema.setAdresse(parseLAdresse(courant));
         cinema.setCode_postal(parseLeCodePostal(courant));
         cinema.setVille(parseLaVille(courant));
-        cinema.setNombre_ecrans(parseLEcran(courant));
+        cinema.setNombre_salles(parseLEcran(courant));
         cinema.setPosition(parseLaPosition(courant));
         cinema.setUrl_image(parseLUrlDeLImage(courant));
 

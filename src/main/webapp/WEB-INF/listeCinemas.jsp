@@ -25,7 +25,7 @@
                         </div>                        
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
-                            <form action="ServletVisiteur?#" method="post">
+                            <form action="ServletVisiteur?action=consulterDetailCinemaAction" method="post">
 
                                 <table>  
                                     <c:if test = "${requestScope.cinemas != null}">
@@ -40,8 +40,8 @@
                                                     <th>CP : </th>
                                                     <th>Ville : </th>
                                                 </tr>
-                                                <c:forEach var="cinema" items="${requestScope.cinemas}" varStatus="status">
-                                                    <tr id="${status.count}" class='clickable'>
+                                                <c:forEach var="cinema" items="${requestScope.cinemas}">
+                                                    <tr id="${cinema.id}" class='clickable'>
                                                         <td>${cinema.nom}</td>
                                                         <td>${cinema.adresse}</td>
                                                         <td>${cinema.code_postal}</td> 

@@ -64,7 +64,7 @@ public class TestCinemaXMLParser {
         assertEquals("9 rue Montesquieu", cinema.getAdresse());
         assertEquals("33000", cinema.getCode_postal());
         assertEquals("Bordeaux", cinema.getVille());
-        assertEquals(12, cinema.getNombre_ecrans());
+        assertEquals(12, cinema.getNombre_salles());
         assertNotNull(cinema.getPosition());
         assertEquals(44.8424880, cinema.getPosition().getLatitude(), 0.001);
         assertEquals(-0.5785400, cinema.getPosition().getLongitude(), 0.001);
