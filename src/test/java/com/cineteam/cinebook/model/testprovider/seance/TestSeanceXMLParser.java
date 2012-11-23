@@ -1,6 +1,6 @@
 package com.cineteam.cinebook.model.testprovider.seance;
 
-import com.cineteam.cinebook.model.entity.Seance;
+import com.cineteam.cinebook.model.entity.SeancesFilm;
 import com.cineteam.cinebook.model.provider.FileProviderSource;
 import com.cineteam.cinebook.model.provider.seance.SeanceXMLParser;
 import java.util.List;
@@ -24,7 +24,7 @@ public class TestSeanceXMLParser
     @Test
     public void retourneDesSeancePourUnCinema()
     {
-        List<Seance> seances = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
+        List<SeancesFilm> seances = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
         
         assertNotNull(seances);
         assertTrue(seances.size() > 0);

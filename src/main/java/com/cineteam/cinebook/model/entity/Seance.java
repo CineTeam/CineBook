@@ -1,11 +1,13 @@
 package com.cineteam.cinebook.model.entity;
 
+import java.util.List;
+
 /**@author alexis */
 public class Seance 
 {
     private String langue;
     private String format;
-    private Film film;
+    private List<Horaire> horaires;
 
     public String getLangue() {
         return langue;
@@ -23,11 +25,11 @@ public class Seance
         this.format = format;
     }
 
-    public Film getFilm() {
-        return film;
+    public List<Horaire> getHoraires() {
+        return horaires;
     }
 
-    public void setFilm(Film film) {
-        this.film = film;
+    public void setHoraires(List<Horaire> horaires) {
+        this.horaires = horaires;
     }
 }

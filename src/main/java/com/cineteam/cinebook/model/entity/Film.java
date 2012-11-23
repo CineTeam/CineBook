@@ -122,5 +122,13 @@ public class Film {
     public void setUrl_bande_annonce(String url_bande_annonce) {
         this.url_bande_annonce = url_bande_annonce;
     }
-
+    
+    @Override
+    public boolean equals(Object obj)
+    {
+         if ( this == obj ) return true;
+         if ( !(obj instanceof Film) ) return false;
+         Film that = (Film)obj;
+         return (id.equals(that));
+    }
 }

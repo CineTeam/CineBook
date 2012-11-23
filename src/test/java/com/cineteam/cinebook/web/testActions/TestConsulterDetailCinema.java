@@ -56,7 +56,7 @@ public class TestConsulterDetailCinema {
         assertTrue(!fauxProviderSeance.getSeancesPourUnCinema(cinema_id).isEmpty());
         assertNotNull(request.getAttribute("cinema"));
         assertNotNull(fauxProviderCinema.getDetailCinema(cinema_id).getNombre_salles());
-        assertNotNull(fauxProviderSeance.getSeancesPourUnCinema(cinema_id).get(0).getFormat());
+        assertNotNull(fauxProviderSeance.getSeancesPourUnCinema(cinema_id).get(0).getSeances().get(0).getFormat());
     }
     
 }

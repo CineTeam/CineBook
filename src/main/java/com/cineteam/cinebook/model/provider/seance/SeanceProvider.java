@@ -1,16 +1,15 @@
 package com.cineteam.cinebook.model.provider.seance;
 
-import com.cineteam.cinebook.model.entity.Film;
-import com.cineteam.cinebook.model.entity.Seance;
+import com.cineteam.cinebook.model.entity.SeancesFilm;
 import java.util.ArrayList;
 import java.util.List;
 
 /** @author alexis */
 public class SeanceProvider implements ISeanceProvider
 {
-    public List<Seance> getSeancesPourUnCinema(String id) 
+    public List<SeancesFilm> getSeancesPourUnCinema(String id) 
     {
-       /*List<Seance> seances = new ArrayList<Seance>();
+       /*List<SeancesFilm> seances = new ArrayList<SeancesFilm>();
         Film f = new Film();
         f.setTitre("ESSSSSAI");
         f.setRealisateur("reaaaaal");
@@ -21,7 +20,7 @@ public class SeanceProvider implements ISeanceProvider
         seances.add(s);
         seances.add(s);
         return seances;*/
-        return new ArrayList<Seance>();
+        return new ArrayList<SeancesFilm>();
     }
     
 }

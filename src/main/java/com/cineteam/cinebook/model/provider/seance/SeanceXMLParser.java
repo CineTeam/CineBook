@@ -2,6 +2,7 @@ package com.cineteam.cinebook.model.provider.seance;
 
 import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.model.entity.Seance;
+import com.cineteam.cinebook.model.entity.SeancesFilm;
 import com.cineteam.cinebook.model.provider.AXMLParser;
 import com.cineteam.cinebook.model.provider.film.FilmXMLParser;
 import java.io.InputStream;
@@ -16,37 +17,46 @@ public class SeanceXMLParser extends AXMLParser
 {
     private FilmXMLParser filmParser = new FilmXMLParser();
     
-    public List<Seance> parserLesSeancesPourUnCinema(InputStream is) 
+    public List<SeancesFilm> parserLesSeancesPourUnCinema(InputStream is) 
     {
          Document document = getDocumentFromInputStream(is);
-         List<Seance> seances = getSeancesPourUnCinema(document);
+         List<SeancesFilm> seances = getSeancesPourUnCinema(document);
          return seances;
     }
 
-    private List<Seance> getSeancesPourUnCinema(Document document)
+    private List<SeancesFilm> getSeancesPourUnCinema(Document document)
     {
-        List<Seance> seances = new ArrayList<Seance>();
+        List<SeancesFilm> seancesFilms = new ArrayList<SeancesFilm>();
+        
         if(document != null)
         {
             Element racine = document.getRootElement();
-            Element seancesCinema = racine.getChild("theaterShowtimes", defaultNameSpace);
-            Element seancesFilms = seancesCinema.getChild("movieShowtimesList", defaultNameSpace);
+            Element seancesCinemaElt = racine.getChild("theaterShowtimes", defaultNameSpace);
+            Element seancesFilmsElt = seancesCinemaElt.getChild("movieShowtimesList", defaultNameSpace);
             
-            List seancesFilmsList = seancesFilms.getChildren("movieShowtimes", defaultNameSpace);
+            List seancesFilmsList = seancesFilmsElt.getChildren("movieShowtimes", defaultNameSpace);
             
             Iterator i = seancesFilmsList.iterator();
             while(i.hasNext())
             {
                 Element courant = (Element)i.next();
                 Element onShow = courant.getChild("onShow", defaultNameSpace);
-                Film film = filmParser.parserLeFilm(onShow);
+                Element movie = onShow.getChild("movie", defaultNameSpace);
+                Film film = filmParser.parserLeFilm(movie);
+                List<Seance> seances = getSeancesForFilm(seancesFilms, film);
+                if(seances == null)
+                {
+                    seances = new ArrayList<Seance>();
+                    SeancesFilm seancesFilm = new SeancesFilm();
+                    seancesFilm.setSeances(seances);
+                    seancesFilm.setFilm(film);
+                    seancesFilms.add(seancesFilm);
+                }
                 Seance seance = parserSeance(courant);
-                seance.setFilm(film);
-                
-                seances.add(seance);
+                seances.add(seance);  
             }
         }
-        return seances;
+        return seancesFilms;
     }
 
     private String parserLaLangue(Element courant)
@@ -64,6 +74,30 @@ public class SeanceXMLParser extends AXMLParser
         seance.setLangue(parserLaLangue(courant));
         seance.setFormat(parserFormat(courant));
         return seance;
+    }
+
+    private boolean seancesFilmsContainsFilm(List<SeancesFilm> seancesFilms, Film film)
+    {
+        for(SeancesFilm seancesFilm : seancesFilms)
+        {
+            if(seancesFilm.getFilm().equals(film))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private List<Seance> getSeancesForFilm(List<SeancesFilm> seancesFilms, Film film)
+    {
+        for(SeancesFilm seancesFilm : seancesFilms)
+        {
+            if(seancesFilm.getFilm() != null && seancesFilm.getFilm().equals(film))
+            {
+                return seancesFilm.getSeances();
+            }
+        }
+        return null;
     }
     
 }
