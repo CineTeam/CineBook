@@ -9,7 +9,8 @@ public class AllocineApiUrlBuilder
         FILMSENSALLE ("movielist"),
         DETAILFILM ("movie"),
         LISTECINEMA ("theaterlist"),
-        DETAILCINEMA ("theater");
+        DETAILCINEMA ("theater"),
+        SEANCES ("showtimelist");
         
         private final String value;
         
@@ -141,6 +142,12 @@ public class AllocineApiUrlBuilder
     public AllocineApiUrlBuilder ajouterLeCodePostal(String codePostal)
     {
         url += "&zip=" + codePostal;
+        return this;
+    } 
+    
+    public AllocineApiUrlBuilder ajouterLesCinemas(String cinemasID)
+    {
+        url += "&theaters=" + cinemasID;
         return this;
     } 
     

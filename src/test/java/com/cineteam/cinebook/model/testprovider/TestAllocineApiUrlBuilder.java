@@ -54,4 +54,11 @@ public class TestAllocineApiUrlBuilder {
         String url = new AllocineApiUrlBuilder(Methodes.DETAILCINEMA).ajouterLIdentifiant("W3300").ajouterLeNiveauDeDetail(NiveauDetail.LARGE).getUrl();
         assertEquals("http://api.allocine.fr/rest/v3/theater?partner=YW5kcm9pZC12M3M&format=xml&code=W3300&profile=large", url);
     }
+    
+    @Test
+    public void retourneUrlSeancePourUnCineamAvecLesBonsParametres()
+    {
+        String url = new AllocineApiUrlBuilder(Methodes.SEANCES).ajouterLesCinemas("W3300").getUrl();
+        assertEquals("http://api.allocine.fr/rest/v3/showtimelist?partner=YW5kcm9pZC12M3M&format=xml&theaters=W3300", url);
+    }
 }

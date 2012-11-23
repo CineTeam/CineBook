@@ -1,0 +1,1671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.allocine.net/v6/ns/">
+  <updated>2012-11-23</updated>
+  <page>1</page>
+  <count>10</count>
+  <totalResults>1</totalResults>
+  <theaterShowtimes>
+    <place>
+      <theater code="W3300">
+        <name>Mega CGR Français - Bordeaux</name>
+        <address>9 rue Montesquieu  </address>
+        <postalCode>33000</postalCode>
+        <city>Bordeaux</city>
+        <picture path="/medias/nmedia/18/75/02/25/19456348.JPG" href="http://images.allocine.fr/medias/nmedia/18/75/02/25/19456348.JPG" />
+        <geoloc lat="44.8424880" long="-0.5785400" />
+        <linkList>
+          <link rel="aco:web" href="http://www.allocine.fr/seance/salle_gen_csalle=W3300.html" />
+        </linkList>
+      </theater>
+    </place>
+    <movieShowtimesList>
+      <movieShowtimes preview="true" releaseWeek="false">
+        <onShow>
+          <movie code="189909">
+            <title>Les Cinq légendes</title>
+            <castingShort>
+              <directors>Peter Ramsey</directors>
+              <actors>Chris Pine, Isla Fisher, Alec Baldwin, Jude Law, Hugh Jackman</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-28</releaseDate>
+              <releaseVersion code="143001">3D</releaseVersion>
+            </release>
+            <runtime>5820</runtime>
+            <genreList>
+              <genre code="13026">Animation</genre>
+              <genre code="13001">Aventure</genre>
+              <genre code="13036">Famille</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14030">A partir de 6 ans</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/89/92/04/20272137.jpg" href="http://images.allocine.fr/medias/nmedia/18/89/92/04/20272137.jpg" />
+            <trailer code="19371690" href="http://www.allocine.fr/blogvision/19371690" />
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110003">3D</screenFormat>
+        <display>Séances du dimanche 25 novembre 2012 : 13:30 (film à 13:45)</display>
+        <screenings>
+          <scr d="2012-11-25">
+            <t code="932816677" p="15">13:30</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="true" releaseWeek="false">
+        <onShow>
+          <movie code="193231">
+            <title>Niko le petit Renne 2</title>
+            <castingShort>
+              <directors>Kari Juusonen, Jorgen Lerdam</directors>
+              <actors>Vuokko Hovatta, Eric Carlson, Kari Ketonen, Elina Knihtilä, Aarre Karén</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-28</releaseDate>
+            </release>
+            <runtime>4620</runtime>
+            <genreList>
+              <genre code="13026">Animation</genre>
+              <genre code="13001">Aventure</genre>
+              <genre code="13036">Famille</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14029">A partir de 3 ans</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/93/29/94/20248999.jpg" href="http://images.allocine.fr/medias/nmedia/18/93/29/94/20248999.jpg" />
+            <trailer code="19399963" href="http://www.allocine.fr/blogvision/19399963" />
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110002">Numérique</screenFormat>
+        <display>Séances du dimanche 25 novembre 2012 : 11:15 (film à 11:30)</display>
+        <screenings>
+          <scr d="2012-11-25">
+            <t code="932816904" p="15">11:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="true" releaseWeek="false">
+        <onShow>
+          <movie code="202924">
+            <title>Ernest et Célestine</title>
+            <castingShort>
+              <directors>Benjamin Renner, Vincent Patar, Stéphane Aubier</directors>
+              <actors>Lambert Wilson, Anne-Marie Loop, Pauline Brunner</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-12-12</releaseDate>
+            </release>
+            <runtime>4740</runtime>
+            <genreList>
+              <genre code="13026">Animation</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14029">A partir de 3 ans</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/90/28/33/20118226.jpg" href="http://images.allocine.fr/medias/nmedia/18/90/28/33/20118226.jpg" />
+            <trailer code="19409528" href="http://www.allocine.fr/blogvision/19409528" />
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <screenFormat code="110002">Numérique</screenFormat>
+        <display>Séances du dimanche 9 décembre 2012 : 11:15 (film à 11:30)</display>
+        <screenings>
+          <scr d="2012-12-09">
+            <t code="932817337" p="15">11:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="true" releaseWeek="false">
+        <onShow>
+          <movie code="54343">
+            <title>L'Odyssée de Pi</title>
+            <castingShort>
+              <directors>Ang Lee</directors>
+              <actors>Suraj Sharma, Irrfan Khan, Adil Hussain, Tabu, Rafe Spall</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-12-19</releaseDate>
+              <releaseVersion code="143001">3D</releaseVersion>
+            </release>
+            <runtime>7620</runtime>
+            <genreList>
+              <genre code="13001">Aventure</genre>
+              <genre code="13008">Drame</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/93/60/26/20298702.jpg" href="http://images.allocine.fr/medias/nmedia/18/93/60/26/20298702.jpg" />
+            <trailer code="19407006" href="http://www.allocine.fr/blogvision/19407006" />
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110003">3D</screenFormat>
+        <display>Séances du vendredi 7 décembre 2012 : 19:45 (film à 20:00)</display>
+        <screenings>
+          <scr d="2012-12-07">
+            <t code="932815638" p="15">19:45</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="true" releaseWeek="false">
+        <onShow>
+          <movie code="182990">
+            <title>Mais qui a re-tué Pamela Rose ?</title>
+            <castingShort>
+              <directors>Kad Merad, Olivier Baroux</directors>
+              <actors>Kad Merad, Olivier Baroux, Audrey Fleurot, Laurent Lafitte, Omar Sy</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-12-05</releaseDate>
+            </release>
+            <runtime>5400</runtime>
+            <genreList>
+              <genre code="13005">Comédie</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/93/56/88/20329158.jpg" href="http://images.allocine.fr/medias/nmedia/18/93/56/88/20329158.jpg" />
+            <trailer code="19437367" href="http://www.allocine.fr/blogvision/19437367" />
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <screenFormat code="110002">Numérique</screenFormat>
+        <display>Séances du mardi 4 décembre 2012 : 20:15 (film à 20:30)</display>
+        <screenings>
+          <scr d="2012-12-04">
+            <t code="932816670" p="15">20:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="182749">
+            <title>Twilight - Chapitre 5 : Révélation 2e partie</title>
+            <castingShort>
+              <directors>Bill Condon</directors>
+              <actors>Kristen Stewart, Robert Pattinson, Taylor Lautner, Billy Burke, Peter Facinelli</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-14</releaseDate>
+            </release>
+            <runtime>6900</runtime>
+            <genreList>
+              <genre code="13012">Fantastique</genre>
+              <genre code="13024">Romance</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/89/43/69/20278941.jpg" href="http://images.allocine.fr/medias/nmedia/18/89/43/69/20278941.jpg" />
+            <trailer code="19397976" href="http://www.allocine.fr/blogvision/19397976" />
+            <statistics>
+              <pressRating>3.133333</pressRating>
+              <pressReviewCount>15</pressReviewCount>
+              <userRating>4.322392</userRating>
+              <userReviewCount>836</userReviewCount>
+              <userRatingCount>4623</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110002">Numérique</screenFormat>
+        <display>Séances du mercredi 21 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 15:15 (film à 15:30), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:45 (film à 20:00), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du jeudi 22 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 15:15 (film à 15:30), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:45 (film à 20:00), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du vendredi 23 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 15:15 (film à 15:30), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:45 (film à 20:00), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du samedi 24 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 15:15 (film à 15:30), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:45 (film à 20:00), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du dimanche 25 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 15:15 (film à 15:30), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:45 (film à 20:00), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du lundi 26 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 15:15 (film à 15:30), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:45 (film à 20:00), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du mardi 27 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 15:15 (film à 15:30), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:45 (film à 20:00), 21:15 (film à 21:30), 22:15 (film à 22:30)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932816631" p="15">14:00</t>
+            <t code="932816632" p="15">15:15</t>
+            <t code="932816633" p="15">16:30</t>
+            <t code="932816634" p="15">18:00</t>
+            <t code="932816635" p="15">19:45</t>
+            <t code="932816636" p="15">21:15</t>
+            <t code="932816637" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932816638" p="15">11:00</t>
+            <t code="932816639" p="15">14:00</t>
+            <t code="932816640" p="15">15:15</t>
+            <t code="932816641" p="15">16:30</t>
+            <t code="932816642" p="15">18:00</t>
+            <t code="932816643" p="15">19:45</t>
+            <t code="932816644" p="15">21:15</t>
+            <t code="932816645" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816646" p="15">11:00</t>
+            <t code="932816647" p="15">14:00</t>
+            <t code="932816648" p="15">15:15</t>
+            <t code="932816649" p="15">16:30</t>
+            <t code="932816650" p="15">18:00</t>
+            <t code="932816651" p="15">19:45</t>
+            <t code="932816652" p="15">21:15</t>
+            <t code="932816653" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816654" p="15">11:00</t>
+            <t code="932816655" p="15">14:00</t>
+            <t code="932816656" p="15">15:15</t>
+            <t code="932816657" p="15">16:30</t>
+            <t code="932816658" p="15">18:00</t>
+            <t code="932816659" p="15">19:45</t>
+            <t code="932816660" p="15">21:15</t>
+            <t code="932816661" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816662" p="15">11:00</t>
+            <t code="932816663" p="15">14:00</t>
+            <t code="932816664" p="15">15:15</t>
+            <t code="932816665" p="15">16:30</t>
+            <t code="932816666" p="15">18:00</t>
+            <t code="932816667" p="15">19:45</t>
+            <t code="932816668" p="15">21:15</t>
+            <t code="932816669" p="15">22:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="145646">
+            <title>Skyfall</title>
+            <castingShort>
+              <directors>Sam Mendes</directors>
+              <actors>Daniel Craig, Judi Dench, Javier Bardem, Ralph Fiennes, Naomie Harris</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-26</releaseDate>
+            </release>
+            <runtime>8580</runtime>
+            <genreList>
+              <genre code="13025">Action</genre>
+              <genre code="13022">Espionnage</genre>
+              <genre code="13023">Thriller</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/88/95/51/20264212.jpg" href="http://images.allocine.fr/medias/nmedia/18/88/95/51/20264212.jpg" />
+            <trailer code="19378475" href="http://www.allocine.fr/blogvision/19378475" />
+            <statistics>
+              <pressRating>3.956521</pressRating>
+              <pressReviewCount>23</pressReviewCount>
+              <userRating>4.16081858</userRating>
+              <userReviewCount>2482</userReviewCount>
+              <userRatingCount>10108</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110002">Numérique</screenFormat>
+        <display>Séances du mercredi 21 novembre 2012 : 10:45 (film à 11:00), 13:45 (film à 14:00), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:30 (film à 19:45), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du jeudi 22 novembre 2012 : 10:45 (film à 11:00), 13:45 (film à 14:00), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:30 (film à 19:45), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du vendredi 23 novembre 2012 : 10:45 (film à 11:00), 13:45 (film à 14:00), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:30 (film à 19:45), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du samedi 24 novembre 2012 : 10:45 (film à 11:00), 13:45 (film à 14:00), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:30 (film à 19:45), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du dimanche 25 novembre 2012 : 10:45 (film à 11:00), 13:45 (film à 14:00), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:30 (film à 19:45), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du lundi 26 novembre 2012 : 10:45 (film à 11:00), 13:45 (film à 14:00), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:30 (film à 19:45), 21:15 (film à 21:30), 22:15 (film à 22:30)
+Séances du mardi 27 novembre 2012 : 10:45 (film à 11:00), 13:45 (film à 14:00), 16:30 (film à 16:45), 18:00 (film à 18:15), 19:30 (film à 19:45), 21:15 (film à 21:30), 22:15 (film à 22:30)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932816130" p="15">13:45</t>
+            <t code="932816131" p="15">16:30</t>
+            <t code="932816132" p="15">18:00</t>
+            <t code="932816133" p="15">19:30</t>
+            <t code="932816134" p="15">21:15</t>
+            <t code="932816135" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932816136" p="15">10:45</t>
+            <t code="932816137" p="15">13:45</t>
+            <t code="932816138" p="15">16:30</t>
+            <t code="932816139" p="15">18:00</t>
+            <t code="932816140" p="15">19:30</t>
+            <t code="932816141" p="15">21:15</t>
+            <t code="932816142" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816143" p="15">10:45</t>
+            <t code="932816144" p="15">13:45</t>
+            <t code="932816145" p="15">16:30</t>
+            <t code="932816146" p="15">18:00</t>
+            <t code="932816147" p="15">19:30</t>
+            <t code="932816148" p="15">21:15</t>
+            <t code="932816149" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816150" p="15">10:45</t>
+            <t code="932816151" p="15">13:45</t>
+            <t code="932816152" p="15">16:30</t>
+            <t code="932816153" p="15">18:00</t>
+            <t code="932816154" p="15">19:30</t>
+            <t code="932816155" p="15">21:15</t>
+            <t code="932816156" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816157" p="15">10:45</t>
+            <t code="932816158" p="15">13:45</t>
+            <t code="932816159" p="15">16:30</t>
+            <t code="932816160" p="15">18:00</t>
+            <t code="932816161" p="15">19:30</t>
+            <t code="932816162" p="15">21:15</t>
+            <t code="932816163" p="15">22:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="180270">
+            <title>Stars 80</title>
+            <castingShort>
+              <directors>Frédéric Forestier, Thomas Langmann</directors>
+              <actors>Richard Anconina, Patrick Timsit, Bruno Lochet, Lio, François Feldman</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-24</releaseDate>
+            </release>
+            <runtime>6600</runtime>
+            <genreList>
+              <genre code="13005">Comédie</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/92/89/27/20223475.jpg" href="http://images.allocine.fr/medias/nmedia/18/92/89/27/20223475.jpg" />
+            <trailer code="19429014" href="http://www.allocine.fr/blogvision/19429014" />
+            <statistics>
+              <pressRating>2.17647</pressRating>
+              <pressReviewCount>17</pressReviewCount>
+              <userRating>3.8752017</userRating>
+              <userReviewCount>575</userReviewCount>
+              <userRatingCount>1604</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 11:00 (film à 11:15), 18:00 (film à 18:15)
+Séances du jeudi 22 novembre 2012 : 11:00 (film à 11:15)
+Séances du vendredi 23 novembre 2012 : 11:00 (film à 11:15), 13:45 (film à 14:00)
+Séances du samedi 24 novembre 2012 : 11:00 (film à 11:15), 18:00 (film à 18:15)
+Séances du dimanche 25 novembre 2012 : 18:00 (film à 18:15)
+Séances du lundi 26 novembre 2012 : 11:00 (film à 11:15), 13:45 (film à 14:00), 18:00 (film à 18:15)
+Séances du mardi 27 novembre 2012 : 11:00 (film à 11:15), 13:45 (film à 14:00), 18:00 (film à 18:15)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932816408" p="15">13:45</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932816409" p="15">11:00</t>
+            <t code="932816410" p="15">18:00</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816411" p="15">18:00</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816412" p="15">11:00</t>
+            <t code="932816413" p="15">13:45</t>
+            <t code="932816414" p="15">18:00</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816415" p="15">11:00</t>
+            <t code="932816416" p="15">13:45</t>
+            <t code="932816417" p="15">18:00</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="193877">
+            <title>Un Plan Parfait</title>
+            <castingShort>
+              <directors>Pascal Chaumeil</directors>
+              <actors>Diane Kruger, Dany Boon, Alice Pol, Robert Plagnol, Jonathan Cohen</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-31</releaseDate>
+            </release>
+            <runtime>6240</runtime>
+            <genreList>
+              <genre code="13005">Comédie</genre>
+              <genre code="13024">Romance</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/93/09/73/20250231.jpg" href="http://images.allocine.fr/medias/nmedia/18/93/09/73/20250231.jpg" />
+            <trailer code="19423048" href="http://www.allocine.fr/blogvision/19423048" />
+            <statistics>
+              <pressRating>2.642857</pressRating>
+              <pressReviewCount>14</pressReviewCount>
+              <userRating>3.431545</userRating>
+              <userReviewCount>379</userReviewCount>
+              <userRatingCount>1385</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <screenFormat code="110002">Numérique</screenFormat>
+        <display>Séances du mercredi 21 novembre 2012 : 18:00 (film à 18:15)
+Séances du samedi 24 novembre 2012 : 18:00 (film à 18:15)
+Séances du dimanche 25 novembre 2012 : 18:00 (film à 18:15)
+Séances du lundi 26 novembre 2012 : 18:00 (film à 18:15)
+Séances du mardi 27 novembre 2012 : 18:00 (film à 18:15)</display>
+        <screenings>
+          <scr d="2012-11-24">
+            <t code="932817020" p="15">18:00</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932817021" p="15">18:00</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932817022" p="15">18:00</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932817023" p="15">18:00</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="190267">
+            <title>Argo</title>
+            <castingShort>
+              <directors>Ben Affleck</directors>
+              <actors>Ben Affleck, Bryan Cranston, John Goodman, Alan Arkin, Kyle Chandler</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-07</releaseDate>
+            </release>
+            <runtime>7140</runtime>
+            <genreList>
+              <genre code="13023">Thriller</genre>
+              <genre code="13008">Drame</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/87/65/00/20273151.jpg" href="http://images.allocine.fr/medias/nmedia/18/87/65/00/20273151.jpg" />
+            <trailer code="19402653" href="http://www.allocine.fr/blogvision/19402653" />
+            <statistics>
+              <pressRating>3.74074</pressRating>
+              <pressReviewCount>27</pressReviewCount>
+              <userRating>4.334051</userRating>
+              <userReviewCount>556</userReviewCount>
+              <userRatingCount>2429</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du jeudi 22 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du vendredi 23 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du samedi 24 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du dimanche 25 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du lundi 26 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du mardi 27 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932816760" p="15">14:00</t>
+            <t code="932816761" p="15">16:30</t>
+            <t code="932816762" p="15">19:45</t>
+            <t code="932816763" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932816764" p="15">11:00</t>
+            <t code="932816765" p="15">14:00</t>
+            <t code="932816766" p="15">16:30</t>
+            <t code="932816767" p="15">19:45</t>
+            <t code="932816768" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816769" p="15">11:00</t>
+            <t code="932816770" p="15">14:00</t>
+            <t code="932816771" p="15">16:30</t>
+            <t code="932816772" p="15">19:45</t>
+            <t code="932816773" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816774" p="15">11:00</t>
+            <t code="932816775" p="15">14:00</t>
+            <t code="932816776" p="15">16:30</t>
+            <t code="932816777" p="15">19:45</t>
+            <t code="932816778" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816779" p="15">11:00</t>
+            <t code="932816780" p="15">14:00</t>
+            <t code="932816781" p="15">16:30</t>
+            <t code="932816782" p="15">19:45</t>
+            <t code="932816783" p="15">22:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="192086">
+            <title>Nous York</title>
+            <castingShort>
+              <directors>Géraldine Nakache, Hervé Mimran</directors>
+              <actors>Leïla Bekhti, Géraldine Nakache, Manu Payet, Nader Boussandel, Baptiste Lecaplain</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-07</releaseDate>
+            </release>
+            <runtime>5880</runtime>
+            <genreList>
+              <genre code="13005">Comédie</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/88/95/95/20225676.jpg" href="http://images.allocine.fr/medias/nmedia/18/88/95/95/20225676.jpg" />
+            <trailer code="19399912" href="http://www.allocine.fr/blogvision/19399912" />
+            <statistics>
+              <pressRating>2.368421</pressRating>
+              <pressReviewCount>19</pressReviewCount>
+              <userRating>1.72715914</userRating>
+              <userReviewCount>370</userReviewCount>
+              <userRatingCount>1094</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 16:00 (film à 16:15), 20:15 (film à 20:30)
+Séances du vendredi 23 novembre 2012 : 20:15 (film à 20:30)
+Séances du samedi 24 novembre 2012 : 16:00 (film à 16:15), 20:15 (film à 20:30)
+Séances du dimanche 25 novembre 2012 : 16:00 (film à 16:15), 20:15 (film à 20:30)
+Séances du lundi 26 novembre 2012 : 16:00 (film à 16:15), 20:15 (film à 20:30)
+Séances du mardi 27 novembre 2012 : 16:00 (film à 16:15), 20:15 (film à 20:30)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932816895" p="15">20:15</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932816896" p="15">16:00</t>
+            <t code="932816897" p="15">20:15</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816898" p="15">16:00</t>
+            <t code="932816899" p="15">20:15</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816900" p="15">16:00</t>
+            <t code="932816901" p="15">20:15</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816902" p="15">16:00</t>
+            <t code="932816903" p="15">20:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="177895">
+            <title>Astérix et Obélix : au service de Sa Majesté</title>
+            <castingShort>
+              <directors>Laurent Tirard</directors>
+              <actors>Gérard Depardieu, Edouard Baer, Guillaume Gallienne, Vincent Lacoste, Valérie Lemercier</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-17</releaseDate>
+            </release>
+            <runtime>6540</runtime>
+            <genreList>
+              <genre code="13005">Comédie</genre>
+              <genre code="13001">Aventure</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/89/32/13/20231929.jpg" href="http://images.allocine.fr/medias/nmedia/18/89/32/13/20231929.jpg" />
+            <trailer code="19393640" href="http://www.allocine.fr/blogvision/19393640" />
+            <statistics>
+              <pressRating>3.185185</pressRating>
+              <pressReviewCount>27</pressReviewCount>
+              <userRating>2.02989268</userRating>
+              <userReviewCount>1202</userReviewCount>
+              <userRatingCount>3559</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <screenFormat code="110003">3D</screenFormat>
+        <display>Séances du mercredi 21 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45)
+Séances du jeudi 22 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45)
+Séances du vendredi 23 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45)
+Séances du samedi 24 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45)
+Séances du dimanche 25 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45)
+Séances du lundi 26 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45)
+Séances du mardi 27 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932816304" p="15">13:30</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932816305" p="15">11:00</t>
+            <t code="932816306" p="15">13:30</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816307" p="15">11:00</t>
+            <t code="932816308" p="15">13:30</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816309" p="15">11:00</t>
+            <t code="932816310" p="15">13:30</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816311" p="15">11:00</t>
+            <t code="932816312" p="15">13:30</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="true">
+        <onShow>
+          <movie code="181845">
+            <title>Thérèse Desqueyroux</title>
+            <castingShort>
+              <directors>Claude Miller</directors>
+              <actors>Audrey Tautou, Gilles Lellouche, Anaïs Demoustier, Catherine Arditi, Isabelle Sadoyan</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-21</releaseDate>
+            </release>
+            <runtime>6600</runtime>
+            <genreList>
+              <genre code="13008">Drame</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/90/19/18/20255135.jpg" href="http://images.allocine.fr/medias/nmedia/18/90/19/18/20255135.jpg" />
+            <trailer code="19407369" href="http://www.allocine.fr/blogvision/19407369" />
+            <statistics>
+              <pressRating>3.375</pressRating>
+              <pressReviewCount>16</pressReviewCount>
+              <userRating>2.39550567</userRating>
+              <userReviewCount>28</userReviewCount>
+              <userRatingCount>93</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du jeudi 22 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du vendredi 23 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du samedi 24 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du dimanche 25 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du lundi 26 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du mardi 27 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932816524" p="15">13:30</t>
+            <t code="932816525" p="15">15:45</t>
+            <t code="932816526" p="15">18:00</t>
+            <t code="932816527" p="15">20:15</t>
+            <t code="932816528" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932816529" p="15">11:00</t>
+            <t code="932816530" p="15">13:30</t>
+            <t code="932816531" p="15">15:45</t>
+            <t code="932816532" p="15">18:00</t>
+            <t code="932816533" p="15">20:15</t>
+            <t code="932816534" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816535" p="15">11:00</t>
+            <t code="932816536" p="15">13:30</t>
+            <t code="932816537" p="15">15:45</t>
+            <t code="932816538" p="15">18:00</t>
+            <t code="932816539" p="15">20:15</t>
+            <t code="932816540" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816541" p="15">11:00</t>
+            <t code="932816542" p="15">13:30</t>
+            <t code="932816543" p="15">15:45</t>
+            <t code="932816544" p="15">18:00</t>
+            <t code="932816545" p="15">20:15</t>
+            <t code="932816546" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816547" p="15">11:00</t>
+            <t code="932816548" p="15">13:30</t>
+            <t code="932816549" p="15">15:45</t>
+            <t code="932816550" p="15">18:00</t>
+            <t code="932816551" p="15">20:15</t>
+            <t code="932816552" p="15">22:30</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="132661">
+            <title>Frankenweenie</title>
+            <castingShort>
+              <directors>Tim Burton</directors>
+              <actors>Charlie Tahan, Winona Ryder, Martin Landau, Martin Short, Catherine O'Hara</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-31</releaseDate>
+              <releaseVersion code="143001">3D</releaseVersion>
+            </release>
+            <runtime>5220</runtime>
+            <genreList>
+              <genre code="13026">Animation</genre>
+              <genre code="13005">Comédie</genre>
+              <genre code="13009">Epouvante-horreur</genre>
+              <genre code="13021">Science fiction</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14031">A partir de 10 ans</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/85/69/55/20127907.jpg" href="http://images.allocine.fr/medias/nmedia/18/85/69/55/20127907.jpg" />
+            <trailer code="19361629" href="http://www.allocine.fr/blogvision/19361629" />
+            <statistics>
+              <pressRating>3.821428</pressRating>
+              <pressReviewCount>28</pressReviewCount>
+              <userRating>4.06600666</userRating>
+              <userReviewCount>338</userReviewCount>
+              <userRatingCount>1396</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110003">3D</screenFormat>
+        <display>Séances du mercredi 21 novembre 2012 : 11:15 (film à 11:30)
+Séances du jeudi 22 novembre 2012 : 11:15 (film à 11:30)
+Séances du vendredi 23 novembre 2012 : 11:15 (film à 11:30)
+Séances du samedi 24 novembre 2012 : 11:15 (film à 11:30)
+Séances du dimanche 25 novembre 2012 : 11:15 (film à 11:30)
+Séances du lundi 26 novembre 2012 : 11:15 (film à 11:30)
+Séances du mardi 27 novembre 2012 : 11:15 (film à 11:30)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932815792" p="15">11:15</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932815793" p="15">11:15</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932815794" p="15">11:15</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932815795" p="15">11:15</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932815796" p="15">11:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="208154">
+            <title>Clochette et le secret des fées</title>
+            <castingShort>
+              <directors>Peggy Holmes</directors>
+              <actors>Timothy Dalton, Lucy Hale, Megan Hilty, Anjelica Huston, Matt Lanter</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-10</releaseDate>
+              <releaseVersion code="143001">3D</releaseVersion>
+            </release>
+            <runtime>4620</runtime>
+            <genreList>
+              <genre code="13026">Animation</genre>
+              <genre code="13036">Famille</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14030">A partir de 6 ans</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/90/97/94/20183973.jpg" href="http://images.allocine.fr/medias/nmedia/18/90/97/94/20183973.jpg" />
+            <trailer code="19376182" href="http://www.allocine.fr/blogvision/19376182" />
+            <statistics>
+              <pressRating>2.375</pressRating>
+              <pressReviewCount>8</pressReviewCount>
+              <userRating>4.17571449</userRating>
+              <userReviewCount>100</userReviewCount>
+              <userRatingCount>480</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110003">3D</screenFormat>
+        <display>Séances du mercredi 21 novembre 2012 : 11:00 (film à 11:15), 13:45 (film à 14:00)
+Séances du samedi 24 novembre 2012 : 11:00 (film à 11:15), 13:45 (film à 14:00)
+Séances du dimanche 25 novembre 2012 : 11:00 (film à 11:15), 13:45 (film à 14:00)</display>
+        <screenings>
+          <scr d="2012-11-24">
+            <t code="932817359" p="15">11:00</t>
+            <t code="932817360" p="15">13:45</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932817361" p="15">11:00</t>
+            <t code="932817362" p="15">13:45</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="true">
+        <onShow>
+          <movie code="198088">
+            <title>Une nouvelle chance</title>
+            <castingShort>
+              <directors>Robert Lorenz</directors>
+              <actors>Clint Eastwood, Amy Adams, Justin Timberlake, John Goodman, Matthew Lillard</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-21</releaseDate>
+            </release>
+            <runtime>6660</runtime>
+            <genreList>
+              <genre code="13008">Drame</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/93/52/99/20261629.jpg" href="http://images.allocine.fr/medias/nmedia/18/93/52/99/20261629.jpg" />
+            <trailer code="19425831" href="http://www.allocine.fr/blogvision/19425831" />
+            <statistics>
+              <pressRating>2.5</pressRating>
+              <pressReviewCount>16</pressReviewCount>
+              <userRating>3.12827444</userRating>
+              <userReviewCount>21</userReviewCount>
+              <userRatingCount>92</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du jeudi 22 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du vendredi 23 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du samedi 24 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du dimanche 25 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du lundi 26 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du mardi 27 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932817118" p="15">13:30</t>
+            <t code="932817119" p="15">15:45</t>
+            <t code="932817120" p="15">18:00</t>
+            <t code="932817121" p="15">20:15</t>
+            <t code="932817122" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932817123" p="15">11:00</t>
+            <t code="932817124" p="15">13:30</t>
+            <t code="932817125" p="15">15:45</t>
+            <t code="932817126" p="15">18:00</t>
+            <t code="932817127" p="15">20:15</t>
+            <t code="932817128" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932817129" p="15">11:00</t>
+            <t code="932817130" p="15">13:30</t>
+            <t code="932817131" p="15">15:45</t>
+            <t code="932817132" p="15">18:00</t>
+            <t code="932817133" p="15">20:15</t>
+            <t code="932817134" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932817135" p="15">11:00</t>
+            <t code="932817136" p="15">13:30</t>
+            <t code="932817137" p="15">15:45</t>
+            <t code="932817138" p="15">18:00</t>
+            <t code="932817139" p="15">20:15</t>
+            <t code="932817140" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932817141" p="15">11:00</t>
+            <t code="932817142" p="15">13:30</t>
+            <t code="932817143" p="15">15:45</t>
+            <t code="932817144" p="15">18:00</t>
+            <t code="932817145" p="15">20:15</t>
+            <t code="932817146" p="15">22:30</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="194667">
+            <title>Le Capital</title>
+            <castingShort>
+              <directors>Costa-Gavras</directors>
+              <actors>Gad Elmaleh, Gabriel Byrne, Natacha Régnier, Céline Sallette, Liya Kebede</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-14</releaseDate>
+            </release>
+            <runtime>6780</runtime>
+            <genreList>
+              <genre code="13008">Drame</genre>
+              <genre code="13023">Thriller</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/92/98/76/20229019.jpg" href="http://images.allocine.fr/medias/nmedia/18/92/98/76/20229019.jpg" />
+            <trailer code="19420169" href="http://www.allocine.fr/blogvision/19420169" />
+            <statistics>
+              <pressRating>2.315789</pressRating>
+              <pressReviewCount>19</pressReviewCount>
+              <userRating>2.4117322</userRating>
+              <userReviewCount>124</userReviewCount>
+              <userRatingCount>366</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du jeudi 22 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du vendredi 23 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du samedi 24 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du dimanche 25 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du lundi 26 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du mardi 27 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932817039" p="15">14:00</t>
+            <t code="932817040" p="15">16:30</t>
+            <t code="932817041" p="15">19:45</t>
+            <t code="932817042" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932817043" p="15">11:00</t>
+            <t code="932817044" p="15">14:00</t>
+            <t code="932817045" p="15">16:30</t>
+            <t code="932817046" p="15">19:45</t>
+            <t code="932817047" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932817048" p="15">11:00</t>
+            <t code="932817049" p="15">14:00</t>
+            <t code="932817050" p="15">16:30</t>
+            <t code="932817051" p="15">19:45</t>
+            <t code="932817052" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932817053" p="15">11:00</t>
+            <t code="932817054" p="15">14:00</t>
+            <t code="932817055" p="15">16:30</t>
+            <t code="932817056" p="15">19:45</t>
+            <t code="932817057" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932817058" p="15">11:00</t>
+            <t code="932817059" p="15">14:00</t>
+            <t code="932817060" p="15">16:30</t>
+            <t code="932817061" p="15">19:45</t>
+            <t code="932817062" p="15">22:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="139291">
+            <title>Looper</title>
+            <castingShort>
+              <directors>Rian Johnson</directors>
+              <actors>Bruce Willis, Joseph Gordon-Levitt, Emily Blunt, Paul Dano, Piper Perabo</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-31</releaseDate>
+            </release>
+            <runtime>6600</runtime>
+            <genreList>
+              <genre code="13021">Science fiction</genre>
+              <genre code="13025">Action</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14035">Avertissement : des scènes, des propos ou des images peuvent heurter la sensibilité des spectateurs</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/89/98/30/20239211.jpg" href="http://images.allocine.fr/medias/nmedia/18/89/98/30/20239211.jpg" />
+            <trailer code="19384410" href="http://www.allocine.fr/blogvision/19384410" />
+            <statistics>
+              <pressRating>3.869565</pressRating>
+              <pressReviewCount>23</pressReviewCount>
+              <userRating>3.80389571</userRating>
+              <userReviewCount>801</userReviewCount>
+              <userRatingCount>3564</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 22:15 (film à 22:30)
+Séances du jeudi 22 novembre 2012 : 22:15 (film à 22:30)
+Séances du samedi 24 novembre 2012 : 22:15 (film à 22:30)
+Séances du dimanche 25 novembre 2012 : 22:15 (film à 22:30)
+Séances du lundi 26 novembre 2012 : 22:15 (film à 22:30)
+Séances du mardi 27 novembre 2012 : 22:15 (film à 22:30)</display>
+        <screenings>
+          <scr d="2012-11-24">
+            <t code="932815888" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932815889" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932815890" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932815891" p="15">22:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="true">
+        <onShow>
+          <movie code="146630">
+            <title>The Impossible</title>
+            <castingShort>
+              <directors>Juan Antonio Bayona</directors>
+              <actors>Naomi Watts, Ewan McGregor, Tom Holland (II), Soenke Möhring, Geraldine Chaplin</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-21</releaseDate>
+            </release>
+            <runtime>6420</runtime>
+            <genreList>
+              <genre code="13008">Drame</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14035">Avertissement : des scènes, des propos ou des images peuvent heurter la sensibilité des spectateurs</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/92/79/54/20282580.jpg" href="http://images.allocine.fr/medias/nmedia/18/92/79/54/20282580.jpg" />
+            <trailer code="19412733" href="http://www.allocine.fr/blogvision/19412733" />
+            <statistics>
+              <pressRating>3.125</pressRating>
+              <pressReviewCount>16</pressReviewCount>
+              <userRating>4.108763</userRating>
+              <userReviewCount>50</userReviewCount>
+              <userRatingCount>215</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du jeudi 22 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du vendredi 23 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du samedi 24 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du dimanche 25 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du lundi 26 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)
+Séances du mardi 27 novembre 2012 : 11:00 (film à 11:15), 14:00 (film à 14:15), 16:30 (film à 16:45), 19:45 (film à 20:00), 22:15 (film à 22:30)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932816176" p="15">14:00</t>
+            <t code="932816177" p="15">16:30</t>
+            <t code="932816178" p="15">19:45</t>
+            <t code="932816179" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932816180" p="15">11:00</t>
+            <t code="932816181" p="15">14:00</t>
+            <t code="932816182" p="15">16:30</t>
+            <t code="932816183" p="15">19:45</t>
+            <t code="932816184" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816185" p="15">11:00</t>
+            <t code="932816186" p="15">14:00</t>
+            <t code="932816187" p="15">16:30</t>
+            <t code="932816188" p="15">19:45</t>
+            <t code="932816189" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816190" p="15">11:00</t>
+            <t code="932816191" p="15">14:00</t>
+            <t code="932816192" p="15">16:30</t>
+            <t code="932816193" p="15">19:45</t>
+            <t code="932816194" p="15">22:15</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816195" p="15">11:00</t>
+            <t code="932816196" p="15">14:00</t>
+            <t code="932816197" p="15">16:30</t>
+            <t code="932816198" p="15">19:45</t>
+            <t code="932816199" p="15">22:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="193715">
+            <title>Dans la maison</title>
+            <castingShort>
+              <directors>François Ozon</directors>
+              <actors>Fabrice Luchini, Ernst Umhauer, Kristin Scott Thomas, Emmanuelle Seigner, Denis Ménochet</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-10</releaseDate>
+            </release>
+            <runtime>6300</runtime>
+            <genreList>
+              <genre code="13023">Thriller</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/91/17/25/20133111.jpg" href="http://images.allocine.fr/medias/nmedia/18/91/17/25/20133111.jpg" />
+            <trailer code="19352899" href="http://www.allocine.fr/blogvision/19352899" />
+            <statistics>
+              <pressRating>3.52</pressRating>
+              <pressReviewCount>25</pressReviewCount>
+              <userRating>3.91591859</userRating>
+              <userReviewCount>552</userReviewCount>
+              <userRatingCount>2323</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 20:15 (film à 20:30)
+Séances du samedi 24 novembre 2012 : 20:15 (film à 20:30)
+Séances du dimanche 25 novembre 2012 : 20:15 (film à 20:30)
+Séances du lundi 26 novembre 2012 : 20:15 (film à 20:30)
+Séances du mardi 27 novembre 2012 : 20:15 (film à 20:30)</display>
+        <screenings>
+          <scr d="2012-11-24">
+            <t code="932816947" p="15">20:15</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816948" p="15">20:15</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816949" p="15">20:15</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816950" p="15">20:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="true">
+        <onShow>
+          <movie code="196809">
+            <title>Comme des frères</title>
+            <castingShort>
+              <directors>Hugo Gélin</directors>
+              <actors>François-Xavier Demaison, Nicolas Duvauchelle, Pierre Niney, Mélanie Thierry, Florence Thomassin</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-21</releaseDate>
+            </release>
+            <runtime>6240</runtime>
+            <genreList>
+              <genre code="13005">Comédie</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/86/09/55/20086909.jpg" href="http://images.allocine.fr/medias/nmedia/18/86/09/55/20086909.jpg" />
+            <trailer code="19416386" href="http://www.allocine.fr/blogvision/19416386" />
+            <statistics>
+              <pressRating>3.615384</pressRating>
+              <pressReviewCount>13</pressReviewCount>
+              <userRating>4.136605</userRating>
+              <userReviewCount>68</userReviewCount>
+              <userRatingCount>260</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="true" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 11:15 (film à 11:30), 13:45 (film à 14:00), 16:00 (film à 16:15), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du jeudi 22 novembre 2012 : 11:15 (film à 11:30), 13:45 (film à 14:00), 16:00 (film à 16:15), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du vendredi 23 novembre 2012 : 11:15 (film à 11:30), 13:45 (film à 14:00), 16:00 (film à 16:15), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du samedi 24 novembre 2012 : 11:15 (film à 11:30), 13:45 (film à 14:00), 16:00 (film à 16:15), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du dimanche 25 novembre 2012 : 11:15 (film à 11:30), 13:45 (film à 14:00), 16:00 (film à 16:15), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du lundi 26 novembre 2012 : 11:15 (film à 11:30), 13:45 (film à 14:00), 16:00 (film à 16:15), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)
+Séances du mardi 27 novembre 2012 : 11:15 (film à 11:30), 13:45 (film à 14:00), 16:00 (film à 16:15), 18:00 (film à 18:15), 20:15 (film à 20:30), 22:30 (film à 22:45)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932817075" p="15">11:15</t>
+            <t code="932817076" p="15">13:45</t>
+            <t code="932817077" p="15">16:00</t>
+            <t code="932817078" p="15">18:00</t>
+            <t code="932817079" p="15">20:15</t>
+            <t code="932817080" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932817081" p="15">11:15</t>
+            <t code="932817082" p="15">13:45</t>
+            <t code="932817083" p="15">16:00</t>
+            <t code="932817084" p="15">18:00</t>
+            <t code="932817085" p="15">20:15</t>
+            <t code="932817086" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932817087" p="15">11:15</t>
+            <t code="932817088" p="15">13:45</t>
+            <t code="932817089" p="15">16:00</t>
+            <t code="932817090" p="15">18:00</t>
+            <t code="932817091" p="15">20:15</t>
+            <t code="932817092" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932817093" p="15">11:15</t>
+            <t code="932817094" p="15">13:45</t>
+            <t code="932817095" p="15">16:00</t>
+            <t code="932817096" p="15">18:00</t>
+            <t code="932817097" p="15">20:15</t>
+            <t code="932817098" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932817099" p="15">11:15</t>
+            <t code="932817100" p="15">13:45</t>
+            <t code="932817101" p="15">16:00</t>
+            <t code="932817102" p="15">18:00</t>
+            <t code="932817103" p="15">20:15</t>
+            <t code="932817104" p="15">22:30</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="198903">
+            <title>Paranormal Activity 4</title>
+            <castingShort>
+              <directors>Henry Joost, Ariel Schulman</directors>
+              <actors>Katie Featherston, Kathryn Newton, Matt Shively, Brady Allen, Stephen Dunham</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-31</releaseDate>
+            </release>
+            <runtime>5700</runtime>
+            <genreList>
+              <genre code="13009">Epouvante-horreur</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14035">Avertissement : des scènes, des propos ou des images peuvent heurter la sensibilité des spectateurs</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/92/36/27/20250875.jpg" href="http://images.allocine.fr/medias/nmedia/18/92/36/27/20250875.jpg" />
+            <trailer code="19407284" href="http://www.allocine.fr/blogvision/19407284" />
+            <statistics>
+              <pressRating>2.625</pressRating>
+              <pressReviewCount>8</pressReviewCount>
+              <userRating>2.58859682</userRating>
+              <userReviewCount>339</userReviewCount>
+              <userRatingCount>1256</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110002">Numérique</screenFormat>
+        <display>Séances du mercredi 21 novembre 2012 : 13:30 (film à 13:45)
+Séances du jeudi 22 novembre 2012 : 13:30 (film à 13:45)
+Séances du vendredi 23 novembre 2012 : 13:30 (film à 13:45)
+Séances du samedi 24 novembre 2012 : 13:30 (film à 13:45)
+Séances du lundi 26 novembre 2012 : 13:30 (film à 13:45)
+Séances du mardi 27 novembre 2012 : 13:30 (film à 13:45)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932817245" p="15">13:30</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932817246" p="15">13:30</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932817247" p="15">13:30</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932817248" p="15">13:30</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="200962">
+            <title>Sinister</title>
+            <castingShort>
+              <directors>Scott Derrickson</directors>
+              <actors>Ethan Hawke, Juliet Rylance, Fred Thompson, James Ransone, Clare Foley</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-07</releaseDate>
+            </release>
+            <runtime>6600</runtime>
+            <genreList>
+              <genre code="13009">Epouvante-horreur</genre>
+              <genre code="13023">Thriller</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14044">Interdit aux moins de 12 ans avec avertissement</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/91/03/05/20267340.jpg" href="http://images.allocine.fr/medias/nmedia/18/91/03/05/20267340.jpg" />
+            <trailer code="19402652" href="http://www.allocine.fr/blogvision/19402652" />
+            <statistics>
+              <pressRating>3.17647</pressRating>
+              <pressReviewCount>17</pressReviewCount>
+              <userRating>3.68733239</userRating>
+              <userReviewCount>309</userReviewCount>
+              <userRatingCount>961</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <display>Séances du mercredi 21 novembre 2012 : 13:30 (film à 13:45), 15:45 (film à 16:00), 22:30 (film à 22:45)
+Séances du jeudi 22 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 22:30 (film à 22:45)
+Séances du vendredi 23 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 22:30 (film à 22:45)
+Séances du samedi 24 novembre 2012 : 13:30 (film à 13:45), 15:45 (film à 16:00), 22:30 (film à 22:45)
+Séances du dimanche 25 novembre 2012 : 13:30 (film à 13:45), 15:45 (film à 16:00), 22:30 (film à 22:45)
+Séances du lundi 26 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 22:30 (film à 22:45)
+Séances du mardi 27 novembre 2012 : 11:00 (film à 11:15), 13:30 (film à 13:45), 15:45 (film à 16:00), 22:30 (film à 22:45)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932817321" p="15">13:30</t>
+            <t code="932817322" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932817323" p="15">13:30</t>
+            <t code="932817324" p="15">15:45</t>
+            <t code="932817325" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932817326" p="15">13:30</t>
+            <t code="932817327" p="15">15:45</t>
+            <t code="932817328" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932817329" p="15">11:00</t>
+            <t code="932817330" p="15">13:30</t>
+            <t code="932817331" p="15">15:45</t>
+            <t code="932817332" p="15">22:30</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932817333" p="15">11:00</t>
+            <t code="932817334" p="15">13:30</t>
+            <t code="932817335" p="15">15:45</t>
+            <t code="932817336" p="15">22:30</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="180343">
+            <title>Ted</title>
+            <castingShort>
+              <directors>Seth MacFarlane</directors>
+              <actors>Mark Wahlberg, Mila Kunis, Seth MacFarlane, Joel McHale, Giovanni Ribisi</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-10-10</releaseDate>
+            </release>
+            <runtime>6420</runtime>
+            <genreList>
+              <genre code="13005">Comédie</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14035">Avertissement : des scènes, des propos ou des images peuvent heurter la sensibilité des spectateurs</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/89/57/28/20196214.jpg" href="http://images.allocine.fr/medias/nmedia/18/89/57/28/20196214.jpg" />
+            <trailer code="19408067" href="http://www.allocine.fr/blogvision/19408067" />
+            <statistics>
+              <pressRating>3.615384</pressRating>
+              <pressReviewCount>26</pressReviewCount>
+              <userRating>3.650625</userRating>
+              <userReviewCount>970</userReviewCount>
+              <userRatingCount>4334</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110002">Numérique</screenFormat>
+        <display>Séances du mercredi 21 novembre 2012 : 15:45 (film à 16:00)
+Séances du jeudi 22 novembre 2012 : 15:45 (film à 16:00)
+Séances du vendredi 23 novembre 2012 : 15:45 (film à 16:00)
+Séances du samedi 24 novembre 2012 : 15:45 (film à 16:00)
+Séances du dimanche 25 novembre 2012 : 15:45 (film à 16:00)
+Séances du lundi 26 novembre 2012 : 15:45 (film à 16:00)
+Séances du mardi 27 novembre 2012 : 15:45 (film à 16:00)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932816506" p="15">15:45</t>
+          </scr>
+          <scr d="2012-11-24">
+            <t code="932816507" p="15">15:45</t>
+          </scr>
+          <scr d="2012-11-25">
+            <t code="932816508" p="15">15:45</t>
+          </scr>
+          <scr d="2012-11-26">
+            <t code="932816509" p="15">15:45</t>
+          </scr>
+          <scr d="2012-11-27">
+            <t code="932816510" p="15">15:45</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="119089">
+            <title>Le Hobbit : un voyage inattendu</title>
+            <castingShort>
+              <directors>Peter Jackson</directors>
+              <actors>Martin Freeman, Richard Armitage, Ian McKellen, Andy Serkis, Aidan Turner</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-12-12</releaseDate>
+            </release>
+            <runtime>0</runtime>
+            <genreList>
+              <genre code="13012">Fantastique</genre>
+              <genre code="13001">Aventure</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/93/43/35/20273834.jpg" href="http://images.allocine.fr/medias/nmedia/18/93/43/35/20273834.jpg" />
+            <trailer code="19404061" href="http://www.allocine.fr/blogvision/19404061" />
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110003">3D</screenFormat>
+        <display>Séances du mercredi 12 décembre 2012 : 10:00 (film à 10:15), 11:00 (film à 11:15), 13:30 (film à 13:45), 14:30 (film à 14:45), 17:00 (film à 17:15), 18:00 (film à 18:15), 20:30 (film à 20:45), 21:30 (film à 21:45)
+Séances du jeudi 13 décembre 2012 : 10:00 (film à 10:15), 11:00 (film à 11:15), 13:30 (film à 13:45), 14:30 (film à 14:45), 17:00 (film à 17:15), 18:00 (film à 18:15), 20:30 (film à 20:45), 21:30 (film à 21:45)
+Séances du vendredi 14 décembre 2012 : 10:00 (film à 10:15), 11:00 (film à 11:15), 13:30 (film à 13:45), 14:30 (film à 14:45), 17:00 (film à 17:15), 18:00 (film à 18:15), 20:30 (film à 20:45), 21:30 (film à 21:45)
+Séances du samedi 15 décembre 2012 : 10:00 (film à 10:15), 11:00 (film à 11:15), 13:30 (film à 13:45), 14:30 (film à 14:45), 17:00 (film à 17:15), 18:00 (film à 18:15), 20:30 (film à 20:45), 21:30 (film à 21:45)
+Séances du dimanche 16 décembre 2012 : 10:00 (film à 10:15), 11:00 (film à 11:15), 13:30 (film à 13:45), 14:30 (film à 14:45), 17:00 (film à 17:15), 18:00 (film à 18:15), 20:30 (film à 20:45), 21:30 (film à 21:45)
+Séances du lundi 17 décembre 2012 : 10:00 (film à 10:15), 11:00 (film à 11:15), 13:30 (film à 13:45), 14:30 (film à 14:45), 17:00 (film à 17:15), 18:00 (film à 18:15), 20:30 (film à 20:45), 21:30 (film à 21:45)
+Séances du mardi 18 décembre 2012 : 10:00 (film à 10:15), 11:00 (film à 11:15), 13:30 (film à 13:45), 14:30 (film à 14:45), 17:00 (film à 17:15), 18:00 (film à 18:15), 20:30 (film à 20:45), 21:30 (film à 21:45)</display>
+        <screenings>
+          <scr d="2012-12-12">
+            <t code="932815640" p="15">10:00</t>
+            <t code="932815641" p="15">11:00</t>
+            <t code="932815642" p="15">13:30</t>
+            <t code="932815643" p="15">14:30</t>
+            <t code="932815644" p="15">17:00</t>
+            <t code="932815645" p="15">18:00</t>
+            <t code="932815646" p="15">20:30</t>
+            <t code="932815647" p="15">21:30</t>
+          </scr>
+          <scr d="2012-12-13">
+            <t code="932815648" p="15">10:00</t>
+            <t code="932815649" p="15">11:00</t>
+            <t code="932815650" p="15">13:30</t>
+            <t code="932815651" p="15">14:30</t>
+            <t code="932815652" p="15">17:00</t>
+            <t code="932815653" p="15">18:00</t>
+            <t code="932815654" p="15">20:30</t>
+            <t code="932815655" p="15">21:30</t>
+          </scr>
+          <scr d="2012-12-14">
+            <t code="932815656" p="15">10:00</t>
+            <t code="932815657" p="15">11:00</t>
+            <t code="932815658" p="15">13:30</t>
+            <t code="932815659" p="15">14:30</t>
+            <t code="932815660" p="15">17:00</t>
+            <t code="932815661" p="15">18:00</t>
+            <t code="932815662" p="15">20:30</t>
+            <t code="932815663" p="15">21:30</t>
+          </scr>
+          <scr d="2012-12-15">
+            <t code="932815664" p="15">10:00</t>
+            <t code="932815665" p="15">11:00</t>
+            <t code="932815666" p="15">13:30</t>
+            <t code="932815667" p="15">14:30</t>
+            <t code="932815668" p="15">17:00</t>
+            <t code="932815669" p="15">18:00</t>
+            <t code="932815670" p="15">20:30</t>
+            <t code="932815671" p="15">21:30</t>
+          </scr>
+          <scr d="2012-12-16">
+            <t code="932815672" p="15">10:00</t>
+            <t code="932815673" p="15">11:00</t>
+            <t code="932815674" p="15">13:30</t>
+            <t code="932815675" p="15">14:30</t>
+            <t code="932815676" p="15">17:00</t>
+            <t code="932815677" p="15">18:00</t>
+            <t code="932815678" p="15">20:30</t>
+            <t code="932815679" p="15">21:30</t>
+          </scr>
+          <scr d="2012-12-17">
+            <t code="932815680" p="15">10:00</t>
+            <t code="932815681" p="15">11:00</t>
+            <t code="932815682" p="15">13:30</t>
+            <t code="932815683" p="15">14:30</t>
+            <t code="932815684" p="15">17:00</t>
+            <t code="932815685" p="15">18:00</t>
+            <t code="932815686" p="15">20:30</t>
+            <t code="932815687" p="15">21:30</t>
+          </scr>
+          <scr d="2012-12-18">
+            <t code="932815688" p="15">10:00</t>
+            <t code="932815689" p="15">11:00</t>
+            <t code="932815690" p="15">13:30</t>
+            <t code="932815691" p="15">14:30</t>
+            <t code="932815692" p="15">17:00</t>
+            <t code="932815693" p="15">18:00</t>
+            <t code="932815694" p="15">20:30</t>
+            <t code="932815695" p="15">21:30</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="119089">
+            <title>Le Hobbit : un voyage inattendu</title>
+            <castingShort>
+              <directors>Peter Jackson</directors>
+              <actors>Martin Freeman, Richard Armitage, Ian McKellen, Andy Serkis, Aidan Turner</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-12-12</releaseDate>
+            </release>
+            <runtime>0</runtime>
+            <genreList>
+              <genre code="13012">Fantastique</genre>
+              <genre code="13001">Aventure</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/93/43/35/20273834.jpg" href="http://images.allocine.fr/medias/nmedia/18/93/43/35/20273834.jpg" />
+            <trailer code="19404061" href="http://www.allocine.fr/blogvision/19404061" />
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110003">3D</screenFormat>
+        <display>Séances du mardi 11 décembre 2012 : 00:05 (film à 00:20)</display>
+        <screenings>
+          <scr d="2012-12-12">
+            <t code="932815639" p="15">00:05</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="true">
+        <onShow>
+          <movie code="135797">
+            <title>La Fille du régiment (Côté Diffusion)</title>
+            <castingShort>
+              <directors>Laurent Pelly</directors>
+              <actors>Natalie Dessay, Juan Diego Florez, Felicity Palmer, Dawn French, Alessandro Corbelli</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-11-21</releaseDate>
+            </release>
+            <runtime>7920</runtime>
+            <genreList>
+              <genre code="13048">Opera</genre>
+            </genreList>
+            <movieCertificate>
+              <certificate code="14030">A partir de 6 ans</certificate>
+            </movieCertificate>
+            <poster path="/medias/nmedia/18/94/06/60/20300843.jpg" href="http://images.allocine.fr/medias/nmedia/18/94/06/60/20300843.jpg" />
+            <statistics>
+              <userRating>3</userRating>
+              <userReviewCount>0</userReviewCount>
+              <userRatingCount>3</userRatingCount>
+            </statistics>
+          </movie>
+        </onShow>
+        <version original="true" code="6002" lang="6002">Anglais</version>
+        <display>Séances du jeudi 22 novembre 2012 : 14:00 (film à 14:15), 18:00 (film à 18:15)
+Séances du vendredi 23 novembre 2012 : 16:00 (film à 16:15), 20:00 (film à 20:15)</display>
+        <screenings>
+          <scr d="2012-11-23">
+            <t code="932815799" p="15">16:00</t>
+            <t code="932815800" p="15">20:00</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="212370">
+            <title>Slava snowshow en 3D (Côté diffusion)</title>
+            <castingShort>
+              <directors>Slava Polunin</directors>
+              <actors>Slava Polunin, Artem Zhimo, Robert Saralp, Alexandre Frish</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-12-20</releaseDate>
+            </release>
+            <runtime>6000</runtime>
+            <genreList>
+              <genre code="13051">Show</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/93/66/82/20270575.jpg" href="http://images.allocine.fr/medias/nmedia/18/93/66/82/20270575.jpg" />
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110003">3D</screenFormat>
+        <display>Séances du jeudi 20 décembre 2012 : 14:00, 20:00
+Séances du vendredi 21 décembre 2012 : 18:00, 20:00</display>
+        <screenings>
+          <scr d="2012-12-20">
+            <t code="931085240" p="0">14:00</t>
+            <t code="931085241" p="0">20:00</t>
+          </scr>
+          <scr d="2012-12-21">
+            <t code="931085242" p="0">18:00</t>
+            <t code="931085243" p="0">20:00</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="184825">
+            <title>Casse-noisette (Côté Diffusion)</title>
+            <castingShort>
+              <actors>Roberta Marquez Seret, Steven McRae</actors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-12-13</releaseDate>
+            </release>
+            <runtime>8400</runtime>
+            <genreList>
+              <genre code="13048">Opera</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/79/26/00/19495000.jpg" href="http://images.allocine.fr/medias/nmedia/18/79/26/00/19495000.jpg" />
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <display>Séances du jeudi 13 décembre 2012 : 20:15 (film à 20:30)</display>
+        <screenings>
+          <scr d="2012-12-13">
+            <t code="932816676" p="15">20:15</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="199402">
+            <title>La Nuit de la glisse (Côté diffusion)</title>
+            <castingShort>
+              <directors>Thierry Donard</directors>
+            </castingShort>
+            <release>
+              <releaseDate>2012-12-07</releaseDate>
+            </release>
+            <runtime>5400</runtime>
+            <genreList>
+              <genre code="13050">Sport event</genre>
+            </genreList>
+            <poster path="/medias/nmedia/18/94/06/31/20300624.jpg" href="http://images.allocine.fr/medias/nmedia/18/94/06/31/20300624.jpg" />
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110002">Numérique</screenFormat>
+        <display>Séances du vendredi 7 décembre 2012 : 20:30 (film à 20:45)</display>
+        <screenings>
+          <scr d="2012-12-07">
+            <t code="932817249" p="15">20:30</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+      <movieShowtimes preview="false" releaseWeek="false">
+        <onShow>
+          <movie code="214239">
+            <title>California Dream 3D</title>
+            <castingShort>
+              <directors>Cameron Hughes</directors>
+            </castingShort>
+            <genreList>
+              <genre code="13007">Documentaire</genre>
+            </genreList>
+          </movie>
+        </onShow>
+        <version original="false" code="6001" lang="6001">Français</version>
+        <screenFormat code="110003">3D</screenFormat>
+        <display>Séances du jeudi 29 novembre 2012 : 20:00 (film à 20:15)</display>
+        <screenings>
+          <scr d="2012-11-29">
+            <t code="932817378" p="15">20:00</t>
+          </scr>
+        </screenings>
+      </movieShowtimes>
+    </movieShowtimesList>
+  </theaterShowtimes>
+</feed>
