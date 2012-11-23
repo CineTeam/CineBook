@@ -97,6 +97,9 @@
                                         </div>
                                     </c:otherwise>                                            
                                 </c:choose>
+                            </c:if>  
+                            <c:if test = "${requestScope.film == null}">  
+                                Aucun film ne correspond à votre recherche
                             </c:if>
                         </div>
                     </div>

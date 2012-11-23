@@ -279,18 +279,18 @@ a:hover {
 
 .short_film{
     background-color: transparent;
-    height : 270px;
+    height : 280px;
     width:500px;
 }
 
-.titre_film,.titre_cinema{
+.titre_film,.titre_cinema,.titre_seance{
     font-weight : bold;
     font-size: 15px;
     padding :0 0 0 0;
     margin:0 0 0 0;
 }
 
-.short_desc_film,.short_desc_cinema{
+.short_desc_film,.short_desc_cinema,.details_seance{
     font-family: Tahoma;
     font-size:14px;
     line-height: 180%;
@@ -385,4 +385,19 @@ a:hover {
     font-size : 14px;
     margin-top: 20px;
     line-height: 180%;
+}
+
+
+.seances_cinema{
+    margin-top: 30px;
+}
+
+.details_seance{
+    margin-left: 500px;
+    height : 280px;
+    width:200px;
+}
+
+.short_film_seance{
+    float:left;
 }
