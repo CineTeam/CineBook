@@ -64,7 +64,7 @@ public class FilmXMLParser extends AXMLParser
         return film;
     }
 
-    private Film parserLeFilm(Element courant) {
+    public Film parserLeFilm(Element courant) {
         Film film = new Film();
         film.setId(courant.getAttributeValue("code"));
         film.setTitre(parseTitre(courant));
