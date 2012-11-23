@@ -22,6 +22,7 @@
                     <div class="post">
                         <div id="entete">
                             <h1>Détail du film</h1>
+                             <c:import url ="barreRechercheFilms.jsp" />
                         </div>                        
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
