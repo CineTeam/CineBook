@@ -20,7 +20,7 @@ public class ConsulterDetailCinemaAction implements Action {
         String index_cinema = (String) request.getParameter("cpt");
         if(!index_cinema.isEmpty()){
             Cinema cinema = providerCinema.getDetailCinema(index_cinema);
-            cinema.setSeances(providerSeance.getSeancesPourUnCinema(cinema.getId()));
+            cinema.setSeances_films(providerSeance.getSeancesPourUnCinema(cinema.getId()));
             request.setAttribute("cinema", cinema);       
         }    
         

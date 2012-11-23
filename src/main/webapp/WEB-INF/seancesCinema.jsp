@@ -4,22 +4,22 @@
     <head>
     </head>
     <body>
-        <%--<form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
+        <form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
             <table>
-                <c:if test = "${requestScope.cinema.seances != null}">
+                <c:if test = "${requestScope.cinema.seances_films != null}">
                     <c:choose>
-                        <c:when test = "${empty requestScope.cinema.seances}">
+                        <c:when test = "${empty requestScope.cinema.seances_films}">
                             <tr> Aucune séance n'est disponible pour ce cinema </tr>
                         </c:when>
                         <c:otherwise>
-                            <c:forEach var="seance" items="${requestScope.cinema.seances}">
+                            <c:forEach var="seances_film" items="${requestScope.cinema.seances_films}">
                                 <tr>
-                                    <a href='#' id="${seance.film.id}" class='clickable'>
+                                    <a href='#' id="${seances_film.film.id}" class='clickable'>
                                         <div class="short_film short_film_seance">
                                             <div class="short_img_film">
                                                 <c:choose>
-                                                    <c:when test = "${seance.film.url_affiche !=null}">
-                                                        <img src="${seance.film.url_affiche}"/>
+                                                    <c:when test = "${seances_film.film.url_affiche !=null}">
+                                                        <img src="${seances_film.film.url_affiche}"/>
                                                     </c:when>
                                                     <c:otherwise>
                                                         <img src="images/image-film-non-dispo.jpg"/>
@@ -27,33 +27,35 @@
                                                 </c:choose>
                                             </div>
                                             <div class="short_desc_film size_desc_film">
-                                                <p class="titre_film">${seance.film.titre}</p>
-                                                <c:if test = "${seance.film.date_sortie !=null}">Sorti le <f:formatDate value="${seance.film.date_sortie}" type="date" dateStyle="default" /> <br></c:if>
-                                                <c:if test = "${seance.film.realisateur !=null}">Par ${seance.film.realisateur} <br></c:if>
-                                                <c:if test = "${seance.film.acteurs !=null}">Avec ${seance.film.acteurs}</c:if>
+                                                <p class="titre_film">${seances_film.film.titre}</p>
+                                                <c:if test = "${seances_film.film.date_sortie !=null}">Sorti le <f:formatDate value="${seances_film.film.date_sortie}" type="date" dateStyle="default" /> <br></c:if>
+                                                <c:if test = "${seances_film.film.realisateur !=null}">Par ${seances_film.film.realisateur} <br></c:if>
+                                                <c:if test = "${seances_film.film.acteurs !=null}">Avec ${seances_film.film.acteurs}</c:if>
                                             </div>   
                                         </div>
                                     </a>
                                     <div class="details_seance">
                                         <p class="titre_seance">Détails de la séance :</p>
-                                        <c:if test = "${seance.format!=null}">Format : ${seance.format} <br></c:if>
-                                        <c:if test = "${seance.langue!=null}">Langue : ${seance.langue} <br></c:if>
-                                        <c:if test = "${!empty seance.horaires}">
-                                            Horaires :
-                                            <c:forEach var="horaire" items="${seance.horaires}">
-                                                -Pour le <f:formatDate value="${horaire.jour}" type="date" dateStyle="default" /> : 
-                                                    <c:forEach var="heure" items="${horaire.heures}" varStatus="status">
-                                                        <c:choose>
-                                                                <c:when test = "${status.first}">
-                                                                    ${heure}
-                                                                </c:when>
-                                                                <c:otherwise>
-                                                                    | ${heure}
-                                                                </c:otherwise>
-                                                        </c:choose>
-                                                    </c:forEach><br>
-                                            </c:forEach>
-                                        </c:if>
+                                        <c:forEach var="seance" items="${seances_film.seances}">
+                                            <c:if test = "${seance.format!=null}">Format : ${seance.format} <br></c:if>
+                                            <c:if test = "${seance.langue!=null}">Langue : ${seance.langue} <br></c:if>
+                                            <c:if test = "${!empty seance.horaires}">
+                                                Horaires :<br>
+                                                <c:forEach var="horaire" items="${seance.horaires}">
+                                                    -Pour le <f:formatDate value="${horaire.jour}" type="date" dateStyle="default" /> : <br>
+                                                        <c:forEach var="heure" items="${horaire.heures}" varStatus="status">
+                                                            <c:choose>
+                                                                    <c:when test = "${status.first}">
+                                                                        ${heure}
+                                                                    </c:when>
+                                                                    <c:otherwise>
+                                                                        | ${heure}
+                                                                    </c:otherwise>
+                                                            </c:choose>
+                                                        </c:forEach><br>
+                                                </c:forEach>
+                                            </c:if>
+                                        </c:forEach>
                                     </div>
                                 </tr>
                                 <tr>
@@ -68,6 +70,6 @@
                 <input id="cpt" type="text" value="test" name="cpt"/>
                 <input id="bouton" type="submit" />
             </div>
-        </form>--%>
+        </form>
     </body>
 </html>

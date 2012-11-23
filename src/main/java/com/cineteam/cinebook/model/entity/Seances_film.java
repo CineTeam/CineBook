@@ -3,7 +3,7 @@ package com.cineteam.cinebook.model.entity;
 import java.util.List;
 
 /** @author alexis */
-public class SeancesFilm 
+public class Seances_film 
 {
     private Film film;
     private List<Seance> seances;

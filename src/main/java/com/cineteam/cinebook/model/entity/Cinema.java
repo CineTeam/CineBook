@@ -13,7 +13,7 @@ public class Cinema
     private int nombre_salles;
     private Geolocalisation position;
     private String url_image;
-    private List<SeancesFilm> seancesFilms;
+    private List<Seances_film> seances_films;
 
     public String getId() {
         return id;
@@ -79,12 +79,12 @@ public class Cinema
         url_image = _url_image;
     }
     
-    public List<SeancesFilm> getSeances() {
-        return seancesFilms;
+    public List<Seances_film> getSeances_films() {
+        return seances_films;
     }
 
-    public void setSeances(List<SeancesFilm> _seances) {
-        seancesFilms = _seances;
+    public void setSeances_films(List<Seances_film> _seances_films) {
+        seances_films = _seances_films;
     }
     
 }
