@@ -60,6 +60,9 @@
                                             </div>
                                             <div id="googlemap"></div>
                                         </div>
+                                        <div class="seances_cinema">
+                                            <c:import url="seancesCinema.jsp"/>
+                                        </div>    
                                     </c:otherwise>                                            
                                 </c:choose>
                             </c:if>

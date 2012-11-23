@@ -1,5 +1,7 @@
 package com.cineteam.cinebook.model.entity;
 
+import java.util.List;
+
 /** @author alexis */
 public class Cinema 
 {
@@ -11,7 +13,8 @@ public class Cinema
     private int nombre_salles;
     private Geolocalisation position;
     private String url_image;
-    
+    private List<Seance> seances;
+
     public String getId() {
         return id;
     }
@@ -75,4 +78,13 @@ public class Cinema
     public void setUrl_image(String _url_image) {
         url_image = _url_image;
     }
+    
+    public List<Seance> getSeances() {
+        return seances;
+    }
+
+    public void setSeances(List<Seance> _seances) {
+        seances = _seances;
+    }
+    
 }

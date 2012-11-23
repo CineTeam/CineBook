@@ -14,14 +14,16 @@ import org.junit.Test;
 /** @author Cedric */
 public class TestConsulterDetailCinema {
     
-    private MockCinemaProvider fauxProvider ;
+    private MockCinemaProvider fauxProviderCinema ;
+    private MockSeanceProvider fauxProviderSeance ;
     private HttpServletRequest request ;
     private ConsulterDetailCinemaAction consulterDetailsCinemaAction ;
     
     @Before
     public void setUp() {
-        fauxProvider = new MockCinemaProvider();
-        consulterDetailsCinemaAction = new ConsulterDetailCinemaAction(fauxProvider);
+        fauxProviderCinema = new MockCinemaProvider();
+        fauxProviderSeance = new MockSeanceProvider();
+        consulterDetailsCinemaAction = new ConsulterDetailCinemaAction(fauxProviderCinema,fauxProviderSeance);
         request = createMock(HttpServletRequest.class);
         replay(request);
     }
@@ -36,7 +38,8 @@ public class TestConsulterDetailCinema {
         
         consulterDetailsCinemaAction.execute(request);
         
-        assertNull(fauxProvider.getDetailCinema(cinema_id));
+        assertNull(fauxProviderCinema.getDetailCinema(cinema_id));
+        assertTrue(fauxProviderSeance.getSeancesPourUnCinema(cinema_id).isEmpty());
         assertNull(request.getAttribute("cinema"));
     }
     
@@ -49,9 +52,11 @@ public class TestConsulterDetailCinema {
         
         consulterDetailsCinemaAction.execute(request);
         
-        assertNotNull(fauxProvider.getDetailCinema(cinema_id));
+        assertNotNull(fauxProviderCinema.getDetailCinema(cinema_id));
+        assertTrue(!fauxProviderSeance.getSeancesPourUnCinema(cinema_id).isEmpty());
         assertNotNull(request.getAttribute("cinema"));
-        assertNotNull(fauxProvider.getDetailCinema(cinema_id).getNombre_salles());
+        assertNotNull(fauxProviderCinema.getDetailCinema(cinema_id).getNombre_salles());
+        assertNotNull(fauxProviderSeance.getSeancesPourUnCinema(cinema_id).get(0).getFormat());
     }
     
 }
