@@ -15,10 +15,10 @@ public class FilmProvider implements IFilmProvider
     private FilmXMLParser parser = new FilmXMLParser();
     private UrlProviderSource source = new UrlProviderSource();
     
-    public List<Film> rechercherFilmParMotCle(String nom) 
+    public List<Film> rechercherFilmParMotCle(String mot_cle) 
     {
         String url = new AllocineApiUrlBuilder(Methodes.RECHERCHE).ajouterLaPage(1).ajouterLeNombreDeResultat(200)
-                                                                  .ajouterLeFiltre(Filtres.FILM).ajouterLaRequete(nom).getUrl();
+                                                                  .ajouterLeFiltre(Filtres.FILM).ajouterLaRequete(mot_cle).getUrl();
         List<Film> films = parser.parserLesFilmsAPartirDeLInputStream(source.getInputStream(url));
         return films;
     }

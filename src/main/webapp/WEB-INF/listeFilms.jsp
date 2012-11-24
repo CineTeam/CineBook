@@ -29,13 +29,13 @@
                             <form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
 
                                 <table>  
-                                    <c:if test = "${requestScope.filmsParNom != null}">
+                                    <c:if test = "${requestScope.filmsParMotCle != null}">
                                         <c:choose>
-                                            <c:when test = "${empty requestScope.filmsParNom}">
+                                            <c:when test = "${empty requestScope.filmsParMotCle}">
                                                 <tr>Aucun film ne correspond à votre recherche</tr>
                                             </c:when>
                                             <c:otherwise>
-                                                <c:forEach var="film" items="${requestScope.filmsParNom}">
+                                                <c:forEach var="film" items="${requestScope.filmsParMotCle}">
                                                     <tr>
                                                         <a href='#' id="${film.id}" class='clickable'>
                                                             <div class="short_film">
@@ -65,7 +65,7 @@
                                             </c:otherwise>                                            
                                         </c:choose>
                                     </c:if>
-                                    <c:if test = "${requestScope.filmsParNom == null}">                                                
+                                    <c:if test = "${requestScope.filmsParMotCle == null}">                                                
                                         <tr>Veuillez saisir un paramètre de recherche !</tr>
                                     </c:if>
                                 </table>

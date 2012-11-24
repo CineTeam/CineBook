@@ -19,8 +19,8 @@ public class RechercherFilmAction implements Action{
 
         String film_recherche = (String) request.getParameter("recherche");
         if(!film_recherche.isEmpty()){
-            List<Film> filmsParNom = provider.rechercherFilmParMotCle(film_recherche);
-            request.setAttribute("filmsParNom", filmsParNom);  
+            List<Film> filmsParMotCle = provider.rechercherFilmParMotCle(film_recherche);
+            request.setAttribute("filmsParMotCle", filmsParMotCle);  
         }
         return "listeFilms.jsp";
  
