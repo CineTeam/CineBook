@@ -39,18 +39,20 @@
                                         <c:forEach var="seance" items="${seances_film.seances}" varStatus="status2">
                                             <c:if test = "${seance.format!=null}">
                                                 <c:if test = "${status2.count==1}">
-                                                    <c:forEach var="seance1" items="${seances_film.seances}" varStatus="status3">
-                                                        <p class="format format_clickable" id="${status1.count}_${status3.count}">
-                                                            ${seance1.format}
-                                                        </p>
-                                                    </c:forEach>
+                                                    <div class="formats">
+                                                        <c:forEach var="seance1" items="${seances_film.seances}" varStatus="status3">
+                                                            <p class="format format_clickable" id="${status1.count}_${status3.count}">
+                                                                ${seance1.format}
+                                                            </p>
+                                                        </c:forEach>
+                                                    </div>
                                                 </c:if>
                                                 <div id="details_${status1.count}_${status2.count}" class="details_format details_format_${status1.count}">
                                                     <c:if test = "${seance.langue!=null}">Langue : ${seance.langue} <br></c:if>
                                                     <c:if test = "${!empty seance.horaires}">
                                                         Horaires :<br>
                                                         <c:forEach var="horaire" items="${seance.horaires}">
-                                                            -Pour le <f:formatDate value="${horaire.jour}" type="date" dateStyle="default" /> : <br>
+                                                            - Pour le <f:formatDate value="${horaire.jour}" type="date" dateStyle="default" /> : <br>
                                                                 <c:forEach var="heure" items="${horaire.heures}" varStatus="status">
                                                                     <c:choose>
                                                                             <c:when test = "${status.first}">
