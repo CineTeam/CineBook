@@ -38,9 +38,13 @@
                                         <p class="titre_seance">Détails de la séance :</p>
                                         <c:forEach var="seance" items="${seances_film.seances}" varStatus="status2">
                                             <c:if test = "${seance.format!=null}">
-                                                <p class="format format_clickable" id="${status1.count}_${status2.count}">
-                                                    ${seance.format}
-                                                </p>
+                                                <c:if test = "${status2.count==1}">
+                                                    <c:forEach var="seance1" items="${seances_film.seances}" varStatus="status3">
+                                                        <p class="format format_clickable" id="${status1.count}_${status3.count}">
+                                                            ${seance1.format}
+                                                        </p>
+                                                    </c:forEach>
+                                                </c:if>
                                                 <div id="details_${status1.count}_${status2.count}" class="details_format details_format_${status1.count}">
                                                     <c:if test = "${seance.langue!=null}">Langue : ${seance.langue} <br></c:if>
                                                     <c:if test = "${!empty seance.horaires}">

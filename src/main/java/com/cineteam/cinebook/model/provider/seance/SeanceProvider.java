@@ -53,12 +53,12 @@ public class SeanceProvider implements ISeanceProvider
         
         Seance s = new Seance();
         s.setFormat("VO");
-        s.setLangue("jkdqshsjkjd");
+        s.setLangue("chinois");
         s.setHoraires(horaires);
         
         Seance s1 = new Seance();
         s1.setFormat("VF");
-        s1.setLangue("jkdqshsjkjd");
+        s1.setLangue("fr");
         s1.setHoraires(horaires);
         
         List<Seance> seances = new ArrayList<Seance>();

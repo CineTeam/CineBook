@@ -409,6 +409,8 @@ a:hover {
 
 .details_format{
     display:none;
+    margin-top:10px;
+    float : left;
 }
 
 .format{
