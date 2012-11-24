@@ -268,7 +268,7 @@ a:hover {
 }
 
 
-.clickable,.button_clickable{
+.clickable,.button_clickable,.format_clickable{
     cursor: pointer;
 }
 
@@ -312,13 +312,18 @@ a:hover {
 
 .short_desc_film{
     display:block;
-    margin-left: 200px;
+    margin-left: 204px;
     padding-left:20px; 
     height : 280px;
 }
 
 .size_desc_film{
     width:350px;
+}
+
+.size_desc_film_cinema{
+    width:276px;
+    
 }
 
 .bandeau_cinema .bandeau_film{
@@ -399,5 +404,16 @@ a:hover {
 }
 
 .short_film_seance{
+    float:left;
+}
+
+.details_format{
+    display:none;
+}
+
+.format{
+    width: 40px;
+    text-align : center;
+    border:1px solid black;
     float:left;
 }

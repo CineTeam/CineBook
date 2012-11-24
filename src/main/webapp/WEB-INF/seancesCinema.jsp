@@ -12,7 +12,7 @@
                             <tr> Aucune séance n'est disponible pour ce cinema </tr>
                         </c:when>
                         <c:otherwise>
-                            <c:forEach var="seances_film" items="${requestScope.cinema.seances_films}">
+                            <c:forEach var="seances_film" items="${requestScope.cinema.seances_films}" varStatus="status1">
                                 <tr>
                                     <a href='#' id="${seances_film.film.id}" class='clickable'>
                                         <div class="short_film short_film_seance">
@@ -26,7 +26,7 @@
                                                     </c:otherwise>
                                                 </c:choose>
                                             </div>
-                                            <div class="short_desc_film size_desc_film">
+                                            <div class="short_desc_film size_desc_film_cinema">
                                                 <p class="titre_film">${seances_film.film.titre}</p>
                                                 <c:if test = "${seances_film.film.date_sortie !=null}">Sorti le <f:formatDate value="${seances_film.film.date_sortie}" type="date" dateStyle="default" /> <br></c:if>
                                                 <c:if test = "${seances_film.film.realisateur !=null}">Par ${seances_film.film.realisateur} <br></c:if>
@@ -36,25 +36,31 @@
                                     </a>
                                     <div class="details_seance">
                                         <p class="titre_seance">Détails de la séance :</p>
-                                        <c:forEach var="seance" items="${seances_film.seances}">
-                                            <c:if test = "${seance.format!=null}">Format : ${seance.format} <br></c:if>
-                                            <c:if test = "${seance.langue!=null}">Langue : ${seance.langue} <br></c:if>
-                                            <c:if test = "${!empty seance.horaires}">
-                                                Horaires :<br>
-                                                <c:forEach var="horaire" items="${seance.horaires}">
-                                                    -Pour le <f:formatDate value="${horaire.jour}" type="date" dateStyle="default" /> : <br>
-                                                        <c:forEach var="heure" items="${horaire.heures}" varStatus="status">
-                                                            <c:choose>
-                                                                    <c:when test = "${status.first}">
-                                                                        ${heure}
-                                                                    </c:when>
-                                                                    <c:otherwise>
-                                                                        | ${heure}
-                                                                    </c:otherwise>
-                                                            </c:choose>
-                                                        </c:forEach><br>
-                                                </c:forEach>
-                                            </c:if>
+                                        <c:forEach var="seance" items="${seances_film.seances}" varStatus="status2">
+                                            <c:if test = "${seance.format!=null}">
+                                                <p class="format format_clickable" id="${status1.count}_${status2.count}">
+                                                    ${seance.format}
+                                                </p>
+                                                <div id="details_${status1.count}_${status2.count}" class="details_format details_format_${status1.count}">
+                                                    <c:if test = "${seance.langue!=null}">Langue : ${seance.langue} <br></c:if>
+                                                    <c:if test = "${!empty seance.horaires}">
+                                                        Horaires :<br>
+                                                        <c:forEach var="horaire" items="${seance.horaires}">
+                                                            -Pour le <f:formatDate value="${horaire.jour}" type="date" dateStyle="default" /> : <br>
+                                                                <c:forEach var="heure" items="${horaire.heures}" varStatus="status">
+                                                                    <c:choose>
+                                                                            <c:when test = "${status.first}">
+                                                                                ${heure}
+                                                                            </c:when>
+                                                                            <c:otherwise>
+                                                                                | ${heure}
+                                                                            </c:otherwise>
+                                                                    </c:choose>
+                                                                </c:forEach><br>
+                                                        </c:forEach>
+                                                    </c:if>
+                                                </div>
+                                           </c:if>
                                         </c:forEach>
                                     </div>
                                 </tr>

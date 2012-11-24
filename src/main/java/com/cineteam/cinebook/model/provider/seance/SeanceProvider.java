@@ -52,13 +52,18 @@ public class SeanceProvider implements ISeanceProvider
         horaires.add(h2);
         
         Seance s = new Seance();
-        s.setFormat("fmmmmmt");
+        s.setFormat("VO");
         s.setLangue("jkdqshsjkjd");
         s.setHoraires(horaires);
         
+        Seance s1 = new Seance();
+        s1.setFormat("VF");
+        s1.setLangue("jkdqshsjkjd");
+        s1.setHoraires(horaires);
+        
         List<Seance> seances = new ArrayList<Seance>();
         seances.add(s);
-        seances.add(s);
+        seances.add(s1);
 
         Seances_film seances_film = new Seances_film();
         seances_film.setFilm(f);
