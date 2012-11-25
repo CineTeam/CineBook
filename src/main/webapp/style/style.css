@@ -412,7 +412,6 @@ a:hover {
     margin-top : 10px;
     height : 14px;
     width:200px;
-    background: url(../images/background-format.png) repeat-y top;
 }
 
 .format{
@@ -422,12 +421,14 @@ a:hover {
     text-align : center;
     float:left;
     margin : 0 0 0 0;
+    background: url(../images/background-titre-format.png) repeat-y top;
 }
 
 .details_format{
-    padding: 5px 5px 5px 5px; 
+    padding: 5px 5px 5px 25px; 
     display:none;
     float : left;
-    width:190px;
+    width:168px;
+    border : 1px solid #383838; 
     background: url(../images/background-format.png) repeat-y top;
 }
