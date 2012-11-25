@@ -65,7 +65,7 @@ public class CinemaXMLParser extends AXMLParser{
         return null;
     }
     
-    private Cinema parserLeCinema (Element courant)
+    public Cinema parserLeCinema (Element courant)
     {
         Cinema cinema = new Cinema();
         cinema.setId(parseLId(courant));

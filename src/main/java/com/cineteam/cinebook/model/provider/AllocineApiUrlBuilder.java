@@ -151,6 +151,12 @@ public class AllocineApiUrlBuilder
         return this;
     } 
     
+    public AllocineApiUrlBuilder ajouterLeFilm(String filmId)
+    {
+        url += "&movie=" + filmId;
+        return this;
+    } 
+    
     public String getUrl()
     {
         return url;

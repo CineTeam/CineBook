@@ -61,4 +61,11 @@ public class TestAllocineApiUrlBuilder {
         String url = new AllocineApiUrlBuilder(Methodes.SEANCES).ajouterLesCinemas("W3300").getUrl();
         assertEquals("http://api.allocine.fr/rest/v3/showtimelist?partner=YW5kcm9pZC12M3M&format=xml&theaters=W3300", url);
     }
+    
+    @Test
+    public void retourneUrlSeancePourUnFilmAvecLesBonsParametres()
+    {
+        String url = new AllocineApiUrlBuilder(Methodes.SEANCES).ajouterLeFilm("12").ajouterLeCodePostal("33000").getUrl();
+        assertEquals("http://api.allocine.fr/rest/v3/showtimelist?partner=YW5kcm9pZC12M3M&format=xml&movie=12&zip=33000", url);
+    }
 }

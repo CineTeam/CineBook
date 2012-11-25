@@ -1,78 +1,29 @@
 package com.cineteam.cinebook.model.provider.seance;
 
-import com.cineteam.cinebook.model.entity.Film;
-import com.cineteam.cinebook.model.entity.Horaire;
-import com.cineteam.cinebook.model.entity.Seance;
+import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.entity.Seances_film;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
+import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder;
+import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Methodes;
+import com.cineteam.cinebook.model.provider.UrlProviderSource;
 import java.util.List;
 
 /** @author alexis */
 public class SeanceProvider implements ISeanceProvider
 {
+    private SeanceXMLParser parser = new SeanceXMLParser();
+    private UrlProviderSource source = new UrlProviderSource();
+    
     public List<Seances_film> getSeancesPourUnCinema(String id) 
     {
-        List<Seances_film> seances_films = new ArrayList<Seances_film>();
-
-        Film f = new Film();
-        f.setTitre("ESSSSSAI");
-        f.setRealisateur("reaaaaal");
-        
-        List<String> heures = new ArrayList<String>();
-        heures.add("10:00");
-        heures.add("12:00");
-        heures.add("22:15");
-        
-        Horaire h1 = new Horaire();
-        h1.setHeures(heures);
-        
-        Calendar c1 = Calendar.getInstance(); // date du jour
-        c1.set(Calendar.YEAR, 2012);
-        c1.set(Calendar.MONTH, 5);
-        c1.set(Calendar.DATE, 2);
-        Date d1 = c1.getTime(); 
-        
-        h1.setJour(d1);
-        
-        Horaire h2 = new Horaire();
-        h2.setHeures(heures);
-        
-        Calendar c = Calendar.getInstance(); // date du jour
-        c.set(Calendar.YEAR, 2007);
-        c.set(Calendar.MONTH, 7);
-        c.set(Calendar.DATE, 26);
-        Date d = c.getTime(); 
-
-        h2.setJour(d);
-        
-        List<Horaire> horaires = new ArrayList<Horaire>();
-        horaires.add(h1);
-        horaires.add(h2);
-        
-        Seance s = new Seance();
-        s.setFormat("VO");
-        s.setLangue("chinois");
-        s.setHoraires(horaires);
-        
-        Seance s1 = new Seance();
-        s1.setFormat("VF");
-        s1.setLangue("fr");
-        s1.setHoraires(horaires);
-        
-        List<Seance> seances = new ArrayList<Seance>();
-        seances.add(s);
-        seances.add(s1);
-
-        Seances_film seances_film = new Seances_film();
-        seances_film.setFilm(f);
-        seances_film.setSeances(seances);
-
-        seances_films.add(seances_film);
-        seances_films.add(seances_film);
-
+        String url = new AllocineApiUrlBuilder(Methodes.SEANCES).ajouterLesCinemas(id).getUrl();
+        List<Seances_film> seances_films = parser.parserLesSeancesPourUnCinema(source.getInputStream(url));
         return seances_films;
     }
     
+    public List<Cinema> getSeancesPourUnFilm(String id, String codePostal) 
+    {
+        String url = new AllocineApiUrlBuilder(Methodes.SEANCES).ajouterLeFilm(id).ajouterLeCodePostal(codePostal).getUrl();
+        List<Cinema> cinemas = parser.parserLesSeancesPourUnFilm(source.getInputStream(url));
+        return cinemas;
+    }
 }
