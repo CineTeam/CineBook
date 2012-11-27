@@ -37,12 +37,16 @@
                                     <div class="details_seance">
                                         <p class="titre_seance">Détails de la séance :</p>
                                         <c:forEach var="seance" items="${seances_film.seances}" varStatus="status2">
-                                            <c:if test = "${seance.format!=null}">
                                                 <c:if test = "${status2.count==1}">
                                                     <div class="formats">
                                                         <c:forEach var="seance1" items="${seances_film.seances}" varStatus="status3">
                                                             <p class="format format_clickable" id="${status1.count}_${status3.count}">
-                                                                ${seance1.format}
+                                                                <c:if test = "${seance.format!=null}">
+                                                                     ${seance1.format}
+                                                                </c:if>
+                                                                <c:if test = "${seance.format==null}">
+                                                                     Numérique
+                                                                </c:if>
                                                             </p>
                                                         </c:forEach>
                                                     </div>
@@ -66,7 +70,6 @@
                                                         </c:forEach>
                                                     </c:if>
                                                 </div>
-                                           </c:if>
                                         </c:forEach>
                                     </div>
                                 </tr>

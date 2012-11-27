@@ -10,9 +10,6 @@ import org.junit.Test;
 /** @author alexis */
 public class TestCinemaProvider {
     
-    public TestCinemaProvider() {
-    }
-    
     @Test
     public void retourneUneListeDeCinemaParMotCle() 
     {
