@@ -16,7 +16,6 @@ public class SeanceProvider implements ISeanceProvider
     public List<Seances_film> getSeancesPourUnCinema(String id) 
     {
         String url = new AllocineApiUrlBuilder(Methodes.SEANCES).ajouterLesCinemas(id).getUrl();
-        System.out.println(url);
         List<Seances_film> seances_films = parser.parserLesSeancesPourUnCinema(source.getInputStream(url));
         return seances_films;
     }
