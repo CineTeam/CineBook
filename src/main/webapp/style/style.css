@@ -290,6 +290,10 @@ a:hover {
     margin:0 0 0 0;
 }
 
+.titre_seance{
+    height : 24px;
+}
+
 .short_desc_film,.short_desc_cinema,.details_seance{
     font-family: Tahoma;
     font-size:14px;
@@ -307,7 +311,7 @@ a:hover {
 .short_img_film img{
     border:2px solid #4D4D4D;
     width:200px;
-    height : 280px;
+    height : 276px;
 }
 
 .short_desc_film{
@@ -432,4 +436,6 @@ a:hover {
     width:173px;
     border : 1px solid #383838; 
     background: url(../images/background-format.png) repeat-y top;
+    max-height: 222px;
+    overflow-y: auto;
 }
