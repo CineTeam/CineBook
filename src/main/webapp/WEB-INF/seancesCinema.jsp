@@ -41,11 +41,11 @@
                                                     <div class="formats">
                                                         <c:forEach var="seance1" items="${seances_film.seances}" varStatus="status3">
                                                             <p class="format format_clickable" id="${status1.count}_${status3.count}">
-                                                                <c:if test = "${seance.format!=null}">
+                                                                <c:if test = "${!empty seance.format}">
                                                                      ${seance1.format}
                                                                 </c:if>
-                                                                <c:if test = "${seance.format==null}">
-                                                                     Numérique
+                                                                <c:if test = "${empty seance.format}">
+                                                                     Inconnu
                                                                 </c:if>
                                                             </p>
                                                         </c:forEach>

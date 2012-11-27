@@ -420,8 +420,8 @@ a:hover {
 }
 
 .format{
-    line-height: 100%;
-    height : 14px;
+    line-height: 120%;
+    height : 18px;
     width: 80px;
     text-align : center;
     float:left;
@@ -436,6 +436,6 @@ a:hover {
     width:173px;
     border : 1px solid #383838; 
     background: url(../images/background-format.png) repeat-y top;
-    max-height: 222px;
+    max-height: 218px;
     overflow-y: auto;
 }
