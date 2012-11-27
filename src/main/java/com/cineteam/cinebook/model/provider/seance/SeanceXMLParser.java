@@ -81,7 +81,9 @@ public class SeanceXMLParser extends AXMLParser
 
     private String parserFormat(Element courant)
     {
-        return courant.getChildText("screenFormat", defaultNameSpace);
+        if(courant.getChildText("screenFormat", defaultNameSpace) != null)
+            return courant.getChildText("screenFormat", defaultNameSpace);
+        return "";
     }
 
     private Seance parserSeance(Element courant) {
@@ -191,9 +193,51 @@ public class SeanceXMLParser extends AXMLParser
             Film film = filmParser.parserLeFilm(getMovieElement(courant));
             List<Seance> seances = getSeancesForFilm(seancesFilms, film);
             Seance seance = parserSeance(courant);
-            seances.add(seance);  
+            ajouterLaSeanceSiNecessaire(seances, seance);
         }
         return seancesFilms;
     }
-    
+
+    private boolean seancesContientLaSeance(List<Seance> seances, Seance seance) {
+        for (Seance s : seances)
+        {
+            if(s.getFormat().equalsIgnoreCase(seance.getFormat()) && s.getLangue().equalsIgnoreCase(seance.getLangue()))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private Seance getSeanceCorrespondante(List<Seance> seances, Seance seance)
+    {
+        for (Seance s : seances)
+        {
+            if(s.getFormat().equalsIgnoreCase(seance.getFormat()) && s.getLangue().equalsIgnoreCase(seance.getLangue()))
+            {
+                return s;
+            }
+        }
+        return null;
+    }
+
+    private void ajouterLaSeanceSiNecessaire(List<Seance> seances, Seance seance) {
+        if(seancesContientLaSeance(seances, seance))
+        {
+            Seance seanceExistante = getSeanceCorrespondante(seances,seance);
+            copierLesHoraires(seance, seanceExistante); 
+        }
+        else
+        {
+            seances.add(seance);
+        }
+    }
+
+    private void copierLesHoraires(Seance seance, Seance seanceExistante) {
+        for (Horaire horaire : seance.getHoraires())
+        {
+            seanceExistante.getHoraires().add(horaire);
+        }
+    }
+
 }
