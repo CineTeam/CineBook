@@ -97,7 +97,10 @@
                                         <div class="synopsis">
                                              ${film.synopsis}
                                         </div>
-                                        <br>
+                                        <br><hr /><br>
+                                         <div class="seances_film">
+                                            <c:import url="seancesFilm.jsp"/>
+                                        </div>
                                     </c:otherwise>                                            
                                 </c:choose>
                             </c:if>  

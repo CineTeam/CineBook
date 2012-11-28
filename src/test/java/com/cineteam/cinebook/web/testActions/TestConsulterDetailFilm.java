@@ -14,14 +14,16 @@ import org.junit.Test;
 /** @author Vivien */
 public class TestConsulterDetailFilm {
     
-    private MockFilmProvider fauxProvider ;
+    private MockFilmProvider fauxProviderFilm ;
+    private MockSeanceProvider fauxProviderSeance ;
     private HttpServletRequest request ;
     private ConsulterDetailFilmAction consulterDetailsFilmAction ;
     
     @Before
     public void setUp() {
-        fauxProvider = new MockFilmProvider();
-        consulterDetailsFilmAction = new ConsulterDetailFilmAction(fauxProvider);
+        fauxProviderFilm = new MockFilmProvider();
+        fauxProviderSeance = new MockSeanceProvider();
+        consulterDetailsFilmAction = new ConsulterDetailFilmAction(fauxProviderFilm,fauxProviderSeance);
         request = createMock(HttpServletRequest.class);
         replay(request);
     }
@@ -36,7 +38,7 @@ public class TestConsulterDetailFilm {
         
         consulterDetailsFilmAction.execute(request);
         
-        assertNull(fauxProvider.getDetailFilm(film_id));
+        assertNull(fauxProviderFilm.getDetailFilm(film_id));
         assertNull(request.getAttribute("film"));
     }
     
@@ -49,9 +51,40 @@ public class TestConsulterDetailFilm {
         
         consulterDetailsFilmAction.execute(request);
         
-        assertNotNull(fauxProvider.getDetailFilm(film_id));
+        assertNotNull(fauxProviderFilm.getDetailFilm(film_id));
         assertNotNull(request.getAttribute("film"));
-        assertNotNull(fauxProvider.getDetailFilm(film_id).getSynopsis());
+        assertNotNull(fauxProviderFilm.getDetailFilm(film_id).getSynopsis());
+    }
+    
+    @Test
+    public void nAffichePasLesCinemasEtLeursSeancesSansCodePostalRecherche()    {
+        String film_id = "10";
+        String cp_recherche = "";
+        final Map parametres = new HashMap();
+        parametres.put("cpt",film_id);
+        parametres.put("recherche",cp_recherche);
+        request = new AddedParametersRequestWrapper(request, parametres);
+        
+        consulterDetailsFilmAction.execute(request);
+        
+        assertTrue(fauxProviderSeance.getSeancesPourUnFilm(film_id,cp_recherche).isEmpty());
+        assertNull(request.getAttribute("cinemas"));
+    }
+    
+    @Test
+    public void afficheLesCinemasEtLeursSeancesAvecCodePostalRecherche() {
+        String film_id = "10";
+        String cp_recherche = "33000";
+        final Map parametres = new HashMap();
+        parametres.put("cpt",film_id);
+        parametres.put("recherche",cp_recherche);
+        request = new AddedParametersRequestWrapper(request, parametres);
+        
+        consulterDetailsFilmAction.execute(request);
+        
+        assertTrue(!fauxProviderSeance.getSeancesPourUnFilm(film_id,cp_recherche).isEmpty());
+        assertNotNull(request.getAttribute("cinemas"));
+        assertNotNull(fauxProviderSeance.getSeancesPourUnFilm(film_id,cp_recherche).get(0).getSeances_films().get(0).getSeances().get(0).getFormat());
     }
     
 }

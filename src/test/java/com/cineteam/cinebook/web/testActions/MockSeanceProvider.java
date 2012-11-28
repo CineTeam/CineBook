@@ -1,5 +1,6 @@
 package com.cineteam.cinebook.web.testActions;
 
+import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.entity.Horaire;
 import com.cineteam.cinebook.model.entity.Seance;
 import com.cineteam.cinebook.model.entity.Seances_film;
@@ -12,6 +13,7 @@ import java.util.List;
 public class MockSeanceProvider implements ISeanceProvider
 {
     public List<Seances_film> seancesFilms = new ArrayList<Seances_film>();
+    public List<Cinema> seancesCinemas = new ArrayList<Cinema>();
     
     public List<Seances_film> getSeancesPourUnCinema(String id) {
         Seances_film seancesFilm = new Seances_film();
@@ -30,6 +32,17 @@ public class MockSeanceProvider implements ISeanceProvider
             seancesFilms.add(seancesFilm);
         }
         return seancesFilms;
+    }
+
+    public List<Cinema> getSeancesPourUnFilm(String id, String codePostal) {
+        if(!codePostal.isEmpty()){
+            Cinema cinema = new Cinema();
+            cinema.setId(id);
+            List<Seances_film> seancesFilmsDuCinema = this.getSeancesPourUnCinema(id);
+            cinema.setSeances_films(seancesFilmsDuCinema);
+            seancesCinemas.add(cinema);
+        }
+        return seancesCinemas;
     }
     
 }
