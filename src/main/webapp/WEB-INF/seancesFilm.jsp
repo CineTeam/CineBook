@@ -46,9 +46,6 @@
                         </c:otherwise>                                            
                     </c:choose>
                 </c:if>
-                <c:if test = "${requestScope.cinemas == null}">                                                
-                    <tr>Veuillez saisir un paramètre de recherche !</tr>
-                </c:if>
             </table>
     </body>
 </html>

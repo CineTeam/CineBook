@@ -38,8 +38,7 @@
                                                     <div class="short_img_film">
                                                         <c:choose>
                                                             <c:when test = "${film.url_affiche !=null}">
-                                                                    <img src="${film.url_affiche}"/>
-
+                                                                <img src="${film.url_affiche}"/>
                                                             </c:when>
                                                             <c:otherwise>
                                                                 <img src="images/image-film-non-dispo.jpg"/>
