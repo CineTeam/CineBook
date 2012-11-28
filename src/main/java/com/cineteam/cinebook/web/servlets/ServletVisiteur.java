@@ -19,7 +19,7 @@ public class ServletVisiteur extends HttpServlet {
     public String getVue() {
         return vue;
     }
-    
+   
     public void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         
