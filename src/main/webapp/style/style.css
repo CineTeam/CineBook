@@ -439,3 +439,12 @@ a:hover {
     max-height: 218px;
     overflow-y: auto;
 }
+
+
+.seances_film{
+    clear: both;
+}
+
+#recherche_seances{
+    line-height: 280%;
+}

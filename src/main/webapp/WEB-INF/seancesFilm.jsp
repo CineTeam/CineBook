@@ -4,23 +4,17 @@
     <head>
     </head>
     <body>
-        <table>
-             <tr>
-                 <td align="left">
-                     Liste des cinemas ! 
-                 </td>
-                 <td align ="right">
-                     <div id="recherche">
-                        <form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
-                            Rechercher par Code Postal:
-                            <input type="text" name="cpt" value="${film.id}" style="display:none;"/>
-                            <input type="text" name="recherche" />                     
-                            <input type="submit" name="envoyer" value="Valider" />
-                        </form>
-                     </div>
-                 </td>
-             </tr>
-        </table>
+        <br><hr /><br>
+        
+        <div id="recherche_seances">
+            <form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
+                Trouvez la prochaine séance la plus proche de chez vous ! <br>
+                Saisir un code postal :
+                <input type="text" name="cpt" value="${film.id}" style="display:none;"/>
+                <input type="text" name="recherche" />                     
+                <input type="submit" name="envoyer" value="Valider" />
+            </form>
+        </div>
             
         <table>  
                 <c:if test = "${requestScope.cinemas != null}">
