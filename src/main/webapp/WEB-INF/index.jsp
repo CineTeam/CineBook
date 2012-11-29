@@ -62,7 +62,7 @@
                             
                             <div class="mini_profil decalage">
                                 <div class="photo_profil">
-                                    <img src="images/vivien.JPG"/>
+                                    <img src="images/vivien.jpg"/>
                                 </div>
                                 <div class="details_profil">
                                     Identité : Vivien Poirier <br>
