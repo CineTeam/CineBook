@@ -24,6 +24,15 @@
     height : 278px;
 }
 
+.titre_accueil{
+    text-align : center;
+    margin-top : 10px;
+    margin-bottom : 30px;
+    font-weight : bold;
+    font-size: 17px;
+    font-family: Tahoma;
+    line-height: 180%;
+}
 
 .details_profil{
     margin-left: 200px;

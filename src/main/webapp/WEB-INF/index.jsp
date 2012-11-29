@@ -25,8 +25,7 @@
                         <h1>Bienvenue sur CineBook</h1>
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
-                            <p>Le site de référencement des cinemas et des films !! </p>
-                            <p>Notre équipe</p>
+                            <p class="titre_accueil">Le site de référencement des cinemas et des films vous présente son équipe ! </p>
                             
                             <div class="mini_profil">
                                 <div class="photo_profil">
