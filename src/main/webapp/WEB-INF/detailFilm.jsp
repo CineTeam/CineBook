@@ -13,6 +13,7 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/tableaux.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/format.js"></script>
     </head>
     <body id="Films">
         <div id="wrapper">
@@ -82,16 +83,16 @@
                                                     <c:if test = "${film.note_utilisateurs!=null}">Spectateurs : <f:formatNumber value="${film.note_utilisateurs}" maxFractionDigits="1" /> / 5</c:if>
                                                 </div>
                                             </div>
-                                            <c:if test = "${film.url_bande_annonce!=null}">
-                                                <div class='bande_annonce'>
+                                            <div class='bande_annonce'>
+                                                <c:if test = "${film.url_bande_annonce!=null}">
                                                     <object width='100%' height='100%'>
                                                         <param name='movie' value='${film.url_bande_annonce}'/>
                                                         <param name='allowFullScreen' value='true'/>
                                                         <param name='allowScriptAccess' value='always'/>
                                                         <embed src='${film.url_bande_annonce}' type='application/x-shockwave-flash' width='100%' height='100%' allowFullScreen='true' allowScriptAccess='always'/>
                                                     </object>
-                                                </div>
-                                            </c:if>
+                                                </c:if>
+                                           </div>
                                         </div>
                                         <div class="synopsis">
                                              ${film.synopsis}
