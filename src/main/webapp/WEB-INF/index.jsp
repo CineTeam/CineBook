@@ -40,7 +40,7 @@
                             
                             <div class="mini_profil decalage">
                                 <div class="photo_profil">
-                                    <img src="images/image-film-non-dispo.jpg"/>
+                                    <img src="images/krikri.jpg"/>
                                 </div>
                                 <div class="details_profil">
                                     Identité : Ikram Chraibi <br>
