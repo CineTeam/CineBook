@@ -30,11 +30,12 @@
                             
                             <div class="mini_profil">
                                 <div class="photo_profil">
-                                    <img src="images/image-film-non-dispo.jpg"/>
+                                    <img src="images/alexis.jpg"/>
                                 </div>
                                 <div class="details_profil">
                                     Identité : Alexis Léauté <br>
                                     Rôle : Product Owner <br>
+                                    Email : aleaute@epsi.fr <br>
                                 </div>
                             </div>
                             
@@ -44,6 +45,8 @@
                                 </div>
                                 <div class="details_profil">
                                     Identité : Ikram Chraibi <br>
+                                    Rôle : <br>
+                                    Email : ichraibi@epsi.fr <br>
                                 </div>
                             </div>
                             
@@ -54,24 +57,29 @@
                                 <div class="details_profil">
                                     Identité : Bérangère Noiraud <br>
                                     Rôle : Développeuse <br>
+                                    Email : bnoiraud@epsi.fr <br>
                                 </div>
                             </div>
                             
                             <div class="mini_profil decalage">
                                 <div class="photo_profil">
-                                    <img src="images/image-film-non-dispo.jpg"/>
+                                    <img src="images/vivien.jpg"/>
                                 </div>
                                 <div class="details_profil">
                                     Identité : Vivien Poirier <br>
+                                    Rôle : <br>
+                                    Email : vpoirier@epsi.fr <br>
                                 </div>
                             </div>
                             
                             <div class="mini_profil">
                                 <div class="photo_profil">
-                                    <img src="images/image-film-non-dispo.jpg"/>
+                                    <img src="images/cedric.png"/>
                                 </div>
                                 <div class="details_profil">
                                     Identité : Cédric Fongue <br>
+                                    Rôle : <br>
+                                    Email : cfongue@epsi.fr <br>
                                 </div>
                             </div>
                             
@@ -81,6 +89,8 @@
                                 </div>
                                 <div class="details_profil">
                                     Identité : Ahmed Mehdi Ben Jemaa <br>
+                                    Rôle : <br>
+                                    Email : abenjemaa@epsi.fr <br>
                                 </div>
                             </div>
                             
