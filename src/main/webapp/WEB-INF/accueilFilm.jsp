@@ -56,7 +56,7 @@
                                                     <c:forEach var="film" items="${requestScope.derniersFilmsSortis}">                           
                                                         <li>
                                                             <a href='#' id="${film.id}" class='clickable'>
-                                                                <div class="short_film">
+                                                                <div class="short_film_slider">
                                                                     <div class="short_img_film">
                                                                         <img src="${film.url_affiche}"/>
                                                                     </div>

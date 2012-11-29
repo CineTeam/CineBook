@@ -34,18 +34,16 @@
                                     </c:when>
                                     <c:otherwise>
                                         <div class="bandeau_film">
-                                            <div class="film_infos">
-                                                <div class="img_film">
-                                                    <div class="short_img_film">
-                                                        <c:choose>
-                                                            <c:when test = "${film.url_affiche !=null}">
-                                                                <img src="${film.url_affiche}"/>
-                                                            </c:when>
-                                                            <c:otherwise>
-                                                                <img src="images/image-film-non-dispo.jpg"/>
-                                                            </c:otherwise>
-                                                        </c:choose>
-                                                    </div>
+                                            <div class="short_film">
+                                                <div class="short_img_film">
+                                                    <c:choose>
+                                                        <c:when test = "${film.url_affiche !=null}">
+                                                            <img src="${film.url_affiche}"/>
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <img src="images/image-film-non-dispo.jpg"/>
+                                                        </c:otherwise>
+                                                    </c:choose>
                                                 </div>
                                                 <div class="short_desc_film size_desc_film">
                                                     <p class="titre_film">${film.titre}</p>
