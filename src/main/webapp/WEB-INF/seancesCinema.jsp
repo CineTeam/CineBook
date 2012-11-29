@@ -15,16 +15,16 @@
                             <c:forEach var="seances_film" items="${requestScope.cinema.seances_films}" varStatus="status1">
                                 <tr>
                                     <a href='#' id="${seances_film.film.id}" class='clickable'>
-                                            <div class="short_img_film">
-                                                <c:choose>
-                                                    <c:when test = "${seances_film.film.url_affiche !=null}">
-                                                        <img src="${seances_film.film.url_affiche}"/>
-                                                    </c:when>
-                                                    <c:otherwise>
-                                                        <img src="images/image-film-non-dispo.jpg"/>
-                                                    </c:otherwise>
-                                                </c:choose>
-                                            </div>
+                                        <div class="short_img_film">
+                                            <c:choose>
+                                                <c:when test = "${seances_film.film.url_affiche !=null}">
+                                                    <img src="${seances_film.film.url_affiche}"/>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <img src="images/image-film-non-dispo.jpg"/>
+                                                </c:otherwise>
+                                            </c:choose>
+                                        </div>
                                     </a>
                                     <div class="detail_film_seance">  
                                         <a href='#' id="${seances_film.film.id}" class='clickable'>
@@ -36,14 +36,14 @@
                                             </div>  
                                         </a> 
                                         <div class="details_seance">
-                                            <p class="titre_seance">Détails de la séance :</p>
+                                            Les séances : <br>
                                             <c:forEach var="seance" items="${seances_film.seances}" varStatus="status2">
                                                     <c:if test = "${status2.count==1}">
                                                         <div class="formats">
                                                             <c:forEach var="seance1" items="${seances_film.seances}" varStatus="status3">
                                                                 <p class="format format_clickable" id="${status1.count}_${status3.count}">
-                                                                    <c:if test = "${!empty seance.format}">${seance1.format} - </c:if>
-                                                                    <c:if test = "${!empty seance.langue}">${seance1.langue}</c:if>
+                                                                    <c:if test = "${!empty seance1.format}">${seance1.format} - </c:if>
+                                                                    <c:if test = "${!empty seance1.langue}">${seance1.langue}</c:if>
                                                                 </p>
                                                             </c:forEach>
                                                         </div>
@@ -69,9 +69,6 @@
                                             </c:forEach>
                                         </div>
                                     </div> 
-                                </tr>
-                                <tr>
-                                    <br><br>
                                 </tr>
                             </c:forEach>
                         </c:otherwise>                                            

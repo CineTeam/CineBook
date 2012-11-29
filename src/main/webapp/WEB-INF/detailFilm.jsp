@@ -95,7 +95,7 @@
                                         <div class="synopsis">
                                              ${film.synopsis}
                                         </div>
-                                         <div class="seances_film">
+                                         <div>
                                             <c:import url="seancesFilm.jsp"/>
                                         </div>
                                     </c:otherwise>                                            

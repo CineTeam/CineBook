@@ -253,10 +253,6 @@ a:hover {
     background: url(../images/img03.png) no-repeat left bottom;
 }
 
-#banner .content {
-}
-
-
 .list-style1 {
     margin: 0px;
     padding: 0px;
@@ -292,18 +288,14 @@ a:hover {
         margin-bottom: 20px;
     }
     
-        .titre_film,.titre_cinema,.titre_seance{
+        .titre_film,.titre_cinema{
             font-weight : bold;
             font-size: 15px;
             padding :0 0 0 0;
             margin:0 0 0 0;
         }
 
-        .titre_seance{
-            height : 24px;
-        }
-
-        .short_desc_film,.short_desc_cinema,.short_desc_film_cinema,.details_seance{
+        .short_desc_film,.short_desc_cinema,.short_desc_film_cinema,.short_desc_cinema_film,.details_seance{
             font-family: Tahoma;
             font-size:14px;
             line-height: 180%;
@@ -340,7 +332,14 @@ a:hover {
             padding-right: 20px;
             width:456px;
             height:140px;
-            
+        }
+        
+        .short_desc_cinema_film{
+            display:block;
+            padding-left:20px; 
+            padding-right: 20px;
+            width:460px;
+            height:80px;
         }
 
     .bande_annonce{
@@ -358,25 +357,42 @@ a:hover {
         width:700px;
     }
 
-        .img_cinema{
+        .img_cinema,.img_cinema_seance{
             background-color: #383838;
             display:block;
             float:left;
-            line-height:300px;
             text-align: center;
-            height:300px;
-            width:320px;  
         }
+        
+            .img_cinema{
+                line-height:300px;
+                height:300px;
+                width:320px;  
+            }
 
-        .img_cinema img{
+            .img_cinema_seance{
+                line-height:220px;
+                height:220px;
+                width:200px;  
+            }
+        
+        .img_cinema img,.img_cinema_seance img{
             display:block;
             vertical-align:middle;
             display:inline-block;
             line-height:1;
-            width:300px;
-            max-height:290px;
         }
-
+        
+            .img_cinema img{
+                width:300px;
+                max-height:290px;
+            }
+            
+            .img_cinema_seance img{
+                width:190px;
+                max-height:210px;
+            }
+        
         .short_desc_cinema{
             display:block;
             margin-left: 320px;
@@ -401,15 +417,22 @@ a:hover {
     line-height: 180%;
 }
 
-.seances_cinema{
+.seances_cinema,.seances_film{
     margin-top: 30px;
+}
+
+.detail_cinema_seance{
+    margin-left: 200px;
+    height : 220px;
+    width:500px;
+    margin-bottom: 20px;
 }
 
 .detail_film_seance{
     margin-left: 204px;
     height : 280px;
     width:496px;
-    
+    margin-bottom: 20px;
 }
 
     .details_seance{
@@ -418,33 +441,33 @@ a:hover {
         width:476px;
     }
 
-.formats{
-    margin-top : 10px;
-    height : 18px;
-    width:476px;
-}
+    .formats{
+        margin-top : 10px;
+        height : 18px;
+        width:476px;
+    }
 
-.format{
-    line-height: 120%;
-    height : 18px;
-    width: 135px;
-    text-align : center;
-    float:left;
-    margin : 0 0 0 0;
-    border-bottom: 1px solid #383838;
-    background: url(../images/background-titre-format.png) repeat-y top;
-}
+    .format{
+        line-height: 120%;
+        height : 18px;
+        width: 135px;
+        text-align : center;
+        float:left;
+        margin : 0 0 0 0;
+        border-bottom: 1px solid #383838;
+        background: url(../images/background-titre-format.png) repeat-y top;
+    }
 
-.details_format{
-    padding: 5px 5px 5px 20px; 
-    display:none;
-    float : left;
-    width:449px;
-    border : 1px solid #383838; 
-    background-color: #ECECEC;
-    max-height: 75px;
-    overflow-y: auto;
-}
+    .details_format{
+        padding: 5px 5px 5px 20px; 
+        display:none;
+        float : left;
+        width:449px;
+        border : 1px solid #383838; 
+        background-color: #ECECEC;
+        max-height: 75px;
+        overflow-y: auto;
+    }
 
 
 .seances_film{
