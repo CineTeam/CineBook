@@ -38,7 +38,7 @@
                                                 <c:forEach var="film" items="${requestScope.filmsParMotCle}">
                                                     <tr>
                                                         <a href='#' id="${film.id}" class='clickable'>
-                                                            <div class="short_film">
+                                                            <div class="short_film lignes_film">
                                                                 <div class="short_img_film">
                                                                     <c:choose>
                                                                         <c:when test = "${film.url_affiche !=null}">
@@ -57,9 +57,6 @@
                                                                 </div>   
                                                             </div>
                                                         </a>
-                                                    </tr>
-                                                    <tr>
-                                                        <br><br>
                                                     </tr>
                                                 </c:forEach>
                                             </c:otherwise>                                            

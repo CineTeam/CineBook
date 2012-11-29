@@ -277,63 +277,79 @@ a:hover {
     display : none;
 }
 
-.short_film{
-    background-color: transparent;
-    height : 280px;
-    width:500px;
-}
-
-.titre_film,.titre_cinema,.titre_seance{
-    font-weight : bold;
-    font-size: 15px;
-    padding :0 0 0 0;
-    margin:0 0 0 0;
-}
-
-.titre_seance{
-    height : 24px;
-}
-
-.short_desc_film,.short_desc_cinema,.details_seance{
-    font-family: Tahoma;
-    font-size:14px;
-    line-height: 180%;
-}
-
-.short_img_film{
-    display:block;
-    float:left;
-    width:200px;
-    height : 280px;
-}
-
-
-.short_img_film img{
-    border:2px solid #4D4D4D;
-    width:200px;
-    height : 276px;
-}
-
-.short_desc_film{
-    display:block;
-    margin-left: 204px;
-    padding-left:20px; 
-    height : 280px;
-}
-
-.size_desc_film{
-    width:350px;
-}
-
-.size_desc_film_cinema{
-    padding-right: 20px;
-    width:256px;
-    
-}
-
-.bandeau_cinema .bandeau_film{
+.bandeau_cinema, .bandeau_film{
     width: 1000px;
 }
+
+    .short_film{
+        display:block;
+        float:left;
+        height : 280px;
+        width:574px;
+    }
+    
+    .lignes_film{
+        margin-bottom: 20px;
+    }
+    
+        .titre_film,.titre_cinema,.titre_seance{
+            font-weight : bold;
+            font-size: 15px;
+            padding :0 0 0 0;
+            margin:0 0 0 0;
+        }
+
+        .titre_seance{
+            height : 24px;
+        }
+
+        .short_desc_film,.short_desc_cinema,.short_desc_film_cinema,.details_seance{
+            font-family: Tahoma;
+            font-size:14px;
+            line-height: 180%;
+        }
+
+        .short_img_film{
+            display:block;
+            float:left;
+            width:200px;
+            height : 280px;
+        }
+
+
+            .short_img_film img{
+                border:2px solid #4D4D4D;
+                width:200px;
+                height : 276px;
+            }
+
+        .short_desc_film{
+            display:block;
+            margin-left: 204px;
+            padding-left:20px; 
+        }
+
+            .size_desc_film{
+                width:350px;
+                height : 280px;
+            }
+
+        .short_desc_film_cinema{
+            display:block;
+            padding-left:20px; 
+            padding-right: 20px;
+            width:456px;
+            height:140px;
+            
+        }
+
+    .bande_annonce{
+        display:block;
+        margin-left:580px;
+        height:280px;
+        width:420px;
+    }
+
 
     #cinema_infos{
         display:block;
@@ -367,8 +383,9 @@ a:hover {
             padding-left:20px; 
             height:300px;
             width:360px;
+            overflow-y: auto;
         }
-      
+
     #googlemap{
         display:block;
         margin-left: 700px;
@@ -376,19 +393,6 @@ a:hover {
         width:300px;
     }
 
-.film_infos{
-    display:block;
-    float:left;
-    width:570px;
-    height:280px;
-}
-
-.bande_annonce{
-    display:block;
-    margin-left:580px;
-    height:280px;
-    width:420px;
-}
 
 .synopsis {
     font-family: Tahoma;
@@ -397,26 +401,27 @@ a:hover {
     line-height: 180%;
 }
 
-
 .seances_cinema{
     margin-top: 30px;
 }
 
-.short_film_seance{
-    float:left;
-}
-
-.details_seance{
-    margin-left: 500px;
+.detail_film_seance{
+    margin-left: 204px;
     height : 280px;
-    width:200px;
+    width:496px;
+    
 }
 
+    .details_seance{
+        margin-left: 20px;
+        height : 140px;
+        width:476px;
+    }
 
 .formats{
     margin-top : 10px;
-    height : 14px;
-    width:200px;
+    height : 18px;
+    width:476px;
 }
 
 .format{
@@ -426,6 +431,7 @@ a:hover {
     text-align : center;
     float:left;
     margin : 0 0 0 0;
+    border-bottom: 1px solid #383838;
     background: url(../images/background-titre-format.png) repeat-y top;
 }
 
@@ -433,10 +439,10 @@ a:hover {
     padding: 5px 5px 5px 20px; 
     display:none;
     float : left;
-    width:173px;
+    width:449px;
     border : 1px solid #383838; 
-    background: url(../images/background-format.png) repeat-y top;
-    max-height: 218px;
+    background-color: #ECECEC;
+    max-height: 75px;
     overflow-y: auto;
 }
 
