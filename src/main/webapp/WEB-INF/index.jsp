@@ -11,6 +11,7 @@
         <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
         <link href="style/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="style/profil.css" rel="stylesheet" type="text/css" media="screen" />
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
     </head>
@@ -25,7 +26,64 @@
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
                             <p>Le site de référencement des cinemas et des films !! </p>
-                            <p>Veuillez consulter la partie qui vous intéresse.</p>
+                            <p>Notre équipe</p>
+                            
+                            <div class="mini_profil">
+                                <div class="photo_profil">
+                                    <img src="images/image-film-non-dispo.jpg"/>
+                                </div>
+                                <div class="details_profil">
+                                    Identité : Alexis Léauté <br>
+                                    Rôle : Product Owner <br>
+                                </div>
+                            </div>
+                            
+                            <div class="mini_profil decalage">
+                                <div class="photo_profil">
+                                    <img src="images/image-film-non-dispo.jpg"/>
+                                </div>
+                                <div class="details_profil">
+                                    Identité : Ikram Chraibi <br>
+                                </div>
+                            </div>
+                            
+                            <div class="mini_profil">
+                                <div class="photo_profil">
+                                    <img src="images/berangere.jpg"/>
+                                </div>
+                                <div class="details_profil">
+                                    Identité : Bérangère Noiraud <br>
+                                    Rôle : Développeuse <br>
+                                </div>
+                            </div>
+                            
+                            <div class="mini_profil decalage">
+                                <div class="photo_profil">
+                                    <img src="images/image-film-non-dispo.jpg"/>
+                                </div>
+                                <div class="details_profil">
+                                    Identité : Vivien Poirier <br>
+                                </div>
+                            </div>
+                            
+                            <div class="mini_profil">
+                                <div class="photo_profil">
+                                    <img src="images/image-film-non-dispo.jpg"/>
+                                </div>
+                                <div class="details_profil">
+                                    Identité : Cédric Fongue <br>
+                                </div>
+                            </div>
+                            
+                            <div class="mini_profil decalage">
+                                <div class="photo_profil">
+                                    <img src="images/image-film-non-dispo.jpg"/>
+                                </div>
+                                <div class="details_profil">
+                                    Identité : Ahmed Mehdi Ben Jemaa <br>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
 
