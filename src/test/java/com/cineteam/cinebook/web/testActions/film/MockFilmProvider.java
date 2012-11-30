@@ -1,4 +1,4 @@
-package com.cineteam.cinebook.web.testActions;
+package com.cineteam.cinebook.web.testActions.film;
 
 import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.model.provider.film.IFilmProvider;

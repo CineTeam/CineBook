@@ -1,5 +1,11 @@
 package com.cineteam.cinebook.web.servlets;
 
+import com.cineteam.cinebook.web.actions.cinema.RechercherCinemaParCPAction;
+import com.cineteam.cinebook.web.actions.cinema.ConsulterDetailCinemaAction;
+import com.cineteam.cinebook.web.actions.cinema.RechercherCinemaAction;
+import com.cineteam.cinebook.web.actions.film.RechercherFilmAction;
+import com.cineteam.cinebook.web.actions.film.ConsulterDetailFilmAction;
+import com.cineteam.cinebook.web.actions.film.RecupererDixDerniersFilmsSortisAction;
 import com.cineteam.cinebook.model.provider.cinema.CinemaProvider;
 import com.cineteam.cinebook.model.provider.film.FilmProvider;
 import com.cineteam.cinebook.model.provider.seance.SeanceProvider;

@@ -1,9 +1,10 @@
-package com.cineteam.cinebook.web.actions;
+package com.cineteam.cinebook.web.actions.film;
 
 import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.model.provider.film.IFilmProvider;
 import com.cineteam.cinebook.model.provider.seance.ISeanceProvider;
+import com.cineteam.cinebook.web.actions.Action;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
