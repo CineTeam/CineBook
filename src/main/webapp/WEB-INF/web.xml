@@ -9,6 +9,14 @@
         <servlet-name>ServletVisiteur</servlet-name>
         <url-pattern>/ServletVisiteur</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ServletMembre</servlet-name>
+        <servlet-class>com.cineteam.cinebook.web.servlets.ServletMembre</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletMembre</servlet-name>
+        <url-pattern>/ServletMembre</url-pattern>
+    </servlet-mapping>
     
     <session-config>
         <session-timeout>
