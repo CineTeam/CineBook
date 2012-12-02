@@ -1,7 +1,9 @@
 package com.cineteam.cinebook.web.servlets;
 
 import com.cineteam.cinebook.web.actions.Action;
+import com.cineteam.cinebook.web.actions.SeDeconnecterAction;
 import com.cineteam.cinebook.web.actions.SidentifierAction;
+import com.cineteam.cinebook.web.actions.SinscrireAction;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -32,6 +34,12 @@ public class ServletMembre extends HttpServlet {
             Action classeAction = null;
             if (param_action.equalsIgnoreCase("sidentifierAction")) {
                     classeAction = new SidentifierAction();
+            }
+            else if (param_action.equalsIgnoreCase("sinscrireAction")) {
+                    classeAction = new SinscrireAction();
+            }
+            else if (param_action.equalsIgnoreCase("seDeconnecterAction")) {
+                    classeAction = new SeDeconnecterAction();
             }
         
         vue = dossier_prive+classeAction.execute(request);

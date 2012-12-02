@@ -116,6 +116,8 @@ a:hover {
 #connexion{
     float: right;
     margin-top: 25px;
+    text-align: right;
+    margin-right: 7px;
 }
 
 #connexion a{
@@ -127,6 +129,12 @@ a:hover {
     color: black;
     text-decoration: underline;
     
+}
+
+#connexion p{
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 7px;
 }
 
 #entete{
@@ -146,8 +154,8 @@ a:hover {
     padding: 0;
 }
 
-#recherche #bouton_valider {	
-    width: 100px;
+#recherche #bouton_valider, #bouton_inscription{	
+    width: auto;
     border-radius: 12px;
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;

@@ -7,7 +7,10 @@
     <body>
         <c:choose>
             <c:when test ="${sessionScope.login != null}">
-                Bienvenue ${sessionScope.login}
+                <p>Bienvenue ${sessionScope.login}</p>
+                <a href="ServletMembre?action=seDeconnecterAction">
+                    Déconnexion
+                </a>
             </c:when>
             <c:otherwise>
                <form action="ServletMembre?action=sidentifierAction" method="post" id="form_connexion">
@@ -20,7 +23,7 @@
                 <c:if test = "${requestScope.echec_connexion}">
                     Login ou mot de passe inconnu
                 </c:if>
-                <a href="">
+                <a href="ServletMembre?vue=inscription.jsp">
                     Inscription
                 </a>
             </c:otherwise>
