@@ -1,3 +1,4 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div id="header-wrapper">
     <div id="banner">
         <div class="content"><img src="images/logo.jpg" width="1000" height="200" alt=""/></div>
@@ -10,6 +11,9 @@
                 <li class="clic"><a href="ServletVisiteur?action=recupererDixDerniersFilmsSortisAction">Films</a></li>
                 <li class="clic"><a href="http://www.allocine.fr/">AlloCiné</a></li>
             </ul>
+        </div>
+        <div id="connexion">
+           <c:import url="barreIdentification.jsp"/>
         </div>
     </div>
 </div> 

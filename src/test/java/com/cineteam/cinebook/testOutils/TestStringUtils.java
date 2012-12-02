@@ -30,4 +30,25 @@ public class TestStringUtils
         String resultat = StringUtils.formaterPourUneUrl(texte);
         assertEquals("une%20url%20eeaue", resultat);
     }
+    
+    @Test 
+    public void retourneFauxSiLaChaineEstNull()
+    {
+        String test = null;
+        assertEquals(true, StringUtils.estVide(test));
+    }
+    
+    @Test 
+    public void retourneFauxSiLaChaineEstVide()
+    {
+        String test = "";
+        assertEquals(true, StringUtils.estVide(test));
+    }
+    
+    @Test 
+    public void retourneVraiSiLaChaineEstRemplie()
+    {
+        String test = "test";
+        assertEquals(false, StringUtils.estVide(test));
+    }
 }

@@ -113,6 +113,22 @@ a:hover {
     background: url(../images/img02.jpg) repeat;
 }
 
+#connexion{
+    float: right;
+    margin-top: 25px;
+}
+
+#connexion a{
+    float: right;
+    margin-right: 7px;
+}
+
+#connexion a:hover{
+    color: black;
+    text-decoration: underline;
+    
+}
+
 #entete{
     width:1000px;
 }

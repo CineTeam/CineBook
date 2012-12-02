@@ -21,4 +21,9 @@ public class StringUtils
         url = remplacerLesEspacesPourUneUrl(url);
         return url;
     }
+    
+    public static boolean estVide(String chaine)
+    {
+        return (chaine == null || chaine.isEmpty());
+    }
 }
