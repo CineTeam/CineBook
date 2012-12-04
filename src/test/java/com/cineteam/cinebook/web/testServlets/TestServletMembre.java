@@ -57,7 +57,7 @@ public class TestServletMembre {
     public void dispatcheLesActions() throws ServletException, IOException 
     {
         final Map params = new HashMap();
-        params.put("action", "sidentifierAction");
+        params.put("action", "seDeconnecterAction");
         request = new AddedParametersRequestWrapper(request,params);
                 
         servlet.processRequest(request,response);
