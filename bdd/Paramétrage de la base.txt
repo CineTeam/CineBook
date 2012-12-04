@@ -1,0 +1,11 @@
+1/ Installer Wamp (localhost + port : 3306)
+
+2/ Créer une nouvelle base de données (base principale) : 
+- la nommer BDCineBook
+- lui associer un nouvel utilisateur : username = bdcinebook, password = bdcinebook
+- importer le script DDL_CineBook.sql
+
+3/ Créer une deuxième base de données (base de test):
+- la nommer BDCineBookTest
+- lui associer l'utilisateur précédent (bdcinebook - bdcinebook)
+- importer le même script que précédemment (DDL_CineBook.sql)

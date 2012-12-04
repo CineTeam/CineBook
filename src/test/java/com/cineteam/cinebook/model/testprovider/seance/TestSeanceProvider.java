@@ -4,8 +4,9 @@ import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.entity.Seances_film;
 import com.cineteam.cinebook.model.provider.seance.SeanceProvider;
 import java.util.List;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /** @author alexis */
 public class TestSeanceProvider

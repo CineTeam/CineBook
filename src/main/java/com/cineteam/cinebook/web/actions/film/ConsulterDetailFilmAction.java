@@ -4,6 +4,7 @@ import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.model.provider.film.IFilmProvider;
 import com.cineteam.cinebook.model.provider.seance.ISeanceProvider;
+import com.cineteam.cinebook.outils.StringUtils;
 import com.cineteam.cinebook.web.actions.Action;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +23,7 @@ public class ConsulterDetailFilmAction implements Action {
     public String execute(HttpServletRequest request) {
         
         String index_film = (String) request.getParameter("cpt");
-        if(!index_film.isEmpty()){
+        if(!StringUtils.estVide(index_film)){
             Film film = providerFilm.getDetailFilm(index_film);
             request.setAttribute("film", film);       
         }    

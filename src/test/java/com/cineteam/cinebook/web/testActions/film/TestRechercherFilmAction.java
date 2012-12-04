@@ -32,9 +32,7 @@ public class TestRechercherFilmAction {
     @Test
     public void neRecherchePasdeFilmSansParametreDeRecherche()
     {
-        final Map parametres = new HashMap();
-        parametres.put("recherche","");
-        request = new AddedParametersRequestWrapper(request, parametres);
+        request = new AddedParametersRequestWrapper(request, new HashMap());
         
         rechercherFilmAction.execute(request);
         

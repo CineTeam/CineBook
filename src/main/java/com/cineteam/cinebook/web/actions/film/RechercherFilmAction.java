@@ -2,6 +2,7 @@ package com.cineteam.cinebook.web.actions.film;
 
 import com.cineteam.cinebook.model.entity.Film;
 import com.cineteam.cinebook.model.provider.film.IFilmProvider;
+import com.cineteam.cinebook.outils.StringUtils;
 import com.cineteam.cinebook.web.actions.Action;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +20,7 @@ public class RechercherFilmAction implements Action{
     public String execute(HttpServletRequest request) {
 
         String film_recherche = (String) request.getParameter("recherche");
-        if(!film_recherche.isEmpty()){
+        if(!StringUtils.estVide(film_recherche)){
             List<Film> filmsParMotCle = provider.rechercherFilmParMotCle(film_recherche);
             request.setAttribute("filmsParMotCle", filmsParMotCle);  
         }

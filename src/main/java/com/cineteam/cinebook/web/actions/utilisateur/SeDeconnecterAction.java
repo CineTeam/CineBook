@@ -1,5 +1,6 @@
-package com.cineteam.cinebook.web.actions;
+package com.cineteam.cinebook.web.actions.utilisateur;
 
+import com.cineteam.cinebook.web.actions.Action;
 import javax.servlet.http.HttpServletRequest;
 
 /** @author alexis */

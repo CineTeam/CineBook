@@ -34,8 +34,6 @@ public class TestServletMembre {
     public void neDispatchePasSiVueNonRenseignee() throws ServletException, IOException 
     {
         final Map params = new HashMap();
-        params.put("action", "");
-        params.put("vue", "");
         request = new AddedParametersRequestWrapper(request,params);
                 
         servlet.processRequest(request,response);
@@ -47,7 +45,6 @@ public class TestServletMembre {
     public void dispatcheSiVueRenseignee() throws ServletException, IOException 
     {
         final Map params = new HashMap();
-        params.put("action", "");
         params.put("vue", "vue.jsp");
         request = new AddedParametersRequestWrapper(request,params);
                 
@@ -61,7 +58,6 @@ public class TestServletMembre {
     {
         final Map params = new HashMap();
         params.put("action", "sidentifierAction");
-        params.put("vue", "");
         request = new AddedParametersRequestWrapper(request,params);
                 
         servlet.processRequest(request,response);

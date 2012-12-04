@@ -33,9 +33,7 @@ public class TestConsulterDetailFilm {
     public void neConsultePasDetailFilmSansFilmSaisi()
     {
         String film_id = "";
-        final Map parametres = new HashMap();
-        parametres.put("cpt",film_id);
-        request = new AddedParametersRequestWrapper(request, parametres);
+        request = new AddedParametersRequestWrapper(request, new HashMap());
         
         consulterDetailsFilmAction.execute(request);
         

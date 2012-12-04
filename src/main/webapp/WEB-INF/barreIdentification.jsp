@@ -6,8 +6,8 @@
     </head>
     <body>
         <c:choose>
-            <c:when test ="${sessionScope.login != null}">
-                <p>Bienvenue ${sessionScope.login}</p>
+            <c:when test ="${sessionScope.utilisateur != null}">
+                <p>Bienvenue ${sessionScope.utilisateur.pseudo}</p>
                 <a href="ServletMembre?action=seDeconnecterAction">
                     Déconnexion
                 </a>
@@ -17,11 +17,12 @@
                     Login : 
                     <input type="text" name="login" id="inputText" />
                     Mot de passe :
-                    <input type="password" name="motDePasse" id="inputText" />
+                    <input type="password" name="mdp" id="inputText" />
                     <input type="submit" id="bouton_connexion" name="connexion" value="Connexion" />
-                </form> <br/>
+                </form>
+                <br/>
                 <c:if test = "${requestScope.echec_connexion}">
-                    Login ou mot de passe inconnu
+                    Login et/ou mot de passe erronés ou vides.
                 </c:if>
                 <a href="ServletMembre?vue=inscription.jsp">
                     Inscription

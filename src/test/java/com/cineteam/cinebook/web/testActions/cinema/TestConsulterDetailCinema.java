@@ -33,9 +33,7 @@ public class TestConsulterDetailCinema {
     public void neConsultePasDetailCinemaSansCinemaSaisi()
     {
         String cinema_id = "";
-        final Map parametres = new HashMap();
-        parametres.put("cpt",cinema_id);
-        request = new AddedParametersRequestWrapper(request, parametres);
+        request = new AddedParametersRequestWrapper(request, new HashMap());
         
         consulterDetailsCinemaAction.execute(request);
         

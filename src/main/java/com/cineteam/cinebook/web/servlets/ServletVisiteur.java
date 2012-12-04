@@ -1,15 +1,12 @@
 package com.cineteam.cinebook.web.servlets;
 
-import com.cineteam.cinebook.web.actions.cinema.RechercherCinemaParCPAction;
-import com.cineteam.cinebook.web.actions.cinema.ConsulterDetailCinemaAction;
-import com.cineteam.cinebook.web.actions.cinema.RechercherCinemaAction;
-import com.cineteam.cinebook.web.actions.film.RechercherFilmAction;
-import com.cineteam.cinebook.web.actions.film.ConsulterDetailFilmAction;
-import com.cineteam.cinebook.web.actions.film.RecupererDixDerniersFilmsSortisAction;
 import com.cineteam.cinebook.model.provider.cinema.CinemaProvider;
 import com.cineteam.cinebook.model.provider.film.FilmProvider;
 import com.cineteam.cinebook.model.provider.seance.SeanceProvider;
-import com.cineteam.cinebook.web.actions.*;
+import com.cineteam.cinebook.outils.StringUtils;
+import com.cineteam.cinebook.web.actions.Action;
+import com.cineteam.cinebook.web.actions.cinema.*;
+import com.cineteam.cinebook.web.actions.film.*;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -33,10 +30,10 @@ public class ServletVisiteur extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String param_vue = (String) request.getParameter("vue");
         String param_action = (String) request.getParameter("action");
-        if(param_vue!=null && !param_vue.isEmpty()){
+        if(!StringUtils.estVide(param_vue)){
             vue = dossier_prive+param_vue;    
         }
-        if(param_action!=null && !param_action.isEmpty()){
+        if(!StringUtils.estVide(param_action)){
             Action classeAction = null;
             if (param_action.equalsIgnoreCase("rechercherCinemaAction")) {
                     classeAction = new RechercherCinemaAction(new CinemaProvider());

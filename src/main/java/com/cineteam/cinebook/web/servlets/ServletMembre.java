@@ -1,9 +1,11 @@
 package com.cineteam.cinebook.web.servlets;
 
+import com.cineteam.cinebook.entitymanager.utilisateur.UtilisateurEntityManager;
+import com.cineteam.cinebook.outils.StringUtils;
 import com.cineteam.cinebook.web.actions.Action;
-import com.cineteam.cinebook.web.actions.SeDeconnecterAction;
-import com.cineteam.cinebook.web.actions.SidentifierAction;
-import com.cineteam.cinebook.web.actions.SinscrireAction;
+import com.cineteam.cinebook.web.actions.utilisateur.SeDeconnecterAction;
+import com.cineteam.cinebook.web.actions.utilisateur.SidentifierAction;
+import com.cineteam.cinebook.web.actions.utilisateur.SinscrireAction;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,22 +29,22 @@ public class ServletMembre extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String param_vue = (String) request.getParameter("vue");
         String param_action = (String) request.getParameter("action");
-        if(param_vue!=null && !param_vue.isEmpty()){
+        if(!StringUtils.estVide(param_vue)){
             vue = dossier_prive+param_vue;    
         }
-        if(param_action!=null && !param_action.isEmpty()){
+        if(!StringUtils.estVide(param_action)){
             Action classeAction = null;
+            if (param_action.equalsIgnoreCase("sinscrireAction")) {
+                    classeAction = new SinscrireAction(new UtilisateurEntityManager());
+            }
             if (param_action.equalsIgnoreCase("sidentifierAction")) {
-                    classeAction = new SidentifierAction();
+                    classeAction = new SidentifierAction(new UtilisateurEntityManager());
             }
-            else if (param_action.equalsIgnoreCase("sinscrireAction")) {
-                    classeAction = new SinscrireAction();
-            }
-            else if (param_action.equalsIgnoreCase("seDeconnecterAction")) {
+            if (param_action.equalsIgnoreCase("seDeconnecterAction")) {
                     classeAction = new SeDeconnecterAction();
             }
         
-        vue = dossier_prive+classeAction.execute(request);
+            vue = dossier_prive+classeAction.execute(request);
         }
         
         if (vue != null) {

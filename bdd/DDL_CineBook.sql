@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.0.1
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Serveur: localhost
--- Généré le : Sam 27 Octobre 2012 à 12:36
--- Version du serveur: 5.1.36
--- Version de PHP: 5.3.0
+-- Client: localhost
+-- Généré le: Mar 04 Décembre 2012 à 08:53
+-- Version du serveur: 5.5.24-log
+-- Version de PHP: 5.4.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 --
 -- Base de données: `bdcinebook`
@@ -24,10 +25,35 @@ CREATE TABLE IF NOT EXISTS `cinemas_frequentes` (
   `id_utilisateur` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Contenu de la table `cinemas_frequentes`
+-- Structure de la table `commentaire_cinema`
 --
 
+CREATE TABLE IF NOT EXISTS `commentaire_cinema` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `texte` varchar(250) NOT NULL,
+  `id_utilisateur` int(11) NOT NULL,
+  `id_cinema` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaire_film`
+--
+
+CREATE TABLE IF NOT EXISTS `commentaire_film` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `texte` varchar(250) NOT NULL,
+  `id_utilisateur` int(11) NOT NULL,
+  `id_film` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -64,11 +90,6 @@ CREATE TABLE IF NOT EXISTS `films_vus` (
   `date` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Contenu de la table `films_vus`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -80,13 +101,11 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `pseudo` varchar(20) NOT NULL,
   `login` varchar(50) NOT NULL,
   `mdp` varchar(20) NOT NULL,
-  `adresse` varchar(50) NOT NULL,
-  `code_postal` int(5) NOT NULL,
-  `ville` varchar(30) NOT NULL,
+  `adresse` varchar(50) DEFAULT NULL,
+  `code_postal` varchar(5) DEFAULT NULL,
+  `ville` varchar(30) DEFAULT NULL,
   `id_droit` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Contenu de la table `utilisateur`
---
+

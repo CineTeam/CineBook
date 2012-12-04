@@ -24,29 +24,46 @@
                         </div>
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
-                            <c:if test = "${requestScope.echec_inscription}">
-                                ${requestScope.erreur} <br/><br/>
+                            <c:if test = "${requestScope.messageErreur!=null}">
+                                ${requestScope.messageErreur} <br/><br/>
                             </c:if>
-                            <table>  
                             <form action="ServletMembre?action=sinscrireAction" method="post" id="form_inscription">
-                                <tr>
-                                    <td> Login : </td>
-                                    <td><input type="text" name="login" id="inputText" /></td>
-                                </tr>
-                                <tr>
-                                    <td>Mot de passe :</td>
-                                    <td><input type="password" name="motDePasse" id="inputText" /></td>
-                                </tr>
-                                <tr>
-                                    <td>Confirmation mot de passe :</td>
-                                    <td><input type="password" name="motDePasseConfirmation" id="inputText" /></td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td align ="right"><br/><input type="submit" id="bouton_inscription" name="inscription" value="Valider" /></td>
-                                </tr>
+                                <table>  
+                                    <tr>
+                                        <td>Pseudo* :</td>
+                                        <td><input type="text" name="pseudo" id="inputText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Login* :</td>
+                                        <td><input type="text" name="login" id="inputText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mot de passe* :</td>
+                                        <td><input type="password" name="mdp" id="inputText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Confirmation mot de passe* :</td>
+                                        <td><input type="password" name="mdpConfirmation" id="inputText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Adresse :</td>
+                                        <td><input type="text" name="adresse" id="inputText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Code postal :</td>
+                                        <td><input type="text" name="code_postal" id="inputText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ville :</td>
+                                        <td><input type="text" name="ville" id="inputText" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td align ="right"><br/><input type="submit" id="bouton_inscription" name="inscription" value="Valider" /></td>
+                                    </tr>
+                                </table>
                             </form>
-                            </table>
+                            * Ces champs sont obligatoires !
                         </div>
                     </div>
                     <div style="clear: both;">&nbsp;</div>

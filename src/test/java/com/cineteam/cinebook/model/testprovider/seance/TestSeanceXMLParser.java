@@ -8,9 +8,7 @@ import com.cineteam.cinebook.model.provider.FileProviderSource;
 import com.cineteam.cinebook.model.provider.seance.SeanceXMLParser;
 import java.util.List;
 import org.joda.time.DateTime;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
