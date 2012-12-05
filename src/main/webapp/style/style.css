@@ -140,6 +140,10 @@ a {
     margin-right: 7px;
 }
 
+.erreur_connexion{
+    float:left;
+}
+
 #entete{
     width:1000px;
 }
@@ -315,14 +319,14 @@ a {
         margin-bottom: 20px;
     }
     
-        .titre_film,.titre_cinema{
+        .titre_film,.titre_cinema, .titre_commentaire{
             font-weight : bold;
             font-size: 15px;
             padding :0 0 0 0;
             margin:0 0 0 0;
         }
 
-        .short_desc_film,.short_desc_cinema,.short_desc_film_cinema,.short_desc_cinema_film,.details_seance,.form_sinscrire{
+        .short_desc_film,.short_desc_cinema,.short_desc_film_cinema,.short_desc_cinema_film,.synopsis,.details_seance,.form_sinscrire,.commentaires{
             font-family: Tahoma;
             font-size:14px;
             line-height: 180%;
@@ -334,8 +338,7 @@ a {
             width:200px;
             height : 280px;
         }
-
-
+        
             .short_img_film img{
                 border:2px solid #4D4D4D;
                 width:200px;
@@ -438,10 +441,7 @@ a {
 
 
 .synopsis {
-    font-family: Tahoma;
-    font-size : 14px;
     margin-top: 20px;
-    line-height: 180%;
 }
 
 .seances_cinema,.seances_film{
@@ -452,10 +452,6 @@ a {
     float:left;
 }
 
-.commentaires {
-    padding-top: 30px;
-    margin-left: 300px;
-}
 .detail_cinema_seance{
     margin-left: 200px;
     height : 220px;
@@ -526,4 +522,23 @@ a {
     .lien:hover
     {
         color: #16737C;
+    }
+
+.commentaires {
+    padding-top: 30px;
+    margin-left: 700px;
+}
+
+    .commentaire_cinema{
+        margin-top: 20px;
+        border-bottom: 1px solid #5E5E5E;
+    }
+    
+    .commentaire_cinema_decale_gauche{
+        width:200px;
+    }
+    
+    .commentaire_cinema_decale_droite{
+        margin-left: 100px;
+        width:200px;
     }

@@ -3,6 +3,7 @@
   <persistence-unit name="JPAPersistence" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>com.cineteam.cinebook.model.entity.Utilisateur</class>
+    <class>com.cineteam.cinebook.model.entity.Commentaire_cinema</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="hibernate.connection.username" value="bdcinebook"/>
@@ -16,6 +17,7 @@
   <persistence-unit name="JPAPersistenceTest" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>com.cineteam.cinebook.model.entity.Utilisateur</class>
+    <class>com.cineteam.cinebook.model.entity.Commentaire_cinema</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="hibernate.connection.username" value="bdcinebook"/>

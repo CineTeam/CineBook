@@ -30,7 +30,10 @@ public class SidentifierAction implements Action{
             request.setAttribute("echec_connexion", false);
             request.getSession().setAttribute("utilisateur", utilisateur);
         }
-        return "index.jsp";
+        
+        String page_courante = request.getParameter("page_courante");
+        page_courante = page_courante.substring(9, page_courante.length());
+        return page_courante;
     }
     
 }

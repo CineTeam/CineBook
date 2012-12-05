@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `commentaire_cinema` (
   `date` date NOT NULL,
   `texte` varchar(250) NOT NULL,
   `id_utilisateur` int(11) NOT NULL,
-  `id_cinema` int(11) NOT NULL,
+  `id_cinema` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `commentaire_film` (
   `date` date NOT NULL,
   `texte` varchar(250) NOT NULL,
   `id_utilisateur` int(11) NOT NULL,
-  `id_film` int(11) NOT NULL,
+  `id_film` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 

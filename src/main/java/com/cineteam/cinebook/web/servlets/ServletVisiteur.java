@@ -1,5 +1,6 @@
 package com.cineteam.cinebook.web.servlets;
 
+import com.cineteam.cinebook.entitymanager.commentaire_cinema.Commentaire_CinemaEntityManager;
 import com.cineteam.cinebook.model.provider.cinema.CinemaProvider;
 import com.cineteam.cinebook.model.provider.film.FilmProvider;
 import com.cineteam.cinebook.model.provider.seance.SeanceProvider;
@@ -48,7 +49,7 @@ public class ServletVisiteur extends HttpServlet {
                     classeAction = new RechercherCinemaParCPAction(new CinemaProvider());
             }
             else if (param_action.equalsIgnoreCase("consulterDetailCinemaAction")) {
-                    classeAction = new ConsulterDetailCinemaAction(new CinemaProvider(),new SeanceProvider());
+                    classeAction = new ConsulterDetailCinemaAction(new CinemaProvider(),new SeanceProvider(),new Commentaire_CinemaEntityManager());
             }
             else if (param_action.equalsIgnoreCase("consulterDetailFilmAction")) {
                     classeAction = new ConsulterDetailFilmAction(new FilmProvider(), new SeanceProvider());

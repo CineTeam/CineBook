@@ -14,10 +14,15 @@
                     Aucun commentaire<br><br>
                 </c:when>
                 <c:otherwise>
-                    <c:forEach var="commentaire" items="${requestScope.commentaires}">
-                        <strong>User</strong> : <br><br>
-                        <c:if test = "${commentaire.texte!=null}">${commentaire.texte}<br><br></c:if>
-                        <c:if test = "${commentaire.date!=null}">Posté le ${commentaire.date}<br><br></c:if>
+                    <c:forEach var="commentaire" items="${requestScope.commentaires}" varStatus="status">
+                        <div class="commentaire_cinema 
+                             <c:if test = "${status.count%2==1}">commentaire_cinema_decale_droite</c:if> 
+                             <c:if test = "${status.count%2==0}">commentaire_cinema_decale_gauche</c:if> 
+                         ">
+                            <c:if test = "${commentaire.utilisateur.pseudo!=null}"><p class="titre_commentaire"> ${commentaire.utilisateur.pseudo} </p> </c:if>
+                            <c:if test = "${commentaire.date!=null}"> Le ${commentaire.date} : <br></c:if>
+                            <c:if test = "${commentaire.texte!=null}">${commentaire.texte}</c:if>
+                        </div>
                     </c:forEach>
                 </c:otherwise>
             </c:choose>
