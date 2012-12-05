@@ -58,6 +58,7 @@ public class TestServletMembre {
     {
         final Map params = new HashMap();
         params.put("action", "seDeconnecterAction");
+        params.put("page_courante_avant_deco","index.jsp");
         request = new AddedParametersRequestWrapper(request,params);
                 
         servlet.processRequest(request,response);

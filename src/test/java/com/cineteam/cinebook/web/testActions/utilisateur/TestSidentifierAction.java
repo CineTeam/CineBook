@@ -31,7 +31,9 @@ public class TestSidentifierAction
     @Test
     public void retourneUnEchecSiChampsVides()
     {
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        final Map parametres = new HashMap();
+        parametres.put("page_courante","index.jsp");
+        request = new AddedParametersRequestWrapper(request, parametres);
         
         sidentifierAction.execute(request);
         
@@ -45,6 +47,7 @@ public class TestSidentifierAction
     {
         final Map parametres = new HashMap();
         parametres.put("mdp","mdp");
+        parametres.put("page_courante","index.jsp");
         request = new AddedParametersRequestWrapper(request, parametres);
         
         sidentifierAction.execute(request);
@@ -59,6 +62,7 @@ public class TestSidentifierAction
     {
         final Map parametres = new HashMap();
         parametres.put("login","login");
+        parametres.put("page_courante","index.jsp");
         request = new AddedParametersRequestWrapper(request, parametres);
         
         sidentifierAction.execute(request);
@@ -74,6 +78,7 @@ public class TestSidentifierAction
         final Map parametres = new HashMap();
         parametres.put("login","login");
         parametres.put("mdp","mdp");
+        parametres.put("page_courante","index.jsp");
         request = new AddedParametersRequestWrapper(request, parametres);
         
         sidentifierAction.execute(request);
@@ -94,6 +99,7 @@ public class TestSidentifierAction
         final Map parametres = new HashMap();
         parametres.put("login", login);
         parametres.put("mdp","mdp");
+        parametres.put("page_courante","index.jsp");
         request = new AddedParametersRequestWrapper(request, parametres);
         
         sidentifierAction.execute(request);
@@ -115,6 +121,7 @@ public class TestSidentifierAction
         final Map parametres = new HashMap();
         parametres.put("login", login);
         parametres.put("mdp",mdp);
+        parametres.put("page_courante","index.jsp");
         request = new AddedParametersRequestWrapper(request, parametres);
         
         sidentifierAction.execute(request);
