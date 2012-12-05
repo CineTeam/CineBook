@@ -38,19 +38,19 @@ public class ServletVisiteur extends HttpServlet {
             if (param_action.equalsIgnoreCase("rechercherCinemaAction")) {
                     classeAction = new RechercherCinemaAction(new CinemaProvider());
             }
-            if (param_action.equalsIgnoreCase("rechercherFilmAction")) {
+            else if (param_action.equalsIgnoreCase("rechercherFilmAction")) {
                     classeAction = new RechercherFilmAction(new FilmProvider());
             }
-            if(param_action.equalsIgnoreCase("recupererDixDerniersFilmsSortisAction")){    
+            else if(param_action.equalsIgnoreCase("recupererDixDerniersFilmsSortisAction")){    
                     classeAction = new RecupererDixDerniersFilmsSortisAction(new FilmProvider());
             }
-            if (param_action.equalsIgnoreCase("rechercherCinemaParCPAction")) {
+            else if (param_action.equalsIgnoreCase("rechercherCinemaParCPAction")) {
                     classeAction = new RechercherCinemaParCPAction(new CinemaProvider());
             }
-            if (param_action.equalsIgnoreCase("consulterDetailCinemaAction")) {
+            else if (param_action.equalsIgnoreCase("consulterDetailCinemaAction")) {
                     classeAction = new ConsulterDetailCinemaAction(new CinemaProvider(),new SeanceProvider());
             }
-            if (param_action.equalsIgnoreCase("consulterDetailFilmAction")) {
+            else if (param_action.equalsIgnoreCase("consulterDetailFilmAction")) {
                     classeAction = new ConsulterDetailFilmAction(new FilmProvider(), new SeanceProvider());
             }
             

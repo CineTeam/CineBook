@@ -42,9 +42,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-}
-
 #wrapper {
     background: #FFFFFF url(../images/img05.jpg) repeat;
 }
@@ -123,13 +120,19 @@ a:hover {
 #connexion a{
     float: right;
     margin-right: 7px;
+    color: #5E5E5E;
+    text-decoration: underline;
 }
 
-#connexion a:hover{
-    color: black;
-    text-decoration: underline;
-    
-}
+    #connexion a:link,#connexion a:visited
+    {
+        color: #5E5E5E;
+    }
+
+    #connexion a:hover
+    {
+        color: #16737C;
+    }
 
 #connexion p{
     font-size: 15px;
@@ -501,3 +504,18 @@ a:hover {
 #recherche_seances{
     line-height: 280%;
 }
+
+.lien{
+    color: #5E5E5E;
+    text-decoration: underline;
+}
+
+    .lien:link,.lien:visited
+    {
+        color: #5E5E5E;
+    }
+
+    .lien:hover
+    {
+        color: #16737C;
+    }

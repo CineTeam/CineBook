@@ -37,10 +37,10 @@ public class ServletMembre extends HttpServlet {
             if (param_action.equalsIgnoreCase("sinscrireAction")) {
                     classeAction = new SinscrireAction(new UtilisateurEntityManager());
             }
-            if (param_action.equalsIgnoreCase("sidentifierAction")) {
+            else if (param_action.equalsIgnoreCase("sidentifierAction")) {
                     classeAction = new SidentifierAction(new UtilisateurEntityManager());
             }
-            if (param_action.equalsIgnoreCase("seDeconnecterAction")) {
+            else if (param_action.equalsIgnoreCase("seDeconnecterAction")) {
                     classeAction = new SeDeconnecterAction();
             }
         
