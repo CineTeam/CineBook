@@ -448,12 +448,13 @@ a {
     margin-top: 30px;
 }
 
-.seances_cinema, .commentaires {
+.seances_cinema {
     float:left;
 }
 
 .commentaires {
     padding-top: 30px;
+    margin-left: 300px;
 }
 .detail_cinema_seance{
     margin-left: 200px;

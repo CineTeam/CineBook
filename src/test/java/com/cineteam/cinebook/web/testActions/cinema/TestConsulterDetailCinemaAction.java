@@ -13,7 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /** @author Cedric */
-public class TestConsulterDetailCinema {
+public class TestConsulterDetailCinemaAction {
     
     private MockCinemaProvider fauxProviderCinema ;
     private MockSeanceProvider fauxProviderSeance ;

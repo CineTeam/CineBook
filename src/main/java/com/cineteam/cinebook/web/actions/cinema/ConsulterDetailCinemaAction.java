@@ -31,7 +31,12 @@ public class ConsulterDetailCinemaAction implements Action {
             request.setAttribute("cinema", cinema);       
             
             List<Commentaire_cinema> commentaires = new ArrayList<Commentaire_cinema>();
-            commentaires.add(new Commentaire_cinema(new Date(), new Utilisateur(), "Ceci est un commentaire.", cinema));
+            Commentaire_cinema commentaire = new Commentaire_cinema();
+            commentaire.setDate(new Date());
+            commentaire.setCinema(cinema);
+            commentaire.setUtilisateur(new Utilisateur());
+            commentaire.setTexte("Ceci est un commentaire.");
+            commentaires.add(commentaire);
             request.setAttribute("commentaires", commentaires);
         }    
         
