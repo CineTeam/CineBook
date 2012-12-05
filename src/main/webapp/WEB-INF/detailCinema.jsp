@@ -65,21 +65,22 @@
                                         <div class="seances_cinema">
                                             <c:import url="seancesCinema.jsp"/>
                                         </div>
-                                        <div id="commentaires">
-                                            <div id="disqus_thread"></div>
-                                            <script type="text/javascript">
-                                                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                                                var disqus_shortname = 'monlocalhost'; // required: replace example with your forum shortname
-
-                                                /* * * DON'T EDIT BELOW THIS LINE * * */
-                                                (function() {
-                                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                                                })();
-                                            </script>
-                                            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                                            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                        <div class="commentaires">
+                                            <h3>Commentaires :</h3><br>
+                                            <c:if test = "${requestScope.commentaires != null}">
+                                                <c:choose>
+                                                    <c:when test = "${empty requestScope.commentaires}">
+                                                        Aucun commentaire<br><br>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <c:forEach var="commentaire" items="${requestScope.commentaires}">
+                                                            <strong>User</strong> : <br><br>
+                                                            <c:if test = "${commentaire.texte!=null}">${commentaire.texte}<br><br></c:if>
+                                                            <c:if test = "${commentaire.date!=null}">Posté le ${commentaire.date}<br><br></c:if>
+                                                        </c:forEach>
+                                                    </c:otherwise>
+                                                </c:choose>
+                                            </c:if>
                                         </div>
                                     </c:otherwise>                                            
                                 </c:choose>
