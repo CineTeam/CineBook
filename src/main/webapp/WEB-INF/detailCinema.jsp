@@ -66,21 +66,7 @@
                                             <c:import url="seancesCinema.jsp"/>
                                         </div>
                                         <div class="commentaires">
-                                            <h3>Commentaires :</h3><br>
-                                            <c:if test = "${requestScope.commentaires != null}">
-                                                <c:choose>
-                                                    <c:when test = "${empty requestScope.commentaires}">
-                                                        Aucun commentaire<br><br>
-                                                    </c:when>
-                                                    <c:otherwise>
-                                                        <c:forEach var="commentaire" items="${requestScope.commentaires}">
-                                                            <strong>User</strong> : <br><br>
-                                                            <c:if test = "${commentaire.texte!=null}">${commentaire.texte}<br><br></c:if>
-                                                            <c:if test = "${commentaire.date!=null}">Posté le ${commentaire.date}<br><br></c:if>
-                                                        </c:forEach>
-                                                    </c:otherwise>
-                                                </c:choose>
-                                            </c:if>
+                                            <c:import url="commentairesCinema.jsp"/>
                                         </div>
                                     </c:otherwise>                                            
                                 </c:choose>
