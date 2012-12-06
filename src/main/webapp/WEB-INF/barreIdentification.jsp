@@ -3,10 +3,9 @@
 <!DOCTYPE html>
 <html>
     <head>    
-        <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-                $(".clickable").click(function() {
+                $(".lien_clickable").click(function() {
                         $("#bouton_deconnexion").click();
                 });
             });
@@ -17,7 +16,7 @@
             <c:when test ="${sessionScope.utilisateur != null}">
                 <p>Bienvenue ${sessionScope.utilisateur.pseudo}</p>
                <form action="ServletMembre?action=seDeconnecterAction" method="post" >
-                    <a href="#" class='clickable'>
+                    <a href="#" class='lien_clickable'>
                         Déconnexion
                     </a>
                     <input type="text" name="page_courante_avant_deco" value="${pageContext.request.servletPath}" class="invisible"/>
