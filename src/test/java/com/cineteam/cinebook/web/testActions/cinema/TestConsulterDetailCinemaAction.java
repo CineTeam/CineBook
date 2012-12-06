@@ -92,5 +92,4 @@ public class TestConsulterDetailCinemaAction {
         assertTrue(!fauxEntityManager.rechercherCommentaires_cinema(cinema_id).isEmpty());
         assertNotNull(fauxEntityManager.rechercherCommentaires_cinema(cinema_id).get(0));
     }
-    
 }

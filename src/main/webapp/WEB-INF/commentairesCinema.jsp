@@ -5,9 +5,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        
     </head>
     <body>
         <h3>Commentaires :</h3><br>
+        <c:if test = "${sessionScope.utilisateur != null}">
+            <form action="ServletMembre?action=deposerCommentaireCinemaAction" method="post" id="form_commentaire">
+                <input type="hidden" name="cpt" value="${requestScope.cinema.id}" />
+                <textarea id="champ_commentaire" name="champ_commentaire"></textarea><br>
+                <input type="submit" id="bouton_valider_commentaire" value="Valider" /><br><br>
+            </form>
+        </c:if>
+        
         <c:if test = "${requestScope.commentaires != null}">
             <c:choose>
                 <c:when test = "${empty requestScope.commentaires}">

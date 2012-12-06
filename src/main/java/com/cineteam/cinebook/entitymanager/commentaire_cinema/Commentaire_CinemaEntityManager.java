@@ -32,7 +32,7 @@ public class Commentaire_CinemaEntityManager implements ICommentaire_CinemaEntit
     }
         
     public List<Commentaire_cinema> rechercherCommentaires_cinema(String id_cinema){
-        Query query= em.createQuery("from Commentaire_cinema where id_cinema = :id_cinema").setParameter("id_cinema",id_cinema);
+        Query query= em.createQuery("from Commentaire_cinema where id_cinema = :id_cinema order by date desc").setParameter("id_cinema",id_cinema);
         return (List<Commentaire_cinema>) query.getResultList();
     }
 }

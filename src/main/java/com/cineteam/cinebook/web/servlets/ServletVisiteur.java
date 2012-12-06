@@ -55,7 +55,13 @@ public class ServletVisiteur extends HttpServlet {
                     classeAction = new ConsulterDetailFilmAction(new FilmProvider(), new SeanceProvider());
             }
             
-            vue = dossier_prive+classeAction.execute(request);
+            String reponse_action = classeAction.execute(request);
+            if(reponse_action.contains(".jsp")){
+                vue = dossier_prive+reponse_action;
+            }
+            else{
+                vue = reponse_action;
+            }
         }
         
         if (vue != null) {

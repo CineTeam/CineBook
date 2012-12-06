@@ -15,6 +15,7 @@
         <script type="text/javascript" src="js/menu.js"></script>
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
         <script type="text/javascript" src="js/googlemap.js"></script>
+        <script type="text/javascript" src="js/deposerCommentaire.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 var latitude = '${requestScope.cinema.position.latitude}';
