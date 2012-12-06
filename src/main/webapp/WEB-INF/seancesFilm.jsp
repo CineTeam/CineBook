@@ -58,7 +58,7 @@
                                                                     Les séances : <br>
                                                                     <c:forEach var="seance" items="${seances_film.seances}" varStatus="status2">
                                                                             <c:if test = "${status2.count==1}">
-                                                                                <div class="formats">
+                                                                                <div class="formats" id="formats_${status1.count}">
                                                                                     <c:forEach var="seance1" items="${seances_film.seances}" varStatus="status3">
                                                                                         <p class="format format_clickable" id="${status1.count}_${status3.count}">
                                                                                             <c:if test = "${!empty seance1.format}">${seance1.format} - </c:if>
