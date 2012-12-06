@@ -1,18 +1,11 @@
-<html> 
-    <head>
-        <script type="text/javascript" src="js/selectRechercheCinemas.js"></script>
-    </head>
-    <body>
-        <div id="recherche">
-            <form action="#" method="post" id="form">
-                Rechercher un cinéma par :
-                <select name="parametre" id="select" >
-                    <option selected="selected" >Mot clé</option>
-                    <option>Code postal</option>
-                </select>
-                <input type="text" name="recherche" id="inputText" />
-                <input type="submit" id="bouton_valider" name="envoyer" value="Valider" />
-            </form>
-        </div>
-    </body>
-</html>
+<div id="recherche">
+    <form action="#" method="post" id="form_recherche_cinema">
+        Rechercher un cinéma par :
+        <select name="parametre" id="select_recherche_cinema" >
+            <option selected="selected" >Mot clé</option>
+            <option>Code postal</option>
+        </select>
+        <input type="text" name="recherche" id="inputText" />
+        <input type="submit" id="bouton_recherche_cinema" value="Valider" />
+    </form>
+</div>

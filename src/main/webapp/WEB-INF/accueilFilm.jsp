@@ -11,25 +11,7 @@
         <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
         <link href="style/style.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="style/slider.css" rel="stylesheet" type="text/css" media="screen" />
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/tableaux.js"></script>
-        <script type="text/javascript" src="js/menu.js"></script>
-        <script type="text/javascript" src="js/easySlider1.7.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $("#slider").easySlider({
-                    auto: true,
-                    continuous: true,
-                    numeric: false,
-                    speed:800,
-                    prevId:'prevBtn',
-                    prevText:'<<&nbsp;&nbsp;',
-                    nextId: 'nextBtn',
-                    nextText: '&nbsp;&nbsp;>>',
-                    pause:2500
-                });
-            });
-        </script>
+        <c:import url="header_javascript.jsp" />
     </head>
     <body id="Films">
         <div id="wrapper">

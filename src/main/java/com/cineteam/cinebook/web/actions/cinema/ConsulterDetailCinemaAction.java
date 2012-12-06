@@ -25,7 +25,6 @@ public class ConsulterDetailCinemaAction implements Action {
 
     public String execute(HttpServletRequest request) {
         String index_cinema = (String) request.getParameter("cpt");
-        
         if(!StringUtils.estVide(index_cinema)){
             Cinema cinema = providerCinema.getDetailCinema(index_cinema);
             cinema.setSeances_films(providerSeance.getSeancesPourUnCinema(cinema.getId()));

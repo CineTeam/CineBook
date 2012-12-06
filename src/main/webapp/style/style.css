@@ -154,14 +154,14 @@ a {
     float : left;
 }
 
-#recherche {
+#recherche,#recherche_film {
     float: right;
     height: auto;
     margin: 0 auto;
     padding: 0;
 }
 
-#recherche #bouton_valider, #bouton_inscription{	
+#recherche #bouton_recherche_cinema,#recherche_film #bouton_recherche_film, #bouton_inscription{	
     width: auto;
     border-radius: 12px;
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -184,14 +184,14 @@ a {
     text-decoration:none;
 }
 
-#recherche #bouton_valider:hover {
+#recherche #bouton_recherche_cinema:hover,#recherche_film #bouton_recherche_film:hover,#bouton_inscription:hover {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d3d3d), color-stop(1, #343434) );
     background:-moz-linear-gradient( center top, #3d3d3d 5%, #343434 100% );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d3d3d', endColorstr='#343434');
     background-color:#3d3d3d;
 }
 
-#recherche #bouton_valider:active {
+#recherche #bouton_recherche_cinema:active,#recherche_film #bouton_recherche_film:active,#bouton_inscription:active {
     position:relative;
     top:1px;
 }
@@ -508,7 +508,7 @@ a {
         padding: 5px 5px 5px 20px; 
         display:none;
         float : left;
-        width:449px;
+        width:430px;
         border : 1px solid #383838; 
         background-color: #ECECEC;
         max-height: 75px;
