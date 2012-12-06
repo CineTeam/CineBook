@@ -35,7 +35,6 @@
     <body id="Accueil">
         <div id="wrapper">
             <c:import url="header.jsp" />
-
             <div id="page">
                 <div id="content">
                     <div class="post">
@@ -120,18 +119,13 @@
                                     </li>
                                 </ul>
                             </div>
-                            
-                            
                         </div>
                     </div>
-
                     <div style="clear: both;">&nbsp;</div>
                 </div>
-
                 <div style="clear: both;">&nbsp;</div>
             </div>
         </div>
-
         <c:import url="footer.jsp" />
     </body>
 </html>
