@@ -13,6 +13,7 @@ public class MockCommentaire_CinemaEntityManager implements ICommentaire_CinemaE
     
     public void creerCommentaire_Cinema(Commentaire_cinema commentaire_cinema) {
         commentaire_cinemaCree = true;
+        commentaires_cinema.add(commentaire_cinema);
     }
 
     public List<Commentaire_cinema> rechercherCommentaires_cinema(String id_cinema) {

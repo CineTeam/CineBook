@@ -13,6 +13,9 @@
                 <input type="submit" id="bouton_valider_commentaire" value="Valider" /><br><br>
             </form>
         </c:if>
+        <c:if test = "${sessionScope.utilisateur == null}">
+            Connectez vous pour déposer un commentaire ! <br>
+        </c:if>
         
         <c:if test = "${requestScope.commentaires != null}">
             <c:choose>

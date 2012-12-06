@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-
+/** @author Berangere */
 public class TestSinscrireAction {
     
     private HttpServletRequest request ;
@@ -38,6 +38,7 @@ public class TestSinscrireAction {
         assertTrue(!((String)request.getAttribute("messageErreur")).isEmpty());
         assertEquals("Veuillez renseigner tous les champs.",request.getAttribute("messageErreur"));
         assertFalse(fauxEntityManager.utilisateurCree);
+        assertNull(fauxEntityManager.rechercherUtilisateur(""));
     }
     
     @Test
@@ -54,6 +55,7 @@ public class TestSinscrireAction {
         assertTrue(!((String)request.getAttribute("messageErreur")).isEmpty());
         assertEquals("Veuillez renseigner tous les champs.",request.getAttribute("messageErreur"));
         assertFalse(fauxEntityManager.utilisateurCree);
+        assertNull(fauxEntityManager.rechercherUtilisateur("login"));
     }
     
     @Test
@@ -70,6 +72,7 @@ public class TestSinscrireAction {
         assertTrue(!((String)request.getAttribute("messageErreur")).isEmpty());
         assertEquals("Veuillez renseigner tous les champs.",request.getAttribute("messageErreur"));
         assertFalse(fauxEntityManager.utilisateurCree);
+        assertNull(fauxEntityManager.rechercherUtilisateur(""));
     }
     
     @Test
@@ -86,6 +89,7 @@ public class TestSinscrireAction {
         assertTrue(!((String)request.getAttribute("messageErreur")).isEmpty());
         assertEquals("Veuillez renseigner tous les champs.",request.getAttribute("messageErreur"));
         assertFalse(fauxEntityManager.utilisateurCree);
+        assertNull(fauxEntityManager.rechercherUtilisateur("login"));
     }
     
     @Test
@@ -102,6 +106,7 @@ public class TestSinscrireAction {
         assertTrue(!((String)request.getAttribute("messageErreur")).isEmpty());
         assertEquals("Veuillez renseigner tous les champs.",request.getAttribute("messageErreur"));
         assertFalse(fauxEntityManager.utilisateurCree);
+        assertNull(fauxEntityManager.rechercherUtilisateur("login"));
     }
     
     @Test
@@ -119,6 +124,7 @@ public class TestSinscrireAction {
         assertTrue(!((String)request.getAttribute("messageErreur")).isEmpty());
         assertEquals("Les mots de passe saisis ne correspondent pas.",request.getAttribute("messageErreur"));
         assertFalse(fauxEntityManager.utilisateurCree);
+        assertNull(fauxEntityManager.rechercherUtilisateur("login"));
     }
     
     @Test
@@ -144,7 +150,7 @@ public class TestSinscrireAction {
     }
     
     @Test
-    public void retournePasDEchecSiPseudoLoginMotDePasseEtConfirmationSontCorrects()
+    public void enregistreUtilisateurSiPseudoLoginMotDePasseEtConfirmationSontCorrects()
     {
         String login = "login";
         final Map parametres = new HashMap();
@@ -157,8 +163,8 @@ public class TestSinscrireAction {
         sinscrireAction.execute(request);
         
         assertEquals(null,request.getAttribute("messageErreur"));
-        assertNull(fauxEntityManager.rechercherUtilisateur(login));
         assertTrue(fauxEntityManager.utilisateurCree);
+        assertNotNull(fauxEntityManager.rechercherUtilisateur(login));
     }
     
     @Test

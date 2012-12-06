@@ -13,6 +13,7 @@ class MockUtilisateurEntityManager implements IUtilisateurEntityManager{
     
     public void creerUtilisateur(Utilisateur utilisateur) {
         utilisateurCree = true;
+        utilisateurs.add(utilisateur);
     }
 
     public Utilisateur rechercherUtilisateur(String login) {
