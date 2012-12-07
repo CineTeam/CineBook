@@ -1,6 +1,6 @@
 package com.cineteam.cinebook.web.servlets;
 
-import com.cineteam.cinebook.entitymanager.commentaire_cinema.Commentaire_CinemaEntityManager;
+import com.cineteam.cinebook.model.entitymanager.commentaire_cinema.Commentaire_CinemaEntityManager;
 import com.cineteam.cinebook.model.provider.cinema.CinemaProvider;
 import com.cineteam.cinebook.model.provider.film.FilmProvider;
 import com.cineteam.cinebook.model.provider.seance.SeanceProvider;

@@ -1,6 +1,6 @@
 package com.cineteam.cinebook.web.actions.cinema;
 
-import com.cineteam.cinebook.entitymanager.commentaire_cinema.ICommentaire_CinemaEntityManager;
+import com.cineteam.cinebook.model.entitymanager.commentaire_cinema.ICommentaire_CinemaEntityManager;
 import com.cineteam.cinebook.model.entity.Cinema;
 import com.cineteam.cinebook.model.entity.Commentaire_cinema;
 import com.cineteam.cinebook.model.provider.cinema.ICinemaProvider;
