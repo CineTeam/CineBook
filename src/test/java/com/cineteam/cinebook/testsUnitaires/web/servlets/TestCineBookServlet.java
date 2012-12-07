@@ -25,7 +25,7 @@ public class TestCineBookServlet {
     @Before
     public void setUp() {
         servlet = new MockCinebookServlet();
-        servlet.addAction("seDeconnecterAction", new SeDeconnecterAction());
+        servlet.addAction("mockAction", new MockAction());
         request = createMock(HttpServletRequest.class);
         replay(request);
         response = createMock(HttpServletResponse.class);
@@ -59,8 +59,7 @@ public class TestCineBookServlet {
     public void dispatcheLesActions() throws ServletException, IOException 
     {
         final Map params = new HashMap();
-        params.put("action", "seDeconnecterAction");
-        params.put("page_courante_avant_deco","index.jsp");
+        params.put("action", "mockAction");
         request = new AddedParametersRequestWrapper(request,params);
                 
         servlet.processRequest(request,response);
