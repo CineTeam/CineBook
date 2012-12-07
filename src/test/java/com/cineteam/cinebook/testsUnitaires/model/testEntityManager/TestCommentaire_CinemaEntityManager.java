@@ -1,8 +1,9 @@
 package com.cineteam.cinebook.testsUnitaires.model.testEntityManager;
 
+import com.cineteam.cinebook.model.entity.Commentaire_cinema;
+import com.cineteam.cinebook.model.entity.Utilisateur;
 import com.cineteam.cinebook.model.entitymanager.commentaire_cinema.Commentaire_CinemaEntityManager;
 import com.cineteam.cinebook.model.entitymanager.utilisateur.UtilisateurEntityManager;
-import com.cineteam.cinebook.model.entity.Commentaire_cinema;
 import java.util.Date;
 import java.util.List;
 import static org.junit.Assert.*;
@@ -15,47 +16,43 @@ public class TestCommentaire_CinemaEntityManager {
     private Commentaire_CinemaEntityManager entityManager;
     private UtilisateurEntityManager utilisateurEntityManager;
     
-  /*  @Before
+    @Before
     public void setUp()
     {
         entityManager = new Commentaire_CinemaEntityManager();
-        entityManager.setEntityManager("JPAPersistenceTest");
         utilisateurEntityManager = new UtilisateurEntityManager(); 
-        utilisateurEntityManager.setEntityManager("JPAPersistenceTest");
     }
     
     @Test
     public void nEnregistrePasUnCommentaire_CinemaEnBaseSiInfosNecessairesNonSaisies() 
     {
-        String erreur=null;
         Commentaire_cinema commentaire_cinema = new Commentaire_cinema();
         
-        try{
-            entityManager.creerCommentaire_Cinema(commentaire_cinema);
-        }catch(Exception e){
-            erreur = e.getMessage();
-        }
+        entityManager.creerCommentaire_Cinema(commentaire_cinema);
         
-        assertNotNull(erreur);
+        assertTrue(entityManager.rechercherCommentaires_cinema("").isEmpty());
     }
     
     @Test
     public void enregistreUnUtilisateurEnBaseSiInfosNecessairesSaisies() 
     {
-        String erreur=null;
         Commentaire_cinema commentaire_cinema = new Commentaire_cinema();
         commentaire_cinema.setDate(new Date());
         commentaire_cinema.setId_cinema("1");
         commentaire_cinema.setTexte("texte");
-        commentaire_cinema.setUtilisateur(utilisateurEntityManager.rechercherUtilisateur("login"));
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setLogin("login");
+        utilisateur.setMdp("mdp");
+        utilisateur.setId_droit(1);
+        utilisateurEntityManager.creerUtilisateur(utilisateur);
+        commentaire_cinema.setUtilisateur(utilisateur);
         
-        try{
-            entityManager.creerCommentaire_Cinema(commentaire_cinema);
-        }catch(Exception e){
-            erreur = e.getMessage();
-        }
+        entityManager.creerCommentaire_Cinema(commentaire_cinema);
         
-        assertNull(erreur);
+        
+        assertTrue(!entityManager.rechercherCommentaires_cinema("1").isEmpty());
+        assertTrue(entityManager.rechercherCommentaires_cinema("1").get(0).equals(commentaire_cinema));
     }
     
     @Test
@@ -69,12 +66,25 @@ public class TestCommentaire_CinemaEntityManager {
     @Test
     public void listeCommentairesCinemaEnBaseSiExistent() 
     {        
+        Commentaire_cinema commentaire_cinema = new Commentaire_cinema();
+        commentaire_cinema.setDate(new Date());
+        commentaire_cinema.setId_cinema("1");
+        commentaire_cinema.setTexte("texte");
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setLogin("login");
+        utilisateur.setMdp("mdp");
+        utilisateur.setId_droit(1);
+        utilisateurEntityManager.creerUtilisateur(utilisateur);
+        commentaire_cinema.setUtilisateur(utilisateur);
+        entityManager.creerCommentaire_Cinema(commentaire_cinema);
+        
         List<Commentaire_cinema> commentaires_cinema = entityManager.rechercherCommentaires_cinema("1");
         
         assertTrue(!commentaires_cinema.isEmpty());
         assertNotNull(commentaires_cinema.get(0));
         assertEquals(commentaires_cinema.get(0).getTexte(),"texte");
         assertEquals(commentaires_cinema.get(0).getUtilisateur().getLogin(),"login");
-    }*/
+    }
         
 }

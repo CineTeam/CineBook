@@ -20,12 +20,6 @@ public class UtilisateurEntityManager implements IUtilisateurEntityManager {
         em.getTransaction().begin();
     }
 
-    public void setEntityManager(String _persistence_unit_name){
-        emf = Persistence.createEntityManagerFactory(_persistence_unit_name);
-        em = emf.createEntityManager();
-        em.getTransaction().begin();
-    }
-    
     public void creerUtilisateur(Utilisateur utilisateur){
         em.persist(utilisateur);
     }

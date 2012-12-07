@@ -1,7 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.model.testEntityManager;
 
-import com.cineteam.cinebook.model.entitymanager.utilisateur.UtilisateurEntityManager;
 import com.cineteam.cinebook.model.entity.Utilisateur;
+import com.cineteam.cinebook.model.entitymanager.utilisateur.UtilisateurEntityManager;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,45 +11,34 @@ public class TestUtilisateurEntityManager {
     
     private UtilisateurEntityManager entityManager;
     
-   /* @Before
+    @Before
     public void setUp()
     {
         entityManager = new UtilisateurEntityManager();
-        entityManager.setEntityManager("JPAPersistenceTest");
     }
     
     @Test
     public void nEnregistrePasUnUtilisateurEnBaseSiInfosNecessairesNonSaisies() 
     {
-        String erreur=null;
-        Utilisateur utilisateur = new Utilisateur();
+       
+        entityManager.creerUtilisateur(new Utilisateur());
         
-        try{
-            entityManager.creerUtilisateur(utilisateur);
-        }catch(Exception e){
-            erreur = e.getMessage();
-        }
-        
-        assertNotNull(erreur);
+        assertNull(entityManager.rechercherUtilisateur(""));
     }
     
     @Test
     public void enregistreUnUtilisateurEnBaseSiInfosNecessairesSaisies() 
     {
-        String erreur=null;
         Utilisateur utilisateur = new Utilisateur();
         utilisateur.setPseudo("pseudo");
         utilisateur.setLogin("login");
         utilisateur.setMdp("mdp");
         utilisateur.setId_droit(1);
         
-        try{
-            entityManager.creerUtilisateur(utilisateur);
-        }catch(Exception e){
-            erreur = e.getMessage();
-        }
+        entityManager.creerUtilisateur(utilisateur);
         
-        assertNull(erreur);
+        assertNotNull(entityManager.rechercherUtilisateur("login"));
+        assertTrue(entityManager.rechercherUtilisateur("login").equals(utilisateur));
     }
     
     @Test
@@ -64,12 +53,19 @@ public class TestUtilisateurEntityManager {
     @Test
     public void rechercheUtilisateurEnBaseSiExiste() 
     {        
-        Utilisateur utilisateur = entityManager.rechercherUtilisateur("login");
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setLogin("login");
+        utilisateur.setMdp("mdp");
+        utilisateur.setId_droit(1);
+        entityManager.creerUtilisateur(utilisateur);
         
-        assertNotNull(utilisateur);
-        assertEquals(utilisateur.getPseudo(),"pseudo");
-        assertEquals(utilisateur.getLogin(),"login");
-        assertEquals(utilisateur.getMdp(),"mdp");
+        Utilisateur utilisateur_recherche = entityManager.rechercherUtilisateur("login");
+        
+        assertNotNull(utilisateur_recherche);
+        assertEquals(utilisateur_recherche.getPseudo(),"pseudo");
+        assertEquals(utilisateur_recherche.getLogin(),"login");
+        assertEquals(utilisateur_recherche.getMdp(),"mdp");
     }
-        */
+        
 }

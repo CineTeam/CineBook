@@ -6,11 +6,14 @@
         <class>com.cineteam.cinebook.model.entity.Commentaire_cinema</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <property name="hibernate.connection.username" value="bdcinebook"/>
-            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.password" value="bdcinebook"/>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BDCineBook"/>
+            <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
+            <property name="hibernate.connection.username" value="sa"/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.connection.url" value="jdbc:hsqldb:file:DDL_CineBook.sql"/>
             <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
         </properties>
     </persistence-unit>
 </persistence>
