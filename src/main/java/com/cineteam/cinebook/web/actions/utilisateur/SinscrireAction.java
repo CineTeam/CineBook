@@ -1,6 +1,6 @@
 package com.cineteam.cinebook.web.actions.utilisateur;
 
-import com.cineteam.cinebook.entitymanager.utilisateur.IUtilisateurEntityManager;
+import com.cineteam.cinebook.model.entitymanager.utilisateur.IUtilisateurEntityManager;
 import com.cineteam.cinebook.model.entity.Utilisateur;
 import com.cineteam.cinebook.outils.StringUtils;
 import com.cineteam.cinebook.web.actions.Action;
