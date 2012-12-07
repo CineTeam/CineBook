@@ -21,7 +21,7 @@
             Mot de passe :
             <input type="password" name="mdp" id="inputText" />
             <input type="text" name="page_courante" value="${pageContext.request.servletPath}" class="invisible"/>
-            <input type="submit" id="bouton_connexion" name="connexion" value="Connexion" />
+            <input type="submit" id="bouton_connexion" name="connexion" value="Connexion" class='button_clickable'/>
         </form>
         <br/>
         <c:if test = "${requestScope.echec_connexion}">

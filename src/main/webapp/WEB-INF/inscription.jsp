@@ -60,7 +60,7 @@
                                         <tr>
                                             <td align="center" colspan="2">
                                                 <br/>
-                                                <input type="submit" id="bouton_inscription" name="inscription" value="Valider" />
+                                                <input type="submit" id="bouton_inscription" name="inscription" value="Valider" class='button_clickable'/>
                                             </td>
                                         </tr>
                                     </table>

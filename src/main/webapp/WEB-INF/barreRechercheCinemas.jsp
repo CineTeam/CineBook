@@ -6,6 +6,6 @@
             <option>Code postal</option>
         </select>
         <input type="text" name="recherche" id="inputText" />
-        <input type="submit" id="bouton_recherche_cinema" value="Valider" />
+        <input type="submit" id="bouton_recherche_cinema" value="Valider" class='button_clickable'/>
     </form>
 </div>

@@ -9,8 +9,8 @@
             <form action="ServletMembre?action=deposerCommentaireCinemaAction" method="post" id="form_commentaire">
                 <input type="hidden" name="cpt" value="${requestScope.cinema.id}" />
                 Déposez un commentaire : <br>
-                <textarea id="champ_commentaire" name="champ_commentaire"></textarea><br>
-                <input type="submit" id="bouton_valider_commentaire" value="Valider" /><br><br>
+                <textarea id="champ_commentaire" name="champ_commentaire" ></textarea><br>
+                <input type="submit" id="bouton_valider_commentaire" value="Valider" class='button_clickable' /><br><br>
             </form>
         </c:if>
         <c:if test = "${sessionScope.utilisateur == null}">
