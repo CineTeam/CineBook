@@ -1,7 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.model.parser;
 
-import com.cineteam.cinebook.model.entity.Cinema;
-import com.cineteam.cinebook.model.provider.cinema.CinemaXMLParser;
+import com.cineteam.cinebook.model.cinema.Cinema;
+import com.cineteam.cinebook.model.cinema.CinemaXMLParser;
 import com.cineteam.cinebook.model.provider.FileProviderSource;
 import java.util.List;
 import static org.junit.Assert.*;

@@ -1,10 +1,10 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions;
 
-import com.cineteam.cinebook.model.entity.Cinema;
-import com.cineteam.cinebook.model.entity.Horaire;
-import com.cineteam.cinebook.model.entity.Seance;
-import com.cineteam.cinebook.model.entity.Seances_film;
-import com.cineteam.cinebook.model.provider.seance.ISeanceProvider;
+import com.cineteam.cinebook.model.cinema.Cinema;
+import com.cineteam.cinebook.model.seance.Horaire;
+import com.cineteam.cinebook.model.seance.Seance;
+import com.cineteam.cinebook.model.seance.Seances_film;
+import com.cineteam.cinebook.model.seance.ISeanceProvider;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

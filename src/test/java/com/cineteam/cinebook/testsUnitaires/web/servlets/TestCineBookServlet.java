@@ -1,6 +1,6 @@
 package com.cineteam.cinebook.testsUnitaires.web.servlets;
 
-import com.cineteam.cinebook.web.actions.utilisateur.SeDeconnecterAction;
+import com.cineteam.cinebook.web.utilisateur.SeDeconnecterAction;
 import com.cineteam.cinebook.web.servlets.CineBookServlet;
 import java.io.IOException;
 import java.util.HashMap;

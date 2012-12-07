@@ -1,7 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.film;
 
-import com.cineteam.cinebook.model.entity.Film;
-import com.cineteam.cinebook.model.provider.film.IFilmProvider;
+import com.cineteam.cinebook.model.film.Film;
+import com.cineteam.cinebook.model.film.IFilmProvider;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsDIntegration;
 
-import com.cineteam.cinebook.model.entity.Cinema;
-import com.cineteam.cinebook.model.entity.Seances_film;
-import com.cineteam.cinebook.model.provider.seance.SeanceProvider;
+import com.cineteam.cinebook.model.cinema.Cinema;
+import com.cineteam.cinebook.model.seance.SeanceProvider;
+import com.cineteam.cinebook.model.seance.Seances_film;
 import java.util.List;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

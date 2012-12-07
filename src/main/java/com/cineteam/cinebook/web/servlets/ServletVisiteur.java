@@ -1,12 +1,15 @@
 package com.cineteam.cinebook.web.servlets;
 
-import com.cineteam.cinebook.model.entitymanager.commentaire_cinema.Commentaire_CinemaEntityManager;
-import com.cineteam.cinebook.model.provider.cinema.CinemaProvider;
-import com.cineteam.cinebook.model.provider.film.FilmProvider;
-import com.cineteam.cinebook.model.provider.seance.SeanceProvider;
-import com.cineteam.cinebook.web.actions.Action;
-import com.cineteam.cinebook.web.actions.cinema.*;
-import com.cineteam.cinebook.web.actions.film.*;
+import com.cineteam.cinebook.web.film.ConsulterDetailFilmAction;
+import com.cineteam.cinebook.web.film.RecupererDixDerniersFilmsSortisAction;
+import com.cineteam.cinebook.web.film.RechercherFilmAction;
+import com.cineteam.cinebook.web.cinema.RechercherCinemaAction;
+import com.cineteam.cinebook.web.cinema.ConsulterDetailCinemaAction;
+import com.cineteam.cinebook.web.cinema.RechercherCinemaParCPAction;
+import com.cineteam.cinebook.model.commentaireCinema.Commentaire_CinemaEntityManager;
+import com.cineteam.cinebook.model.cinema.CinemaProvider;
+import com.cineteam.cinebook.model.film.FilmProvider;
+import com.cineteam.cinebook.model.seance.SeanceProvider;
 import java.util.HashMap;
 
 /** @author Bérangère */

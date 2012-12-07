@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
-    <persistence-unit name="JPAPersistence" transaction-type="RESOURCE_LOCAL">
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <class>com.cineteam.cinebook.model.entity.Utilisateur</class>
-        <class>com.cineteam.cinebook.model.entity.Commentaire_cinema</class>
-        <exclude-unlisted-classes>false</exclude-unlisted-classes>
-        <properties>
-            <property name="hibernate.connection.username" value="bdcinebook"/>
-            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.password" value="bdcinebook"/>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BDCineBook"/>
-            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
-        </properties>
-    </persistence-unit>
+  <persistence-unit name="JPAPersistence" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.cineteam.cinebook.model.utilisateur.Utilisateur</class>
+    <class>com.cineteam.cinebook.model.commentaireCinema.Commentaire_cinema</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="hibernate.connection.username" value="bdcinebook"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.connection.password" value="bdcinebook"/>
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BDCineBook"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+    </properties>
+  </persistence-unit>
 </persistence>

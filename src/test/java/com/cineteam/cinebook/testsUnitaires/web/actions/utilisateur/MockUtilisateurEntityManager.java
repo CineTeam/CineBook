@@ -1,7 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.utilisateur;
 
-import com.cineteam.cinebook.model.entitymanager.utilisateur.IUtilisateurEntityManager;
-import com.cineteam.cinebook.model.entity.Utilisateur;
+import com.cineteam.cinebook.model.utilisateur.IUtilisateurEntityManager;
+import com.cineteam.cinebook.model.utilisateur.Utilisateur;
 import java.util.ArrayList;
 import java.util.List;
 

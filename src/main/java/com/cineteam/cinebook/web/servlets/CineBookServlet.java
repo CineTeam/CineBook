@@ -1,11 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cineteam.cinebook.web.servlets;
 
 import com.cineteam.cinebook.outils.StringUtils;
-import com.cineteam.cinebook.web.actions.Action;
 import java.io.IOException;
 import java.util.Map;
 import javax.servlet.RequestDispatcher;
@@ -14,10 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author alexis
- */
+/** @author alexis */
 public abstract class CineBookServlet extends HttpServlet {
      
     protected String vue = null;
@@ -69,6 +61,6 @@ public abstract class CineBookServlet extends HttpServlet {
 
     @Override
     public String getServletInfo() {
-        return "Dispatche les actions membres";
+        return "Dispatche les actions et les vues";
     }
 }

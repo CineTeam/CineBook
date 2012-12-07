@@ -1,11 +1,11 @@
 package com.cineteam.cinebook.testsUnitaires.model.parser;
 
-import com.cineteam.cinebook.model.entity.Cinema;
-import com.cineteam.cinebook.model.entity.Horaire;
-import com.cineteam.cinebook.model.entity.Seance;
-import com.cineteam.cinebook.model.entity.Seances_film;
+import com.cineteam.cinebook.model.cinema.Cinema;
+import com.cineteam.cinebook.model.seance.Horaire;
+import com.cineteam.cinebook.model.seance.Seance;
+import com.cineteam.cinebook.model.seance.Seances_film;
 import com.cineteam.cinebook.model.provider.FileProviderSource;
-import com.cineteam.cinebook.model.provider.seance.SeanceXMLParser;
+import com.cineteam.cinebook.model.seance.SeanceXMLParser;
 import java.util.List;
 import org.joda.time.DateTime;
 import static org.junit.Assert.*;

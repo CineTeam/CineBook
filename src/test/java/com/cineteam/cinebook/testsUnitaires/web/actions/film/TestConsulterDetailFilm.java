@@ -1,6 +1,6 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.film;
 
-import com.cineteam.cinebook.web.actions.film.ConsulterDetailFilmAction;
+import com.cineteam.cinebook.web.film.ConsulterDetailFilmAction;
 import com.cineteam.cinebook.testsUnitaires.web.actions.MockSeanceProvider;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
 import java.util.HashMap;

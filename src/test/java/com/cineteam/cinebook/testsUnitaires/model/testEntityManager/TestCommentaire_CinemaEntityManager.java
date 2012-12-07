@@ -1,9 +1,9 @@
 package com.cineteam.cinebook.testsUnitaires.model.testEntityManager;
 
-import com.cineteam.cinebook.model.entity.Commentaire_cinema;
-import com.cineteam.cinebook.model.entity.Utilisateur;
-import com.cineteam.cinebook.model.entitymanager.commentaire_cinema.Commentaire_CinemaEntityManager;
-import com.cineteam.cinebook.model.entitymanager.utilisateur.UtilisateurEntityManager;
+import com.cineteam.cinebook.model.commentaireCinema.Commentaire_cinema;
+import com.cineteam.cinebook.model.utilisateur.Utilisateur;
+import com.cineteam.cinebook.model.commentaireCinema.Commentaire_CinemaEntityManager;
+import com.cineteam.cinebook.model.utilisateur.UtilisateurEntityManager;
 import java.util.Date;
 import java.util.List;
 import static org.junit.Assert.*;

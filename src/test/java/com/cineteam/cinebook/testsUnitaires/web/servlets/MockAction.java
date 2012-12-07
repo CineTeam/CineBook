@@ -1,6 +1,6 @@
 package com.cineteam.cinebook.testsUnitaires.web.servlets;
 
-import com.cineteam.cinebook.web.actions.Action;
+import com.cineteam.cinebook.web.servlets.Action;
 import javax.servlet.http.HttpServletRequest;
 
 /** @author Bérangère */

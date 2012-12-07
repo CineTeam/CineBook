@@ -1,7 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.cinema;
 
-import com.cineteam.cinebook.model.entity.Utilisateur;
-import com.cineteam.cinebook.web.actions.cinema.DeposerCommentaireCinemaAction;
+import com.cineteam.cinebook.model.utilisateur.Utilisateur;
+import com.cineteam.cinebook.web.cinema.DeposerCommentaireCinemaAction;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
 import java.util.HashMap;
 import java.util.Map;

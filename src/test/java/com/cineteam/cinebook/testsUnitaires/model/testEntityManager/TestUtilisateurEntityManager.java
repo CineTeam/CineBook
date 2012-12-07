@@ -1,7 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.model.testEntityManager;
 
-import com.cineteam.cinebook.model.entity.Utilisateur;
-import com.cineteam.cinebook.model.entitymanager.utilisateur.UtilisateurEntityManager;
+import com.cineteam.cinebook.model.utilisateur.Utilisateur;
+import com.cineteam.cinebook.model.utilisateur.UtilisateurEntityManager;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,7 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.film;
 
-import com.cineteam.cinebook.model.entity.Film;
-import com.cineteam.cinebook.web.actions.film.RechercherFilmAction;
+import com.cineteam.cinebook.model.film.Film;
+import com.cineteam.cinebook.web.film.RechercherFilmAction;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
 import java.util.HashMap;
 import java.util.List;

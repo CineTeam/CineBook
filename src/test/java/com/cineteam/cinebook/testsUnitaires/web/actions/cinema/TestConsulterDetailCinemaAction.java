@@ -1,7 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.cinema;
 
-import com.cineteam.cinebook.model.entity.Commentaire_cinema;
-import com.cineteam.cinebook.web.actions.cinema.ConsulterDetailCinemaAction;
+import com.cineteam.cinebook.model.commentaireCinema.Commentaire_cinema;
+import com.cineteam.cinebook.web.cinema.ConsulterDetailCinemaAction;
 import com.cineteam.cinebook.testsUnitaires.web.actions.MockSeanceProvider;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
 import java.util.HashMap;

@@ -1,12 +1,11 @@
 package com.cineteam.cinebook.web.servlets;
 
-import com.cineteam.cinebook.model.entitymanager.commentaire_cinema.Commentaire_CinemaEntityManager;
-import com.cineteam.cinebook.model.entitymanager.utilisateur.UtilisateurEntityManager;
-import com.cineteam.cinebook.web.actions.Action;
-import com.cineteam.cinebook.web.actions.cinema.DeposerCommentaireCinemaAction;
-import com.cineteam.cinebook.web.actions.utilisateur.SeDeconnecterAction;
-import com.cineteam.cinebook.web.actions.utilisateur.SidentifierAction;
-import com.cineteam.cinebook.web.actions.utilisateur.SinscrireAction;
+import com.cineteam.cinebook.model.commentaireCinema.Commentaire_CinemaEntityManager;
+import com.cineteam.cinebook.model.utilisateur.UtilisateurEntityManager;
+import com.cineteam.cinebook.web.cinema.DeposerCommentaireCinemaAction;
+import com.cineteam.cinebook.web.utilisateur.SeDeconnecterAction;
+import com.cineteam.cinebook.web.utilisateur.SidentifierAction;
+import com.cineteam.cinebook.web.utilisateur.SinscrireAction;
 import java.util.HashMap;
 
 public class ServletMembre extends CineBookServlet {

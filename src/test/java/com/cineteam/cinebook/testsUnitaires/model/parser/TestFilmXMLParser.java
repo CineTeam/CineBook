@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsUnitaires.model.parser;
 
-import com.cineteam.cinebook.model.entity.Film;
+import com.cineteam.cinebook.model.film.Film;
 import com.cineteam.cinebook.model.provider.FileProviderSource;
-import com.cineteam.cinebook.model.provider.film.FilmXMLParser;
+import com.cineteam.cinebook.model.film.FilmXMLParser;
 import java.util.List;
 import org.joda.time.DateTime;
 import static org.junit.Assert.*;
