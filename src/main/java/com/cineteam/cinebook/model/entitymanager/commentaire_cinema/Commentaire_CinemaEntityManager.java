@@ -15,7 +15,8 @@ public class Commentaire_CinemaEntityManager implements ICommentaire_CinemaEntit
     private EntityManagerFactory emf;
     private EntityManager em;
 
-    public Commentaire_CinemaEntityManager() {
+    public Commentaire_CinemaEntityManager()
+    {
         emf = Persistence.createEntityManagerFactory("JPAPersistence");
         em = emf.createEntityManager();
         em.getTransaction().begin();
