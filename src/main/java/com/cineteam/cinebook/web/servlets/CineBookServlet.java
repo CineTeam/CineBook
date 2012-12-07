@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author alexis
  */
-public class CineBookServlet extends HttpServlet {
+public abstract class CineBookServlet extends HttpServlet {
      
     protected String vue = null;
     protected Map<String, Action> actions;

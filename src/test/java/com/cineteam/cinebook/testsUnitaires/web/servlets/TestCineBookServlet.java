@@ -1,6 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.web.servlets;
 
-import com.cineteam.cinebook.web.servlets.ServletMembre;
+import com.cineteam.cinebook.web.actions.utilisateur.SeDeconnecterAction;
+import com.cineteam.cinebook.web.servlets.CineBookServlet;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,15 +16,16 @@ import org.junit.Before;
 import org.junit.Test;
 
 /** @author Bérangère */
-public class TestServletMembre {
+public class TestCineBookServlet {
     
     private HttpServletRequest request;
     private HttpServletResponse response;
-    private ServletMembre servlet;
+    private MockCinebookServlet servlet;
   
     @Before
     public void setUp() {
-        servlet = new ServletMembre();
+        servlet = new MockCinebookServlet();
+        servlet.addAction("seDeconnecterAction", new SeDeconnecterAction());
         request = createMock(HttpServletRequest.class);
         replay(request);
         response = createMock(HttpServletResponse.class);
