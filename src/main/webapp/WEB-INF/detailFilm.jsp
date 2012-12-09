@@ -94,7 +94,11 @@
                                         </div>
                                          <div>
                                             <c:import url="seancesFilm.jsp"/>
+                                            <div class="commentaires">
+                                                <c:import url="commentairesFilm.jsp"/>
+                                            </div>
                                         </div>
+                                        
                                     </c:otherwise>                                            
                                 </c:choose>
                             </c:if>  

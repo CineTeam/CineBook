@@ -458,6 +458,7 @@ a {
 
 .seances_cinema,.seances_film{
     margin-top: 30px;
+    float:left;
 }
 
 .seances_cinema {
@@ -519,6 +520,9 @@ a {
 
 #recherche_seances{
     line-height: 280%;
+    width: 600px;
+    float: left;
+    padding-top: 20px;
 }
 
 .lien{

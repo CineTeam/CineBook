@@ -3,7 +3,7 @@
 <html> 
     <head></head>
     <body>
-        <br><hr /><br>
+        <br><hr />
         
         <div id="recherche_seances">
             <form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
