@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `cinemas_frequentes` (
 -- Structure de la table `commentaire_cinema`
 --
 
-CREATE TABLE IF NOT EXISTS `commentaire_cinema` (
+CREATE TABLE IF NOT EXISTS `commentairecinema` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `date` date NOT NULL,
   `texte` varchar(250) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `commentaire_cinema` (
 -- Structure de la table `commentaire_film`
 --
 
-CREATE TABLE IF NOT EXISTS `commentaire_film` (
+CREATE TABLE IF NOT EXISTS `commentairefilm` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `date` date NOT NULL,
   `texte` varchar(250) NOT NULL,

@@ -6,8 +6,9 @@ import com.cineteam.cinebook.web.film.RechercherFilmAction;
 import com.cineteam.cinebook.web.cinema.RechercherCinemaAction;
 import com.cineteam.cinebook.web.cinema.ConsulterDetailCinemaAction;
 import com.cineteam.cinebook.web.cinema.RechercherCinemaParCPAction;
-import com.cineteam.cinebook.model.commentaireCinema.Commentaire_CinemaEntityManager;
+import com.cineteam.cinebook.model.commentaire.CommentaireCinemaEntityManager;
 import com.cineteam.cinebook.model.cinema.CinemaProvider;
+import com.cineteam.cinebook.model.commentaire.CommentaireFilmEntityManager;
 import com.cineteam.cinebook.model.film.FilmProvider;
 import com.cineteam.cinebook.model.seance.SeanceProvider;
 import java.util.HashMap;
@@ -22,7 +23,7 @@ public class ServletVisiteur extends CineBookServlet {
         actions.put("rechercherFilmAction", new RechercherFilmAction(new FilmProvider()));
         actions.put("recupererDixDerniersFilmsSortisAction", new RecupererDixDerniersFilmsSortisAction(new FilmProvider()));
         actions.put("rechercherCinemaParCPAction", new RechercherCinemaParCPAction(new CinemaProvider()));
-        actions.put("consulterDetailCinemaAction", new ConsulterDetailCinemaAction(new CinemaProvider(),new SeanceProvider(),new Commentaire_CinemaEntityManager()));
-        actions.put("consulterDetailFilmAction", new ConsulterDetailFilmAction(new FilmProvider(), new SeanceProvider()));
+        actions.put("consulterDetailCinemaAction", new ConsulterDetailCinemaAction(new CinemaProvider(),new SeanceProvider(),new CommentaireCinemaEntityManager()));
+        actions.put("consulterDetailFilmAction", new ConsulterDetailFilmAction(new FilmProvider(), new SeanceProvider(), new CommentaireFilmEntityManager()));
     }
 }

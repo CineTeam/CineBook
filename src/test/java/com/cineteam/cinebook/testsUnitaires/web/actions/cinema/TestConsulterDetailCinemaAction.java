@@ -1,6 +1,6 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.cinema;
 
-import com.cineteam.cinebook.model.commentaireCinema.Commentaire_cinema;
+import com.cineteam.cinebook.model.commentaire.CommentaireCinema;
 import com.cineteam.cinebook.web.cinema.ConsulterDetailCinemaAction;
 import com.cineteam.cinebook.testsUnitaires.web.actions.MockSeanceProvider;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
@@ -82,7 +82,7 @@ public class TestConsulterDetailCinemaAction {
         final Map parametres = new HashMap();
         parametres.put("cpt",cinema_id);
         request = new AddedParametersRequestWrapper(request, parametres);
-        Commentaire_cinema commentaire_cinema = new Commentaire_cinema();
+        CommentaireCinema commentaire_cinema = new CommentaireCinema();
         commentaire_cinema.setId_cinema(cinema_id);
         fauxEntityManager.commentaires_cinema.add(commentaire_cinema);
         

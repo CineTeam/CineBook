@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.web.cinema;
 
-import com.cineteam.cinebook.model.commentaireCinema.Commentaire_cinema;
+import com.cineteam.cinebook.model.commentaire.CommentaireCinema;
 import com.cineteam.cinebook.model.utilisateur.Utilisateur;
-import com.cineteam.cinebook.model.commentaireCinema.ICommentaire_CinemaEntityManager;
+import com.cineteam.cinebook.model.commentaire.ICommentaireCinemaEntityManager;
 import com.cineteam.cinebook.outils.StringUtils;
 import com.cineteam.cinebook.web.servlets.Action;
 import java.util.Date;
@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 /** @author Cedric */
 public class DeposerCommentaireCinemaAction implements Action {
 
-    private ICommentaire_CinemaEntityManager entityManager;
+    private ICommentaireCinemaEntityManager entityManager;
     
-    public DeposerCommentaireCinemaAction(ICommentaire_CinemaEntityManager _entityManager) {
+    public DeposerCommentaireCinemaAction(ICommentaireCinemaEntityManager _entityManager) {
         entityManager = _entityManager;
     }
     
@@ -23,7 +23,7 @@ public class DeposerCommentaireCinemaAction implements Action {
         String texte = (String) request.getParameter("champ_commentaire");
         
         if(!StringUtils.estVide(texte) && utilisateur!=null){
-            Commentaire_cinema commentaire = new Commentaire_cinema();
+            CommentaireCinema commentaire = new CommentaireCinema();
             commentaire.setId_cinema(index_cinema);
             commentaire.setTexte(texte);
             commentaire.setDate(new Date());

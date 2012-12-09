@@ -1,4 +1,4 @@
-package com.cineteam.cinebook.model.commentaireCinema;
+package com.cineteam.cinebook.model.commentaire;
 
 import com.cineteam.cinebook.model.utilisateur.Utilisateur;
 import java.io.Serializable;
@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 /** @author Vivien */
 @Entity
-public class Commentaire_cinema implements Serializable {
+public class CommentaireCinema implements Serializable {
     
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

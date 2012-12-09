@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsUnitaires.model.testEntityManager;
 
-import com.cineteam.cinebook.model.commentaireCinema.Commentaire_cinema;
+import com.cineteam.cinebook.model.commentaire.CommentaireCinema;
 import com.cineteam.cinebook.model.utilisateur.Utilisateur;
-import com.cineteam.cinebook.model.commentaireCinema.Commentaire_CinemaEntityManager;
+import com.cineteam.cinebook.model.commentaire.CommentaireCinemaEntityManager;
 import com.cineteam.cinebook.model.utilisateur.UtilisateurEntityManager;
 import java.util.Date;
 import java.util.List;
@@ -11,22 +11,22 @@ import org.junit.Before;
 import org.junit.Test;
 
 /** @author Bérangère */
-public class TestCommentaire_CinemaEntityManager {
+public class TestCommentaireCinemaEntityManager {
     
-    private Commentaire_CinemaEntityManager entityManager;
+    private CommentaireCinemaEntityManager entityManager;
     private UtilisateurEntityManager utilisateurEntityManager;
     
     @Before
     public void setUp()
     {
-        entityManager = new Commentaire_CinemaEntityManager();
+        entityManager = new CommentaireCinemaEntityManager();
         utilisateurEntityManager = new UtilisateurEntityManager(); 
     }
     
     @Test
     public void nEnregistrePasUnCommentaire_CinemaEnBaseSiInfosNecessairesNonSaisies() 
     {
-        Commentaire_cinema commentaire_cinema = new Commentaire_cinema();
+        CommentaireCinema commentaire_cinema = new CommentaireCinema();
         
         entityManager.creerCommentaire_Cinema(commentaire_cinema);
         
@@ -36,7 +36,7 @@ public class TestCommentaire_CinemaEntityManager {
     @Test
     public void enregistreUnUtilisateurEnBaseSiInfosNecessairesSaisies() 
     {
-        Commentaire_cinema commentaire_cinema = new Commentaire_cinema();
+        CommentaireCinema commentaire_cinema = new CommentaireCinema();
         commentaire_cinema.setDate(new Date());
         commentaire_cinema.setId_cinema("1");
         commentaire_cinema.setTexte("texte");
@@ -58,7 +58,7 @@ public class TestCommentaire_CinemaEntityManager {
     @Test
     public void neListePasDeCommentairesCinemaEnBaseSiNExistePas() 
     {        
-        List<Commentaire_cinema> commentaires_cinema = entityManager.rechercherCommentaires_cinema("");
+        List<CommentaireCinema> commentaires_cinema = entityManager.rechercherCommentaires_cinema("");
         
         assertTrue(commentaires_cinema.isEmpty());
     }
@@ -66,7 +66,7 @@ public class TestCommentaire_CinemaEntityManager {
     @Test
     public void listeCommentairesCinemaEnBaseSiExistent() 
     {        
-        Commentaire_cinema commentaire_cinema = new Commentaire_cinema();
+        CommentaireCinema commentaire_cinema = new CommentaireCinema();
         commentaire_cinema.setDate(new Date());
         commentaire_cinema.setId_cinema("1");
         commentaire_cinema.setTexte("texte");
@@ -79,7 +79,7 @@ public class TestCommentaire_CinemaEntityManager {
         commentaire_cinema.setUtilisateur(utilisateur);
         entityManager.creerCommentaire_Cinema(commentaire_cinema);
         
-        List<Commentaire_cinema> commentaires_cinema = entityManager.rechercherCommentaires_cinema("1");
+        List<CommentaireCinema> commentaires_cinema = entityManager.rechercherCommentaires_cinema("1");
         
         assertTrue(!commentaires_cinema.isEmpty());
         assertNotNull(commentaires_cinema.get(0));
