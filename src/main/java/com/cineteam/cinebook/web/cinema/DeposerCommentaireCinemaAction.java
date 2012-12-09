@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.web.cinema;
 
 import com.cineteam.cinebook.model.commentaire.CommentaireCinema;
-import com.cineteam.cinebook.model.utilisateur.Utilisateur;
 import com.cineteam.cinebook.model.commentaire.ICommentaireCinemaEntityManager;
+import com.cineteam.cinebook.model.utilisateur.Utilisateur;
 import com.cineteam.cinebook.outils.StringUtils;
 import com.cineteam.cinebook.web.servlets.Action;
 import java.util.Date;

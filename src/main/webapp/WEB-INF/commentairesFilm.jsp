@@ -8,6 +8,7 @@
         <c:if test = "${sessionScope.utilisateur != null}">
             <form action="ServletMembre?action=deposerCommentaireFilmAction" method="post" id="form_commentaire">
                 <input type="hidden" name="cpt" value="${requestScope.film.id}" />
+                <input type="hidden" name="code_postal" value="${requestScope.code_postal}" />
                 Déposez un commentaire : <br>
                 <textarea id="champ_commentaire" name="champ_commentaire" ></textarea><br>
                 <input type="submit" id="bouton_valider_commentaire" value="Valider" class='button_clickable' /><br><br>

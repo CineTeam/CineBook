@@ -38,7 +38,8 @@ public class ConsulterDetailFilmAction implements Action {
         if(CP_recherche!=null){
             if(!CP_recherche.isEmpty()){
                 List<Cinema> cinemasParCP = providerSeance.getSeancesPourUnFilm(index_film,CP_recherche);
-                request.setAttribute("cinemas", cinemasParCP);       
+                request.setAttribute("cinemas", cinemasParCP);
+                request.setAttribute("code_postal", CP_recherche);
             }    
         }
             

@@ -10,7 +10,7 @@
                 Trouvez la prochaine séance la plus proche de chez vous ! <br>
                 Saisir un code postal :
                 <input type="text" name="cpt" value="${film.id}" style="display:none;"/>
-                <input type="text" name="recherche" />                     
+                <input type="text" name="recherche" value="${requestScope.code_postal}"/>                     
                 <input type="submit" name="envoyer" value="Valider" />
             </form>
         </div>
