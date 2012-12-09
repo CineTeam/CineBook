@@ -18,7 +18,7 @@ public class TestConsulterDetailCinemaAction {
     
     private MockCinemaProvider fauxProviderCinema ;
     private MockSeanceProvider fauxProviderSeance ;
-    private MockCommentaire_CinemaEntityManager fauxEntityManager;
+    private MockCommentaireCinemaEntityManager fauxEntityManager;
     private HttpServletRequest request ;
     private ConsulterDetailCinemaAction consulterDetailsCinemaAction ;
     
@@ -26,7 +26,7 @@ public class TestConsulterDetailCinemaAction {
     public void setUp() {
         fauxProviderCinema = new MockCinemaProvider();
         fauxProviderSeance = new MockSeanceProvider();
-        fauxEntityManager = new MockCommentaire_CinemaEntityManager();
+        fauxEntityManager = new MockCommentaireCinemaEntityManager();
         consulterDetailsCinemaAction = new ConsulterDetailCinemaAction(fauxProviderCinema,fauxProviderSeance,fauxEntityManager);
         request = createMock(HttpServletRequest.class);
         replay(request);

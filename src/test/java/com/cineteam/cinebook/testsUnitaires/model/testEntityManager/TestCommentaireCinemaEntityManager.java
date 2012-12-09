@@ -36,23 +36,23 @@ public class TestCommentaireCinemaEntityManager {
     @Test
     public void enregistreUnUtilisateurEnBaseSiInfosNecessairesSaisies() 
     {
-        CommentaireCinema commentaire_cinema = new CommentaireCinema();
-        commentaire_cinema.setDate(new Date());
-        commentaire_cinema.setId_cinema("1");
-        commentaire_cinema.setTexte("texte");
+        CommentaireCinema commentaireCinema = new CommentaireCinema();
+        commentaireCinema.setDate(new Date());
+        commentaireCinema.setId_cinema("1");
+        commentaireCinema.setTexte("texte");
         Utilisateur utilisateur = new Utilisateur();
         utilisateur.setPseudo("pseudo");
         utilisateur.setLogin("login");
         utilisateur.setMdp("mdp");
         utilisateur.setId_droit(1);
         utilisateurEntityManager.creerUtilisateur(utilisateur);
-        commentaire_cinema.setUtilisateur(utilisateur);
+        commentaireCinema.setUtilisateur(utilisateur);
         
-        entityManager.creerCommentaire_Cinema(commentaire_cinema);
+        entityManager.creerCommentaire_Cinema(commentaireCinema);
         
         
         assertTrue(!entityManager.rechercherCommentaires_cinema("1").isEmpty());
-        assertTrue(entityManager.rechercherCommentaires_cinema("1").get(0).equals(commentaire_cinema));
+        assertTrue(entityManager.rechercherCommentaires_cinema("1").get(0).equals(commentaireCinema));
     }
     
     @Test

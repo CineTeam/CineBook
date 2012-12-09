@@ -14,7 +14,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /** @author Vivien */
-public class TestConsulterDetailFilm {
+public class TestConsulterDetailFilmAction {
     
     private MockFilmProvider fauxProviderFilm ;
     private MockSeanceProvider fauxProviderSeance ;

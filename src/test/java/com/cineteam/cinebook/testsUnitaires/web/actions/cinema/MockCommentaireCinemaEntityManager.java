@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** @author Berangere */
-public class MockCommentaire_CinemaEntityManager implements ICommentaireCinemaEntityManager{
+public class MockCommentaireCinemaEntityManager implements ICommentaireCinemaEntityManager{
     
     public List<CommentaireCinema> commentaires_cinema = new ArrayList<CommentaireCinema>();
     public boolean commentaire_cinemaCree = false;

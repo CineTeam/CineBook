@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.cinema;
 
 import com.cineteam.cinebook.model.utilisateur.Utilisateur;
-import com.cineteam.cinebook.web.cinema.DeposerCommentaireCinemaAction;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
+import com.cineteam.cinebook.web.cinema.DeposerCommentaireCinemaAction;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
@@ -15,13 +15,13 @@ import org.junit.Test;
 /** @author Cedric */
 public class TestDeposerCommentaireCinemaAction {
     
-    private MockCommentaire_CinemaEntityManager fauxEntityManager;
+    private MockCommentaireCinemaEntityManager fauxEntityManager;
     private HttpServletRequest request ;
     private DeposerCommentaireCinemaAction deposerCommentaireCinemaAction ;
     
     @Before
     public void setUp() {
-        fauxEntityManager = new MockCommentaire_CinemaEntityManager();
+        fauxEntityManager = new MockCommentaireCinemaEntityManager();
         deposerCommentaireCinemaAction = new DeposerCommentaireCinemaAction(fauxEntityManager);
         request = createMock(HttpServletRequest.class);
         replay(request);
