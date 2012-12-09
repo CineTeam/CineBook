@@ -67,5 +67,26 @@ public class TestUtilisateurEntityManager {
         assertEquals(utilisateur_recherche.getLogin(),"login");
         assertEquals(utilisateur_recherche.getMdp(),"mdp");
     }
+    
+    @Test
+    public void modifieLUtilisateurEnBase()
+    {
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setPseudo("ikram");
+        utilisateur.setLogin("ick");
+        utilisateur.setMdp("mdp");
+        utilisateur.setId_droit(1);
+        entityManager.creerUtilisateur(utilisateur);
+        utilisateur.setAdresse("adresse");
+        utilisateur.setCode_postal("33000");
+        utilisateur.setVille("ville");
+        entityManager.modifierUtilisateur(utilisateur);
+        Utilisateur utilisateur_modifier = entityManager.rechercherUtilisateur(utilisateur.getLogin());
         
+        
+        assertNotNull(utilisateur_modifier);
+        assertEquals(utilisateur_modifier.getAdresse(),"adresse");
+        assertEquals(utilisateur_modifier.getCode_postal(),"33000");
+        assertEquals(utilisateur_modifier.getVille(),"ville");
+    }
 }

@@ -4,15 +4,25 @@
 <c:choose>
     <c:when test ="${sessionScope.utilisateur != null}">
         <p>Bienvenue ${sessionScope.utilisateur.pseudo}</p>
-        <form action="ServletMembre?action=seDeconnecterAction" method="post" >
-            <a href="#" class='lien_clickable'>
-                Déconnexion
-            </a>
-            <input type="text" name="page_courante_avant_deco" value="${pageContext.request.servletPath}" class="invisible"/>
-            <div class="invisible">
-                <input id="bouton_deconnexion" type="submit" />
-            </div>
-        </form>
+        <table>
+            <tr>
+                <td>
+                    <a href="ServletMembre?vue=profilUtilisateur.jsp">Mon Profil</a>
+                </td>
+                <td>
+                    <form action="ServletMembre?action=seDeconnecterAction" method="post" >
+                        <a href="#" class='lien_clickable'>
+                            Déconnexion
+                        </a>
+                        <input type="text" name="page_courante_avant_deco" value="${pageContext.request.servletPath}" class="invisible"/>
+                        <div class="invisible">
+                            <input id="bouton_deconnexion" type="submit" />
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+               
     </c:when>
     <c:otherwise>
         <form action="ServletMembre?action=sidentifierAction" method="post" id="form_connexion">

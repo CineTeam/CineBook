@@ -22,5 +22,18 @@ class MockUtilisateurEntityManager implements IUtilisateurEntityManager{
                 return utilisateur;
         return null;     
     }
+
+    public void modifierUtilisateur(Utilisateur utilisateur) {
+        for(Utilisateur uti : utilisateurs)
+        {
+            if(uti.getLogin().equals(uti.getLogin()))
+            {
+                uti.setAdresse(utilisateur.getAdresse());
+                uti.setCode_postal(utilisateur.getCode_postal());
+                uti.setVille(utilisateur.getVille());
+                break;
+            }
+        }
+    }
     
 }

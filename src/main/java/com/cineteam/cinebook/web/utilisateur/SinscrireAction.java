@@ -59,6 +59,7 @@ public class SinscrireAction implements Action {
        
             entityManager.creerUtilisateur(utilisateur);
             request.setAttribute("messageErreur", messageErreur);
+            request.getSession().setAttribute("utilisateur", utilisateur);
             return "index.jsp";
         }
        

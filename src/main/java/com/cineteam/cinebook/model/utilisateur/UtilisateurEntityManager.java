@@ -30,4 +30,14 @@ public class UtilisateurEntityManager implements IUtilisateurEntityManager {
         else
             return (Utilisateur) query.getResultList().get(0);
     }
+    
+    public void modifierUtilisateur(Utilisateur utilisateur){
+        Utilisateur uti = em.find(Utilisateur.class, utilisateur.getId());
+        uti.setAdresse(utilisateur.getAdresse());
+        uti.setCode_postal(utilisateur.getCode_postal());
+        uti.setVille(utilisateur.getVille());
+        em.getTransaction().commit();
+    }
+    
+    
 }
