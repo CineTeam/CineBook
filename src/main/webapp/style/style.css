@@ -161,7 +161,7 @@ a {
     padding: 0;
 }
 
-#recherche #bouton_recherche_cinema,#recherche_film #bouton_recherche_film, #bouton_inscription,#bouton_valider_commentaire{	
+#recherche #bouton_recherche_cinema,#recherche_film #bouton_recherche_film, #bouton_inscription,#bouton_valider_commentaire,#bouton_modifier{	
     width: auto;
     border-radius: 12px;
     -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -184,14 +184,14 @@ a {
     text-decoration:none;
 }
 
-#recherche #bouton_recherche_cinema:hover,#recherche_film #bouton_recherche_film:hover,#bouton_inscription:hover,#bouton_valider_commentaire:hover {
+#recherche #bouton_recherche_cinema:hover,#recherche_film #bouton_recherche_film:hover,#bouton_inscription:hover,#bouton_valider_commentaire:hover,#bouton_modifier:hover {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d3d3d), color-stop(1, #343434) );
     background:-moz-linear-gradient( center top, #3d3d3d 5%, #343434 100% );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d3d3d', endColorstr='#343434');
     background-color:#3d3d3d;
 }
 
-#recherche #bouton_recherche_cinema:active,#recherche_film #bouton_recherche_film:active,#bouton_inscription:active ,#bouton_valider_commentaire:active{
+#recherche #bouton_recherche_cinema:active,#recherche_film #bouton_recherche_film:active,#bouton_inscription:active ,#bouton_valider_commentaire:active,#bouton_modifier:active{
     position:relative;
     top:1px;
 }
@@ -338,7 +338,7 @@ a {
             margin:0 0 0 0;
         }
 
-        .short_desc_film,.short_desc_cinema,.short_desc_film_cinema,.short_desc_cinema_film,.synopsis,.details_seance,.form_sinscrire,.commentaires{
+        .short_desc_film,.short_desc_cinema,.short_desc_film_cinema,.short_desc_cinema_film,.synopsis,.details_seance,.form_sinscrire,.commentaires,.form_modifier_utilisateur{
             font-family: Tahoma;
             font-size:14px;
             line-height: 180%;

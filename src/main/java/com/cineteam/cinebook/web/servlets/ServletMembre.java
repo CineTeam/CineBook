@@ -22,6 +22,5 @@ public class ServletMembre extends CineBookServlet {
         actions.put("deposerCommentaireCinemaAction", new DeposerCommentaireCinemaAction(new CommentaireCinemaEntityManager()));
         actions.put("deposerCommentaireFilmAction", new DeposerCommentaireFilmAction(new CommentaireFilmEntityManager()));
         actions.put("modifierUtilisateurAction", new ModifierUtilisateurAction(new UtilisateurEntityManager()));                
-        
     }
 }

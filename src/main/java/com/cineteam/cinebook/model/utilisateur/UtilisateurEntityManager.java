@@ -32,12 +32,11 @@ public class UtilisateurEntityManager implements IUtilisateurEntityManager {
     }
     
     public void modifierUtilisateur(Utilisateur utilisateur){
-        Utilisateur uti = em.find(Utilisateur.class, utilisateur.getId());
-        uti.setAdresse(utilisateur.getAdresse());
-        uti.setCode_postal(utilisateur.getCode_postal());
-        uti.setVille(utilisateur.getVille());
-        em.getTransaction().commit();
+        Utilisateur ancien_utilisateur = em.find(Utilisateur.class, utilisateur.getId());
+        ancien_utilisateur.setAdresse(utilisateur.getAdresse());
+        ancien_utilisateur.setCode_postal(utilisateur.getCode_postal());
+        ancien_utilisateur.setVille(utilisateur.getVille());
+        em.refresh(ancien_utilisateur);
     }
-    
     
 }

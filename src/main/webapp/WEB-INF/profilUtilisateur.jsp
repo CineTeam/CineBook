@@ -30,7 +30,7 @@
                                     </c:when>
                                     <c:otherwise>
                                         <div align="center">
-                                            <form action="ServletMembre?action=modifierUtilisateurAction" method="post" class="form_sinscrire">
+                                            <form action="ServletMembre?action=modifierUtilisateurAction" method="post" class="form_modifier_utilisateur">
                                                 <table>  
                                                     <tr>
                                                         <td>Pseudo :</td>
@@ -38,7 +38,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Login :</td>
-                                                        <td><span type="text" name="login" id="inputText">${sessionScope.utilisateur.login}</span></td>
+                                                        <td><span name="login" id="inputText">${sessionScope.utilisateur.login}</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Adresse :</td>

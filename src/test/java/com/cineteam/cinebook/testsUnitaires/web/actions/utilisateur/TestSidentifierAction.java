@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.utilisateur;
 
 import com.cineteam.cinebook.model.utilisateur.Utilisateur;
-import com.cineteam.cinebook.web.utilisateur.SidentifierAction;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
+import com.cineteam.cinebook.web.utilisateur.SidentifierAction;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;

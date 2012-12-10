@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.utilisateur;
 
 import com.cineteam.cinebook.model.utilisateur.Utilisateur;
-import com.cineteam.cinebook.web.utilisateur.SinscrireAction;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
+import com.cineteam.cinebook.web.utilisateur.SinscrireAction;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
@@ -165,6 +165,9 @@ public class TestSinscrireAction {
         assertEquals(null,request.getAttribute("messageErreur"));
         assertTrue(fauxEntityManager.utilisateurCree);
         assertNotNull(fauxEntityManager.rechercherUtilisateur(login));
+        assertEquals(fauxEntityManager.rechercherUtilisateur(login).getPseudo(),"pseudo");
+        assertEquals(fauxEntityManager.rechercherUtilisateur(login).getLogin(),login);
+        assertEquals(fauxEntityManager.rechercherUtilisateur(login).getMdp(),"mdp");
     }
     
     @Test

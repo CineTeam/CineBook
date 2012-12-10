@@ -30,7 +30,6 @@ public class TestCinemaProvider {
         
         assertNotNull(cinemas);
         assertTrue(cinemas.size() > 0);
-        
     }
     
     @Test

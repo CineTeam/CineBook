@@ -2,6 +2,7 @@ package com.cineteam.cinebook.testsUnitaires.web.actions.utilisateur;
 
 import com.cineteam.cinebook.model.utilisateur.Utilisateur;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
+import com.cineteam.cinebook.web.utilisateur.ModifierUtilisateurAction;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
@@ -10,9 +11,8 @@ import static org.easymock.EasyMock.replay;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import com.cineteam.cinebook.web.utilisateur.ModifierUtilisateurAction;
 
-/** @author CrazyKoala */
+/** @author Ikram */
 public class TestModifierUtilisateurAction {
     
     private HttpServletRequest request ;
@@ -29,21 +29,48 @@ public class TestModifierUtilisateurAction {
     }
     
     @Test
-    public void modifieUtilisateur()
+    public void neModifiePasAdresseDeLUtilisateurSiAucunChampSaisi()
     {
+        final Utilisateur utilisateur = utilisateur();
+        fauxEntityManager.creerUtilisateur(utilisateur);
+        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request.getSession().setAttribute("utilisateur", utilisateur);    
+        
+        modifierUtilisateurAction.execute(request);
+        
+        assertFalse(fauxEntityManager.utilisateurModifie);
+        assertNull(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getAdresse());
+        assertNull(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getCode_postal());
+        assertNull(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getVille());
+    }
+    
+    
+    @Test
+    public void modifieAdresseDeLUtilisateurSiChampsSaisis()
+    {
+        final Utilisateur utilisateur = utilisateur();
+        fauxEntityManager.creerUtilisateur(utilisateur);
         final Map parametres = new HashMap();
         parametres.put("adresse","adresse");
         parametres.put("code_postal","33000");
         parametres.put("ville", "ville");
         request = new AddedParametersRequestWrapper(request, parametres);
-        request.getSession().setAttribute("utilisateur", new Utilisateur());        
+        request.getSession().setAttribute("utilisateur",utilisateur);        
         
         modifierUtilisateurAction.execute(request);
-        Utilisateur uti = (Utilisateur) request.getSession().getAttribute("utilisateur");
-        assertNotNull(uti);
-        assertEquals(uti.getAdresse(),"adresse");
-        assertEquals(uti.getCode_postal(),"33000");
-        assertEquals(uti.getVille(),"ville");
-    }
         
+        assertTrue(fauxEntityManager.utilisateurModifie);
+        assertEquals(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getAdresse(),"adresse");
+        assertEquals(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getCode_postal(),"33000");
+        assertEquals(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getVille(),"ville");
+    }
+    
+    private Utilisateur utilisateur(){
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setLogin("login");
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setMdp("mdp");
+        return utilisateur;
+    }
+ 
 }
