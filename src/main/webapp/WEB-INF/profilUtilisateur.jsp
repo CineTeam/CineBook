@@ -23,6 +23,9 @@
                         </div>
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
+                             <c:if test = "${requestScope.message != null}">                                                
+                                 <p>${requestScope.message}</p>
+                             </c:if>
                             <c:if test = "${sessionScope.utilisateur!=null}">
                                 <c:choose>
                                     <c:when test="${empty sessionScope.utilisateur}">

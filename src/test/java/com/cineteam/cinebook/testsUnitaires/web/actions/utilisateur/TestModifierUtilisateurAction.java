@@ -42,6 +42,7 @@ public class TestModifierUtilisateurAction {
         assertNull(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getAdresse());
         assertNull(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getCode_postal());
         assertNull(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getVille());
+        assertEquals(request.getAttribute("message"),"Profil non modifié.");
     }
     
     
@@ -63,6 +64,7 @@ public class TestModifierUtilisateurAction {
         assertEquals(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getAdresse(),"adresse");
         assertEquals(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getCode_postal(),"33000");
         assertEquals(fauxEntityManager.rechercherUtilisateur(utilisateur.getLogin()).getVille(),"ville");
+        assertEquals(request.getAttribute("message"),"Profil enregistré.");
     }
     
     private Utilisateur utilisateur(){

@@ -16,6 +16,7 @@ public class ModifierUtilisateurAction implements Action{
     
     public String execute(HttpServletRequest request)
     {
+        String message = "Profil non modifié."; 
         Utilisateur utilisateur = (Utilisateur) request.getSession().getAttribute("utilisateur");
         String adresse = request.getParameter("adresse");
         String code_postal = request.getParameter("code_postal");
@@ -29,8 +30,9 @@ public class ModifierUtilisateurAction implements Action{
             entityManager.modifierUtilisateur(utilisateur);
             
             request.getSession().setAttribute("utilisateur", utilisateur);
+            message = "Profil enregistré.";   
         }
-        
+        request.setAttribute("message", message);
         return "profilUtilisateur.jsp";
     }
 
