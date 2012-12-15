@@ -5,6 +5,7 @@
     <class>com.cineteam.cinebook.model.utilisateur.Utilisateur</class>
     <class>com.cineteam.cinebook.model.commentaire.CommentaireCinema</class>
     <class>com.cineteam.cinebook.model.commentaire.CommentaireFilm</class>
+    <class>com.cineteam.cinebook.model.film.FilmVu</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="hibernate.connection.username" value="bdcinebook"/>
