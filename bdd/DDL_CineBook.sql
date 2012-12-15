@@ -17,18 +17,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cinemas_frequentes`
+-- Structure de la table `cinemafrequente`
 --
 
-CREATE TABLE IF NOT EXISTS `cinemas_frequentes` (
-  `id_cinema` int(11) NOT NULL,
-  `id_utilisateur` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `cinemafrequente` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_cinema` varchar(250) NOT NULL,
+  `id_utilisateur` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_cinema`
+-- Structure de la table `commentairecinema`
 --
 
 CREATE TABLE IF NOT EXISTS `commentairecinema` (
@@ -38,12 +40,12 @@ CREATE TABLE IF NOT EXISTS `commentairecinema` (
   `id_utilisateur` int(11) NOT NULL,
   `id_cinema` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire_film`
+-- Structure de la table `commentairefilm`
 --
 
 CREATE TABLE IF NOT EXISTS `commentairefilm` (
@@ -53,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `commentairefilm` (
   `id_utilisateur` int(11) NOT NULL,
   `id_film` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -81,14 +83,15 @@ INSERT INTO `droit` (`id`, `membre`, `moderateur`, `administrateur`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `films_vus`
+-- Structure de la table `filmvu`
 --
 
-CREATE TABLE IF NOT EXISTS `films_vus` (
-  `id_film` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `filmvu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_film` varchar(250) NOT NULL,
   `id_utilisateur` int(11) NOT NULL,
-  `date` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -106,6 +109,6 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `ville` varchar(30) DEFAULT NULL,
   `id_droit` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 
