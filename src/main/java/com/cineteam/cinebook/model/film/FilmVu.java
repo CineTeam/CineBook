@@ -18,7 +18,7 @@ public class FilmVu implements Serializable {
     
     private String id_film;
     
-    private int id_utilisateur;
+    private Long id_utilisateur;
 
     public Long getId() {
         return id;
@@ -32,11 +32,11 @@ public class FilmVu implements Serializable {
         id_film = _id_film;
     }
 
-    public int getId_utilisateur() {
+    public Long getId_utilisateur() {
         return id_utilisateur;
     }
 
-    public void setId_utilisateur(int _id_utilisateur) {
+    public void setId_utilisateur(Long _id_utilisateur) {
         id_utilisateur = _id_utilisateur;
     }
     

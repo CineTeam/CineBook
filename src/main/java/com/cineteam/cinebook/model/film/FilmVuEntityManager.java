@@ -24,7 +24,7 @@ public class FilmVuEntityManager implements IFilmVuEntityManager {
         em.persist(filmVu);
     }
     
-    public List<FilmVu> rechercherFilmsVus(int id_utilisateur){
+    public List<FilmVu> rechercherFilmsVus(Long id_utilisateur){
         Query query= em.createQuery("from FilmVu where id_utilisateur = :id_utilisateur").setParameter("id_utilisateur",id_utilisateur);
         return (List<FilmVu>) query.getResultList();
     }

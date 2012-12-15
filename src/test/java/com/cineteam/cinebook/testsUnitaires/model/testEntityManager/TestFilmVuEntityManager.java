@@ -25,7 +25,7 @@ public class TestFilmVuEntityManager {
         
         entityManager.enregistrerFilmVu(filmVu);
         
-        assertNull(entityManager.rechercherFilmsVus(0).get(0).getId_film());
+        assertTrue(entityManager.rechercherFilmsVus(new Long(0)).isEmpty());
     }
     
     @Test
@@ -33,7 +33,7 @@ public class TestFilmVuEntityManager {
     {
         FilmVu filmVu = new FilmVu();
         filmVu.setId_film("idfilm");
-        filmVu.setId_utilisateur(1);
+        filmVu.setId_utilisateur(new Long(1));
         
         entityManager.enregistrerFilmVu(filmVu);
         
@@ -44,7 +44,7 @@ public class TestFilmVuEntityManager {
     @Test
     public void neRecherchePasFilmVuEnBaseSiNExistePas() 
     {        
-        List<FilmVu> filmsVus = entityManager.rechercherFilmsVus(0);
+        List<FilmVu> filmsVus = entityManager.rechercherFilmsVus(new Long(0));
         
         assertTrue(filmsVus.isEmpty());
     }
@@ -55,15 +55,15 @@ public class TestFilmVuEntityManager {
     {        
         FilmVu filmVu = new FilmVu();
         filmVu.setId_film("idfilm");
-        filmVu.setId_utilisateur(1);
+        filmVu.setId_utilisateur(new Long(1));
         entityManager.enregistrerFilmVu(filmVu);
         
-        List<FilmVu> filmsVus = entityManager.rechercherFilmsVus(1);
+        List<FilmVu> filmsVus = entityManager.rechercherFilmsVus(filmVu.getId_utilisateur());
         
         assertTrue(!filmsVus.isEmpty());
         assertNotNull(filmsVus.get(0));
         assertEquals(filmsVus.get(0).getId_film(),"idfilm");
-        assertEquals(filmsVus.get(0).getId_utilisateur(),1);
+        assertEquals(filmsVus.get(0).getId_utilisateur(),new Long(1));
     }
     
     

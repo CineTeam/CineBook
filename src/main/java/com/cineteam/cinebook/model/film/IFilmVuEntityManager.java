@@ -6,6 +6,6 @@ import java.util.List;
 public interface IFilmVuEntityManager {
     
     public void enregistrerFilmVu(FilmVu filmVu);
-    public List<FilmVu> rechercherFilmsVus(int id_utilisateur);
+    public List<FilmVu> rechercherFilmsVus(Long id_utilisateur);
        
 }
