@@ -10,13 +10,16 @@ public class MockCommentaireCinemaEntityManager implements ICommentaireCinemaEnt
     
     public List<CommentaireCinema> commentaires_cinema = new ArrayList<CommentaireCinema>();
     public boolean commentaire_cinemaCree = false;
+    public boolean commentaire_cinemaSupprime = false;
     
-    public void creerCommentaire_Cinema(CommentaireCinema commentaire_cinema) {
+    public void creerCommentaire_Cinema(CommentaireCinema commentaire_cinema) 
+    {
         commentaire_cinemaCree = true;
         commentaires_cinema.add(commentaire_cinema);
     }
 
-    public List<CommentaireCinema> rechercherCommentaires_cinema(String id_cinema) {
+    public List<CommentaireCinema> rechercherCommentaires_cinema(String id_cinema) 
+    {
         List<CommentaireCinema> resultat = new ArrayList<CommentaireCinema>(); 
         for(CommentaireCinema commentaire_cinema : commentaires_cinema)
             if(commentaire_cinema.getId_cinema().equals(id_cinema))
@@ -24,7 +27,9 @@ public class MockCommentaireCinemaEntityManager implements ICommentaireCinemaEnt
         return resultat;     
     }
 
-    public void supprimerCommentairesCinemaDeLUtilisateur(Long id_utilisateur) {
+    public void supprimerCommentairesCinemaDeLUtilisateur(Long id_utilisateur) 
+    {
+        commentaire_cinemaSupprime = true;
         List<CommentaireCinema> commentairesCinemaASupprimer = new ArrayList<CommentaireCinema>(); 
         for(CommentaireCinema commentaire_cinema : commentaires_cinema)
             if(commentaire_cinema.getUtilisateur().getId().equals(id_utilisateur))

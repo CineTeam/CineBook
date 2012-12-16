@@ -19,6 +19,7 @@ import static org.junit.Assert.*;
 
 /** @author Cedric */
 public class TestSupprimerUtilisateurAction {
+    
     private HttpServletRequest request ;
     private SupprimerUtilisateurAction supprimerUtilisateurAction;
     private MockUtilisateurEntityManager fauxEntityManagerUtilisateur;
@@ -33,93 +34,94 @@ public class TestSupprimerUtilisateurAction {
         fauxEntityManagerCommentaireFilm = new MockCommentaireFilmEntityManager();
         fauxEntityManagerCommentaireCinema = new MockCommentaireCinemaEntityManager();
         fauxEntityManagerFilmsVus = new MockFilmVuEntityManager();
-        
         supprimerUtilisateurAction = new SupprimerUtilisateurAction(fauxEntityManagerUtilisateur, fauxEntityManagerCommentaireFilm, fauxEntityManagerCommentaireCinema, fauxEntityManagerFilmsVus);
-        
         request = createMock(HttpServletRequest.class);
         replay(request);
     }
     
     @Test
-    public void supprimerUtilisateur()
+    public void neSupprimePasLUtilisateurSiNEstPasConnecte()
     {
-      Utilisateur utilisateur = new Utilisateur();
-      utilisateur.setId(1l);
-      utilisateur.setLogin("alexedric");
-      fauxEntityManagerUtilisateur.utilisateurs.add(utilisateur);
+        request = new AddedParametersRequestWrapper(request, new HashMap());
+        final Utilisateur utilisateur = utilisateur();
+        fauxEntityManagerUtilisateur.utilisateurs.add(utilisateur);     
       
-      request = new AddedParametersRequestWrapper(request, new HashMap());
-      request.getSession().setAttribute("utilisateur",utilisateur);        
+        supprimerUtilisateurAction.execute(request);
       
-      supprimerUtilisateurAction.execute(request);
+        assertFalse(fauxEntityManagerUtilisateur.utilisateurSupprime);
+        assertNotNull(fauxEntityManagerUtilisateur.rechercherUtilisateur(utilisateur.getLogin()));
+    }
+    
+    @Test
+    public void supprimeLUtilisateurSiEstConnecte()
+    {
+        request = new AddedParametersRequestWrapper(request, new HashMap());
+        final Utilisateur utilisateur = utilisateur();
+        fauxEntityManagerUtilisateur.utilisateurs.add(utilisateur); 
+        request.getSession().setAttribute("utilisateur",utilisateur);        
       
-      assertNull(fauxEntityManagerUtilisateur.rechercherUtilisateur(utilisateur.getLogin()));
+        supprimerUtilisateurAction.execute(request);
+      
+        assertTrue(fauxEntityManagerUtilisateur.utilisateurSupprime);
+        assertNull(fauxEntityManagerUtilisateur.rechercherUtilisateur(utilisateur.getLogin()));
     }
             
     @Test
     public void supprimeLesCommentairesDeFilmsDeLUtilisateur()
     {
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setId(1l);
-        utilisateur.setLogin("alexedric");
-        
-        fauxEntityManagerUtilisateur.utilisateurs.add(utilisateur);
-      
+        final Utilisateur utilisateur = utilisateur();
+        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request.getSession().setAttribute("utilisateur",utilisateur);        
         CommentaireFilm commentaireFilm = new CommentaireFilm();
         commentaireFilm.setUtilisateur(utilisateur);
         commentaireFilm.setId_film("AZ");
+        fauxEntityManagerCommentaireFilm.commentairesFilm.add(commentaireFilm);  
         
-        request = new AddedParametersRequestWrapper(request, new HashMap());
-        request.getSession().setAttribute("utilisateur",utilisateur);          
-        
-        fauxEntityManagerCommentaireFilm.creerCommentaireFilm(commentaireFilm);
         supprimerUtilisateurAction.execute(request);
         
+        assertTrue(fauxEntityManagerCommentaireFilm.commentaireFilmSupprime);
         assertTrue(fauxEntityManagerCommentaireFilm.rechercherCommentairesFilm(commentaireFilm.getId_film()).isEmpty());
     }
     
     @Test
     public void supprimeLesCommentairesDeCinemaDeLUtilisateur()
     {
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setId(1l);
-        utilisateur.setLogin("alexedric");
-        
-        fauxEntityManagerUtilisateur.utilisateurs.add(utilisateur);
-      
+        final Utilisateur utilisateur = utilisateur();        
+        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request.getSession().setAttribute("utilisateur",utilisateur);    
         CommentaireCinema commentaireCinema = new CommentaireCinema();
         commentaireCinema.setUtilisateur(utilisateur);
         commentaireCinema.setId_cinema("AZ");
+        fauxEntityManagerCommentaireCinema.commentaires_cinema.add(commentaireCinema);
         
-        request = new AddedParametersRequestWrapper(request, new HashMap());
-        request.getSession().setAttribute("utilisateur",utilisateur);          
-        
-        fauxEntityManagerCommentaireCinema.creerCommentaire_Cinema(commentaireCinema);
         supprimerUtilisateurAction.execute(request);
         
+        assertTrue(fauxEntityManagerCommentaireCinema.commentaire_cinemaSupprime);
         assertTrue(fauxEntityManagerCommentaireCinema.rechercherCommentaires_cinema(commentaireCinema.getId_cinema()).isEmpty());
     }
     
     @Test
     public void supprimeLesFilmsVusDeLUtilisateur()
     {
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setId(1l);
-        utilisateur.setLogin("alexedric");
-        
-        fauxEntityManagerUtilisateur.utilisateurs.add(utilisateur);
-      
+        final Utilisateur utilisateur = utilisateur();
+        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request.getSession().setAttribute("utilisateur",utilisateur);      
         FilmVu filmVu = new FilmVu();
         filmVu.setId_film("AZ");
         filmVu.setId_utilisateur(1l);
-        
-        request = new AddedParametersRequestWrapper(request, new HashMap());
-        request.getSession().setAttribute("utilisateur",utilisateur);          
-        
-        fauxEntityManagerFilmsVus.enregistrerFilmVu(filmVu);
+        fauxEntityManagerFilmsVus.filmsVus.add(filmVu);
         
         supprimerUtilisateurAction.execute(request);
         
+        assertTrue(fauxEntityManagerFilmsVus.filmVuSupprime);
         assertTrue(fauxEntityManagerFilmsVus.rechercherFilmsVus(utilisateur.getId()).isEmpty());
     }
+    
+    private Utilisateur utilisateur(){
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setId(1l);
+        utilisateur.setLogin("alexedric");
+        return utilisateur;
+    }
+    
 }

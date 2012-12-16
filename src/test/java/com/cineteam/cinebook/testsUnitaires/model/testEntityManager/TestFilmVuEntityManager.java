@@ -71,21 +71,21 @@ public class TestFilmVuEntityManager {
     }
     
     @Test
-    public void supprimerFilmsVusDeLUtilisateur()
+    public void peuxSupprimerFilmsVusDeLUtilisateur()
     {
-        FilmVu filmVu = new FilmVu();
-        filmVu.setId_film("idfilm");
-        filmVu.setId_utilisateur(new Long(1));
-        entityManager.enregistrerFilmVu(filmVu);
-        
         Utilisateur utilisateur = new Utilisateur();
         utilisateur.setPseudo("pseudo");
         utilisateur.setLogin("login");
         utilisateur.setMdp("mdp");
         utilisateur.setId_droit(1);
         utilisateurEntityManager.creerUtilisateur(utilisateur);
+        FilmVu filmVu = new FilmVu();
+        filmVu.setId_film("idfilm");
         filmVu.setId_utilisateur(utilisateur.getId());
+        entityManager.enregistrerFilmVu(filmVu);
         
         entityManager.supprimerFilmsVus(utilisateur.getId());
+        
+        assertTrue(entityManager.rechercherFilmsVus(utilisateur.getId()).isEmpty());
     }
 }

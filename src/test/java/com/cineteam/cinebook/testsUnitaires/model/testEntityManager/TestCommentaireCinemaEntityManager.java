@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsUnitaires.model.testEntityManager;
 
 import com.cineteam.cinebook.model.commentaire.CommentaireCinema;
-import com.cineteam.cinebook.model.utilisateur.Utilisateur;
 import com.cineteam.cinebook.model.commentaire.CommentaireCinemaEntityManager;
+import com.cineteam.cinebook.model.utilisateur.Utilisateur;
 import com.cineteam.cinebook.model.utilisateur.UtilisateurEntityManager;
 import java.util.Date;
 import java.util.List;
@@ -36,20 +36,12 @@ public class TestCommentaireCinemaEntityManager {
     @Test
     public void enregistreUnUtilisateurEnBaseSiInfosNecessairesSaisies() 
     {
-        CommentaireCinema commentaireCinema = new CommentaireCinema();
-        commentaireCinema.setDate(new Date());
-        commentaireCinema.setId_cinema("1");
-        commentaireCinema.setTexte("texte");
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setLogin("login");
-        utilisateur.setMdp("mdp");
-        utilisateur.setId_droit(1);
+        CommentaireCinema commentaireCinema = commentaireCinema();
+        Utilisateur utilisateur = utilisateur();
         utilisateurEntityManager.creerUtilisateur(utilisateur);
         commentaireCinema.setUtilisateur(utilisateur);
         
         entityManager.creerCommentaire_Cinema(commentaireCinema);
-        
         
         assertTrue(!entityManager.rechercherCommentaires_cinema("1").isEmpty());
         assertTrue(entityManager.rechercherCommentaires_cinema("1").get(0).equals(commentaireCinema));
@@ -66,15 +58,8 @@ public class TestCommentaireCinemaEntityManager {
     @Test
     public void listeCommentairesCinemaEnBaseSiExistent() 
     {        
-        CommentaireCinema commentaire_cinema = new CommentaireCinema();
-        commentaire_cinema.setDate(new Date());
-        commentaire_cinema.setId_cinema("1");
-        commentaire_cinema.setTexte("texte");
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setLogin("login");
-        utilisateur.setMdp("mdp");
-        utilisateur.setId_droit(1);
+        CommentaireCinema commentaire_cinema = commentaireCinema();
+        Utilisateur utilisateur = utilisateur();
         utilisateurEntityManager.creerUtilisateur(utilisateur);
         commentaire_cinema.setUtilisateur(utilisateur);
         entityManager.creerCommentaire_Cinema(commentaire_cinema);
@@ -88,17 +73,10 @@ public class TestCommentaireCinemaEntityManager {
     }
         
     @Test
-    public void supprimeCommentaireCinemaDeLUtilisateur()
+    public void peuxSupprimeCommentaireCinemaDeLUtilisateur()
     {
-        CommentaireCinema commentaire_cinema = new CommentaireCinema();
-        commentaire_cinema.setDate(new Date());
-        commentaire_cinema.setId_cinema("1");
-        commentaire_cinema.setTexte("texte");
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setLogin("login");
-        utilisateur.setMdp("mdp");
-        utilisateur.setId_droit(1);
+        CommentaireCinema commentaire_cinema = commentaireCinema();
+        Utilisateur utilisateur = utilisateur();
         utilisateurEntityManager.creerUtilisateur(utilisateur);
         commentaire_cinema.setUtilisateur(utilisateur);
         entityManager.creerCommentaire_Cinema(commentaire_cinema);
@@ -106,5 +84,24 @@ public class TestCommentaireCinemaEntityManager {
         entityManager.supprimerCommentairesCinemaDeLUtilisateur(utilisateur.getId());
         
         assertTrue(entityManager.rechercherCommentaires_cinema(commentaire_cinema.getId_cinema()).isEmpty());
+    }
+    
+    private CommentaireCinema commentaireCinema()
+    {
+        CommentaireCinema commentaireCinema = new CommentaireCinema();
+        commentaireCinema.setDate(new Date());
+        commentaireCinema.setId_cinema("1");
+        commentaireCinema.setTexte("texte");
+        return commentaireCinema;
+    }
+    
+    private Utilisateur utilisateur()
+    {
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setLogin("login");
+        utilisateur.setMdp("mdp");
+        utilisateur.setId_droit(1);
+        return utilisateur;
     }
 }

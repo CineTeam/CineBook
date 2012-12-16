@@ -10,6 +10,7 @@ public class MockCommentaireFilmEntityManager  implements ICommentaireFilmEntity
 {
     public List<CommentaireFilm> commentairesFilm = new ArrayList<CommentaireFilm>();
     public boolean commentaireFilmCree = false;
+    public boolean commentaireFilmSupprime = false;
     
     public void creerCommentaireFilm(CommentaireFilm commentaireFilm) 
     {
@@ -28,6 +29,7 @@ public class MockCommentaireFilmEntityManager  implements ICommentaireFilmEntity
 
     public void supprimerCommentaireFilmDeLUtilisateur(Long id_utilisateur) 
     {
+        commentaireFilmSupprime = true;
         List<CommentaireFilm> filmsASupprimer = new ArrayList<CommentaireFilm>();
         for(CommentaireFilm commentaireFilm : commentairesFilm)
             if(commentaireFilm.getUtilisateur().getId().equals(id_utilisateur))

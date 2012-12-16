@@ -28,11 +28,7 @@ public class TestUtilisateurEntityManager {
     @Test
     public void enregistreUnUtilisateurEnBaseSiInfosNecessairesSaisies() 
     {
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setLogin("login");
-        utilisateur.setMdp("mdp");
-        utilisateur.setId_droit(1);
+        Utilisateur utilisateur = utilisateur();
         
         entityManager.creerUtilisateur(utilisateur);
         
@@ -52,11 +48,7 @@ public class TestUtilisateurEntityManager {
     @Test
     public void rechercheUtilisateurEnBaseSiExiste() 
     {        
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setLogin("login");
-        utilisateur.setMdp("mdp");
-        utilisateur.setId_droit(1);
+        Utilisateur utilisateur = utilisateur();
         entityManager.creerUtilisateur(utilisateur);
         
         Utilisateur utilisateur_recherche = entityManager.rechercherUtilisateur(utilisateur.getLogin());
@@ -81,11 +73,7 @@ public class TestUtilisateurEntityManager {
     @Test
     public void modifieLUtilisateurEnBaseSiExiste()
     {
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setLogin("login");
-        utilisateur.setMdp("mdp");
-        utilisateur.setId_droit(1);
+        Utilisateur utilisateur = utilisateur();
         entityManager.creerUtilisateur(utilisateur);
         utilisateur.setAdresse("adresse");
         utilisateur.setCode_postal("33000");
@@ -99,20 +87,24 @@ public class TestUtilisateurEntityManager {
         assertEquals(utilisateur_modifie.getCode_postal(),utilisateur.getCode_postal());
         assertEquals(utilisateur_modifie.getVille(),utilisateur.getVille());
     }
-    
+        
     @Test
-    public void supprimerUtilisateur()
+    public void peuxSupprimerUtilisateur()
     {
+        Utilisateur utilisateur = utilisateur();
+        entityManager.creerUtilisateur(utilisateur);
+        
+        entityManager.supprimerUtilisateur(utilisateur.getId());
+        
+        assertNull(entityManager.rechercherUtilisateur(utilisateur.getLogin()));
+    }
+    
+    private Utilisateur utilisateur(){
         Utilisateur utilisateur = new Utilisateur();
         utilisateur.setPseudo("pseudo");
         utilisateur.setLogin("login");
         utilisateur.setMdp("mdp");
         utilisateur.setId_droit(1);
-        entityManager.creerUtilisateur(utilisateur);
-        utilisateur.setAdresse("adresse");
-        utilisateur.setCode_postal("33000");
-        utilisateur.setVille("ville");
-        
-        entityManager.supprimerUtilisateur(utilisateur.getId());
+        return utilisateur;
     }
 }

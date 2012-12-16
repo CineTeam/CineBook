@@ -38,15 +38,8 @@ public class TestCommentaireFilmEntityManager
     @Test
     public void enregistreUnUtilisateurEnBaseSiInfosNecessairesSaisies() 
     {
-        CommentaireFilm commentaireFilm = new CommentaireFilm();
-        commentaireFilm.setDate(new Date());
-        commentaireFilm.setId_film("1");
-        commentaireFilm.setTexte("texte");
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setLogin("login");
-        utilisateur.setMdp("mdp");
-        utilisateur.setId_droit(1);
+        CommentaireFilm commentaireFilm = commentaireFilm();
+        Utilisateur utilisateur = utilisateur();
         utilisateurEntityManager.creerUtilisateur(utilisateur);
         commentaireFilm.setUtilisateur(utilisateur);
         
@@ -67,15 +60,8 @@ public class TestCommentaireFilmEntityManager
     @Test
     public void listeCommentairesCinemaEnBaseSiExistent() 
     {        
-        CommentaireFilm commentaireFilm = new CommentaireFilm();
-        commentaireFilm.setDate(new Date());
-        commentaireFilm.setId_film("1");
-        commentaireFilm.setTexte("texte");
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setLogin("login");
-        utilisateur.setMdp("mdp");
-        utilisateur.setId_droit(1);
+        CommentaireFilm commentaireFilm = commentaireFilm();
+        Utilisateur utilisateur = utilisateur();
         utilisateurEntityManager.creerUtilisateur(utilisateur);
         commentaireFilm.setUtilisateur(utilisateur);
         entityManager.creerCommentaireFilm(commentaireFilm);
@@ -89,21 +75,33 @@ public class TestCommentaireFilmEntityManager
     }
     
     @Test
-    public void supprimeCommentairesCinemaDeLUtilisateur()
+    public void peuxSupprimerCommentairesCinemaDeLUtilisateur()
     {
-        CommentaireFilm commentaireFilm = new CommentaireFilm();
-        commentaireFilm.setDate(new Date());
-        commentaireFilm.setId_film("1");
-        commentaireFilm.setTexte("texte");
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setLogin("login");
-        utilisateur.setMdp("mdp");
-        utilisateur.setId_droit(1);
+        CommentaireFilm commentaireFilm = commentaireFilm();
+        Utilisateur utilisateur = utilisateur();
         utilisateurEntityManager.creerUtilisateur(utilisateur);
         commentaireFilm.setUtilisateur(utilisateur);
         entityManager.creerCommentaireFilm(commentaireFilm);
         
         entityManager.supprimerCommentaireFilmDeLUtilisateur(utilisateur.getId());
+        
+        assertTrue(entityManager.rechercherCommentairesFilm(commentaireFilm.getId_film()).isEmpty());
+    }
+    
+    private CommentaireFilm commentaireFilm(){
+        CommentaireFilm commentaireFilm = new CommentaireFilm();
+        commentaireFilm.setDate(new Date());
+        commentaireFilm.setId_film("1");
+        commentaireFilm.setTexte("texte");
+        return commentaireFilm;
+    }
+    
+    private Utilisateur utilisateur(){
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setLogin("login");
+        utilisateur.setMdp("mdp");
+        utilisateur.setId_droit(1);
+        return utilisateur;
     }
 }

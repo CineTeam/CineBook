@@ -10,13 +10,16 @@ public class MockFilmVuEntityManager  implements IFilmVuEntityManager
 {
     public List<FilmVu> filmsVus = new ArrayList<FilmVu>();
     public boolean filmVuEnregistre = false;
+    public boolean filmVuSupprime = false;
     
-    public void enregistrerFilmVu(FilmVu filmVu) {
+    public void enregistrerFilmVu(FilmVu filmVu) 
+    {
         filmVuEnregistre = true;
         filmsVus.add(filmVu);
     }
 
-    public List<FilmVu> rechercherFilmsVus(Long id_utilisateur) {
+    public List<FilmVu> rechercherFilmsVus(Long id_utilisateur) 
+    {
         List<FilmVu> resultat = new ArrayList<FilmVu>(); 
         for(FilmVu filmVu : filmsVus)
             if(filmVu.getId_utilisateur().equals(id_utilisateur))
@@ -24,7 +27,9 @@ public class MockFilmVuEntityManager  implements IFilmVuEntityManager
         return resultat;
     }
 
-    public void supprimerFilmsVus(Long id_utilisateur) {
+    public void supprimerFilmsVus(Long id_utilisateur) 
+    {
+        filmVuSupprime = true;
         List<FilmVu> filmVusASupprimer = new ArrayList<FilmVu>(); 
         for(FilmVu filmVu : filmsVus)
             if(filmVu.getId_utilisateur().equals(id_utilisateur))

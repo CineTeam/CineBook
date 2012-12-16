@@ -12,14 +12,15 @@ import javax.servlet.http.HttpServletRequest;
 public class SupprimerUtilisateurAction implements Action{
     
     private IUtilisateurEntityManager entityManager;
-    private ICommentaireFilmEntityManager entityManagerFilm;
-    private ICommentaireCinemaEntityManager entityManagerCinema;
+    private ICommentaireFilmEntityManager entityManagerCommentaireFilm;
+    private ICommentaireCinemaEntityManager entityManagerCommentaireCinema;
     private IFilmVuEntityManager entityManagerFilmVu;
     
-    public SupprimerUtilisateurAction(IUtilisateurEntityManager _entityManager, ICommentaireFilmEntityManager _entityManagerFilm, ICommentaireCinemaEntityManager _entityManagerCinema, IFilmVuEntityManager _entityManagerFilmVu) {
+    public SupprimerUtilisateurAction(IUtilisateurEntityManager _entityManager, ICommentaireFilmEntityManager _entityManagerCommentaireFilm, ICommentaireCinemaEntityManager _entityManagerCommentaireCinema, IFilmVuEntityManager _entityManagerFilmVu) 
+    {
         entityManager = _entityManager;
-        entityManagerFilm = _entityManagerFilm;
-        entityManagerCinema = _entityManagerCinema;
+        entityManagerCommentaireFilm = _entityManagerCommentaireFilm;
+        entityManagerCommentaireCinema = _entityManagerCommentaireCinema;
         entityManagerFilmVu = _entityManagerFilmVu;
     }
     
@@ -27,13 +28,14 @@ public class SupprimerUtilisateurAction implements Action{
     {
         Utilisateur utilisateur = (Utilisateur)request.getSession().getAttribute("utilisateur");
         
-        entityManagerFilm.supprimerCommentaireFilmDeLUtilisateur(utilisateur.getId());
-        entityManagerCinema.supprimerCommentairesCinemaDeLUtilisateur(utilisateur.getId());
-        entityManagerFilmVu.supprimerFilmsVus(utilisateur.getId());
+        if(utilisateur!=null){
+            entityManagerCommentaireFilm.supprimerCommentaireFilmDeLUtilisateur(utilisateur.getId());
+            entityManagerCommentaireCinema.supprimerCommentairesCinemaDeLUtilisateur(utilisateur.getId());
+            entityManagerFilmVu.supprimerFilmsVus(utilisateur.getId());
+            entityManager.supprimerUtilisateur(utilisateur.getId());
+        }
         
-        entityManager.supprimerUtilisateur(utilisateur.getId());
         request.getSession().invalidate();
-        
         return "index.jsp";
     }
 }
