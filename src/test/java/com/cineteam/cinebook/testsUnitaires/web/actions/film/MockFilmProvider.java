@@ -1,6 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.film;
 
 import com.cineteam.cinebook.model.film.Film;
+import com.cineteam.cinebook.model.film.FilmVu;
 import com.cineteam.cinebook.model.film.IFilmProvider;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,18 +45,18 @@ public class MockFilmProvider implements IFilmProvider
         return film;
     }
     
-    public List<Film> getFilmsParIds(List<String> IdsFilms)
+    public List<Film> getFilmsParIds(List<FilmVu> idsFilms)
     {
-        List<Film> filmsVus = new ArrayList<Film>();
-        if(IdsFilms !=null)
+        List<Film> films = new ArrayList<Film>();
+        if(idsFilms !=null)
         {
-            for(int i =0; i< IdsFilms.size(); i++)
+            for(int i =0; i< idsFilms.size(); i++)
             {
-                Film film = getDetailFilm(IdsFilms.get(i));
-                filmsVus.add(film);
+                Film film = getDetailFilm(idsFilms.get(i).getId_film());
+                films.add(film);
             }
         }
-        return filmsVus;
+        return films;
     }
     
 }

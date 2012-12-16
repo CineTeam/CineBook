@@ -2,6 +2,7 @@ package com.cineteam.cinebook.testsDIntegration;
 
 import com.cineteam.cinebook.model.film.Film;
 import com.cineteam.cinebook.model.film.FilmProvider;
+import com.cineteam.cinebook.model.film.FilmVu;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
 import java.util.ArrayList;
 import java.util.List;
@@ -70,12 +71,12 @@ public class TestFilmProvider {
     public void retourneListeFilmPourListeId()
     {
         FilmProvider filmProvider = new FilmProvider();
+        FilmVu filmVu = new FilmVu();
+        filmVu.setId_film("61282");
+        List<FilmVu> filmsVus = new ArrayList<FilmVu>();
+        filmsVus.add(filmVu);
         
-        List<String> IdsFilm = new ArrayList<String>();
-        IdsFilm.add("61282");
-        IdsFilm.add("10");
-        
-        List<Film> films = filmProvider.getFilmsParIds(IdsFilm);
+        List<Film> films = filmProvider.getFilmsParIds(filmsVus);
       
         assertNotNull(films);
         assertTrue(films.size()>0);
@@ -86,7 +87,6 @@ public class TestFilmProvider {
     {
         FilmProvider filmProvider = new FilmProvider();
         
-        assertTrue(filmProvider.getFilmsParIds(null).isEmpty());  
-        
+        assertTrue(filmProvider.getFilmsParIds(null).isEmpty());      
     }
 }

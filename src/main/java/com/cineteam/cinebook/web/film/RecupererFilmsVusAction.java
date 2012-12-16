@@ -11,12 +11,12 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 /** @author Ikram */
-public class RecupererFilmsVusActions implements Action {
+public class RecupererFilmsVusAction implements Action {
 
     private IFilmProvider provider;
     private IFilmVuEntityManager em;
         
-    public RecupererFilmsVusActions(IFilmProvider _provider, IFilmVuEntityManager _em) {
+    public RecupererFilmsVusAction(IFilmProvider _provider, IFilmVuEntityManager _em) {
         provider = _provider;
         em = _em;
     }
@@ -29,18 +29,12 @@ public class RecupererFilmsVusActions implements Action {
             List<FilmVu> filmsVusParIds = em.rechercherFilmsVus(utilisateur.getId());
             if(!filmsVusParIds.isEmpty())
             {
-                List<String> IdsFilmsVus = new ArrayList<String>();
-                for(int i=0; i<filmsVusParIds.size();i++)
-                {
-                    IdsFilmsVus.add(filmsVusParIds.get(i).getId_film());
-                }
-                filmsVus = provider.getFilmsParIds(IdsFilmsVus);
+                filmsVus = provider.getFilmsParIds(filmsVusParIds);
             }
         }
+        
         request.setAttribute("filmsVus", filmsVus);           
         return "filmsVus.jsp";   
     }
-
-    
-     
+  
 }
