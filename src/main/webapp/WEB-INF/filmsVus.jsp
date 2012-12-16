@@ -25,7 +25,7 @@
                         </div>
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
-                            <div id="slider">
+                           <div class="entry">
                                 <form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
                                     <table>
                                         <c:choose>

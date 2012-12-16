@@ -19,7 +19,7 @@
                 <div id="content">
                     <div class="post">
                         <div id="entete">
-                            <h1>Profil</h1>
+                            <h1>Mon Compte</h1>
                         </div>
                         <div style="clear: both;">&nbsp;</div>
                         <div class="entry">
@@ -29,7 +29,7 @@
                             <c:if test = "${sessionScope.utilisateur!=null}">
                                 <c:choose>
                                     <c:when test="${empty sessionScope.utilisateur}">
-                                        Aucun profil ne correspond à ce pseudo
+                                        Aucun compte ne correspond à ce pseudo
                                     </c:when>
                                     <c:otherwise>
                                         <div align="center">
@@ -71,7 +71,7 @@
                                 <br/><br/>
                             </c:if>
                              <c:if test = "${sessionScope.utilisateur == null}">  
-                                Aucun profil ne correspond.
+                                Aucun compte ne correspond.
                             </c:if>
                         </div>
                     </div>

@@ -7,10 +7,10 @@
         <table>
             <tr>
                 <td>
-                    <a href="ServletMembre?action=RecupererFilmsVusActions">Films vus</a>
+                    <a href="ServletMembre?action=RecupererFilmsVusActions">Mes films</a>
                 </td>
                 <td>
-                    <a href="ServletMembre?vue=profilUtilisateur.jsp">Mon Profil</a>
+                    <a href="ServletMembre?vue=profilUtilisateur.jsp">Mon compte</a>
                 </td>
                 <td>
                     <form action="ServletMembre?action=seDeconnecterAction" method="post" >
