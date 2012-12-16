@@ -6,6 +6,7 @@ import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Methodes;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.NiveauDetail;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Ordre;
 import com.cineteam.cinebook.model.provider.UrlProviderSource;
+import java.util.ArrayList;
 import java.util.List;
 
 /** @author alexis */
@@ -38,4 +39,17 @@ public class FilmProvider implements IFilmProvider
         return film;
     }
     
+    public List<Film> getFilmsParIds(List<String> IdsFilms)
+    {
+        List<Film> filmsVus = new ArrayList<Film>();
+        if(IdsFilms != null)
+        {
+            for(int i =0; i< IdsFilms.size(); i++)
+            {
+                Film film = getDetailFilm(IdsFilms.get(i));
+                filmsVus.add(film);
+            }
+        }
+        return filmsVus;
+    }
 }

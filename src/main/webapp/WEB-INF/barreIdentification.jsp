@@ -7,6 +7,9 @@
         <table>
             <tr>
                 <td>
+                    <a href="ServletMembre?action=RecupererFilmsVusActions">Films vus</a>
+                </td>
+                <td>
                     <a href="ServletMembre?vue=profilUtilisateur.jsp">Mon Profil</a>
                 </td>
                 <td>
