@@ -2,10 +2,14 @@ package com.cineteam.cinebook.web.servlets;
 
 import com.cineteam.cinebook.model.commentaire.CommentaireCinemaEntityManager;
 import com.cineteam.cinebook.model.commentaire.CommentaireFilmEntityManager;
+<<<<<<< HEAD
 import com.cineteam.cinebook.model.film.FilmVu;
+=======
+>>>>>>> f588aba3ceef014a8d7ceab337883ed98b98afda
 import com.cineteam.cinebook.model.film.FilmVuEntityManager;
 import com.cineteam.cinebook.model.utilisateur.UtilisateurEntityManager;
 import com.cineteam.cinebook.web.cinema.DeposerCommentaireCinemaAction;
+import com.cineteam.cinebook.web.film.AjouterFilmAuxFilmsVusAction;
 import com.cineteam.cinebook.web.film.DeposerCommentaireFilmAction;
 import com.cineteam.cinebook.web.utilisateur.ModifierUtilisateurAction;
 import com.cineteam.cinebook.web.utilisateur.SeDeconnecterAction;
@@ -26,5 +30,6 @@ public class ServletMembre extends CineBookServlet {
         actions.put("deposerCommentaireFilmAction", new DeposerCommentaireFilmAction(new CommentaireFilmEntityManager()));
         actions.put("modifierUtilisateurAction", new ModifierUtilisateurAction(new UtilisateurEntityManager()));                
         actions.put("supprimerUtilisateurAction", new SupprimerUtilisateurAction(new UtilisateurEntityManager(), new CommentaireFilmEntityManager(), new CommentaireCinemaEntityManager(), new FilmVuEntityManager()));
-}
+        actions.put("ajouterFilmAuxFilmsVusAction", new AjouterFilmAuxFilmsVusAction(new FilmVuEntityManager()));                  
+    }
 }

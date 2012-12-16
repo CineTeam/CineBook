@@ -1,5 +1,6 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.film;
 
+import com.cineteam.cinebook.model.film.FilmVu;
 import com.cineteam.cinebook.model.utilisateur.Utilisateur;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
 import com.cineteam.cinebook.web.film.AjouterFilmAuxFilmsVusAction;
@@ -61,6 +62,30 @@ public class TestAjouterFilmAuxFilmsVusAction {
         final Map parametres = new HashMap();
         parametres.put("cpt","id_film");
         request = new AddedParametersRequestWrapper(request, parametres);   
+        
+        ajouterFilmAuxFilmsVusAction.execute(request);
+        
+        assertFalse(fauxEntityManager.filmVuEnregistre);
+        assertTrue(fauxEntityManager.rechercherFilmsVus(new Long(0)).isEmpty());
+    }
+    
+    @Test
+    public void nEnregistrePasFilmSiDejaDansLaListe()
+    {
+        String idFilm = "id_film";
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setId(new Long(1));
+        utilisateur.setLogin("login");
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setMdp("mdp");
+        final Map parametres = new HashMap();
+        parametres.put("cpt",idFilm);
+        request = new AddedParametersRequestWrapper(request, parametres);    
+        request.getSession().setAttribute("utilisateur",utilisateur); 
+        FilmVu filmVu = new FilmVu();
+        filmVu.setId_film(idFilm);
+        filmVu.setId_utilisateur(utilisateur.getId());
+        fauxEntityManager.filmsVus.add(filmVu);
         
         ajouterFilmAuxFilmsVusAction.execute(request);
         

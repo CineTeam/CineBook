@@ -76,6 +76,13 @@
                                                     <c:if test = "${film.duree!=null}">Durée : ${film.duree}<br></c:if>
                                                     <c:if test = "${film.note_presse!=null}">Presse : <f:formatNumber value="${film.note_presse}" maxFractionDigits="1" /> / 5<br></c:if>
                                                     <c:if test = "${film.note_utilisateurs!=null}">Spectateurs : <f:formatNumber value="${film.note_utilisateurs}" maxFractionDigits="1" /> / 5</c:if>
+                                                    <c:if test ="${sessionScope.utilisateur != null}">
+                                                        <form action="ServletMembre?action=ajouterFilmAuxFilmsVusAction" method="post">
+                                                            <input type="hidden" name="cpt" value="${requestScope.film.id}" />
+                                                            <input type="hidden" name="code_postal" value="${requestScope.code_postal}" />
+                                                            <input type="submit" value="J'ai vu ce film !" class='button_clickable'/>
+                                                        </form>
+                                                    </c:if>
                                                 </div>
                                             </div>
                                             <div class='bande_annonce'>

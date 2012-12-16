@@ -17,7 +17,6 @@ public class AjouterFilmAuxFilmsVusAction implements Action{
         entityManager = _entityManager;
     }
     
-    
     public String execute(HttpServletRequest request) {
         
         String indexFilm = (String) request.getParameter("cpt");
@@ -25,16 +24,21 @@ public class AjouterFilmAuxFilmsVusAction implements Action{
         Utilisateur utilisateur = (Utilisateur) request.getSession().getAttribute("utilisateur");
         
         if(!StringUtils.estVide(indexFilm) && utilisateur!=null){
-            FilmVu filmVu = new FilmVu();
-            filmVu.setId_film(indexFilm);
-            filmVu.setId_utilisateur(utilisateur.getId());
-            entityManager.enregistrerFilmVu(filmVu);
+            if(!filmDejaDansLesFilmsVu(indexFilm,utilisateur.getId())){
+                FilmVu filmVu = new FilmVu();
+                filmVu.setId_film(indexFilm);
+                filmVu.setId_utilisateur(utilisateur.getId());
+                entityManager.enregistrerFilmVu(filmVu);
+            }
         }
         
-        //inclure les input au form du boutton dans la jsp
-        //<input type="hidden" name="cpt" value="${requestScope.film.id}" />
-        //<input type="hidden" name="code_postal" value="${requestScope.code_postal}" />
         return "ServletVisiteur?action=consulterDetailFilmAction&cpt="+indexFilm+"&recherche="+CP_recherche;
     }
-    
+
+    private boolean filmDejaDansLesFilmsVu(String idFilm, Long idUtilisateur){
+        for(FilmVu filmVu : entityManager.rechercherFilmsVus(idUtilisateur))
+            if(filmVu.getId_film().equals(idFilm))
+                return true;
+        return false;
+    }
 }
