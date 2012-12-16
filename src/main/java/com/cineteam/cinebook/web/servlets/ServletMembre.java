@@ -2,10 +2,6 @@ package com.cineteam.cinebook.web.servlets;
 
 import com.cineteam.cinebook.model.commentaire.CommentaireCinemaEntityManager;
 import com.cineteam.cinebook.model.commentaire.CommentaireFilmEntityManager;
-<<<<<<< HEAD
-import com.cineteam.cinebook.model.film.FilmVu;
-=======
->>>>>>> f588aba3ceef014a8d7ceab337883ed98b98afda
 import com.cineteam.cinebook.model.film.FilmVuEntityManager;
 import com.cineteam.cinebook.model.utilisateur.UtilisateurEntityManager;
 import com.cineteam.cinebook.web.cinema.DeposerCommentaireCinemaAction;
