@@ -32,7 +32,7 @@
                                         <c:when test = "${requestScope.filmsVus != null}">                                        
                                             <c:choose>
                                                 <c:when test = "${empty requestScope.filmsVus}">
-                                                    <tr>Aucun film</tr>
+                                                    <tr>Vous n'avez vu aucun film pour le moment !</tr>
                                                 </c:when>
                                                 <c:otherwise>
                                                     <c:forEach var="film" items="${requestScope.filmsVus}">                           

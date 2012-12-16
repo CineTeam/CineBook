@@ -11,6 +11,7 @@ class MockUtilisateurEntityManager implements IUtilisateurEntityManager{
     public List<Utilisateur> utilisateurs = new ArrayList<Utilisateur>();
     public boolean utilisateurCree = false;
     public boolean utilisateurModifie = false;
+    public boolean utilisateurSupprime = false;
     
     public void creerUtilisateur(Utilisateur utilisateur) {
         utilisateurCree = true;
@@ -24,10 +25,23 @@ class MockUtilisateurEntityManager implements IUtilisateurEntityManager{
         return null;     
     }
 
+    
     public void modifierUtilisateur(Utilisateur utilisateur) {
         utilisateurModifie = true;
         Utilisateur ancien_utilisateur = this.rechercherUtilisateur(utilisateur.getLogin());
         utilisateurs.set(utilisateurs.indexOf(ancien_utilisateur),utilisateur);
     }
+
+    public void supprimerUtilisateur(Long id_utilisateur) {
+        utilisateurSupprime = true;
+        Utilisateur utilisateurASupprimer = null;
+        for(Utilisateur utilisateur : utilisateurs)
+            if(utilisateur.getId().equals(id_utilisateur))
+                utilisateurASupprimer = utilisateur;
+        
+        if(utilisateurASupprimer != null)
+            utilisateurs.remove(utilisateurASupprimer);
+    }
+    
     
 }

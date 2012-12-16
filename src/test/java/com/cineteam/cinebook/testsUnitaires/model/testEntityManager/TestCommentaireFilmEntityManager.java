@@ -87,4 +87,23 @@ public class TestCommentaireFilmEntityManager
         assertEquals(commentairesFilm.get(0).getTexte(),"texte");
         assertEquals(commentairesFilm.get(0).getUtilisateur().getLogin(),"login");
     }
+    
+    @Test
+    public void supprimeCommentairesCinemaDeLUtilisateur()
+    {
+        CommentaireFilm commentaireFilm = new CommentaireFilm();
+        commentaireFilm.setDate(new Date());
+        commentaireFilm.setId_film("1");
+        commentaireFilm.setTexte("texte");
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setLogin("login");
+        utilisateur.setMdp("mdp");
+        utilisateur.setId_droit(1);
+        utilisateurEntityManager.creerUtilisateur(utilisateur);
+        commentaireFilm.setUtilisateur(utilisateur);
+        entityManager.creerCommentaireFilm(commentaireFilm);
+        
+        entityManager.supprimerCommentaireFilmDeLUtilisateur(utilisateur.getId());
+    }
 }

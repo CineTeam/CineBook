@@ -2,6 +2,8 @@ package com.cineteam.cinebook.testsUnitaires.model.testEntityManager;
 
 import com.cineteam.cinebook.model.film.FilmVu;
 import com.cineteam.cinebook.model.film.FilmVuEntityManager;
+import com.cineteam.cinebook.model.utilisateur.Utilisateur;
+import com.cineteam.cinebook.model.utilisateur.UtilisateurEntityManager;
 import java.util.List;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -11,11 +13,13 @@ import org.junit.Test;
 public class TestFilmVuEntityManager {
     
     private FilmVuEntityManager entityManager;
+    private UtilisateurEntityManager utilisateurEntityManager;
     
     @Before
     public void setUp()
     {
         entityManager = new FilmVuEntityManager();
+        utilisateurEntityManager = new UtilisateurEntityManager();
     }
     
     @Test
@@ -66,5 +70,22 @@ public class TestFilmVuEntityManager {
         assertEquals(filmsVus.get(0).getId_utilisateur(),new Long(1));
     }
     
-    
+    @Test
+    public void supprimerFilmsVusDeLUtilisateur()
+    {
+        FilmVu filmVu = new FilmVu();
+        filmVu.setId_film("idfilm");
+        filmVu.setId_utilisateur(new Long(1));
+        entityManager.enregistrerFilmVu(filmVu);
+        
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setLogin("login");
+        utilisateur.setMdp("mdp");
+        utilisateur.setId_droit(1);
+        utilisateurEntityManager.creerUtilisateur(utilisateur);
+        filmVu.setId_utilisateur(utilisateur.getId());
+        
+        entityManager.supprimerFilmsVus(utilisateur.getId());
+    }
 }

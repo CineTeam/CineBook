@@ -32,5 +32,9 @@ public class CommentaireFilmEntityManager implements ICommentaireFilmEntityManag
         Query query= em.createQuery("from CommentaireFilm where id_film = :id_film order by date desc").setParameter("id_film",idFilm);
         return (List<CommentaireFilm>) query.getResultList();
     }
-    
+
+    public void supprimerCommentaireFilmDeLUtilisateur(Long id_utilisateur) {
+        Query query = em.createNativeQuery("DELETE FROM commentairefilm WHERE id_utilisateur = :id_utilisateur").setParameter("id_utilisateur", id_utilisateur);
+        query.executeUpdate();
+    }   
 }

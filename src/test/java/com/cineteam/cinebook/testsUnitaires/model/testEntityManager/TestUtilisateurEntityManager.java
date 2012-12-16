@@ -99,4 +99,20 @@ public class TestUtilisateurEntityManager {
         assertEquals(utilisateur_modifie.getCode_postal(),utilisateur.getCode_postal());
         assertEquals(utilisateur_modifie.getVille(),utilisateur.getVille());
     }
+    
+    @Test
+    public void supprimerUtilisateur()
+    {
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setLogin("login");
+        utilisateur.setMdp("mdp");
+        utilisateur.setId_droit(1);
+        entityManager.creerUtilisateur(utilisateur);
+        utilisateur.setAdresse("adresse");
+        utilisateur.setCode_postal("33000");
+        utilisateur.setVille("ville");
+        
+        entityManager.supprimerUtilisateur(utilisateur.getId());
+    }
 }
