@@ -38,5 +38,11 @@ public class UtilisateurEntityManager implements IUtilisateurEntityManager {
         ancien_utilisateur.setVille(utilisateur.getVille());
         em.refresh(ancien_utilisateur);
     }
+
+    public void supprimerUtilisateur(Long id_utilisateur) {
+        Query query = em.createNativeQuery("DELETE FROM Utilisateur WHERE id = :id").setParameter("id", id_utilisateur);
+        query.executeUpdate();
+        
+    }
     
 }

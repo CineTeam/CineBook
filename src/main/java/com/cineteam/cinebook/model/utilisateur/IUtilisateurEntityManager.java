@@ -6,5 +6,5 @@ public interface IUtilisateurEntityManager {
     public void creerUtilisateur(Utilisateur utilisateur);
     public Utilisateur rechercherUtilisateur(String login);
     public void modifierUtilisateur(Utilisateur utilisateur);
-
+    public void supprimerUtilisateur(Long id_utilisateur);
 }

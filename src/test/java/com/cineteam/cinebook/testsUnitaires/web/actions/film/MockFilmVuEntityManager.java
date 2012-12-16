@@ -24,4 +24,14 @@ public class MockFilmVuEntityManager  implements IFilmVuEntityManager
         return resultat;
     }
 
+    public void supprimerFilmsVus(Long id_utilisateur) {
+        List<FilmVu> filmVusASupprimer = new ArrayList<FilmVu>(); 
+        for(FilmVu filmVu : filmsVus)
+            if(filmVu.getId_utilisateur().equals(id_utilisateur))
+                filmVusASupprimer.add(filmVu);
+        
+        for(FilmVu filmVu : filmVusASupprimer)
+            filmsVus.remove(filmVu);
+    }
+
 }

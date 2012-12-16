@@ -58,6 +58,7 @@
                                                     <tr>
                                                         <td align="center" colspan="2">
                                                             <br/>
+                                                            <a href="ServletMembre?action=supprimerUtilisateurAction">Supprimer mon compte</a>
                                                             <input type="submit" id="bouton_modifier" name="modifier" value="Valider" class='button_clickable'/>
                                                         </td>
                                                     </tr>

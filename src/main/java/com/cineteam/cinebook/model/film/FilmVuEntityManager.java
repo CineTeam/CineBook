@@ -28,5 +28,10 @@ public class FilmVuEntityManager implements IFilmVuEntityManager {
         Query query= em.createQuery("from FilmVu where id_utilisateur = :id_utilisateur").setParameter("id_utilisateur",id_utilisateur);
         return (List<FilmVu>) query.getResultList();
     }
+
+    public void supprimerFilmsVus(Long id_utilisateur) {
+        Query query = em.createNativeQuery("DELETE FROM filmvu WHERE id_utilisateur = :id_utilisateur").setParameter("id_utilisateur", id_utilisateur);
+        query.executeUpdate();
+    }
     
 }

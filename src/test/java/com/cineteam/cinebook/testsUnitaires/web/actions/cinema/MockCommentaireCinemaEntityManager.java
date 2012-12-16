@@ -23,5 +23,15 @@ public class MockCommentaireCinemaEntityManager implements ICommentaireCinemaEnt
                 resultat.add(commentaire_cinema);
         return resultat;     
     }
+
+    public void supprimerCommentairesCinemaDeLUtilisateur(Long id_utilisateur) {
+        List<CommentaireCinema> commentairesCinemaASupprimer = new ArrayList<CommentaireCinema>(); 
+        for(CommentaireCinema commentaire_cinema : commentaires_cinema)
+            if(commentaire_cinema.getUtilisateur().getId().equals(id_utilisateur))
+                commentairesCinemaASupprimer.add(commentaire_cinema);
+        
+        for(CommentaireCinema commentaire_cinema : commentairesCinemaASupprimer)
+            commentaires_cinema.remove(commentaire_cinema);
+    }
    
 }
