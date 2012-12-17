@@ -32,7 +32,7 @@ public class TestRechercherCinemaAction {
     @Test
     public void neRecherchePasdeCinemaSansParametreDeRecherche()
     {
-        request = new AddedParametersRequestWrapper(request);
+        request = new AddedParametersRequestWrapper(request,new HashMap());
         
         rechercherCinemaAction.execute(request);
         

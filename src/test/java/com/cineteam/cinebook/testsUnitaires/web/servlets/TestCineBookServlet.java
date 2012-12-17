@@ -34,7 +34,7 @@ public class TestCineBookServlet {
     @Test
     public void neDispatchePasSiVueNonRenseignee() throws ServletException, IOException 
     {
-        request = new AddedParametersRequestWrapper(request);
+        request = new AddedParametersRequestWrapper(request,new HashMap());
                 
         servlet.processRequest(request,response);
         

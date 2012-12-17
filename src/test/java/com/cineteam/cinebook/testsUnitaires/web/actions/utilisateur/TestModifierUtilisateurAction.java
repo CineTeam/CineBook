@@ -33,7 +33,7 @@ public class TestModifierUtilisateurAction {
     {
         final Utilisateur utilisateur = utilisateur();
         fauxEntityManager.creerUtilisateur(utilisateur);
-        request = new AddedParametersRequestWrapper(request);
+        request = new AddedParametersRequestWrapper(request,new HashMap());
         request.getSession().setAttribute("utilisateur", utilisateur);    
         
         modifierUtilisateurAction.execute(request);

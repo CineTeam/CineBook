@@ -29,9 +29,9 @@ public class TestAjouterFilmAuxFilmsVusAction {
     }
         
     @Test
-    public void neEnregistrePasFilmVuSiUtilisateurNonConnecteEtFilmNonSaisi()
+    public void nEnregistrePasFilmVuSiUtilisateurNonConnecteEtFilmNonSaisi()
     {
-        request = new AddedParametersRequestWrapper(request);
+        request = new AddedParametersRequestWrapper(request,new HashMap());
         
         ajouterFilmAuxFilmsVusAction.execute(request);
         
@@ -42,7 +42,7 @@ public class TestAjouterFilmAuxFilmsVusAction {
     @Test
     public void nEnregistrePasFilmVuSiFilmNonSaisi()
     {
-        request = new AddedParametersRequestWrapper(request);
+        request = new AddedParametersRequestWrapper(request,new HashMap());
         final Utilisateur utilisateur = utilisateur();
         request.getSession().setAttribute("utilisateur",utilisateur);       
         
