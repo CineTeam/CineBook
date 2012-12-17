@@ -5,6 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CinéBook</title>
+        <c:import url="header_javascript.jsp" />
         <link href="style/slider.css" rel="stylesheet" type="text/css" media="screen" />
     </head>
     <body>
