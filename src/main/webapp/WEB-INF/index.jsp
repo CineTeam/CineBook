@@ -7,10 +7,6 @@
         <meta name="description" content="" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CinéBook</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-        <link href="style/style.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="style/slider.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="style/profil.css" rel="stylesheet" type="text/css" media="screen" />
         <c:import url="header_javascript.jsp" />

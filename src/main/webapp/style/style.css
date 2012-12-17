@@ -112,33 +112,27 @@ a {
 
 #connexion{
     float: right;
-    margin-top: 25px;
-    text-align: right;
-    margin-right: 7px;
 }
 
-#connexion a{
-    float: right;
-    margin-right: 7px;
-    color: #5E5E5E;
-    text-decoration: underline;
-}
-
-    #connexion a:link,#connexion a:visited
-    {
-        color: #5E5E5E;
+    #identification{
+        margin-top: 25px;
     }
 
-    #connexion a:hover
-    {
-        color: #16737C;
-    }
+        .lien_inscription{
+            float: right;
+            color: #5E5E5E;
+            text-decoration: underline;
+        }
 
-#connexion p{
-    font-size: 15px;
-    font-weight: bold;
-    margin-right: 7px;
-}
+            .lien_inscription:link,.lien_inscription:visited
+            {
+                color: #5E5E5E;
+            }
+
+            .lien_inscription:hover
+            {
+                color: #16737C;
+            }
 
 .erreur_connexion{
     float:left;
@@ -307,7 +301,7 @@ a {
 }
 
 
-.clickable,.button_clickable,.format_clickable{
+.clickable,.button_clickable,.format_clickable,.img_clickable{
     cursor: pointer;
 }
 

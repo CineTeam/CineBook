@@ -1,0 +1,42 @@
+#identification_membre{
+    margin-top: 10px;
+}
+
+.bienvenue{
+    font-size: 15px;
+    font-weight: bold;
+    width: 140px;
+    height:25px;
+}
+
+.bienvenue img{
+    vertical-align: -7px;
+}
+
+#menu_membre { 
+    display: none;
+    position:absolute;
+    text-align: center;
+    width: 140px;
+    height:80px;
+}
+
+#menu_membre a{
+    display:block;
+    width : 140px;
+    height : 20px;
+    font-family: Tahoma;
+    font-size:14px;
+    color: #5E5E5E;
+    background-image: url(../images/lien_menu_membre.png) ;
+}
+
+    #menu_membre a:link,#menu_membre a:visited
+    {
+        color: #5E5E5E;
+    }
+
+    #menu_membre a:hover
+    {
+        color: #16737C;
+    }
