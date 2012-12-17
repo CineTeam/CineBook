@@ -23,7 +23,8 @@ public class TestConsulterDetailCinemaAction {
     private ConsulterDetailCinemaAction consulterDetailsCinemaAction ;
     
     @Before
-    public void setUp() {
+    public void setUp() 
+    {
         fauxProviderCinema = new MockCinemaProvider();
         fauxProviderSeance = new MockSeanceProvider();
         fauxEntityManager = new MockCommentaireCinemaEntityManager();
@@ -36,7 +37,7 @@ public class TestConsulterDetailCinemaAction {
     public void neConsultePasDetailCinemaSansCinemaSaisi()
     {
         String cinema_id = "";
-        request = new AddedParametersRequestWrapper(request);
+        request = new AddedParametersRequestWrapper(request,new HashMap());
         
         consulterDetailsCinemaAction.execute(request);
         
