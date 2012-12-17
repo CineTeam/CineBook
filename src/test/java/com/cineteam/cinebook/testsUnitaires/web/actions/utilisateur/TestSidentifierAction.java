@@ -92,7 +92,7 @@ public class TestSidentifierAction
     public void retourneUnEchecSiMdpUtilisateurDifferentMdpSaisi()
     {
         String login = "login";
-        Utilisateur utilisateur = new Utilisateur();
+        final Utilisateur utilisateur = new Utilisateur();
         utilisateur.setLogin(login);
         utilisateur.setMdp("motDePasse");
         fauxEntityManager.utilisateurs.add(utilisateur);
@@ -114,7 +114,7 @@ public class TestSidentifierAction
     {
         String login = "login";
         String mdp = "mdp";
-        Utilisateur utilisateur = new Utilisateur();
+        final Utilisateur utilisateur = new Utilisateur();
         utilisateur.setLogin(login);
         utilisateur.setMdp(mdp);
         fauxEntityManager.utilisateurs.add(utilisateur);

@@ -9,13 +9,12 @@ import com.cineteam.cinebook.testsUnitaires.web.actions.film.MockCommentaireFilm
 import com.cineteam.cinebook.testsUnitaires.web.actions.film.MockFilmVuEntityManager;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
 import com.cineteam.cinebook.web.utilisateur.SupprimerUtilisateurAction;
-import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.replay;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /** @author Cedric */
 public class TestSupprimerUtilisateurAction {
@@ -28,7 +27,7 @@ public class TestSupprimerUtilisateurAction {
     private MockFilmVuEntityManager fauxEntityManagerFilmsVus;
    
     @Before
-    public void setUp()
+    public void setUp() 
     {
         fauxEntityManagerUtilisateur = new MockUtilisateurEntityManager();
         fauxEntityManagerCommentaireFilm = new MockCommentaireFilmEntityManager();
@@ -42,7 +41,7 @@ public class TestSupprimerUtilisateurAction {
     @Test
     public void neSupprimePasLUtilisateurSiNEstPasConnecte()
     {
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request = new AddedParametersRequestWrapper(request);
         final Utilisateur utilisateur = utilisateur();
         fauxEntityManagerUtilisateur.utilisateurs.add(utilisateur);     
       
@@ -55,7 +54,7 @@ public class TestSupprimerUtilisateurAction {
     @Test
     public void supprimeLUtilisateurSiEstConnecte()
     {
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request = new AddedParametersRequestWrapper(request);
         final Utilisateur utilisateur = utilisateur();
         fauxEntityManagerUtilisateur.utilisateurs.add(utilisateur); 
         request.getSession().setAttribute("utilisateur",utilisateur);        
@@ -69,8 +68,8 @@ public class TestSupprimerUtilisateurAction {
     @Test
     public void supprimeLesCommentairesDeFilmsDeLUtilisateur()
     {
+        request = new AddedParametersRequestWrapper(request);
         final Utilisateur utilisateur = utilisateur();
-        request = new AddedParametersRequestWrapper(request, new HashMap());
         request.getSession().setAttribute("utilisateur",utilisateur);        
         CommentaireFilm commentaireFilm = new CommentaireFilm();
         commentaireFilm.setUtilisateur(utilisateur);
@@ -86,8 +85,8 @@ public class TestSupprimerUtilisateurAction {
     @Test
     public void supprimeLesCommentairesDeCinemaDeLUtilisateur()
     {
+        request = new AddedParametersRequestWrapper(request);
         final Utilisateur utilisateur = utilisateur();        
-        request = new AddedParametersRequestWrapper(request, new HashMap());
         request.getSession().setAttribute("utilisateur",utilisateur);    
         CommentaireCinema commentaireCinema = new CommentaireCinema();
         commentaireCinema.setUtilisateur(utilisateur);
@@ -103,8 +102,8 @@ public class TestSupprimerUtilisateurAction {
     @Test
     public void supprimeLesFilmsVusDeLUtilisateur()
     {
+        request = new AddedParametersRequestWrapper(request);
         final Utilisateur utilisateur = utilisateur();
-        request = new AddedParametersRequestWrapper(request, new HashMap());
         request.getSession().setAttribute("utilisateur",utilisateur);      
         FilmVu filmVu = new FilmVu();
         filmVu.setId_film("AZ");

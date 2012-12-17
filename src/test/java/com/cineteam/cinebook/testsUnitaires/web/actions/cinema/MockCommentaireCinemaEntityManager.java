@@ -1,7 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.cinema;
 
-import com.cineteam.cinebook.model.commentaire.ICommentaireCinemaEntityManager;
 import com.cineteam.cinebook.model.commentaire.CommentaireCinema;
+import com.cineteam.cinebook.model.commentaire.ICommentaireCinemaEntityManager;
 import java.util.ArrayList;
 import java.util.List;
 

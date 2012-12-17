@@ -31,7 +31,7 @@ public class TestAjouterFilmAuxFilmsVusAction {
     @Test
     public void neEnregistrePasFilmVuSiUtilisateurNonConnecteEtFilmNonSaisi()
     {
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request = new AddedParametersRequestWrapper(request);
         
         ajouterFilmAuxFilmsVusAction.execute(request);
         
@@ -42,12 +42,8 @@ public class TestAjouterFilmAuxFilmsVusAction {
     @Test
     public void nEnregistrePasFilmVuSiFilmNonSaisi()
     {
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setId(new Long(1));
-        utilisateur.setLogin("login");
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setMdp("mdp");
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request = new AddedParametersRequestWrapper(request);
+        final Utilisateur utilisateur = utilisateur();
         request.getSession().setAttribute("utilisateur",utilisateur);       
         
         ajouterFilmAuxFilmsVusAction.execute(request);
@@ -73,14 +69,10 @@ public class TestAjouterFilmAuxFilmsVusAction {
     public void nEnregistrePasFilmSiDejaDansLaListe()
     {
         String idFilm = "id_film";
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setId(new Long(1));
-        utilisateur.setLogin("login");
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setMdp("mdp");
         final Map parametres = new HashMap();
         parametres.put("cpt",idFilm);
         request = new AddedParametersRequestWrapper(request, parametres);    
+        final Utilisateur utilisateur = utilisateur();
         request.getSession().setAttribute("utilisateur",utilisateur); 
         FilmVu filmVu = new FilmVu();
         filmVu.setId_film(idFilm);
@@ -96,14 +88,10 @@ public class TestAjouterFilmAuxFilmsVusAction {
     @Test
     public void enregistreFilmVuSiUtilisateurConnecteEtFilmSaisi()
     {
-        Utilisateur utilisateur = new Utilisateur();
-        utilisateur.setId(new Long(1));
-        utilisateur.setLogin("login");
-        utilisateur.setPseudo("pseudo");
-        utilisateur.setMdp("mdp");
         final Map parametres = new HashMap();
         parametres.put("cpt","id_film");
         request = new AddedParametersRequestWrapper(request, parametres);   
+        final Utilisateur utilisateur = utilisateur();
         request.getSession().setAttribute("utilisateur",utilisateur); 
         
         ajouterFilmAuxFilmsVusAction.execute(request);
@@ -115,4 +103,12 @@ public class TestAjouterFilmAuxFilmsVusAction {
         assertEquals(fauxEntityManager.rechercherFilmsVus(utilisateur.getId()).get(0).getId_utilisateur(),utilisateur.getId());
     }
     
+    private Utilisateur utilisateur(){
+        Utilisateur utilisateur = new Utilisateur();
+        utilisateur.setId(new Long(1));
+        utilisateur.setLogin("login");
+        utilisateur.setPseudo("pseudo");
+        utilisateur.setMdp("mdp");
+        return utilisateur;
+    }
 }

@@ -36,7 +36,7 @@ public class TestConsulterDetailFilmAction {
     public void neConsultePasDetailFilmSansFilmSaisi()
     {
         String film_id = "";
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request = new AddedParametersRequestWrapper(request);
         
         consulterDetailsFilmAction.execute(request);
         
@@ -47,7 +47,8 @@ public class TestConsulterDetailFilmAction {
     }
     
     @Test
-    public void consulteDetailFilmAvecFilmSaisi() {
+    public void consulteDetailFilmAvecFilmSaisi() 
+    {
         String film_id = "10";
         final Map parametres = new HashMap();
         parametres.put("cpt",film_id);
@@ -61,7 +62,8 @@ public class TestConsulterDetailFilmAction {
     }
     
     @Test
-    public void nAffichePasLesCinemasEtLeursSeancesSansCodePostalRecherche()    {
+    public void nAffichePasLesCinemasEtLeursSeancesSansCodePostalRecherche()    
+    {
         String film_id = "10";
         String cp_recherche = "";
         final Map parametres = new HashMap();
@@ -76,7 +78,8 @@ public class TestConsulterDetailFilmAction {
     }
     
     @Test
-    public void afficheLesCinemasEtLeursSeancesAvecCodePostalRecherche() {
+    public void afficheLesCinemasEtLeursSeancesAvecCodePostalRecherche() 
+    {
         String film_id = "10";
         String cp_recherche = "33000";
         final Map parametres = new HashMap();
@@ -92,7 +95,8 @@ public class TestConsulterDetailFilmAction {
     }
     
     @Test
-    public void neListePasDeCommentairesSiPasDeCommentaire() {
+    public void neListePasDeCommentairesSiPasDeCommentaire() 
+    {
         String film_id = "10";
         final Map parametres = new HashMap();
         parametres.put("cpt",film_id);
@@ -105,7 +109,8 @@ public class TestConsulterDetailFilmAction {
     }
     
     @Test
-    public void listeLesCommentairesSiPresenceDeCommentaires() {
+    public void listeLesCommentairesSiPresenceDeCommentaires() 
+    {
         String film_id = "10";
         final Map parametres = new HashMap();
         parametres.put("cpt",film_id);

@@ -46,7 +46,7 @@ public class TestRecupererFilmsVusAction {
     @Test
     public void neRetournePasDeFilmVuSiPasDeFilmsVus() 
     { 
-        Utilisateur utilisateur = new Utilisateur();
+        final Utilisateur utilisateur = new Utilisateur();
         utilisateur.setId(33L);
         request = new AddedParametersRequestWrapper(request);   
         request.getSession().setAttribute("utilisateur",utilisateur);
@@ -61,11 +61,11 @@ public class TestRecupererFilmsVusAction {
     @Test
     public void recupereDesFilmsSiUtilisateurConnecteEtFilmsVus() 
     {
-        Utilisateur utilisateur = new Utilisateur();
+        final Utilisateur utilisateur = new Utilisateur();
         utilisateur.setId(33L);
-        Film film = new Film();
+        final Film film = new Film();
         film.setId("10");
-        FilmVu filmVu = new FilmVu();
+        final FilmVu filmVu = new FilmVu();
         filmVu.setId_film(film.getId());
         filmVu.setId_utilisateur(utilisateur.getId());
         fauxEntityManager.filmsVus.add(filmVu);

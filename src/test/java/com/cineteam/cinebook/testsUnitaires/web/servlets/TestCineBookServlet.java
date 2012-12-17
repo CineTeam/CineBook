@@ -1,7 +1,5 @@
 package com.cineteam.cinebook.testsUnitaires.web.servlets;
 
-import com.cineteam.cinebook.web.utilisateur.SeDeconnecterAction;
-import com.cineteam.cinebook.web.servlets.CineBookServlet;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +21,8 @@ public class TestCineBookServlet {
     private MockCinebookServlet servlet;
   
     @Before
-    public void setUp() {
+    public void setUp() 
+    {
         servlet = new MockCinebookServlet();
         servlet.addAction("mockAction", new MockAction());
         request = createMock(HttpServletRequest.class);
@@ -35,8 +34,7 @@ public class TestCineBookServlet {
     @Test
     public void neDispatchePasSiVueNonRenseignee() throws ServletException, IOException 
     {
-        final Map params = new HashMap();
-        request = new AddedParametersRequestWrapper(request,params);
+        request = new AddedParametersRequestWrapper(request);
                 
         servlet.processRequest(request,response);
         
@@ -46,9 +44,9 @@ public class TestCineBookServlet {
     @Test
     public void dispatcheSiVueRenseignee() throws ServletException, IOException 
     {
-        final Map params = new HashMap();
-        params.put("vue", "vue.jsp");
-        request = new AddedParametersRequestWrapper(request,params);
+        final Map parametres = new HashMap();
+        parametres.put("vue", "vue.jsp");
+        request = new AddedParametersRequestWrapper(request,parametres);
                 
         servlet.processRequest(request,response);
         
@@ -58,9 +56,9 @@ public class TestCineBookServlet {
     @Test
     public void dispatcheLesActions() throws ServletException, IOException 
     {
-        final Map params = new HashMap();
-        params.put("action", "mockAction");
-        request = new AddedParametersRequestWrapper(request,params);
+        final Map parametres = new HashMap();
+        parametres.put("action", "mockAction");
+        request = new AddedParametersRequestWrapper(request,parametres);
                 
         servlet.processRequest(request,response);
         

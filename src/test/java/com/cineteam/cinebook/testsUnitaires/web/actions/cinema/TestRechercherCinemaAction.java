@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.cinema;
 
 import com.cineteam.cinebook.model.cinema.Cinema;
-import com.cineteam.cinebook.web.cinema.RechercherCinemaAction;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
+import com.cineteam.cinebook.web.cinema.RechercherCinemaAction;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +32,7 @@ public class TestRechercherCinemaAction {
     @Test
     public void neRecherchePasdeCinemaSansParametreDeRecherche()
     {
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request = new AddedParametersRequestWrapper(request);
         
         rechercherCinemaAction.execute(request);
         

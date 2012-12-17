@@ -31,7 +31,7 @@ public class TestSinscrireAction {
     @Test
     public void retourneEchecSiAucunChampSaisi()
     {
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request = new AddedParametersRequestWrapper(request);
         
         sinscrireAction.execute(request);
         

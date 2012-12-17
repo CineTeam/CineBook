@@ -1,9 +1,9 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.cinema;
 
 import com.cineteam.cinebook.model.commentaire.CommentaireCinema;
-import com.cineteam.cinebook.web.cinema.ConsulterDetailCinemaAction;
 import com.cineteam.cinebook.testsUnitaires.web.actions.MockSeanceProvider;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
+import com.cineteam.cinebook.web.cinema.ConsulterDetailCinemaAction;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
@@ -36,7 +36,7 @@ public class TestConsulterDetailCinemaAction {
     public void neConsultePasDetailCinemaSansCinemaSaisi()
     {
         String cinema_id = "";
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request = new AddedParametersRequestWrapper(request);
         
         consulterDetailsCinemaAction.execute(request);
         
@@ -48,7 +48,8 @@ public class TestConsulterDetailCinemaAction {
     }
     
     @Test
-    public void consulteDetailCinemaAvecCinemaSaisi() {
+    public void consulteDetailCinemaAvecCinemaSaisi() 
+    {
         String cinema_id = "10";
         final Map parametres = new HashMap();
         parametres.put("cpt",cinema_id);
@@ -64,7 +65,8 @@ public class TestConsulterDetailCinemaAction {
     }
     
     @Test
-    public void neListePasDeCommentairesSiPasDeCommentaire() {
+    public void neListePasDeCommentairesSiPasDeCommentaire() 
+    {
         String cinema_id = "10";
         final Map parametres = new HashMap();
         parametres.put("cpt",cinema_id);
@@ -77,7 +79,8 @@ public class TestConsulterDetailCinemaAction {
     }
     
     @Test
-    public void listeLesCommentairesSiPresenceDeCommentaires() {
+    public void listeLesCommentairesSiPresenceDeCommentaires() 
+    {
         String cinema_id = "10";
         final Map parametres = new HashMap();
         parametres.put("cpt",cinema_id);

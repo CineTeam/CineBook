@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.film;
 
 import com.cineteam.cinebook.model.film.Film;
-import com.cineteam.cinebook.web.film.RechercherFilmAction;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
+import com.cineteam.cinebook.web.film.RechercherFilmAction;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +32,7 @@ public class TestRechercherFilmAction {
     @Test
     public void neRecherchePasdeFilmSansParametreDeRecherche()
     {
-        request = new AddedParametersRequestWrapper(request, new HashMap());
+        request = new AddedParametersRequestWrapper(request);
         
         rechercherFilmAction.execute(request);
         
@@ -57,7 +57,8 @@ public class TestRechercherFilmAction {
     @Test
     public void rechercheFilmAvecParametreDeRechercheEtFilms()
     {
-        final Film film = film();
+        final Film film = new Film();
+        film.setTitre("filmRecherche");
         fauxProvider.films.add(film);
         String param_recherche = "filmRecherche";
         final Map parametres = new HashMap();
@@ -70,10 +71,4 @@ public class TestRechercherFilmAction {
         assertTrue(!((List<Film>)request.getAttribute("filmsParMotCle")).isEmpty());
     }
     
-    public Film film()
-    {
-        Film film = new Film();
-        film.setTitre("filmRecherche");
-        return film;
-    }
 }

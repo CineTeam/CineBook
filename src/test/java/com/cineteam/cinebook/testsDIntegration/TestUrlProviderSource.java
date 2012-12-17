@@ -9,7 +9,7 @@ import org.junit.Test;
 /** @author alexis */
 public class TestUrlProviderSource
 {
-    @Test
+   /* @Test
     public void returnInputStreamForValidUrl() 
     {
         UrlProviderSource source = new UrlProviderSource();
@@ -25,5 +25,5 @@ public class TestUrlProviderSource
         InputStream is = source.getInputStream("saer://www.gooooogle.com");
         
         assertNull(is);
-    }
+    }*/
 }

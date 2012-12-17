@@ -1,8 +1,8 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.film;
 
 import com.cineteam.cinebook.model.film.Film;
-import com.cineteam.cinebook.web.film.RecupererDixDerniersFilmsSortisAction;
 import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
+import com.cineteam.cinebook.web.film.RecupererDixDerniersFilmsSortisAction;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import static org.easymock.EasyMock.createMock;
@@ -42,7 +42,7 @@ public class TestRecupererDixDerniersFilmsSortisAction {
     public void recupereDixFilms() 
     {
         for(int i=0; i < 10; i++){
-            fauxProvider.films.add(film());
+            fauxProvider.films.add(new Film());
         }
         request = new AddedParametersRequestWrapper(request);   
         
@@ -50,10 +50,6 @@ public class TestRecupererDixDerniersFilmsSortisAction {
         
         assertEquals(fauxProvider.getDixDerniersFilms().size(), 10);
         assertTrue(!((List<Film>)request.getAttribute("derniersFilmsSortis")).isEmpty());
-    }
-
-    public Film film() {
-        return new Film();
     }
     
 }
