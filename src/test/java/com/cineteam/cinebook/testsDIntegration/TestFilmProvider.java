@@ -3,7 +3,6 @@ package com.cineteam.cinebook.testsDIntegration;
 import com.cineteam.cinebook.model.film.Film;
 import com.cineteam.cinebook.model.film.FilmProvider;
 import com.cineteam.cinebook.model.film.FilmVu;
-import com.cineteam.cinebook.testsUnitaires.web.servlets.AddedParametersRequestWrapper;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.assertNotNull;
@@ -13,7 +12,7 @@ import org.junit.Test;
 /** @author alexis */
 public class TestFilmProvider {
     
-  /*  @Test
+    @Test
     public void retourneListeDeFilmPourUneRecherche() 
     {
         FilmProvider filmProvider = new FilmProvider();
@@ -88,5 +87,5 @@ public class TestFilmProvider {
         FilmProvider filmProvider = new FilmProvider();
         
         assertTrue(filmProvider.getFilmsParIds(null).isEmpty());      
-    }*/
+    }
 }

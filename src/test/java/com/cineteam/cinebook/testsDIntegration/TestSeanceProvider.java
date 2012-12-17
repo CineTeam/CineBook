@@ -11,8 +11,7 @@ import org.junit.Test;
 /** @author alexis */
 public class TestSeanceProvider
 {
-    
-  /*  @Test
+    @Test
     public void retourneUneListeDeSeanceDeFilmsDunCinema()
     {
         SeanceProvider provider = new SeanceProvider();
@@ -32,5 +31,5 @@ public class TestSeanceProvider
         
         assertNotNull(cinemas);
         assertTrue(cinemas.size() > 0);
-    }*/
+    }
 }

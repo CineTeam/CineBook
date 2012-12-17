@@ -10,7 +10,7 @@ import org.junit.Test;
 /** @author alexis */
 public class TestCinemaProvider {
     
-   /* @Test
+    @Test
     public void retourneUneListeDeCinemaParMotCle() 
     {
         CinemaProvider cinemaProvider = new CinemaProvider();
@@ -40,5 +40,5 @@ public class TestCinemaProvider {
         Cinema cinema = cinemaProvider.getDetailCinema("W3300");
         
         assertNotNull(cinema);
-    }*/
+    }
 }
