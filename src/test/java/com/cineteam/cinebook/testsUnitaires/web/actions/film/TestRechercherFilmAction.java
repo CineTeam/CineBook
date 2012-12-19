@@ -37,7 +37,7 @@ public class TestRechercherFilmAction {
         rechercherFilmAction.execute(request);
         
         assertTrue(fauxProvider.rechercherFilmParMotCle("").isEmpty());        
-        assertNull(request.getAttribute("filmsParMotCle"));
+        assertNull(request.getAttribute("films"));
     }
  
     @Test
@@ -51,7 +51,7 @@ public class TestRechercherFilmAction {
         rechercherFilmAction.execute(request);
         
         assertTrue(fauxProvider.rechercherFilmParMotCle(param_recherche).isEmpty());       
-        assertTrue(((List<Film>)request.getAttribute("filmsParMotCle")).isEmpty());
+        assertTrue(((List<Film>)request.getAttribute("films")).isEmpty());
     }
     
     @Test
@@ -68,7 +68,7 @@ public class TestRechercherFilmAction {
         rechercherFilmAction.execute(request);
         
         assertTrue(!fauxProvider.rechercherFilmParMotCle(param_recherche).isEmpty()); 
-        assertTrue(!((List<Film>)request.getAttribute("filmsParMotCle")).isEmpty());
+        assertTrue(!((List<Film>)request.getAttribute("films")).isEmpty());
     }
     
 }

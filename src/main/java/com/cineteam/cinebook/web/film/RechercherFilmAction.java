@@ -22,7 +22,7 @@ public class RechercherFilmAction implements Action{
         String film_recherche = (String) request.getParameter("recherche");
         if(!StringUtils.estVide(film_recherche)){
             List<Film> filmsParMotCle = provider.rechercherFilmParMotCle(film_recherche);
-            request.setAttribute("filmsParMotCle", filmsParMotCle);  
+            request.setAttribute("films", filmsParMotCle);  
         }
         return "listeFilms.jsp";
  

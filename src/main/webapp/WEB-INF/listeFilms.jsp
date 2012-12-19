@@ -15,7 +15,8 @@
                 <div id="content">
                     <div class="post">
                         <div id="entete">
-                            <h1>Liste des films !</h1>
+                            
+                            <h1>Liste des films <c:if test ="${pageContext.request.getParameter('action') eq 'recupererFilmsVusAction'}" > vus </c:if>!</h1>
                             <c:import url ="barreRechercheFilms.jsp" />
                         </div>
                         <div style="clear: both;">&nbsp;</div>
@@ -23,13 +24,13 @@
                             <form action="ServletVisiteur?action=consulterDetailFilmAction" method="post">
 
                                 <table>  
-                                    <c:if test = "${requestScope.filmsParMotCle != null}">
+                                    <c:if test = "${requestScope.films != null}">
                                         <c:choose>
-                                            <c:when test = "${empty requestScope.filmsParMotCle}">
+                                            <c:when test = "${empty requestScope.films}">
                                                 <tr>Aucun film ne correspond à votre recherche</tr>
                                             </c:when>
                                             <c:otherwise>
-                                                <c:forEach var="film" items="${requestScope.filmsParMotCle}">
+                                                <c:forEach var="film" items="${requestScope.films}">
                                                     <tr>
                                                         <a href='#' id="${film.id}" class='clickable'>
                                                             <div class="short_film lignes_film">
@@ -56,7 +57,7 @@
                                             </c:otherwise>                                            
                                         </c:choose>
                                     </c:if>
-                                    <c:if test = "${requestScope.filmsParMotCle == null}">                                                
+                                    <c:if test = "${requestScope.films == null}">                                                
                                         <tr>Veuillez saisir un paramètre de recherche !</tr>
                                     </c:if>
                                 </table>

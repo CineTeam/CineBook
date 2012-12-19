@@ -40,7 +40,7 @@ public class TestRecupererFilmsVusAction {
     
         assertTrue(fauxEntityManager.rechercherFilmsVus(null).isEmpty());
         assertTrue(fauxProvider.getFilmsParIds(fauxEntityManager.filmsVus).isEmpty());
-        assertTrue(((List<Film>)request.getAttribute("filmsVus")).isEmpty());
+        assertTrue(((List<Film>)request.getAttribute("films")).isEmpty());
     }
     
     @Test
@@ -55,7 +55,7 @@ public class TestRecupererFilmsVusAction {
     
         assertTrue(fauxEntityManager.rechercherFilmsVus(utilisateur.getId()).isEmpty());
         assertTrue(fauxProvider.getFilmsParIds(fauxEntityManager.filmsVus).isEmpty());
-        assertTrue(((List<Film>)request.getAttribute("filmsVus")).isEmpty());
+        assertTrue(((List<Film>)request.getAttribute("films")).isEmpty());
     }
     
     @Test
@@ -76,8 +76,8 @@ public class TestRecupererFilmsVusAction {
         
         assertTrue(!fauxEntityManager.rechercherFilmsVus(utilisateur.getId()).isEmpty());
         assertTrue(!fauxProvider.getFilmsParIds(fauxEntityManager.filmsVus).isEmpty());
-        assertTrue(!((List<Film>)request.getAttribute("filmsVus")).isEmpty());
-        assertEquals(((List<Film>)request.getAttribute("filmsVus")).get(0).getId(),"10");
+        assertTrue(!((List<Film>)request.getAttribute("films")).isEmpty());
+        assertEquals(((List<Film>)request.getAttribute("films")).get(0).getId(),"10");
     }
     
 }

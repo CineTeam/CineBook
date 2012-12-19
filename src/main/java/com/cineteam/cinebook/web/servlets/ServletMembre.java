@@ -27,7 +27,7 @@ public class ServletMembre extends CineBookServlet {
         actions.put("deposerCommentaireCinemaAction", new DeposerCommentaireCinemaAction(new CommentaireCinemaEntityManager()));
         actions.put("deposerCommentaireFilmAction", new DeposerCommentaireFilmAction(new CommentaireFilmEntityManager()));
         actions.put("modifierUtilisateurAction", new ModifierUtilisateurAction(new UtilisateurEntityManager()));                
-        actions.put("RecupererFilmsVusActions", new RecupererFilmsVusAction(new FilmProvider(),new FilmVuEntityManager()));
+        actions.put("recupererFilmsVusAction", new RecupererFilmsVusAction(new FilmProvider(),new FilmVuEntityManager()));
         actions.put("supprimerUtilisateurAction", new SupprimerUtilisateurAction(new UtilisateurEntityManager(), new CommentaireFilmEntityManager(), new CommentaireCinemaEntityManager(), new FilmVuEntityManager()));
         actions.put("ajouterFilmAuxFilmsVusAction", new AjouterFilmAuxFilmsVusAction(new FilmVuEntityManager()));                  
 
