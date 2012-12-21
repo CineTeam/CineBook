@@ -1,6 +1,7 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.cinema;
 
 import com.cineteam.cinebook.model.cinema.Cinema;
+import com.cineteam.cinebook.model.cinema.CinemaFrequente;
 import com.cineteam.cinebook.model.cinema.ICinemaProvider;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +44,20 @@ public class MockCinemaProvider implements ICinemaProvider
             cinema.setNombre_salles(40);
         }
         return cinema;
+    }
+
+    public List<Cinema> getCinemasParIds(List<CinemaFrequente> idsCinemas) 
+    {
+        List<Cinema> resultat = new ArrayList<Cinema>();
+        if(idsCinemas !=null)
+        {
+            for(int i =0; i< idsCinemas.size(); i++)
+            {
+                Cinema cinema = getDetailCinema(idsCinemas.get(i).getId_cinema());
+                resultat.add(cinema);
+            }
+        }
+        return resultat;
     }
     
 }

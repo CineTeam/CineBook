@@ -1,5 +1,6 @@
 package com.cineteam.cinebook.web.utilisateur;
 
+import com.cineteam.cinebook.model.cinema.ICinemaFrequenteEntityManager;
 import com.cineteam.cinebook.model.commentaire.ICommentaireCinemaEntityManager;
 import com.cineteam.cinebook.model.commentaire.ICommentaireFilmEntityManager;
 import com.cineteam.cinebook.model.film.IFilmVuEntityManager;
@@ -15,13 +16,15 @@ public class SupprimerUtilisateurAction implements Action{
     private ICommentaireFilmEntityManager entityManagerCommentaireFilm;
     private ICommentaireCinemaEntityManager entityManagerCommentaireCinema;
     private IFilmVuEntityManager entityManagerFilmVu;
+    private ICinemaFrequenteEntityManager entityManagerCinemaFrequente;
     
-    public SupprimerUtilisateurAction(IUtilisateurEntityManager _entityManager, ICommentaireFilmEntityManager _entityManagerCommentaireFilm, ICommentaireCinemaEntityManager _entityManagerCommentaireCinema, IFilmVuEntityManager _entityManagerFilmVu) 
+    public SupprimerUtilisateurAction(IUtilisateurEntityManager _entityManager, ICommentaireFilmEntityManager _entityManagerCommentaireFilm, ICommentaireCinemaEntityManager _entityManagerCommentaireCinema, IFilmVuEntityManager _entityManagerFilmVu, ICinemaFrequenteEntityManager _entityManagerCinemaFrequente) 
     {
         entityManager = _entityManager;
         entityManagerCommentaireFilm = _entityManagerCommentaireFilm;
         entityManagerCommentaireCinema = _entityManagerCommentaireCinema;
         entityManagerFilmVu = _entityManagerFilmVu;
+        entityManagerCinemaFrequente = _entityManagerCinemaFrequente;
     }
     
     public String execute(HttpServletRequest request) 
@@ -32,6 +35,7 @@ public class SupprimerUtilisateurAction implements Action{
             entityManagerCommentaireFilm.supprimerCommentaireFilmDeLUtilisateur(utilisateur.getId());
             entityManagerCommentaireCinema.supprimerCommentairesCinemaDeLUtilisateur(utilisateur.getId());
             entityManagerFilmVu.supprimerFilmsVus(utilisateur.getId());
+            entityManagerCinemaFrequente.supprimerCinemasFrequentes(utilisateur.getId());
             entityManager.supprimerUtilisateur(utilisateur.getId());
         }
         

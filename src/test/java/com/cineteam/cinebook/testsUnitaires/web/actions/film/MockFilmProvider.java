@@ -47,16 +47,16 @@ public class MockFilmProvider implements IFilmProvider
     
     public List<Film> getFilmsParIds(List<FilmVu> idsFilms)
     {
-        List<Film> films = new ArrayList<Film>();
+        List<Film> resultat = new ArrayList<Film>();
         if(idsFilms !=null)
         {
             for(int i =0; i< idsFilms.size(); i++)
             {
                 Film film = getDetailFilm(idsFilms.get(i).getId_film());
-                films.add(film);
+                resultat.add(film);
             }
         }
-        return films;
+        return resultat;
     }
     
 }

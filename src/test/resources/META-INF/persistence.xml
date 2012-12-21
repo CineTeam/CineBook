@@ -6,6 +6,7 @@
         <class>com.cineteam.cinebook.model.commentaire.CommentaireCinema</class>
         <class>com.cineteam.cinebook.model.commentaire.CommentaireFilm</class>
         <class>com.cineteam.cinebook.model.film.FilmVu</class>
+        <class>com.cineteam.cinebook.model.cinema.CinemaFrequente</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>

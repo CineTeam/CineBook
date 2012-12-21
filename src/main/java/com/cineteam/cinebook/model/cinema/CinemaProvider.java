@@ -5,6 +5,7 @@ import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Filtres;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.Methodes;
 import com.cineteam.cinebook.model.provider.AllocineApiUrlBuilder.NiveauDetail;
 import com.cineteam.cinebook.model.provider.UrlProviderSource;
+import java.util.ArrayList;
 import java.util.List;
 
 /** @author alexis */
@@ -33,6 +34,20 @@ public class CinemaProvider implements ICinemaProvider {
         String url = new AllocineApiUrlBuilder(Methodes.DETAILCINEMA).ajouterLIdentifiant(id).ajouterLeNiveauDeDetail(NiveauDetail.LARGE).getUrl();
         Cinema resultat = parser.parserLeCinemaAPartirDeInputStream(source.getInputStream(url));
         return resultat; 
+    }
+    
+    public List<Cinema> getCinemasParIds(List<CinemaFrequente> idsCinemas)
+    {
+        List<Cinema> cinemasFrequentes = new ArrayList<Cinema>();
+        if(idsCinemas != null)
+        {
+            for(int i =0; i< idsCinemas.size(); i++)
+            {
+                Cinema cinema = getDetailCinema(idsCinemas.get(i).getId_cinema());
+                cinemasFrequentes.add(cinema);
+            }
+        }
+        return cinemasFrequentes;
     }
     
 }

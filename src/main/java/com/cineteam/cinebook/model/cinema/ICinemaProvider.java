@@ -10,4 +10,6 @@ public interface ICinemaProvider
     public List<Cinema> rechercherCinemasParCodePostal(String codePostal);
     
     public Cinema getDetailCinema(String id);
+    
+    public List<Cinema> getCinemasParIds(List<CinemaFrequente> idsCinemas);
 }

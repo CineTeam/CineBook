@@ -1,9 +1,11 @@
 package com.cineteam.cinebook.testsUnitaires.web.actions.utilisateur;
 
+import com.cineteam.cinebook.model.cinema.CinemaFrequente;
 import com.cineteam.cinebook.model.commentaire.CommentaireCinema;
 import com.cineteam.cinebook.model.commentaire.CommentaireFilm;
 import com.cineteam.cinebook.model.film.FilmVu;
 import com.cineteam.cinebook.model.utilisateur.Utilisateur;
+import com.cineteam.cinebook.testsUnitaires.web.actions.cinema.MockCinemaFrequenteEntityManager;
 import com.cineteam.cinebook.testsUnitaires.web.actions.cinema.MockCommentaireCinemaEntityManager;
 import com.cineteam.cinebook.testsUnitaires.web.actions.film.MockCommentaireFilmEntityManager;
 import com.cineteam.cinebook.testsUnitaires.web.actions.film.MockFilmVuEntityManager;
@@ -25,6 +27,7 @@ public class TestSupprimerUtilisateurAction {
     private MockCommentaireFilmEntityManager fauxEntityManagerCommentaireFilm;
     private MockCommentaireCinemaEntityManager fauxEntityManagerCommentaireCinema;
     private MockFilmVuEntityManager fauxEntityManagerFilmsVus;
+    private MockCinemaFrequenteEntityManager fauxEntityManagerCinemasFrequentes;
    
     @Before
     public void setUp() 
@@ -33,7 +36,8 @@ public class TestSupprimerUtilisateurAction {
         fauxEntityManagerCommentaireFilm = new MockCommentaireFilmEntityManager();
         fauxEntityManagerCommentaireCinema = new MockCommentaireCinemaEntityManager();
         fauxEntityManagerFilmsVus = new MockFilmVuEntityManager();
-        supprimerUtilisateurAction = new SupprimerUtilisateurAction(fauxEntityManagerUtilisateur, fauxEntityManagerCommentaireFilm, fauxEntityManagerCommentaireCinema, fauxEntityManagerFilmsVus);
+        fauxEntityManagerCinemasFrequentes = new MockCinemaFrequenteEntityManager();
+        supprimerUtilisateurAction = new SupprimerUtilisateurAction(fauxEntityManagerUtilisateur, fauxEntityManagerCommentaireFilm, fauxEntityManagerCommentaireCinema, fauxEntityManagerFilmsVus, fauxEntityManagerCinemasFrequentes);
         request = createMock(HttpServletRequest.class);
         replay(request);
     }
@@ -114,6 +118,23 @@ public class TestSupprimerUtilisateurAction {
         
         assertTrue(fauxEntityManagerFilmsVus.filmVuSupprime);
         assertTrue(fauxEntityManagerFilmsVus.rechercherFilmsVus(utilisateur.getId()).isEmpty());
+    }
+    
+    @Test
+    public void supprimeLesCinemasFrequentesDeLUtilisateur()
+    {
+        request = new AddedParametersRequestWrapper(request);
+        final Utilisateur utilisateur = utilisateur();
+        request.getSession().setAttribute("utilisateur",utilisateur);      
+        CinemaFrequente cinemaFrequente = new CinemaFrequente();
+        cinemaFrequente.setId_cinema("ZA");
+        cinemaFrequente.setId_utilisateur(1l);
+        fauxEntityManagerCinemasFrequentes.cinemasFrequentes.add(cinemaFrequente);
+        
+        supprimerUtilisateurAction.execute(request);
+        
+        assertTrue(fauxEntityManagerCinemasFrequentes.cinemaFrequenteSupprime);
+        assertTrue(fauxEntityManagerCinemasFrequentes.rechercherCinemasFrequentes(utilisateur.getId()).isEmpty());
     }
     
     private Utilisateur utilisateur(){

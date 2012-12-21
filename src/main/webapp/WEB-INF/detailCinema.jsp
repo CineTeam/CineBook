@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>CinéBook</title>
-        <c:import url="header_javascript.jsp" />
+        <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 var latitude = '${requestScope.cinema.position.latitude}';
@@ -13,6 +13,7 @@
                 initialize(latitude, longitude);
             });
         </script>
+        <c:import url="header_javascript.jsp" />
     </head>
     <body id="Cinémas">
         <div id="wrapper">
@@ -49,6 +50,13 @@
                                                     <c:if test = "${cinema.adresse!=null}">${cinema.adresse}<br></c:if>
                                                     <c:if test = "${cinema.code_postal!=null}">${cinema.code_postal} ${cinema.ville}<br></c:if>
                                                     <c:if test = "${cinema.nombre_salles!=null}">Nombre de salles : ${cinema.nombre_salles}<br></c:if>
+                                                    <br>
+                                                    <c:if test ="${sessionScope.utilisateur != null}">
+                                                        <form action="ServletMembre?action=ajouterCinemaAuxCinemasFrequentesAction" method="post">
+                                                            <input type="hidden" name="cpt" value="${requestScope.cinema.id}" />
+                                                            <input type="submit" value="Je suis allé dans ce cinéma !" class='button_clickable'/>
+                                                        </form>
+                                                    </c:if>
                                                 </div>
                                             </div>
                                             <div id="googlemap"></div>
