@@ -10,10 +10,18 @@
                 Trouvez la prochaine séance la plus proche de chez vous ! <br>
                 Saisir un code postal :
                 <input type="text" name="cpt" value="${film.id}" style="display:none;"/>
-                <input type="text" name="recherche" value="${requestScope.code_postal}"/>                     
+                <c:choose>
+                    <c:when test ="${sessionScope.utilisateur != null && !empty sessionScope.utilisateur.code_postal }">
+                        <input type="text" name="recherche" value="${utilisateur.code_postal}"/>    
+                    </c:when>
+                    <c:otherwise>
+                        <input type="text" name="recherche" value="${requestScope.code_postal}"/>        
+                    </c:otherwise>
+                </c:choose>                
                 <input type="submit" name="envoyer" value="Valider" />
             </form>
         </div>
+                
         <div class="seances_film">
             <form action="ServletVisiteur?action=consulterDetailCinemaAction" method="post">
                 <table>  
