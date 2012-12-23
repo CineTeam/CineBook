@@ -14,7 +14,7 @@
                 <div id="content">
                     <div class="post">
                         <div id="entete">
-                            <h1>Liste des cinemas !</h1>
+                            <h1>Liste des cinemas <c:if test ="${pageContext.request.getParameter('action') eq 'recupererCinemasFrequentesAction'}" > fréquentés </c:if>!</h1>
                              <c:import url="barreRechercheCinemas.jsp" />
                         </div>                        
                         <div style="clear: both;">&nbsp;</div>

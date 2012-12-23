@@ -15,7 +15,6 @@
                 <div id="content">
                     <div class="post">
                         <div id="entete">
-                            
                             <h1>Liste des films <c:if test ="${pageContext.request.getParameter('action') eq 'recupererFilmsVusAction'}" > vus </c:if>!</h1>
                             <c:import url ="barreRechercheFilms.jsp" />
                         </div>

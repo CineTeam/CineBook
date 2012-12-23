@@ -32,7 +32,6 @@ public class RecupererFilmsVusAction implements Action {
                 filmsVus = provider.getFilmsParIds(filmsVusParIds);
             }
         }
-        request.setAttribute("type", "filmsVus");
         request.setAttribute("films", filmsVus);           
         return "listeFilms.jsp";   
     }

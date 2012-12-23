@@ -8,8 +8,9 @@
                 Bienvenue ${sessionScope.utilisateur.pseudo} &nbsp;<img src="images/fleche_menu.png" id="fleche_menu_membre" class="img_clickable"/>
             </div>
             <div id="menu_membre">
-                <a href="ServletMembre?action=recupererFilmsVusAction">Mes films</a>
                 <a href="ServletMembre?vue=profilUtilisateur.jsp">Mon compte</a>
+                <a href="ServletMembre?action=recupererFilmsVusAction">Mes films</a>
+                <a href="ServletMembre?action=recupererCinemasFrequentesAction">Mes cinémas</a>
                 <form action="ServletMembre?action=seDeconnecterAction" method="post" >
                     <a href="#" class='lien_clickable'>
                         Déconnexion

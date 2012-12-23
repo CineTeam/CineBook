@@ -1,6 +1,7 @@
 package com.cineteam.cinebook.web.servlets;
 
 import com.cineteam.cinebook.model.cinema.CinemaFrequenteEntityManager;
+import com.cineteam.cinebook.model.cinema.CinemaProvider;
 import com.cineteam.cinebook.model.commentaire.CommentaireCinemaEntityManager;
 import com.cineteam.cinebook.model.commentaire.CommentaireFilmEntityManager;
 import com.cineteam.cinebook.model.film.FilmProvider;
@@ -8,6 +9,7 @@ import com.cineteam.cinebook.model.film.FilmVuEntityManager;
 import com.cineteam.cinebook.model.utilisateur.UtilisateurEntityManager;
 import com.cineteam.cinebook.web.cinema.AjouterCinemaAuxCinemasFrequentesAction;
 import com.cineteam.cinebook.web.cinema.DeposerCommentaireCinemaAction;
+import com.cineteam.cinebook.web.cinema.RecupererCinemasFrequentesAction;
 import com.cineteam.cinebook.web.film.AjouterFilmAuxFilmsVusAction;
 import com.cineteam.cinebook.web.film.DeposerCommentaireFilmAction;
 import com.cineteam.cinebook.web.film.RecupererFilmsVusAction;
@@ -28,6 +30,7 @@ public class ServletMembre extends CineBookServlet {
         actions.put("recupererFilmsVusAction", new RecupererFilmsVusAction(new FilmProvider(),new FilmVuEntityManager()));
         actions.put("supprimerUtilisateurAction", new SupprimerUtilisateurAction(new UtilisateurEntityManager(), new CommentaireFilmEntityManager(), new CommentaireCinemaEntityManager(), new FilmVuEntityManager(), new CinemaFrequenteEntityManager()));
         actions.put("ajouterFilmAuxFilmsVusAction", new AjouterFilmAuxFilmsVusAction(new FilmVuEntityManager()));
-        actions.put("ajouterCinemaAuxCinemasFrequentesAction", new AjouterCinemaAuxCinemasFrequentesAction(new CinemaFrequenteEntityManager()));               
+        actions.put("ajouterCinemaAuxCinemasFrequentesAction", new AjouterCinemaAuxCinemasFrequentesAction(new CinemaFrequenteEntityManager()));
+        actions.put("recupererCinemasFrequentesAction", new RecupererCinemasFrequentesAction(new CinemaProvider(),new CinemaFrequenteEntityManager()));
     }
 }
