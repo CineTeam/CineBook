@@ -333,7 +333,7 @@ a {
             margin:0 0 0 0;
         }
 
-        .short_desc_film,.short_desc_cinema,.short_desc_film_cinema,.short_desc_cinema_film,.synopsis,.details_seance,.form_sinscrire,.commentaires,.form_modifier_utilisateur{
+        .short_desc_film,.short_desc_cinema,.liste_desc_cinema,.short_desc_film_cinema,.short_desc_cinema_film,.synopsis,.details_seance,.form_sinscrire,.commentaires,.form_modifier_utilisateur{
             font-family: Tahoma;
             font-size:14px;
             line-height: 180%;
@@ -437,6 +437,14 @@ a {
             height:300px;
             width:360px;
             overflow-y: auto;
+        }
+        
+        .liste_desc_cinema{
+            display:block;
+            margin-left: 20px;
+            margin-top: 20px;
+            height:70px;
+            width:300px;
         }
 
     #googlemap{
