@@ -6,6 +6,6 @@ import java.util.List;
 /**@author alexis*/
 public interface ISeanceProvider
 {
-    public List<Seances_film> getSeancesPourUnCinema(String id);
+    public List<SeancesFilm> getSeancesPourUnCinema(String id);
     public List<Cinema> getSeancesPourUnFilm(String id, String codePostal);
 }

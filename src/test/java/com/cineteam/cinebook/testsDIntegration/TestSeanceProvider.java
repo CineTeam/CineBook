@@ -2,7 +2,7 @@ package com.cineteam.cinebook.testsDIntegration;
 
 import com.cineteam.cinebook.model.cinema.Cinema;
 import com.cineteam.cinebook.model.seance.SeanceProvider;
-import com.cineteam.cinebook.model.seance.Seances_film;
+import com.cineteam.cinebook.model.seance.SeancesFilm;
 import java.util.List;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -16,7 +16,7 @@ public class TestSeanceProvider
     {
         SeanceProvider provider = new SeanceProvider();
         
-        List<Seances_film> seances_films = provider.getSeancesPourUnCinema("W3300");
+        List<SeancesFilm> seances_films = provider.getSeancesPourUnCinema("W3300");
         
         assertNotNull(seances_films);
         assertTrue(seances_films.size() > 0);

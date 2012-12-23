@@ -21,10 +21,10 @@ public class SeanceXMLParser extends AXMLParser
     private FilmXMLParser filmParser = new FilmXMLParser();
     private CinemaXMLParser cinemaParser = new CinemaXMLParser();
     
-    public List<Seances_film> parserLesSeancesPourUnCinema(InputStream is) 
+    public List<SeancesFilm> parserLesSeancesPourUnCinema(InputStream is) 
     {
          Document document = getDocumentFromInputStream(is);
-         List<Seances_film> seances = getSeancesPourUnCinema(document);
+         List<SeancesFilm> seances = getSeancesPourUnCinema(document);
          return seances;
     }
     
@@ -35,9 +35,9 @@ public class SeanceXMLParser extends AXMLParser
          return seances;
     }
 
-    private List<Seances_film> getSeancesPourUnCinema(Document document)
+    private List<SeancesFilm> getSeancesPourUnCinema(Document document)
     {
-        List<Seances_film> seancesFilms = new ArrayList<Seances_film>();
+        List<SeancesFilm> seancesFilms = new ArrayList<SeancesFilm>();
         
         if(document != null)
         {
@@ -91,9 +91,9 @@ public class SeanceXMLParser extends AXMLParser
         return seance;
     }
 
-    private boolean seancesFilmsContainsFilm(List<Seances_film> seancesFilms, Film film)
+    private boolean seancesFilmsContainsFilm(List<SeancesFilm> seancesFilms, Film film)
     {
-        for(Seances_film seancesFilm : seancesFilms)
+        for(SeancesFilm seancesFilm : seancesFilms)
         {
             if(seancesFilm.getFilm().equals(film))
             {
@@ -103,9 +103,9 @@ public class SeanceXMLParser extends AXMLParser
         return false;
     }
 
-    private List<Seance> getSeancesForFilm(List<Seances_film> seancesFilms, Film film)
+    private List<Seance> getSeancesForFilm(List<SeancesFilm> seancesFilms, Film film)
     {
-        for(Seances_film seancesFilm : seancesFilms)
+        for(SeancesFilm seancesFilm : seancesFilms)
         {
             if(seancesFilm.getFilm() != null && seancesFilm.getFilm().getId().equals(film.getId()))
             {
@@ -134,9 +134,9 @@ public class SeanceXMLParser extends AXMLParser
         return horaires;
     }
 
-    private List<Seance> createSeanceForFilm(Film film, List<Seances_film> seancesFilms) {
+    private List<Seance> createSeanceForFilm(Film film, List<SeancesFilm> seancesFilms) {
         List<Seance> seances = new ArrayList<Seance>();
-        Seances_film seancesFilm = new Seances_film();
+        SeancesFilm seancesFilm = new SeancesFilm();
         seancesFilm.setSeances(seances);
         seancesFilm.setFilm(film);
         seancesFilms.add(seancesFilm);
@@ -178,9 +178,9 @@ public class SeanceXMLParser extends AXMLParser
         return horaire;
     }
 
-    private List<Seances_film> parserSeancesDunCinema(Element seancesCinemaElt) 
+    private List<SeancesFilm> parserSeancesDunCinema(Element seancesCinemaElt) 
     {
-        List<Seances_film> seancesFilms = new ArrayList<Seances_film>();
+        List<SeancesFilm> seancesFilms = new ArrayList<SeancesFilm>();
         Element seancesFilmsElt = seancesCinemaElt.getChild("movieShowtimesList", defaultNameSpace);
         List seancesFilmsList = seancesFilmsElt.getChildren("movieShowtimes", defaultNameSpace);  
         Iterator i = seancesFilmsList.iterator();

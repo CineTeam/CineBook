@@ -3,7 +3,7 @@ package com.cineteam.cinebook.testsUnitaires.model.parser;
 import com.cineteam.cinebook.model.cinema.Cinema;
 import com.cineteam.cinebook.model.seance.Horaire;
 import com.cineteam.cinebook.model.seance.Seance;
-import com.cineteam.cinebook.model.seance.Seances_film;
+import com.cineteam.cinebook.model.seance.SeancesFilm;
 import com.cineteam.cinebook.model.provider.FileProviderSource;
 import com.cineteam.cinebook.model.seance.SeanceXMLParser;
 import java.util.List;
@@ -28,7 +28,7 @@ public class TestSeanceXMLParser
     @Test
     public void retourneDesSeancesDeFilmsPourUnCinema()
     {
-        List<Seances_film> seances = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
+        List<SeancesFilm> seances = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
         
         assertNotNull(seances);
         assertTrue(seances.size() > 0);
@@ -37,9 +37,9 @@ public class TestSeanceXMLParser
     @Test 
     public void retourneDesSeancesDeFilmsAvecUnFilmEtDesSeances()
     {
-        List<Seances_film> seancesFilms = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
+        List<SeancesFilm> seancesFilms = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
         
-        Seances_film seancesFilm = seancesFilms.get(0);
+        SeancesFilm seancesFilm = seancesFilms.get(0);
         List<Seance> seances = seancesFilm.getSeances();
         
         assertNotNull(seancesFilm);
@@ -52,9 +52,9 @@ public class TestSeanceXMLParser
     @Test 
     public void retourneDesSeancesDeFilmsAvecDesSeancesCompletes()
     {
-        List<Seances_film> seancesFilms = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
+        List<SeancesFilm> seancesFilms = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
         
-        Seances_film seancesFilm = seancesFilms.get(0);
+        SeancesFilm seancesFilm = seancesFilms.get(0);
         List<Seance> seances = seancesFilm.getSeances();
         Seance seance = seances.get(0);
         
@@ -68,9 +68,9 @@ public class TestSeanceXMLParser
     @Test
     public void retourneDesSeancesDeFilmsAvecDesHorairesComplets()
     {
-        List<Seances_film> seancesFilms = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
+        List<SeancesFilm> seancesFilms = parser.parserLesSeancesPourUnCinema(source.getInputStream("TestXml/seanceCinema.xml"));
         
-        Seances_film seancesFilm = seancesFilms.get(0);
+        SeancesFilm seancesFilm = seancesFilms.get(0);
         List<Seance> seances = seancesFilm.getSeances();
         Seance seance = seances.get(0);
         List<Horaire> horaires = seance.getHoraires();

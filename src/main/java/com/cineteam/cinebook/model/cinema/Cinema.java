@@ -1,6 +1,6 @@
 package com.cineteam.cinebook.model.cinema;
 
-import com.cineteam.cinebook.model.seance.Seances_film;
+import com.cineteam.cinebook.model.seance.SeancesFilm;
 import java.util.List;
 
 /** @author alexis */
@@ -14,7 +14,7 @@ public class Cinema
     private int nombre_salles;
     private Geolocalisation position;
     private String url_image;
-    private List<Seances_film> seances_films;
+    private List<SeancesFilm> seances_films;
 
     public String getId() {
         return id;
@@ -80,11 +80,11 @@ public class Cinema
         url_image = _url_image;
     }
     
-    public List<Seances_film> getSeances_films() {
+    public List<SeancesFilm> getSeances_films() {
         return seances_films;
     }
 
-    public void setSeances_films(List<Seances_film> _seances_films) {
+    public void setSeances_films(List<SeancesFilm> _seances_films) {
         seances_films = _seances_films;
     }
     

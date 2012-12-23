@@ -1,6 +1,5 @@
 package com.cineteam.cinebook.model.seance;
 
-import com.cineteam.cinebook.model.seance.Horaire;
 import java.util.List;
 
 /**@author alexis */

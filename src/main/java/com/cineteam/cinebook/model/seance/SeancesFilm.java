@@ -4,7 +4,7 @@ import com.cineteam.cinebook.model.film.Film;
 import java.util.List;
 
 /** @author alexis */
-public class Seances_film 
+public class SeancesFilm 
 {
     private Film film;
     private List<Seance> seances;
