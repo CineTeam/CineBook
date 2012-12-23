@@ -13,9 +13,9 @@
                 <a href="ServletMembre?action=recupererCinemasFrequentesAction">Mes cinémas</a>
                 <form action="ServletMembre?action=seDeconnecterAction" method="post" >
                     <a href="#" class='lien_clickable'>
+                        <c:import url ="champs_redirection.jsp" />
                         Déconnexion
                     </a>
-                    <input type="text" name="page_courante_avant_deco" value="${pageContext.request.servletPath}" class="invisible"/>
                     <div class="invisible">
                         <input id="bouton_deconnexion" type="submit" />
                     </div>
@@ -30,7 +30,7 @@
                 <input type="text" name="login" id="inputText" />
                 Mot de passe :
                 <input type="password" name="mdp" id="inputText" />
-                <input type="text" name="page_courante" value="${pageContext.request.servletPath}" class="invisible"/>
+                <c:import url ="champs_redirection.jsp" />
                 <input type="submit" id="bouton_connexion" name="connexion" value="Connexion" class='button_clickable'/>
             </form>
             <br/>

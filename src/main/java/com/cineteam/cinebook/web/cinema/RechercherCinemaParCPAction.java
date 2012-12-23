@@ -7,7 +7,7 @@ import com.cineteam.cinebook.web.servlets.Action;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
-/** @author Bérangère */
+/** @author Berangere */
 public class RechercherCinemaParCPAction implements Action{
 
     private ICinemaProvider provider ; 
@@ -17,15 +17,14 @@ public class RechercherCinemaParCPAction implements Action{
         provider = _provider;
     }
     
-    public String execute(HttpServletRequest request) {
-
+    public String execute(HttpServletRequest request) 
+    {
         String cinema_recherche = (String) request.getParameter("recherche");
         if(!StringUtils.estVide(cinema_recherche)){
             List<Cinema> cinemasParCP = provider.rechercherCinemasParCodePostal(cinema_recherche);
             request.setAttribute("cinemas", cinemasParCP);       
         }    
         return "listeCinemas.jsp";
-
     }
     
 }

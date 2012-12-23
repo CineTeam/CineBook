@@ -11,6 +11,7 @@ import com.cineteam.cinebook.web.cinema.RechercherCinemaParCPAction;
 import com.cineteam.cinebook.web.film.ConsulterDetailFilmAction;
 import com.cineteam.cinebook.web.film.RechercherFilmAction;
 import com.cineteam.cinebook.web.film.RecupererDixDerniersFilmsSortisAction;
+import com.cineteam.cinebook.web.utilisateur.RedirigerAction;
 import java.util.HashMap;
 
 /** @author Bérangère */
@@ -25,5 +26,6 @@ public class ServletVisiteur extends CineBookServlet {
         actions.put("rechercherCinemaParCPAction", new RechercherCinemaParCPAction(new CinemaProvider()));
         actions.put("consulterDetailCinemaAction", new ConsulterDetailCinemaAction(new CinemaProvider(),new SeanceProvider(),new CommentaireCinemaEntityManager()));
         actions.put("consulterDetailFilmAction", new ConsulterDetailFilmAction(new FilmProvider(), new SeanceProvider(), new CommentaireFilmEntityManager()));
+        actions.put("redirigerAction", new RedirigerAction());
     }
 }
