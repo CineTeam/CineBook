@@ -25,7 +25,7 @@
                             <c:if test = "${sessionScope.utilisateur!=null}">
                                 <c:choose>
                                     <c:when test="${empty sessionScope.utilisateur}">
-                                        Aucun compte ne correspond à ce pseudo
+                                        Aucun compte ne correspond a ce pseudo
                                     </c:when>
                                     <c:otherwise>
                                         <div align="center">
@@ -54,8 +54,13 @@
                                                     <tr>
                                                         <td align="center" colspan="2">
                                                             <br/>
-                                                            <a href="ServletMembre?action=supprimerUtilisateurAction">Supprimer mon compte</a>
                                                             <input type="submit" id="bouton_modifier" name="modifier" value="Valider" class='button_clickable'/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" colspan="2">
+                                                            <br/>
+                                                            <a href="ServletMembre?action=supprimerUtilisateurAction" class="lien_suppr_compte">Supprimer mon compte</a>
                                                         </td>
                                                     </tr>
                                                 </table>

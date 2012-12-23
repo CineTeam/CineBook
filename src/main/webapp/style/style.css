@@ -120,17 +120,18 @@ a {
 
         .lien_inscription{
             float: right;
-            color: #5E5E5E;
             text-decoration: underline;
         }
+    
+        .lien_inscription,.lien_suppr_compte{
+            color: #5E5E5E;
+        }
 
-            .lien_inscription:link,.lien_inscription:visited
-            {
+            .lien_inscription:link,.lien_inscription:visited,.lien_suppr_compte:link,.lien_suppr_compte:visited{
                 color: #5E5E5E;
             }
 
-            .lien_inscription:hover
-            {
+            .lien_inscription:hover,.lien_suppr_compte:hover{
                 color: #16737C;
             }
 
